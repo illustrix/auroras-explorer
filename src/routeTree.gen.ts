@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ShipmentIndexRouteImport } from './routes/shipment/index'
+import { Route as ProductionLineIndexRouteImport } from './routes/production-line/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,30 +23,39 @@ const ShipmentIndexRoute = ShipmentIndexRouteImport.update({
   path: '/shipment/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProductionLineIndexRoute = ProductionLineIndexRouteImport.update({
+  id: '/production-line/',
+  path: '/production-line/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/production-line/': typeof ProductionLineIndexRoute
   '/shipment/': typeof ShipmentIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/production-line': typeof ProductionLineIndexRoute
   '/shipment': typeof ShipmentIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/production-line/': typeof ProductionLineIndexRoute
   '/shipment/': typeof ShipmentIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/shipment/'
+  fullPaths: '/' | '/production-line/' | '/shipment/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/shipment'
-  id: '__root__' | '/' | '/shipment/'
+  to: '/' | '/production-line' | '/shipment'
+  id: '__root__' | '/' | '/production-line/' | '/shipment/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ProductionLineIndexRoute: typeof ProductionLineIndexRoute
   ShipmentIndexRoute: typeof ShipmentIndexRoute
 }
 
@@ -65,11 +75,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ShipmentIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/production-line/': {
+      id: '/production-line/'
+      path: '/production-line'
+      fullPath: '/production-line/'
+      preLoaderRoute: typeof ProductionLineIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ProductionLineIndexRoute: ProductionLineIndexRoute,
   ShipmentIndexRoute: ShipmentIndexRoute,
 }
 export const routeTree = rootRouteImport

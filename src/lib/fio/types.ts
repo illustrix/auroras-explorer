@@ -1,4 +1,3 @@
-
 // "OrderId": "e1576e85a7c6543847a7f478528817ea",
 // "CompanyId": "68d282e10b2650dee8c75ff76cb16d38",
 // "CompanyName": "Lumber Liquidators",
@@ -101,4 +100,53 @@ export interface Material {
   UserNameSubmitted: string
   Volume: number
   Weight: number
+}
+
+// [
+//   {
+//     "BuildingTicker": "RIG",
+//     "RecipeName": "=\u003E",
+//     "StandardRecipeName": "RIG:=\u003E",
+//     "Inputs": [],
+//     "Outputs": [],
+//     "TimeMs": 17280000
+//   },
+//   {
+//     "BuildingTicker": "TNP",
+//     "RecipeName": "1xTC 4xREA 4xFLX=\u003E1xETC",
+//     "StandardRecipeName": "TNP:4xFLX-4xREA-1xTC=\u003E1xETC",
+//     "Inputs": [
+//       {
+//         "Ticker": "TC",
+//         "Amount": 1
+//       },
+//       {
+//         "Ticker": "REA",
+//         "Amount": 4
+//       },
+//       {
+//         "Ticker": "FLX",
+//         "Amount": 4
+//       }
+//     ],
+//     "Outputs": [
+//       {
+//         "Ticker": "ETC",
+//         "Amount": 1
+//       }
+//     ],
+//     "TimeMs": 69120000
+//   },
+export interface RecipeItem {
+  Ticker: string
+  Amount: number
+}
+
+export interface Recipe {
+  BuildingTicker: string
+  RecipeName: string
+  StandardRecipeName: string
+  Inputs: RecipeItem[]
+  Outputs: RecipeItem[]
+  TimeMs: number
 }

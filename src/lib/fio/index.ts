@@ -1,4 +1,6 @@
-import type { Material, TradingSummary } from './types'
+import type { Material, Recipe, TradingSummary } from './types'
+
+export * from './types'
 
 const fioBaseUrl = 'https://rest.fnar.net'
 
@@ -14,4 +16,11 @@ export const getAllMaterials = async () => {
   const res = await fetch(`${fioBaseUrl}/material/allmaterials`)
   const data = await res.json()
   return data as Material[]
+}
+
+export const getAllRecipes = async () => {
+  // https://rest.fnar.net/recipes/allrecipes
+  const res = await fetch(`${fioBaseUrl}/recipes/allrecipes`)
+  const data = await res.json()
+  return data as Recipe[]
 }

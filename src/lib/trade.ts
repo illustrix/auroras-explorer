@@ -1,6 +1,6 @@
 import { assert } from './assert'
-import type { DataStore } from './fio/store'
 import { filterTradingsByExchangePairs } from './fio/util'
+import type { GameData } from './store'
 
 export interface Acquisition {
   materialId: string
@@ -23,13 +23,13 @@ export interface AcquisitionSummary {
 }
 
 export const getBestAcquisitions = (
-  dataStore: DataStore,
+  data: GameData,
   from: string,
   to: string,
   weightCapacity: number,
   volumeCapacity: number,
 ): AcquisitionSummary => {
-  const tradings = filterTradingsByExchangePairs(dataStore.orders, from, to)
+  const tradings = filterTradingsByExchangePairs(data.orders, from, to)
   for (const trading of Object.values(tradings)) {
     trading.buyingOrders = trading.buyingOrders
       .toSorted((a, b) => a.ItemCost - b.ItemCost)
@@ -38,7 +38,7 @@ export const getBestAcquisitions = (
       (a, b) => a.ItemCost - b.ItemCost,
     )
   }
-  const itemsInfo = dataStore.materialsByTicker
+  const itemsInfo = data.materialsByTicker
 
   let weightLeftCapacity = weightCapacity
   let volumeLeftCapacity = volumeCapacity
@@ -160,8 +160,8 @@ export const formatAcquisitionSummary = (
   return result
 }
 
-export const findSupplyShortage = (dataStore: DataStore, filterEx: string) => {
-  const tradings = dataStore.orders.filter(o => {
+export const findSupplyShortage = (data: GameData, filterEx: string) => {
+  const tradings = data.orders.filter(o => {
     return (
       o.ExchangeCode === filterEx &&
       o.SellingOrders.length === 0 &&

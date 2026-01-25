@@ -1,7 +1,6 @@
-import { useQuery } from '@tanstack/react-query'
 import { createFileRoute } from '@tanstack/react-router'
 import { useMemo, useState } from 'react'
-import { loadData } from '@/lib/fio/store'
+import { useGameData } from '@/lib/store'
 import { formatAcquisitionSummary, getBestAcquisitions } from '@/lib/trade'
 
 export const Route = createFileRoute('/shipment/')({
@@ -9,11 +8,7 @@ export const Route = createFileRoute('/shipment/')({
 })
 
 function RouteComponent() {
-  const { data } = useQuery({
-    queryKey: ['initData'],
-    queryFn: loadData,
-    staleTime: Infinity,
-  })
+  const { data } = useGameData()
 
   const [fromCX, setFromCX] = useState('')
   const [toCX, setToCX] = useState('')
