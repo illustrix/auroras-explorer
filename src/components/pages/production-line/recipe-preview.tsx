@@ -1,0 +1,94 @@
+import { type FC, useMemo } from 'react'
+import { TradingSummaryTooltip } from '@/components/game/trading-summary'
+import {
+  calculateRecipeDailyProfit,
+  getInfraNeedsForBuilding,
+} from '@/lib/calculation'
+import type { Recipe } from '@/lib/fio'
+import { formatDuration } from '@/lib/format'
+import { useGameData } from '@/lib/store'
+import { cn } from '@/lib/utils'
+import { useExplorerContext } from './context'
+import { MaterialTile } from './material-tile'
+
+export const RecipePreview: FC<{ recipe: Recipe }> = ({ recipe }) => {
+  const { data } = useGameData()
+  const { cx, setMat } = useExplorerContext()
+  const dailyProfit = useMemo(() => {
+    if (!data) return
+    return calculateRecipeDailyProfit(data.orders, recipe, cx)
+  }, [data, cx, recipe])
+
+  const intraNeeds = useMemo(() => {
+    if (!data) return []
+    return getInfraNeedsForBuilding(data, recipe.BuildingTicker)
+  }, [data, recipe])
+
+  return (
+    <div className="flex flex-col px-2 py-1 gap-1 rounded bg-secondary text-secondary-foreground">
+      <div className="flex items-center justify-between">
+        <div className="flex items-baseline text-sm text-muted-foreground">
+          @<span className="text-foreground">{recipe.BuildingTicker}</span>
+          <div className="flex text-xs gap-1 pl-2">
+            {intraNeeds.map(need => {
+              return (
+                <span key={need.ticker}>
+                  {need.ticker}
+                  <sub>x{need.amount.toPrecision(1)}</sub>
+                </span>
+              )
+            })}
+          </div>
+        </div>
+        <div className="text-sm text-muted-foreground">
+          {formatDuration(recipe.TimeMs)}
+        </div>
+      </div>
+      <div className="flex gap-1 items-center">
+        {recipe.Inputs.map(input => {
+          return (
+            <div key={input.Ticker}>
+              <TradingSummaryTooltip ticker={input.Ticker}>
+                <MaterialTile
+                  ticker={input.Ticker}
+                  number={input.Amount}
+                  className="cursor-pointer hover:outline-2"
+                  onClick={() => setMat(input.Ticker)}
+                />
+              </TradingSummaryTooltip>
+            </div>
+          )
+        })}
+
+        <div>⇨</div>
+
+        {recipe.Outputs.map(output => {
+          return (
+            <div key={output.Ticker}>
+              <TradingSummaryTooltip ticker={output.Ticker}>
+                <MaterialTile
+                  ticker={output.Ticker}
+                  number={output.Amount}
+                  className="cursor-pointer hover:outline-2"
+                  onClick={() => setMat(output.Ticker)}
+                />
+              </TradingSummaryTooltip>
+            </div>
+          )
+        })}
+      </div>
+
+      <div className="text-sm text-muted-foreground">
+        Profit:{' '}
+        <span
+          className={cn(
+            dailyProfit && dailyProfit > 0 ? 'text-green-400' : 'text-red-400',
+          )}
+        >
+          ${dailyProfit?.toLocaleString()}
+        </span>
+        /day
+      </div>
+    </div>
+  )
+}

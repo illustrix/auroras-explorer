@@ -6,6 +6,11 @@
 	color: #7f7f7f;
 }
 
+.building-tile {
+	background: linear-gradient(135deg, rgb(52, 140, 160), rgb(77, 165, 185));
+	color: rgb(179, 255, 255);
+}
+
 .material-category-agricultural-products {
 	background: linear-gradient(135deg, #003800, #0a4708);
 	color: #8bb37b;

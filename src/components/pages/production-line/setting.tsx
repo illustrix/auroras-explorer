@@ -1,0 +1,54 @@
+import type { FC } from 'react'
+import { MaterialSelector } from '@/components/game/material-selector'
+import { Field, FieldLabel } from '@/components/ui/field'
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
+import { useGameData } from '@/lib/store'
+import { useExplorerContext } from './context'
+
+export const Setting: FC = () => {
+  const { data } = useGameData()
+  const { cx, setCx, mat, setMat } = useExplorerContext()
+
+  return (
+    <div className="flex gap-4">
+      <Field className="max-w-60">
+        <FieldLabel>Commodity Exchange</FieldLabel>
+        <Select value={cx} onValueChange={value => setCx(value)}>
+          <SelectTrigger className="w-full max-w-xs">
+            <SelectValue placeholder="Select Commodity Exchange" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              {data?.exchanges.map(exchange => {
+                return (
+                  <SelectItem
+                    key={exchange.ExchangeCode}
+                    value={exchange.ExchangeCode}
+                  >
+                    {exchange.ExchangeCode} ({exchange.LocationName})
+                  </SelectItem>
+                )
+              })}
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+      </Field>
+
+      <Field className="max-w-80">
+        <FieldLabel>Material</FieldLabel>
+        <MaterialSelector
+          materials={data?.materials || []}
+          value={mat}
+          onValueChange={value => setMat(value)}
+        />
+      </Field>
+    </div>
+  )
+}

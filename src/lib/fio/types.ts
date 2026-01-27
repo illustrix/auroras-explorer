@@ -150,3 +150,90 @@ export interface Recipe {
   Outputs: RecipeItem[]
   TimeMs: number
 }
+
+// "ComexExchangeId": "428b9f5cf86d62bbb29f9485f10a88d3",
+// "ExchangeName": "Hortus Station Commodity Exchange",
+// "ExchangeCode": "IC1",
+// "ExchangeOperatorId": null,
+// "ExchangeOperatorCode": null,
+// "ExchangeOperatorName": null,
+// "CurrencyNumericCode": 5,
+// "CurrencyCode": "ICA",
+// "CurrencyName": "Austral",
+// "CurrencyDecimals": 2,
+// "LocationId": "0deca369a92788b8079e7ac245be66f7",
+// "LocationName": "Hortus Station",
+// "LocationNaturalId": "HRT"
+
+export interface CommodityExchange {
+  ComexExchangeId: string
+  ExchangeName: string
+  ExchangeCode: string
+  ExchangeOperatorId: string | null
+  ExchangeOperatorCode: string | null
+  ExchangeOperatorName: string | null
+  CurrencyNumericCode: number
+  CurrencyCode: string
+  CurrencyName: string
+  CurrencyDecimals: number
+  LocationId: string
+  LocationName: string
+  LocationNaturalId: string
+}
+
+// "BuildingCosts": [
+//   {
+//     "CommodityName": "basicStructuralElements",
+//     "CommodityTicker": "BSE",
+//     "Weight": 0.30000001192092896,
+//     "Volume": 0.5,
+//     "Amount": 12
+//   }
+// ],
+// "Recipes": [
+//   {
+//     "Inputs": [],
+//     "Outputs": [],
+//     "BuildingRecipeId": "@RIG=>",
+//     "DurationMs": 17280000,
+//     "RecipeName": "=>",
+//     "StandardRecipeName": "RIG:=>"
+//   }
+// ],
+// "BuildingId": "00e3d3d9ac2fc9ba7cac62519915dc43",
+// "Name": "rig",
+// "Ticker": "RIG",
+// "Expertise": "RESOURCE_EXTRACTION",
+// "Pioneers": 30,
+// "Settlers": 0,
+// "Technicians": 0,
+// "Engineers": 0,
+// "Scientists": 0,
+// "AreaCost": 10,
+// "UserNameSubmitted": "SAGANAKI",
+// "Timestamp": "2025-05-08T12:49:39.054422Z"
+
+export interface BuildingCost {
+  CommodityName: string
+  CommodityTicker: string
+  Weight: number
+  Volume: number
+  Amount: number
+}
+
+export interface Building {
+  BuildingCosts: BuildingCost[]
+  Recipes: Recipe[]
+  BuildingId: string
+  Name: string
+  Ticker: string
+  Expertise: string
+  Pioneers: number
+  Settlers: number
+  Technicians: number
+  Engineers: number
+  Scientists: number
+  AreaCost: number
+  UserNameSubmitted: string
+  Timestamp: string
+}

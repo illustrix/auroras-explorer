@@ -3,26 +3,38 @@ import * as fio from '@/lib/fio'
 import { getDataWithCache } from './fs'
 
 export interface GameData {
+  materials: fio.Material[]
   materialsByTicker: Record<string, fio.Material>
   orders: fio.TradingSummary[]
   recipes: fio.Recipe[]
+  exchanges: fio.CommodityExchange[]
+  buildingsByTicker: Record<string, fio.Building>
 }
 
 const loadGameData = async (): Promise<GameData> => {
-  const [ordersData, allMaterials, allRecipes] = await Promise.all([
-    getDataWithCache(fio.getOrdersData, 'ordersData'),
-    getDataWithCache(fio.getAllMaterials, 'allMaterials'),
-    getDataWithCache(fio.getAllRecipes, 'allRecipes'),
+  const [orders, materials, recipes, exchanges, buildings] = await Promise.all([
+    fio.getOrdersData(),
+    getDataWithCache(fio.getAllMaterials, 'materials'),
+    getDataWithCache(fio.getAllRecipes, 'recipes'),
+    getDataWithCache(fio.getAllExchanges, 'exchanges'),
+    getDataWithCache(fio.getAllBuildings, 'buildings'),
   ])
 
   const dataStore: GameData = {
+    materials: materials.toSorted((a, b) => a.Ticker.localeCompare(b.Ticker)),
     materialsByTicker: {},
-    orders: ordersData,
-    recipes: allRecipes,
+    orders,
+    recipes,
+    exchanges,
+    buildingsByTicker: {},
   }
 
-  for (const material of allMaterials) {
+  for (const material of materials) {
     dataStore.materialsByTicker[material.Ticker] = material
+  }
+
+  for (const building of buildings) {
+    dataStore.buildingsByTicker[building.Ticker] = building
   }
 
   return dataStore

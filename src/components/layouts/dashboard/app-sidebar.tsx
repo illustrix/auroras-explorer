@@ -8,15 +8,21 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/components/ui/sidebar'
-import HugeiconsCargoShip from '~icons/hugeicons/cargo-ship'
+// import HugeiconsCargoShip from '~icons/hugeicons/cargo-ship'
+import MdiCompassOutline from '~icons/mdi/compass-outline'
 import { NavMain } from './nav-main'
 
 const data = {
   navMain: [
+    // {
+    //   title: 'Shipment',
+    //   url: '/shipment',
+    //   icon: HugeiconsCargoShip,
+    // },
     {
-      title: 'Shipment',
-      url: '/shipment',
-      icon: HugeiconsCargoShip,
+      title: 'Production Line',
+      url: '/production-line/',
+      icon: MdiCompassOutline,
     },
   ],
 }
@@ -34,7 +40,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <Link to="/">
                 <IconInnerShadowTop className="size-5!" />
                 <span className="text-base font-semibold">
-                  Auroras Conductor
+                  Auroras Explorer
                 </span>
               </Link>
             </SidebarMenuButton>

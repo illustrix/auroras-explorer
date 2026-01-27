@@ -1,4 +1,4 @@
-import { Link } from '@tanstack/react-router'
+import { Link, useMatches } from '@tanstack/react-router'
 import type { ComponentType } from 'react'
 import {
   SidebarGroup,
@@ -17,6 +17,8 @@ export function NavMain({
     icon?: ComponentType
   }[]
 }) {
+  const matches = useMatches()
+
   return (
     <SidebarGroup>
       <SidebarGroupContent className="flex flex-col gap-2">
@@ -40,16 +42,20 @@ export function NavMain({
           </SidebarMenuItem>
         </SidebarMenu> */}
         <SidebarMenu>
-          {items.map(item => (
-            <Link to={item.url} key={item.title}>
-              <SidebarMenuItem>
-                <SidebarMenuButton tooltip={item.title}>
-                  {item.icon && <item.icon />}
-                  <span>{item.title}</span>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            </Link>
-          ))}
+          {items.map(item => {
+            const isActive = matches.some(match => match.pathname === item.url)
+
+            return (
+              <Link to={item.url} key={item.title}>
+                <SidebarMenuItem>
+                  <SidebarMenuButton isActive={isActive} tooltip={item.title}>
+                    {item.icon && <item.icon />}
+                    <span>{item.title}</span>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              </Link>
+            )
+          })}
         </SidebarMenu>
       </SidebarGroupContent>
     </SidebarGroup>

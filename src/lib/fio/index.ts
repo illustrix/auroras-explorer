@@ -1,4 +1,10 @@
-import type { Material, Recipe, TradingSummary } from './types'
+import type {
+  Building,
+  CommodityExchange,
+  Material,
+  Recipe,
+  TradingSummary,
+} from './types'
 
 export * from './types'
 
@@ -23,4 +29,18 @@ export const getAllRecipes = async () => {
   const res = await fetch(`${fioBaseUrl}/recipes/allrecipes`)
   const data = await res.json()
   return data as Recipe[]
+}
+
+export const getAllExchanges = async () => {
+  // https://rest.fnar.net/global/comexexchanges
+  const res = await fetch(`${fioBaseUrl}/global/comexexchanges`)
+  const data = await res.json()
+  return data as CommodityExchange[]
+}
+
+export const getAllBuildings = async () => {
+  // https://rest.fnar.net/building/allbuildings
+  const res = await fetch(`${fioBaseUrl}/building/allbuildings`)
+  const data = await res.json()
+  return data as Building[]
 }
