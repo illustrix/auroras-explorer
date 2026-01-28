@@ -8,6 +8,7 @@ export interface GameData {
   orders: fio.TradingSummary[]
   recipes: fio.Recipe[]
   exchanges: fio.CommodityExchange[]
+  buildings: fio.Building[]
   buildingsByTicker: Record<string, fio.Building>
 }
 
@@ -26,6 +27,7 @@ const loadGameData = async (): Promise<GameData> => {
     orders,
     recipes,
     exchanges,
+    buildings: buildings.toSorted((a, b) => a.Ticker.localeCompare(b.Ticker)),
     buildingsByTicker: {},
   }
 

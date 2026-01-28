@@ -61,7 +61,7 @@ export function MaterialSelector({
           role="combobox"
           aria-expanded={open}
           aria-label="Select a material"
-          className="max-w-[200px] justify-between"
+          className="justify-between"
         >
           {selected ? selected : 'Select a material...'}
           <ChevronsUpDown className="text-muted-foreground" />

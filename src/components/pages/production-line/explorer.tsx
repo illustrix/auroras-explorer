@@ -13,13 +13,11 @@ import '@xyflow/react/dist/style.css'
 import { type FC, useCallback, useEffect } from 'react'
 import { useExplorerContext } from './context'
 import { ExplorerContextProvider } from './context-provider'
+import type { Graph } from './graph'
 import {
-  addRecipeRelationToGraph,
-  addRecipeToGraphAsNode,
-  type Graph,
-  getRecipesByInput,
-  getRecipesByOutput,
-} from './graph'
+  addBuildingRelatedRecipesToGraph,
+  addMaterialRelatedRecipesToGraph,
+} from './graph-explorer'
 import { layout } from './layout'
 import { MaterialNode, RecipeNode } from './node'
 import { Setting } from './setting'
@@ -34,38 +32,17 @@ const GraphView: FC = () => {
   const reactFlow = useReactFlow()
   const [nodes, , onNodesChange] = useNodesState([])
   const [edges, , onEdgesChange] = useEdgesState([])
-  const { mat } = useExplorerContext()
+  const { mat, building } = useExplorerContext()
 
   const updateGraph = useCallback(async () => {
     const graph: Graph = { nodes: [], edges: [] }
     if (recipes) {
-      console.log('updating graph for material', mat)
-      const addedKeys = new Set<string>()
-      const currentRecipes = getRecipesByOutput(recipes, mat)
-      if (currentRecipes.length > 0) {
-        for (const recipe of currentRecipes) {
-          addRecipeToGraphAsNode(graph, recipe)
-
-          for (const input of recipe.Inputs) {
-            const inputRecipes = getRecipesByOutput(recipes, input.Ticker)
-            for (const inputRecipe of inputRecipes) {
-              if (addedKeys.has(inputRecipe.RecipeName)) {
-                continue
-              }
-              addRecipeToGraphAsNode(graph, inputRecipe)
-              addRecipeRelationToGraph(graph, inputRecipe, recipe)
-              addedKeys.add(inputRecipe.RecipeName)
-            }
-          }
-        }
-      }
-
-      const furtherRecipes = getRecipesByInput(recipes, mat)
-      for (const recipe of furtherRecipes) {
-        addRecipeToGraphAsNode(graph, recipe)
-        for (const currentRecipe of currentRecipes) {
-          addRecipeRelationToGraph(graph, currentRecipe, recipe)
-        }
+      if (mat) {
+        console.log('updating graph for material', mat)
+        addMaterialRelatedRecipesToGraph(graph, recipes, mat)
+      } else if (building) {
+        console.log('updating graph for building', building)
+        addBuildingRelatedRecipesToGraph(graph, recipes, building)
       }
     }
     const { nodes, edges } = layout(graph)
@@ -74,7 +51,7 @@ const GraphView: FC = () => {
     console.log('graph updated', { nodes, edges })
     await reactFlow.fitView()
     await reactFlow.zoomTo(1)
-  }, [reactFlow, recipes, mat])
+  }, [reactFlow, recipes, mat, building])
 
   useEffect(() => {
     updateGraph()
@@ -83,6 +60,7 @@ const GraphView: FC = () => {
   return (
     <ReactFlow
       colorMode="dark"
+      minZoom={0.01}
       maxZoom={5}
       nodes={nodes}
       edges={edges}

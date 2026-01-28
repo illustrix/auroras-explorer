@@ -26,7 +26,7 @@ const _MaterialTile: FC<MaterialTileProps> = ({
         isBuilding
           ? 'building-tile'
           : mat
-            ? `material-category-${mat.CategoryName.toLowerCase().replace(/ /g, '-')}`
+            ? `material-category-${mat.CategoryName.toLowerCase().replace(/ /g, '-').replaceAll(/\(|\)/g, '')}`
             : '',
         className,
       )}

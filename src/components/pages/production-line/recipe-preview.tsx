@@ -13,9 +13,9 @@ import { MaterialTile } from './material-tile'
 
 export const RecipePreview: FC<{ recipe: Recipe }> = ({ recipe }) => {
   const { data } = useGameData()
-  const { cx, setMat } = useExplorerContext()
+  const { cx, setMat, setBuilding } = useExplorerContext()
   const dailyProfit = useMemo(() => {
-    if (!data) return
+    if (!data || !cx) return
     return calculateRecipeDailyProfit(data.orders, recipe, cx)
   }, [data, cx, recipe])
 
@@ -25,10 +25,20 @@ export const RecipePreview: FC<{ recipe: Recipe }> = ({ recipe }) => {
   }, [data, recipe])
 
   return (
-    <div className="flex flex-col px-2 py-1 gap-1 rounded bg-secondary text-secondary-foreground">
+    <div className="flex flex-col px-2 py-1 gap-1 rounded bg-secondary text-secondary-foreground cursor-default">
       <div className="flex items-center justify-between">
         <div className="flex items-baseline text-sm text-muted-foreground">
-          @<span className="text-foreground">{recipe.BuildingTicker}</span>
+          @
+          <button
+            type="button"
+            className="text-accent-foreground hover:underline cursor-pointer"
+            onClick={() => {
+              setMat(undefined)
+              setBuilding(recipe.BuildingTicker)
+            }}
+          >
+            {recipe.BuildingTicker}
+          </button>
           <div className="flex text-xs gap-1 pl-2">
             {intraNeeds.map(need => {
               return (

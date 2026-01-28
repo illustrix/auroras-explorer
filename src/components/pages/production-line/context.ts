@@ -1,15 +1,16 @@
 import { createContext, useContext } from 'react'
 
 export const ExplorerContext = createContext<{
-  cx: string
-  setCx: (cx: string) => void
-  mat: string
-  setMat: (mat: string) => void
+  cx?: string
+  setCx: (cx?: string) => void
+  mat?: string
+  setMat: (mat?: string) => void
+  building?: string
+  setBuilding: (building?: string) => void
 }>({
-  cx: '',
   setCx: () => {},
-  mat: '',
   setMat: () => {},
+  setBuilding: () => {},
 })
 
 export const useExplorerContext = () => {
