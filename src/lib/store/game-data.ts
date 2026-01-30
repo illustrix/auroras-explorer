@@ -14,7 +14,9 @@ export interface GameData {
 
 const loadGameData = async (): Promise<GameData> => {
   const [orders, materials, recipes, exchanges, buildings] = await Promise.all([
-    fio.getOrdersData(),
+    getDataWithCache(fio.getOrdersData, 'orders', {
+      expiryMs: 1000 * 60 * 5, // 5 minutes
+    }),
     getDataWithCache(fio.getAllMaterials, 'materials'),
     getDataWithCache(fio.getAllRecipes, 'recipes'),
     getDataWithCache(fio.getAllExchanges, 'exchanges'),

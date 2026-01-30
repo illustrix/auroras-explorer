@@ -1,3 +1,8 @@
+import dayjs from 'dayjs'
+import localizedFormat from 'dayjs/plugin/localizedFormat'
+
+dayjs.extend(localizedFormat)
+
 export const formatDuration = (ms: number): string => {
   const seconds = Math.floor(ms / 1000)
   const minutes = Math.floor(seconds / 60)
@@ -14,4 +19,8 @@ export const formatDuration = (ms: number): string => {
     return `${minutes}m ${seconds % 60}s`
   }
   return `${seconds}s`
+}
+
+export const formatTime = (date: dayjs.ConfigType): string => {
+  return dayjs(date).format('LLL')
 }
