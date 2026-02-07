@@ -1,0 +1,41 @@
+import { Link } from '@tanstack/react-router'
+import { tools } from './tools'
+
+export const ToolGalleryPage = () => {
+  return (
+    <div className="p-8">
+      <h1 className="text-2xl font-bold">Welcome to Auroras Explorer</h1>
+      <p className="mt-4 text-muted-foreground">
+        Explore the collection of tools for Prosperous Universe. Use the links
+        below to navigate to different tools and resources available in the
+        Auroras Explorer.
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+        {tools.map(tool => {
+          return (
+            <Link
+              key={tool.url}
+              to={tool.url}
+              className="border border-border rounded-lg hover:outline transition-all flex flex-col gap-2"
+            >
+              <img
+                alt={`preview of ${tool.title}`}
+                src={tool.preview}
+                className="w-full h-60 object-cover rounded-md"
+              />
+              <div className="p-4 flex flex-col gap-2 flex-1">
+                <div className="flex items-center">
+                  <tool.icon className="w-6 h-6 text-primary mr-2" />
+                  <h3 className="text-lg font-semibold">{tool.title}</h3>
+                </div>
+                <p className="text-sm text-muted-foreground flex-1">
+                  {tool.description}
+                </p>
+              </div>
+            </Link>
+          )
+        })}
+      </div>
+    </div>
+  )
+}

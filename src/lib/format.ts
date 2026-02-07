@@ -34,3 +34,11 @@ export const formatSize = (bytes: number): string => {
   const gb = mb / 1024
   return `${gb.toFixed(2)}GB`
 }
+
+export const formatCurrency = (amount: number): string => {
+  const formatted = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  }).format(amount)
+  return formatted
+}

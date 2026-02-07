@@ -1,13 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { ToolGalleryPage } from '@/components/pages/gallery'
 
 export const Route = createFileRoute('/')({
   component: RouteComponent,
 })
 
 function RouteComponent() {
-  return (
-    <div className="absolute inset-0 flex items-center justify-center">
-      Hello Prosperous Universe.
-    </div>
-  )
+  return <ToolGalleryPage />
 }

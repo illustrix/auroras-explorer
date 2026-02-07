@@ -1,5 +1,6 @@
 import { IconInnerShadowTop } from '@tabler/icons-react'
 import { Link } from '@tanstack/react-router'
+import { tools } from '@/components/pages/gallery/tools'
 import {
   Sidebar,
   SidebarContent,
@@ -11,24 +12,11 @@ import {
 } from '@/components/ui/sidebar'
 import { useLocalStorage } from '@/hooks/use-storage'
 import { formatTime } from '@/lib/format'
-// import HugeiconsCargoShip from '~icons/hugeicons/cargo-ship'
-import MdiCompassOutline from '~icons/mdi/compass-outline'
 import TablerBrandDiscord from '~icons/tabler/brand-discord'
 import { NavMain } from './nav-main'
 
 const data = {
-  navMain: [
-    // {
-    //   title: 'Shipment',
-    //   url: '/shipment',
-    //   icon: HugeiconsCargoShip,
-    // },
-    {
-      title: 'Production Line',
-      url: '/production-line/',
-      icon: MdiCompassOutline,
-    },
-  ],
+  navMain: tools,
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {

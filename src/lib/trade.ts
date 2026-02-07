@@ -29,7 +29,11 @@ export const getBestAcquisitions = (
   weightCapacity: number,
   volumeCapacity: number,
 ): AcquisitionSummary => {
-  const tradings = filterTradingsByExchangePairs(data.orders, from, to)
+  const tradings = filterTradingsByExchangePairs(
+    structuredClone(data.orders),
+    from,
+    to,
+  )
   for (const trading of Object.values(tradings)) {
     trading.buyingOrders = trading.buyingOrders
       .toSorted((a, b) => a.ItemCost - b.ItemCost)
@@ -170,4 +174,35 @@ export const findSupplyShortage = (data: GameData, filterEx: string) => {
   })
 
   return tradings.toSorted((a, b) => a.Bid - b.Bid).toReversed()
+}
+
+export const genXitAction = (cx: string, acquisitions: Acquisition[]) => {
+  const materials: Record<string, number> = {}
+  for (const acq of acquisitions) {
+    materials[acq.materialTicker] =
+      (materials[acq.materialTicker] ?? 0) + acq.count
+  }
+  return {
+    actions: [
+      {
+        group: 'A1',
+        exchange: cx,
+        priceLimits: {},
+        buyPartial: false,
+        useCXInv: true,
+        name: 'BuyItems',
+        type: 'CX Buy',
+      },
+    ],
+    global: {
+      name: 'Auroras Explorer Shipment Plan',
+    },
+    groups: [
+      {
+        type: 'Manual',
+        name: 'A1',
+        materials,
+      },
+    ],
+  }
 }

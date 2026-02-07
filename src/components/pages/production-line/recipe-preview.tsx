@@ -8,8 +8,8 @@ import type { Recipe } from '@/lib/fio'
 import { formatDuration } from '@/lib/format'
 import { useGameData } from '@/lib/store'
 import { cn } from '@/lib/utils'
+import { MaterialTile } from '../../game/material-tile'
 import { useExplorerContext } from './context'
-import { MaterialTile } from './material-tile'
 
 export const RecipePreview: FC<{ recipe: Recipe }> = ({ recipe }) => {
   const { data } = useGameData()

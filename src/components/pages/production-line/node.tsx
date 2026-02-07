@@ -1,7 +1,7 @@
 import { Handle, type NodeProps, Position } from '@xyflow/react'
 import type { FC, ReactNode } from 'react'
 import type { Recipe } from '@/lib/fio'
-import { MaterialTile } from './material-tile'
+import { MaterialTile } from '../../game/material-tile'
 // import FaMinus from '~icons/fa/minus'
 // import FaPlus from '~icons/fa/plus'
 import { RecipePreview } from './recipe-preview'

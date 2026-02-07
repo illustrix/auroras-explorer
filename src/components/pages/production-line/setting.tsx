@@ -1,6 +1,7 @@
 import { startCase } from 'es-toolkit/string'
 import type { FC } from 'react'
 import { MaterialSelector } from '@/components/game/material-selector'
+import { CommodityExchangeSelect } from '@/components/game/select/cx-select'
 import { Field, FieldLabel } from '@/components/ui/field'
 import {
   Select,
@@ -21,25 +22,12 @@ export const Setting: FC = () => {
     <div className="flex gap-4">
       <Field className="w-60">
         <FieldLabel>Commodity Exchange</FieldLabel>
-        <Select value={cx} onValueChange={value => setCx(value)}>
-          <SelectTrigger className="w-full max-w-xs">
-            <SelectValue placeholder="Select Commodity Exchange" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectGroup>
-              {data?.exchanges.map(exchange => {
-                return (
-                  <SelectItem
-                    key={exchange.ExchangeCode}
-                    value={exchange.ExchangeCode}
-                  >
-                    {exchange.ExchangeCode} ({exchange.LocationName})
-                  </SelectItem>
-                )
-              })}
-            </SelectGroup>
-          </SelectContent>
-        </Select>
+        <CommodityExchangeSelect
+          value={cx}
+          onValueChange={value => {
+            setCx(value)
+          }}
+        />
       </Field>
 
       <Field className="w-50">
