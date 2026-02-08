@@ -37,7 +37,6 @@ export const Setting: FC = () => {
           value={mat}
           onValueChange={value => {
             setMat(value)
-            setBuilding('')
           }}
         />
       </Field>
@@ -49,7 +48,6 @@ export const Setting: FC = () => {
           value={building}
           onValueChange={value => {
             setBuilding(value)
-            setMat('')
           }}
         >
           <SelectTrigger className="w-full max-w-xs">
