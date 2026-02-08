@@ -16,13 +16,15 @@ export const ToolGalleryPage = () => {
             <Link
               key={tool.url}
               to={tool.url}
-              className="border border-border rounded-lg hover:outline transition-all flex flex-col gap-2"
+              className="border border-border rounded-lg hover:outline transition-all flex flex-col gap-2 group overflow-hidden"
             >
-              <img
-                alt={`preview of ${tool.title}`}
-                src={tool.preview}
-                className="w-full h-60 object-cover rounded-md"
-              />
+              <div className="overflow-hidden w-full h-60 rounded-lg bg-muted/50">
+                <img
+                  alt={`preview of ${tool.title}`}
+                  src={tool.preview}
+                  className="w-full h-60 group-hover:scale-110 transition-all"
+                />
+              </div>
               <div className="p-4 flex flex-col gap-2 flex-1">
                 <div className="flex items-center">
                   <tool.icon className="w-6 h-6 text-primary mr-2" />
