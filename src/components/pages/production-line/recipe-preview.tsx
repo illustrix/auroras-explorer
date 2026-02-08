@@ -90,14 +90,24 @@ export const RecipePreview: FC<{ recipe: Recipe }> = ({ recipe }) => {
 
       <div className="text-sm text-muted-foreground">
         Profit:{' '}
-        <span
-          className={cn(
-            dailyProfit && dailyProfit > 0 ? 'text-green-400' : 'text-red-400',
-          )}
-        >
-          ${dailyProfit?.toLocaleString()}
-        </span>
-        /day
+        {dailyProfit ? (
+          <>
+            <span
+              className={cn(
+                dailyProfit
+                  ? dailyProfit > 0
+                    ? 'text-green-400'
+                    : 'text-red-400'
+                  : '',
+              )}
+            >
+              ${dailyProfit.toLocaleString()}
+            </span>
+            /day
+          </>
+        ) : (
+          'N/A'
+        )}
       </div>
     </div>
   )
