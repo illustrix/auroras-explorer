@@ -45,7 +45,7 @@ export const Setting: FC = () => {
         <FieldLabel>Building</FieldLabel>
 
         <Select
-          value={building}
+          value={building || ''}
           onValueChange={value => {
             setBuilding(value)
           }}
