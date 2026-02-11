@@ -48,7 +48,7 @@ export const getColumns = (props: { fromCX: string; toCX: string }) => [
     },
     maxSize: 60,
   }),
-  columnHelper.accessor('costPerItem', {
+  columnHelper.accessor('sellingPricePerItem', {
     id: 'ask',
     header: `${props.fromCX} Ask`,
     cell: row => (
@@ -56,7 +56,7 @@ export const getColumns = (props: { fromCX: string; toCX: string }) => [
     ),
     maxSize: 60,
   }),
-  columnHelper.accessor('sellingPricePerItem', {
+  columnHelper.accessor('costPerItem', {
     header: `${props.toCX} Bid`,
     cell: row => (
       <div className="text-right">{formatCurrency(row.getValue())}</div>
