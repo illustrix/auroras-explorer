@@ -15,16 +15,21 @@ export class SaveUserContractTask {
   ) {}
 
   async init() {
+    console.log('Initializing SaveUserContractTask...')
     const group = await getGroup(config.fio.groupId, config.fio.apiToken)
     const usernames = group.GroupUsers.map(u => u.GroupUserName)
     this.usernames = usernames
+    console.log('Found', this.usernames.length, 'users in group', this.groupId)
   }
 
   async run() {
     this.running = true
     while (this.running) {
       const now = Date.now()
-      if (now - this.lastExecutedAt >= this.executeInterval) {
+      if (
+        this.lastExecutedAt === 0 ||
+        now - this.lastExecutedAt >= this.executeInterval
+      ) {
         this.lastExecutedAt = now
         await this.executeSaveUserContractTask()
       }
