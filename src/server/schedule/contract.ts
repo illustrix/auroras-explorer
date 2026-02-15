@@ -1,3 +1,4 @@
+import async from 'async'
 import axios from 'axios'
 import { maxBy } from 'es-toolkit'
 import { getGroup, getUserContracts } from '@/lib/fio'
@@ -48,7 +49,22 @@ export class SaveUserContractTask {
 
   async saveUserContracts(username: string) {
     try {
-      const contracts = await getUserContracts(username, this.token)
+      const contracts = await async.retry(
+        {
+          times: 5,
+          interval: (attemptCount: number) => 1000 * 2 ** attemptCount,
+          errorFilter: (err: unknown) => {
+            if (axios.isAxiosError(err)) {
+              // Retry for all errors except 401 Unauthorized, which indicates no permission to access the user's contracts
+              return err.response?.status !== 401
+            }
+            return true
+          },
+        },
+        async () => {
+          return await getUserContracts(username, this.token)
+        },
+      )
       const result = await bulkSaveUserContracts(contracts)
       const syncStatus: Partial<SyncStatus> = {
         username,
