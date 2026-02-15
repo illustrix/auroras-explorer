@@ -172,6 +172,8 @@ function TabsTrigger({
 
   const localRef = React.useRef<HTMLButtonElement | null>(null)
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error Skip type checking for 3rd party library
   React.useImperativeHandle(ref, () => localRef.current as HTMLButtonElement)
 
   React.useEffect(() => {

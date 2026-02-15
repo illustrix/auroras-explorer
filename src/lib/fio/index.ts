@@ -1,5 +1,4 @@
 import axios, { type AxiosProgressEvent } from 'axios'
-import { memoize } from 'es-toolkit'
 import type {
   Building,
   CommodityExchange,

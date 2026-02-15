@@ -274,6 +274,7 @@ const MultipleSelector = React.forwardRef<
       [handleUnselect, selected],
     )
 
+    // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
     useEffect(() => {
       if (open) {
         document.addEventListener('mousedown', handleClickOutside)
@@ -295,6 +296,7 @@ const MultipleSelector = React.forwardRef<
       }
     }, [value])
 
+    // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
     useEffect(() => {
       /** If `onSearch` is provided, do not trigger options updated. */
       if (!arrayOptions || onSearch) {
@@ -306,6 +308,7 @@ const MultipleSelector = React.forwardRef<
       }
     }, [arrayDefaultOptions, arrayOptions, groupBy, onSearch, options])
 
+    // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
     useEffect(() => {
       /** sync search */
 
@@ -330,6 +333,7 @@ const MultipleSelector = React.forwardRef<
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [debouncedSearchTerm, groupBy, open, triggerSearchOnFocus])
 
+    // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
     useEffect(() => {
       /** async search */
 
@@ -448,12 +452,12 @@ const MultipleSelector = React.forwardRef<
           'h-auto overflow-visible bg-transparent',
           commandProps?.className,
         )}
-        // shouldFilter={
-        //   commandProps?.shouldFilter !== undefined
-        //     ? commandProps.shouldFilter
-        //     : !onSearch
-        // } // When onSearch is provided, we don't want to filter the options. You can still override it.
-        // filter={commandFilter()}
+        shouldFilter={
+          commandProps?.shouldFilter !== undefined
+            ? commandProps.shouldFilter
+            : !onSearch
+        } // When onSearch is provided, we don't want to filter the options. You can still override it.
+        filter={commandFilter()}
       >
         {/** biome-ignore lint/a11y/noStaticElementInteractions: <explanation> */}
         {/** biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}

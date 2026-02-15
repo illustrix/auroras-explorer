@@ -130,6 +130,8 @@ function MotionHighlight<T extends string>({
 
   const localRef = React.useRef<HTMLDivElement>(null)
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error Skip type checking for 3rd party library
   React.useImperativeHandle(ref, () => localRef.current as HTMLDivElement)
 
   const [activeValue, setActiveValue] = React.useState<T | null>(
@@ -182,6 +184,7 @@ function MotionHighlight<T extends string>({
         return newBounds
       })
     },
+    // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
     [props],
   )
 
@@ -271,6 +274,7 @@ function MotionHighlight<T extends string>({
     },
     [
       mode,
+      // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
       props,
       boundsState,
       transition,
@@ -307,6 +311,7 @@ function MotionHighlight<T extends string>({
           : render(
               React.Children.map(children, (child, index) => (
                 <MotionHighlightItem
+                  // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                   key={index}
                   className={props?.itemsClassName}
                 >
@@ -400,6 +405,8 @@ function MotionHighlightItem({
 
   const localRef = React.useRef<HTMLDivElement>(null)
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error Skip type checking for 3rd party library
   React.useImperativeHandle(ref, () => localRef.current as HTMLDivElement)
 
   React.useEffect(() => {
