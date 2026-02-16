@@ -14,9 +14,9 @@ import { StatusMap } from './constants'
 import { useGroupContractsPageContext } from './context'
 
 export const Settings = () => {
-  const { usernames, setUsernames, type, setType, status, setStatus } =
+  const { groupId, usernames, setUsernames, type, setType, status, setStatus } =
     useGroupContractsPageContext()
-  const { data: users } = useQuery(groupUsersQuery('873386'))
+  const { data: users } = useQuery(groupUsersQuery(groupId))
 
   return (
     <div className="mb-4 flex flex-wrap gap-4 items-end">

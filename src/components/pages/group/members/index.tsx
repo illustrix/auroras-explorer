@@ -1,12 +1,16 @@
 import { useQuery } from '@tanstack/react-query'
+import { getRouteApi } from '@tanstack/react-router'
 import { getCoreRowModel, useReactTable } from '@tanstack/react-table'
 import { DataTable } from '@/components/common/data-table'
 import { LoadingPage } from '@/components/common/loading'
 import { groupUsersQuery } from '@/lib/query/group'
 import { columns } from './user-table/columns'
 
+const routeApi = getRouteApi('/group/{-$groupId}/members/')
+
 export const GroupMembersPage = () => {
-  const { data: users } = useQuery(groupUsersQuery('873386'))
+  const { groupId = '' } = routeApi.useParams()
+  const { data: users } = useQuery(groupUsersQuery(groupId))
 
   const table = useReactTable({
     data: users || [],

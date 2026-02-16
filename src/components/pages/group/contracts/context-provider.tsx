@@ -1,4 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
+import { getRouteApi } from '@tanstack/react-router'
 import { getCoreRowModel, useReactTable } from '@tanstack/react-table'
 import { type FC, type ReactNode, useMemo, useState } from 'react'
 import { columns } from '@/components/game/contract/contract-table/columns'
@@ -6,9 +7,12 @@ import { groupContractsQuery } from '@/lib/query/contract'
 import { StatusMap, TypesMap } from './constants'
 import { GroupContractsPageContext } from './context'
 
+const routeApi = getRouteApi('/group/{-$groupId}/contracts/')
+
 export const GroupContractsPageContextProvider: FC<{
   children: ReactNode
 }> = ({ children }) => {
+  const { groupId = '' } = routeApi.useParams()
   const [usernames, setUsernames] = useState<string[]>([])
   const [type, setType] = useState<string>('All')
   const [status, setStatus] = useState<string>('All')
@@ -20,7 +24,7 @@ export const GroupContractsPageContextProvider: FC<{
 
   const contractsQuery = useQuery(
     groupContractsQuery({
-      groupId: '873386',
+      groupId,
       order: '-DateEpochMs',
       types: TypesMap[type],
       statuses: StatusMap[status],
@@ -34,6 +38,7 @@ export const GroupContractsPageContextProvider: FC<{
     data: contractsQuery.data?.items || [],
     columns,
     getCoreRowModel: getCoreRowModel(),
+    getRowId: row => row.ContractId,
     state: {
       pagination,
     },
@@ -44,6 +49,7 @@ export const GroupContractsPageContextProvider: FC<{
 
   const value = useMemo(() => {
     return {
+      groupId,
       usernames,
       setUsernames,
       type,
@@ -54,7 +60,7 @@ export const GroupContractsPageContextProvider: FC<{
       pagination,
       table,
     }
-  }, [type, usernames, status, contractsQuery, table, pagination])
+  }, [groupId, type, usernames, status, contractsQuery, table, pagination])
 
   return (
     <GroupContractsPageContext.Provider value={value}>

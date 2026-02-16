@@ -26,13 +26,13 @@ export const useNavigates = () => {
     },
     {
       title: 'Group Members',
-      url: '/group/members/',
+      url: '/group/873386/members/',
       icon: MdiAccountGroupOutline,
       category: 'Group Tools',
     },
     {
       title: 'Group Contracts',
-      url: '/group/contracts/',
+      url: '/group/873386/contracts/',
       icon: MdiInvoiceListOutline,
       category: 'Group Tools',
     },

@@ -30,7 +30,7 @@ export const ContractDetail: FC<{
                 className="flex items-center gap-2"
               >
                 <span className="text-muted-foreground w-8">
-                  #{condition.ConditionIndex}
+                  #{condition.ConditionIndex + 1}
                 </span>
 
                 <span>

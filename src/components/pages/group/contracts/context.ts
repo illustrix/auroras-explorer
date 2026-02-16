@@ -5,6 +5,7 @@ import type { Contract } from '@/lib/api'
 import type { Pagination } from '@/server/common/paging'
 
 export const GroupContractsPageContext = createContext<{
+  groupId: string
   usernames: string[]
   setUsernames: (usernames: string[]) => void
   type: string
@@ -18,6 +19,7 @@ export const GroupContractsPageContext = createContext<{
   }
   table: Table<Contract>
 }>({
+  groupId: '',
   usernames: [],
   setUsernames: () => {},
   type: 'All',
