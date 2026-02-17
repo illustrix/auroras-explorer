@@ -3,6 +3,7 @@ import { QueryClientProvider } from '@tanstack/react-query'
 import { createRouter, RouterProvider } from '@tanstack/react-router'
 import { DynamicCreateElementContainer } from 'redyc'
 import { LoadingPage } from './components/common/loading'
+import { ErrorPage } from './components/pages/error-page'
 import { queryClient } from './lib/query'
 import { routeTree } from './routeTree.gen'
 
@@ -24,6 +25,7 @@ function App() {
           <RouterProvider
             router={router}
             defaultPendingComponent={LoadingPage}
+            defaultErrorComponent={ErrorPage}
           />
         </QueryClientProvider>
       </TooltipProvider>
