@@ -25,7 +25,7 @@ export const RecipePreview: FC<{ recipe: Recipe }> = ({ recipe }) => {
   }, [data, recipe])
 
   return (
-    <div className="flex flex-col px-2 py-1 gap-1 rounded bg-secondary text-secondary-foreground cursor-default">
+    <div className="flex flex-col px-2 py-1 gap-1 rounded-md bg-secondary text-secondary-foreground cursor-default">
       <div className="flex items-center justify-between">
         <div className="flex items-baseline text-sm text-muted-foreground">
           @
