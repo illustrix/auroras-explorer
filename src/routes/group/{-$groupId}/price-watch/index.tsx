@@ -1,4 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { RequireAuth } from '@/components/auth/require-auth'
 import { GroupPriceWatchPage } from '@/components/pages/group/price-watch'
 
 export const Route = createFileRoute('/group/{-$groupId}/price-watch/')({
@@ -10,5 +11,9 @@ function RouteComponent() {
 
   if (!groupId) return null
 
-  return <GroupPriceWatchPage groupId={groupId} />
+  return (
+    <RequireAuth>
+      <GroupPriceWatchPage groupId={groupId} />
+    </RequireAuth>
+  )
 }

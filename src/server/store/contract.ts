@@ -165,7 +165,7 @@ const filterListContractOptions = (
     query.whereIn('Status', statuses)
   }
   if (tags && tags.length > 0) {
-    query.whereJsonSupersetOf('Tags', tags)
+    query.whereRaw(`"Tags" @> ?::text[]`, [`{${tags.join(',')}}`])
   }
   if (participants && participants.length > 0) {
     if (explicit) {

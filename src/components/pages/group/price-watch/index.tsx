@@ -20,10 +20,10 @@ export const GroupPriceWatchPage: FC<{
   )
 
   return (
-    <div>
+    <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Price Watch</h1>
 
-      <div className="mt-4 flex flex-col gap-4">
+      <div className="mt-4 flex flex-col">
         {contracts?.items.map(contract => {
           return (
             <ContractPriceInsight
