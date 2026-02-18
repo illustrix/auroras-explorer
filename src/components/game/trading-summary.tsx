@@ -1,3 +1,4 @@
+import { capitalize, keyBy, snakeCase } from 'es-toolkit'
 import { type FC, useMemo } from 'react'
 import {
   HoverCard,
@@ -25,7 +26,7 @@ export const TradingSummary: FC<{ ticker: string }> = ({ ticker }) => {
   if (!orders) return null
 
   return (
-    <Table>
+    <Table className="font-mono">
       <TableHeader>
         <TableRow>
           <TableHead></TableHead>
@@ -39,7 +40,13 @@ export const TradingSummary: FC<{ ticker: string }> = ({ ticker }) => {
           <TableCell>Ask</TableCell>
           {orders.map(order => (
             <TableCell key={order.ExchangeCode}>
-              {order.Ask?.toFixed(2)}
+              {order.Ask ? (
+                <span className="text-sm text-destructive">
+                  ${order.Ask?.toLocaleString()}
+                </span>
+              ) : (
+                <span className="text-muted-foreground">N/A</span>
+              )}
             </TableCell>
           ))}
         </TableRow>
@@ -47,7 +54,13 @@ export const TradingSummary: FC<{ ticker: string }> = ({ ticker }) => {
           <TableCell>Bid</TableCell>
           {orders.map(order => (
             <TableCell key={order.ExchangeCode}>
-              {order.Bid?.toFixed(2)}
+              {order.Bid ? (
+                <span className="text-sm text-success">
+                  ${order.Bid?.toLocaleString()}
+                </span>
+              ) : (
+                <span className="text-muted-foreground">N/A</span>
+              )}
             </TableCell>
           ))}
         </TableRow>
@@ -55,7 +68,7 @@ export const TradingSummary: FC<{ ticker: string }> = ({ ticker }) => {
           <TableCell>Supply</TableCell>
           {orders.map(order => (
             <TableCell key={order.ExchangeCode}>
-              {order.Supply?.toFixed(2)}
+              {order.Supply?.toLocaleString()}
             </TableCell>
           ))}
         </TableRow>
@@ -63,7 +76,7 @@ export const TradingSummary: FC<{ ticker: string }> = ({ ticker }) => {
           <TableCell>Demand</TableCell>
           {orders.map(order => (
             <TableCell key={order.ExchangeCode}>
-              {order.Demand?.toFixed(2)}
+              {order.Demand?.toLocaleString()}
             </TableCell>
           ))}
         </TableRow>
@@ -76,10 +89,21 @@ export const TradingSummaryTooltip: FC<{
   ticker: string
   children: React.ReactNode
 }> = ({ ticker, children }) => {
+  const { data } = useGameData()
+
+  const material = data?.materialsByTicker[ticker]
+
+  if (!material) return <>{children}</>
+
   return (
     <HoverCard>
       <HoverCardTrigger>{children}</HoverCardTrigger>
-      <HoverCardContent className="min-w-lg">
+      <HoverCardContent className="min-w-180">
+        <div className="flex items-center gap-2 mb-4">
+          <div className="text-lg font-bold capitalize">
+            {snakeCase(material.Name).replaceAll('_', ' ')}
+          </div>
+        </div>
         <TradingSummary ticker={ticker} />
       </HoverCardContent>
     </HoverCard>

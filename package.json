@@ -73,6 +73,8 @@
     "@iconify-json/fa": "^1.2.2",
     "@iconify-json/hugeicons": "^1.2.23",
     "@iconify-json/mdi": "^1.2.3",
+    "@iconify-json/ri": "^1.2.10",
+    "@iconify-json/stash": "^1.2.4",
     "@iconify-json/tabler": "^1.2.26",
     "@illustrix/shared-configs": "^1.0.0",
     "@svgr/core": "^8.1.0",

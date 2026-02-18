@@ -1,5 +1,6 @@
 import { IconInnerShadowTop } from '@tabler/icons-react'
 import { Link } from '@tanstack/react-router'
+import { Time } from '@/components/common/time'
 import {
   Sidebar,
   SidebarContent,
@@ -11,7 +12,6 @@ import {
 } from '@/components/ui/sidebar'
 import { useNavigates } from '@/hooks/use-navigates'
 import { setItem, useLocalStorage } from '@/hooks/use-storage'
-import { formatTime } from '@/lib/format'
 import { queryClient } from '@/lib/query'
 import { identityQuery, useIdentity } from '@/lib/query/user'
 import TablerBrandDiscord from '~icons/tabler/brand-discord'
@@ -47,8 +47,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarFooter>
         <div className="text-muted-foreground flex flex-col text-xs gap-4">
           <div>
-            <div>Data Updated:</div>
-            <span>{formatTime(dataUpdatedAt ?? 0)}</span>
+            <span>Data Updated:</span> <Time time={dataUpdatedAt ?? 0} />
           </div>
           <span>
             Data Source:{' '}

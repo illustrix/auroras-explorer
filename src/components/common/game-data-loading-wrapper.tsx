@@ -1,6 +1,7 @@
 import type { FC, ReactNode } from 'react'
 import { formatSize } from '@/lib/format'
 import { useDataLoadingState, useGameData } from '@/lib/store'
+import { Loading } from './loading'
 
 export const GameDataLoadingWrapper: FC<{ children: ReactNode }> = ({
   children,
@@ -10,8 +11,9 @@ export const GameDataLoadingWrapper: FC<{ children: ReactNode }> = ({
 
   if (isLoading) {
     return (
-      <div className="absolute inset-0 flex items-center justify-center text-lg font-medium">
-        Loading Necessary Data...
+      <div className="absolute inset-0 flex flex-col gap-8 items-center justify-center text-lg font-medium">
+        <Loading />
+        <div>Loading Necessary Data...</div>
         <div
           className="hidden"
           // TODO: show loading progress

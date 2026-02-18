@@ -22,16 +22,16 @@ export const getTradingSummariesByMaterial = (
   ticker: string,
 ) => {
   indexOrdersByTicker(orders)
-  const summaries: TradingSummary[] = []
+  const summaries: Record<string, TradingSummary> = {}
   for (const [, cache] of caches) {
     const summary = cache.get(ticker)
     if (summary) {
-      summaries.push(summary)
+      summaries[summary.ExchangeCode] = summary
     }
   }
-  return summaries.toSorted((a, b) =>
-    a.ExchangeCode.localeCompare(b.ExchangeCode),
-  )
+  return ['AI1', 'CI1', 'IC1', 'NC1', 'CI2', 'NC2']
+    .map(cx => summaries[cx])
+    .filter(Boolean) as TradingSummary[]
 }
 
 export const calculateRecipeDailyProfit = (
