@@ -11,6 +11,7 @@ import { exchangeFromFioToken } from '../services/user'
 import { type ListContractsOptions, listContracts } from '../store/contract'
 import { getGroupUserInfos, getGroupUsernames } from '../store/group'
 import type { Env } from './types'
+import { parseArray, parseRange } from './util'
 
 const app = new Hono<Env>()
 
@@ -62,7 +63,7 @@ app.use('/api/group/:groupId/*', requireGroupAuth())
 
 app.get('/api/group/:groupId/contracts', async c => {
   const groupId = c.req.param('groupId')
-  const usernamesParam = c.req.query('usernames')
+  const usernamesParam = parseArray(c.req.query('usernames'))
   const usernames = await getGroupUsernames(groupId)
   if (usernames.length === 0) {
     return c.json([])
@@ -75,22 +76,15 @@ app.get('/api/group/:groupId/contracts', async c => {
     order: c.req.query('order'),
     limit: pageSize,
     offset: pageSize * (page - 1),
-    types: c.req.query('types')
-      ? (c.req.query('types') as string).split(',')
-      : undefined,
-    statuses: c.req.query('statuses')
-      ? (c.req.query('statuses') as string).split(',')
-      : undefined,
+    types: parseArray(c.req.query('types')),
+    statuses: parseArray(c.req.query('statuses')),
     participants: usernames.map(u => u.toUpperCase()),
-    tags: c.req.query('tags')
-      ? (c.req.query('tags') as string).split(',').map(t => t.trim())
-      : undefined,
+    tags: parseArray(c.req.query('tags')),
+    time: parseRange(c.req.query('time')),
   }
 
   if (usernamesParam) {
-    opts.participants = (usernamesParam as string)
-      .split(',')
-      .map(u => u.toUpperCase())
+    opts.participants = usernamesParam.map(u => u.toUpperCase())
     opts.explicit = true
   }
 

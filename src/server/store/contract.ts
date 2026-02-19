@@ -92,6 +92,10 @@ export interface ListContractsOptions {
    */
   explicit?: boolean
   tags?: string[]
+  time?: {
+    from?: number
+    to?: number
+  }
 }
 
 const getConditionsForContract = async (
@@ -153,6 +157,7 @@ const filterListContractOptions = (
     statuses,
     explicit = false,
     tags,
+    time,
   }: ListContractsOptions,
 ) => {
   if (submitters && submitters.length > 0) {
@@ -166,6 +171,14 @@ const filterListContractOptions = (
   }
   if (tags && tags.length > 0) {
     query.whereRaw(`"Tags" @> ?::text[]`, [`{${tags.join(',')}}`])
+  }
+  if (time) {
+    if (time.from) {
+      query.where('DateEpochMs', '>=', time.from)
+    }
+    if (time.to) {
+      query.where('DateEpochMs', '<=', time.to)
+    }
   }
   if (participants && participants.length > 0) {
     if (explicit) {
@@ -310,7 +323,7 @@ export const getContractType = (conditions: UserContractCondition[]) => {
 
 type ToInsertedContract = Omit<
   ContractPO,
-  'Conditions' | 'CreatedAt' | 'UpdatedAt'
+  'Conditions' | 'CreatedAt' | 'UpdatedAt' | 'Tags'
 >
 
 const CxCompanyCodes = ['AI1', 'CI1', 'CI2', 'IC1', 'NC1', 'NC2']

@@ -1,7 +1,6 @@
-import { useQuery } from '@tanstack/react-query'
 import { DataTableViewOptions } from '@/components/common/data-table/column-toggle'
+import { DatePickerWithRange } from '@/components/ui/date-range-picker'
 import { Field, FieldLabel } from '@/components/ui/field'
-import MultipleSelector from '@/components/ui/multiple-select'
 import {
   Select,
   SelectContent,
@@ -9,7 +8,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { groupUsersQuery } from '@/lib/query/group'
+import { GroupMemberSelect } from '../group-member-select'
 import { StatusMap, TypesMap } from './constants'
 import { useGroupContractsPageContext } from './context'
 
@@ -22,39 +21,23 @@ export const Settings = () => {
     setType,
     status,
     setStatus,
+    date,
+    setDate,
     table,
   } = useGroupContractsPageContext()
-  const { data: users } = useQuery(groupUsersQuery(groupId))
 
   return (
     <div className="mb-4 flex flex-wrap gap-4 items-end">
+      <DatePickerWithRange date={date} setDate={setDate} />
+
       <div className="flex-1" />
 
       <Field className="w-50">
         <FieldLabel>Users</FieldLabel>
-        <MultipleSelector
-          className="w-full"
-          defaultOptions={[]}
-          options={
-            users
-              ?.map(user => ({
-                label: user.username,
-                value: user.username,
-              }))
-              .filter(user => user.value) || []
-          }
-          value={usernames.map(username => ({
-            label: username,
-            value: username,
-          }))}
-          onChange={values => {
-            setUsernames(values.map(v => v.value))
-          }}
-          placeholder="Select User"
-          inputProps={{
-            className: 'w-full',
-          }}
-          emptyIndicator="No users found"
+        <GroupMemberSelect
+          groupId={groupId}
+          value={usernames}
+          onChange={setUsernames}
         />
       </Field>
 

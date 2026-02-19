@@ -1,4 +1,3 @@
-import type { Table } from '@tanstack/react-table'
 import {
   ChevronFirstIcon,
   ChevronLastIcon,
@@ -12,18 +11,25 @@ import {
   Pagination as PaginationRoot,
 } from '../ui/pagination'
 
-export interface PaginationProps<T> {
-  table: Table<T>
+export interface PaginationInstance {
+  firstPage: () => void
+  previousPage: () => void
+  nextPage: () => void
+  lastPage: () => void
+  getCanPreviousPage: () => boolean
+  getCanNextPage: () => boolean
+  getPageCount: () => number
+}
+
+export interface PaginationProps {
+  table: PaginationInstance
   pagination: {
     pageIndex: number
     pageSize: number
   }
 }
 
-export const Pagination = <T extends object>({
-  table,
-  pagination,
-}: PaginationProps<T>) => {
+export const Pagination = ({ table, pagination }: PaginationProps) => {
   return (
     <PaginationRoot>
       <PaginationContent>
@@ -43,7 +49,7 @@ export const Pagination = <T extends object>({
             href="#"
             aria-label="Go to previous page"
             size="icon"
-            onClick={() => table.previousPage()}
+            onClick={() => table.getCanPreviousPage() && table.previousPage()}
             disabled={!table.getCanPreviousPage()}
           >
             <ChevronLeftIcon className="size-4" />

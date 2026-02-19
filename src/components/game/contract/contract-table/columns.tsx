@@ -1,6 +1,6 @@
 import { createColumnHelper } from '@tanstack/react-table'
 import type { Contract } from '@/lib/api/types'
-import MdiArrowLeftRight from '~icons/mdi/arrow-left-right'
+import MdiArrowRight from '~icons/mdi/arrow-right'
 import {
   ContractItems,
   ContractLocation,
@@ -67,7 +67,7 @@ export const columns = [
       return (
         <div className="flex items-center gap-2 text-muted-foreground">
           <span className="font-semibold">{contract.ProviderUsername}</span>
-          <MdiArrowLeftRight />
+          <MdiArrowRight />
           <span className="font-semibold">{contract.CustomerUsername}</span>
         </div>
       )

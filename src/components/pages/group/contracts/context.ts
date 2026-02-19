@@ -1,6 +1,7 @@
 import type { UseQueryResult } from '@tanstack/react-query'
 import type { Table } from '@tanstack/react-table'
 import { createContext, useContext } from 'react'
+import type { DateRange } from 'react-day-picker'
 import type { Contract } from '@/lib/api'
 import type { Pagination } from '@/server/common/paging'
 
@@ -12,6 +13,8 @@ export const GroupContractsPageContext = createContext<{
   setType: (type: string) => void
   status: string
   setStatus: (status: string) => void
+  date?: DateRange
+  setDate: (date: DateRange | undefined) => void
   contractsQuery: UseQueryResult<Pagination<Contract>, Error>
   pagination: {
     pageIndex: number
@@ -26,6 +29,7 @@ export const GroupContractsPageContext = createContext<{
   setType: () => {},
   status: 'All',
   setStatus: () => {},
+  setDate: () => {},
   contractsQuery: {} as UseQueryResult<Pagination<Contract>, Error>,
   pagination: {
     pageIndex: 0,

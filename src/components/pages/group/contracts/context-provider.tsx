@@ -6,6 +6,7 @@ import {
   type VisibilityState,
 } from '@tanstack/react-table'
 import { type FC, type ReactNode, useMemo, useState } from 'react'
+import type { DateRange } from 'react-day-picker'
 import { columns } from '@/components/game/contract/contract-table/columns'
 import { groupContractsQuery } from '@/lib/query/contract'
 import { StatusMap, TypesMap } from './constants'
@@ -20,6 +21,7 @@ export const GroupContractsPageContextProvider: FC<{
   const [usernames, setUsernames] = useState<string[]>([])
   const [type, setType] = useState<string>('All')
   const [status, setStatus] = useState<string>('All')
+  const [date, setDate] = useState<DateRange | undefined>(undefined)
 
   const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({})
 
@@ -37,6 +39,7 @@ export const GroupContractsPageContextProvider: FC<{
       usernames: usernames.length > 0 ? usernames : undefined,
       page: pagination.pageIndex + 1,
       pageSize: pagination.pageSize,
+      time: date,
     }),
   )
 
@@ -64,11 +67,22 @@ export const GroupContractsPageContextProvider: FC<{
       setType,
       status,
       setStatus,
+      date,
+      setDate,
       contractsQuery,
       pagination,
       table,
     }
-  }, [groupId, type, usernames, status, contractsQuery, table, pagination])
+  }, [
+    groupId,
+    type,
+    usernames,
+    status,
+    date,
+    contractsQuery,
+    table,
+    pagination,
+  ])
 
   return (
     <GroupContractsPageContext.Provider value={value}>
