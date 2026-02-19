@@ -8,6 +8,7 @@ import {
 import { type FC, type ReactNode, useMemo, useState } from 'react'
 import type { DateRange } from 'react-day-picker'
 import { columns } from '@/components/game/contract/contract-table/columns'
+import { getDateRange } from '@/lib/date'
 import { groupContractsQuery } from '@/lib/query/contract'
 import { StatusMap, TypesMap } from './constants'
 import { GroupContractsPageContext } from './context'
@@ -21,7 +22,9 @@ export const GroupContractsPageContextProvider: FC<{
   const [usernames, setUsernames] = useState<string[]>([])
   const [type, setType] = useState<string>('All')
   const [status, setStatus] = useState<string>('All')
-  const [date, setDate] = useState<DateRange | undefined>(undefined)
+  const [date, setDate] = useState<DateRange | undefined>(() =>
+    getDateRange('today'),
+  )
 
   const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({})
 
