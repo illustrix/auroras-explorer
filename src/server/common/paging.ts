@@ -14,11 +14,22 @@ export interface PaginationOptions {
 
 export const handleOrderBy = (
   query: Knex.QueryBuilder,
-  orderBy: string,
+  orderBy: string = '',
   validFields: string[],
 ) => {
-  query
   for (const { field, direction } of parseOrderBy(orderBy, validFields)) {
     query.orderBy(field, direction)
+  }
+}
+
+export const handlePaginationOptions = (
+  query: Knex.QueryBuilder,
+  opt: PaginationOptions,
+) => {
+  if (opt.limit) {
+    query.limit(opt.limit)
+  }
+  if (opt.offset) {
+    query.offset(opt.offset)
   }
 }

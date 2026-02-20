@@ -1,10 +1,10 @@
-export type Variables = {
-  user?: {
-    username: string
-  }
+import type { Context } from '../common/context'
+
+export type User = {
+  username: string
 }
 
-export type Env = {
-  Bindings: object
-  Variables: Variables
+export type Variables = {
+  user?: User
+  ctx: Context
 }

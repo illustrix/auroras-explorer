@@ -21,7 +21,7 @@ export const authenticate = () =>
   })
 
 export const requireGroupAuth = () =>
-  createMiddleware(async (c, next) => {
+  createMiddleware<Env>(async (c, next) => {
     const groupId = c.req.param('groupId')
     if (groupId) {
       const user = c.get('user')

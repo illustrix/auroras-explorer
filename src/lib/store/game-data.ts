@@ -1,19 +1,7 @@
 import { queryOptions, useQuery } from '@tanstack/react-query'
-import type { AxiosRequestConfig } from 'axios'
 import { createStore, useStore } from 'zustand'
-import type * as fio from '@/lib/fio'
-import { fioClient } from '@/lib/fio'
-import { getDataWithCache } from './fs'
-
-export interface GameData {
-  materials: fio.Material[]
-  materialsByTicker: Record<string, fio.Material>
-  orders: fio.TradingSummary[]
-  recipes: fio.Recipe[]
-  exchanges: fio.CommodityExchange[]
-  buildings: fio.Building[]
-  buildingsByTicker: Record<string, fio.Building>
-}
+import { GameDataService } from '@/server/services/game-data'
+import { fsCache } from './fs'
 
 interface DataLoadingState {
   progress: number
@@ -31,97 +19,11 @@ const dataLoadingStateStore = createStore<DataLoadingState>(set => ({
 
 export const useDataLoadingState = () => useStore(dataLoadingStateStore)
 
-interface LoaderConfig<T = unknown> {
-  key: string
-  fn: (opt?: AxiosRequestConfig) => Promise<T>
-  expiryMs?: number
-  apply: (g: GameData, data: T) => void
-}
-
-const loaders: LoaderConfig[] = []
-
-const addLoader = <T>(config: LoaderConfig<T>) => {
-  loaders.push(config as LoaderConfig)
-}
-
-addLoader({
-  key: 'orders',
-  fn: fioClient.getOrdersData,
-  expiryMs: 1000 * 60 * 5, // 5 minutes
-  apply: (g, data) => {
-    g.orders = data
-  },
-})
-
-addLoader({
-  key: 'materials',
-  fn: fioClient.getAllMaterials,
-  apply: (g, data) => {
-    g.materials = data.toSorted((a, b) => a.Ticker.localeCompare(b.Ticker))
-    g.materialsByTicker = {}
-    for (const material of data) {
-      g.materialsByTicker[material.Ticker] = material
-    }
-  },
-})
-
-addLoader({
-  key: 'recipes',
-  fn: fioClient.getAllRecipes,
-  apply: (g, data) => {
-    g.recipes = data
-  },
-})
-
-addLoader({
-  key: 'exchanges',
-  fn: fioClient.getAllExchanges,
-  apply: (g, data) => {
-    g.exchanges = data
-  },
-})
-
-addLoader({
-  key: 'buildings',
-  fn: fioClient.getAllBuildings,
-  apply: (g, data) => {
-    g.buildings = data.toSorted((a, b) => a.Ticker.localeCompare(b.Ticker))
-    g.buildingsByTicker = {}
-    for (const building of data) {
-      g.buildingsByTicker[building.Ticker] = building
-    }
-  },
-})
-
-const loadGameData = async (): Promise<GameData> => {
-  const dataStore: GameData = {
-    materials: [],
-    materialsByTicker: {},
-    orders: [],
-    recipes: [],
-    exchanges: [],
-    buildings: [],
-    buildingsByTicker: {},
-  }
-
-  await Promise.all(
-    loaders.map(async ({ key, fn, apply, expiryMs }) => {
-      const opt: AxiosRequestConfig = {
-        onDownloadProgress(event) {
-          console.log('progress', { key, event })
-        },
-      }
-      const data = await getDataWithCache(() => fn(opt), key, { expiryMs })
-      apply(dataStore, data)
-    }),
-  )
-
-  return dataStore
-}
+const gameDataService = new GameDataService(fsCache)
 
 const gameDataQuery = queryOptions({
   queryKey: ['gameData'],
-  queryFn: loadGameData,
+  queryFn: () => gameDataService.loadAll(),
   staleTime: Infinity,
 })
 

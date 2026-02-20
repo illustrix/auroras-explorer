@@ -1,55 +1,38 @@
+import { compact } from 'es-toolkit'
+import type { GameData } from '@/server/services/game-data'
 import { assert } from './assert'
+import { allExchanges } from './constants'
 import type { Recipe, TradingSummary } from './fio'
-import type { GameData } from './store'
-
-// CX -> Ticker -> TradingSummary
-const caches: Map<string, Map<string, TradingSummary>> = new Map()
-
-const indexOrdersByTicker = (orders: TradingSummary[]) => {
-  if (caches.size > 0) return
-  for (const order of orders) {
-    if (!caches.has(order.ExchangeCode)) {
-      caches.set(order.ExchangeCode, new Map())
-    }
-    const cx = caches.get(order.ExchangeCode)
-    assert(cx)
-    cx.set(order.MaterialTicker, order)
-  }
-}
 
 export const getTradingSummariesByMaterial = (
-  orders: TradingSummary[],
+  data: GameData,
   ticker: string,
 ) => {
-  indexOrdersByTicker(orders)
   const summaries: Record<string, TradingSummary> = {}
-  for (const [, cache] of caches) {
-    const summary = cache.get(ticker)
+  for (const cx of allExchanges) {
+    const summary = data.getTradingSummaryByCx(cx)?.get(ticker)
     if (summary) {
       summaries[summary.ExchangeCode] = summary
     }
   }
-  return ['AI1', 'CI1', 'IC1', 'NC1', 'CI2', 'NC2']
-    .map(cx => summaries[cx])
-    .filter(Boolean) as TradingSummary[]
+  return compact(allExchanges.map(cx => summaries[cx]))
 }
 
 export const calculateRecipeDailyProfit = (
-  allOrders: TradingSummary[],
+  data: GameData,
   recipe: Recipe,
   cx: string,
 ) => {
-  indexOrdersByTicker(allOrders)
   const maxRunsPerDay = Math.floor(86400000 / recipe.TimeMs)
   let inputCostPerRun = 0
   for (const input of recipe.Inputs) {
-    const order = caches.get(cx)?.get(input.Ticker)
+    const order = data.getTradingSummaryByCx(cx)?.get(input.Ticker)
     assert(order, `No trading summary for ${input.Ticker} in exchange ${cx}`)
     inputCostPerRun += order.Ask * input.Amount
   }
   let outputRevenuePerRun = 0
   for (const output of recipe.Outputs) {
-    const order = caches.get(cx)?.get(output.Ticker)
+    const order = data.getTradingSummaryByCx(cx)?.get(output.Ticker)
     assert(order, `No trading summary for ${output.Ticker} in exchange ${cx}`)
     outputRevenuePerRun += order.Bid * output.Amount
   }

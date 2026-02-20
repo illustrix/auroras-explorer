@@ -20,7 +20,7 @@ export const TradingSummary: FC<{ ticker: string }> = ({ ticker }) => {
   const { data } = useGameData()
   const orders = useMemo(() => {
     if (!data) return
-    return getTradingSummariesByMaterial(data.orders, ticker)
+    return getTradingSummariesByMaterial(data, ticker)
   }, [data, ticker])
 
   if (!orders) return null

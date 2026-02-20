@@ -16,7 +16,7 @@ export const RecipePreview: FC<{ recipe: Recipe }> = ({ recipe }) => {
   const { cx, setMat, setBuilding } = useExplorerContext()
   const dailyProfit = useMemo(() => {
     if (!data || !cx) return
-    return calculateRecipeDailyProfit(data.orders, recipe, cx)
+    return calculateRecipeDailyProfit(data, recipe, cx)
   }, [data, cx, recipe])
 
   const intraNeeds = useMemo(() => {

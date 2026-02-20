@@ -17,3 +17,16 @@ export interface UserInfo {
   lastContSyncAt: string
   lastContSyncStatus: string
 }
+
+export interface UserPlan {
+  id: string
+  username: string
+  groupId: string
+  planet: string
+  plan: string
+  createdAt: string
+  updatedAt: string
+  createdBy: string
+  inputs: string[]
+  outputs: string[]
+}
