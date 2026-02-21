@@ -8,6 +8,7 @@ import type {
   Recipe,
   TradingSummary,
   UserContract,
+  WorkforceNeed,
 } from './types'
 
 export class FioClient {
@@ -54,6 +55,9 @@ export class FioClient {
   getAllRecipes = this.createLoader<Recipe[]>('/recipes/allrecipes')
   getAllExchanges = this.createLoader<CommodityExchange[]>(
     '/global/comexexchanges',
+  )
+  getAllWorkforceNeeds = this.createLoader<WorkforceNeed[]>(
+    '/global/workforceneeds',
   )
   getAllBuildings = this.createLoader<Building[]>('/building/allbuildings')
   getLoginInfo = this.createLoader<string>('/auth')

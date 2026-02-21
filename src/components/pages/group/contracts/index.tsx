@@ -1,5 +1,6 @@
 import { isHotkeyPressed } from 'react-hotkeys-hook'
 import { DataTable } from '@/components/common/data-table'
+import { inspect } from '@/components/common/dialog'
 import { LoadingPage } from '@/components/common/loading'
 import { Pagination } from '@/components/common/pagination'
 import { ContractDetailInDataTable } from '@/components/game/contract/contract-detail'
@@ -33,6 +34,7 @@ const GroupContractsPageInner = () => {
               if (isHotkeyPressed('backquote')) {
                 e.preventDefault()
                 console.log(row.original)
+                inspect(row.original)
               }
             }}
           />

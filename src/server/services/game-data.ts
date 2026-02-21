@@ -13,6 +13,7 @@ export class GameData {
   exchanges: fio.CommodityExchange[] = []
   buildings: fio.Building[] = []
   buildingsByTicker: Record<string, fio.Building> = {}
+  workforceNeedsByType: Record<string, fio.WorkforceNeed> = {}
 
   set orders(orders: fio.TradingSummary[]) {
     this._orders = orders
@@ -138,6 +139,17 @@ export class GameDataService extends GameData {
         g.buildingsByTicker = {}
         for (const building of data) {
           g.buildingsByTicker[building.Ticker] = building
+        }
+      },
+    })
+
+    this.addLoader({
+      key: 'workforceNeeds',
+      fn: this.fioClient.getAllWorkforceNeeds,
+      apply: (g, data) => {
+        g.workforceNeedsByType = {}
+        for (const workforceNeed of data) {
+          g.workforceNeedsByType[workforceNeed.WorkforceType] = workforceNeed
         }
       },
     })

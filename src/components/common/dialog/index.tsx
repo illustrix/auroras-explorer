@@ -1,50 +1,12 @@
-import { DialogContent } from '@radix-ui/react-dialog'
-import {
-  type FC,
-  type ReactNode,
-  useCallback,
-  useEffect,
-  useState,
-} from 'react'
-import { dynamicCreateElement } from 'redyc'
-import { Dialog } from '@/components/ui/dialog'
+import type { ReactNode } from 'react'
+import { dialog as rawDialog } from 'redyc'
+import { JsonInspector } from '@/components/debug/json'
+import { AutoOpenDialog } from './auto-open-dialog'
 
-export const AutoOpenDialog: FC<{
-  children: ReactNode
-  onClose: () => void
-}> = ({ children, onClose }) => {
-  const [open, setOpen] = useState(false)
-
-  useEffect(() => {
-    setOpen(true)
-  }, [])
-
-  const handleOpenChange = useCallback(
-    (open: boolean) => {
-      if (!open) {
-        onClose()
-      }
-    },
-    [onClose],
-  )
-
-  return (
-    <Dialog open={open} onOpenChange={handleOpenChange}>
-      <DialogContent>{children}</DialogContent>
-    </Dialog>
-  )
+export const dialog = (el: ReactNode) => {
+  return rawDialog(<AutoOpenDialog>{el}</AutoOpenDialog>)
 }
 
-export const dialog = (content: ReactNode) => {
-  const dismiss = dynamicCreateElement(
-    <AutoOpenDialog
-      onClose={() => {
-        dismiss()
-      }}
-    >
-      {content}
-    </AutoOpenDialog>,
-  )
-
-  return dismiss
+export const inspect = (data: unknown) => {
+  return dialog(<JsonInspector data={data} />)
 }

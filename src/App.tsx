@@ -20,18 +20,18 @@ declare module '@tanstack/react-router' {
 
 function App() {
   return (
-    <DynamicCreateElementContainer>
-      <TooltipProvider>
-        <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <QueryClientProvider client={queryClient}>
+        <DynamicCreateElementContainer>
           <RouterProvider
             router={router}
             defaultPendingComponent={LoadingPage}
             defaultErrorComponent={ErrorPage}
             defaultNotFoundComponent={NotFoundPage}
           />
-        </QueryClientProvider>
-      </TooltipProvider>
-    </DynamicCreateElementContainer>
+        </DynamicCreateElementContainer>
+      </QueryClientProvider>
+    </TooltipProvider>
   )
 }
 

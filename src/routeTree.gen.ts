@@ -15,6 +15,7 @@ import { Route as ShipmentIndexRouteImport } from './routes/shipment/index'
 import { Route as ProductionLineIndexRouteImport } from './routes/production-line/index'
 import { Route as GroupChar123GroupIdChar125RouteRouteImport } from './routes/group/{-$groupId}/route'
 import { Route as GroupChar123GroupIdChar125PriceWatchIndexRouteImport } from './routes/group/{-$groupId}/price-watch/index'
+import { Route as GroupChar123GroupIdChar125PlanIndexRouteImport } from './routes/group/{-$groupId}/plan/index'
 import { Route as GroupChar123GroupIdChar125MembersIndexRouteImport } from './routes/group/{-$groupId}/members/index'
 import { Route as GroupChar123GroupIdChar125ContractsIndexRouteImport } from './routes/group/{-$groupId}/contracts/index'
 
@@ -50,6 +51,12 @@ const GroupChar123GroupIdChar125PriceWatchIndexRoute =
     path: '/price-watch/',
     getParentRoute: () => GroupChar123GroupIdChar125RouteRoute,
   } as any)
+const GroupChar123GroupIdChar125PlanIndexRoute =
+  GroupChar123GroupIdChar125PlanIndexRouteImport.update({
+    id: '/plan/',
+    path: '/plan/',
+    getParentRoute: () => GroupChar123GroupIdChar125RouteRoute,
+  } as any)
 const GroupChar123GroupIdChar125MembersIndexRoute =
   GroupChar123GroupIdChar125MembersIndexRouteImport.update({
     id: '/members/',
@@ -71,6 +78,7 @@ export interface FileRoutesByFullPath {
   '/shipment/': typeof ShipmentIndexRoute
   '/group/{-$groupId}/contracts/': typeof GroupChar123GroupIdChar125ContractsIndexRoute
   '/group/{-$groupId}/members/': typeof GroupChar123GroupIdChar125MembersIndexRoute
+  '/group/{-$groupId}/plan/': typeof GroupChar123GroupIdChar125PlanIndexRoute
   '/group/{-$groupId}/price-watch/': typeof GroupChar123GroupIdChar125PriceWatchIndexRoute
 }
 export interface FileRoutesByTo {
@@ -81,6 +89,7 @@ export interface FileRoutesByTo {
   '/shipment': typeof ShipmentIndexRoute
   '/group/{-$groupId}/contracts': typeof GroupChar123GroupIdChar125ContractsIndexRoute
   '/group/{-$groupId}/members': typeof GroupChar123GroupIdChar125MembersIndexRoute
+  '/group/{-$groupId}/plan': typeof GroupChar123GroupIdChar125PlanIndexRoute
   '/group/{-$groupId}/price-watch': typeof GroupChar123GroupIdChar125PriceWatchIndexRoute
 }
 export interface FileRoutesById {
@@ -92,6 +101,7 @@ export interface FileRoutesById {
   '/shipment/': typeof ShipmentIndexRoute
   '/group/{-$groupId}/contracts/': typeof GroupChar123GroupIdChar125ContractsIndexRoute
   '/group/{-$groupId}/members/': typeof GroupChar123GroupIdChar125MembersIndexRoute
+  '/group/{-$groupId}/plan/': typeof GroupChar123GroupIdChar125PlanIndexRoute
   '/group/{-$groupId}/price-watch/': typeof GroupChar123GroupIdChar125PriceWatchIndexRoute
 }
 export interface FileRouteTypes {
@@ -104,6 +114,7 @@ export interface FileRouteTypes {
     | '/shipment/'
     | '/group/{-$groupId}/contracts/'
     | '/group/{-$groupId}/members/'
+    | '/group/{-$groupId}/plan/'
     | '/group/{-$groupId}/price-watch/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -114,6 +125,7 @@ export interface FileRouteTypes {
     | '/shipment'
     | '/group/{-$groupId}/contracts'
     | '/group/{-$groupId}/members'
+    | '/group/{-$groupId}/plan'
     | '/group/{-$groupId}/price-watch'
   id:
     | '__root__'
@@ -124,6 +136,7 @@ export interface FileRouteTypes {
     | '/shipment/'
     | '/group/{-$groupId}/contracts/'
     | '/group/{-$groupId}/members/'
+    | '/group/{-$groupId}/plan/'
     | '/group/{-$groupId}/price-watch/'
   fileRoutesById: FileRoutesById
 }
@@ -179,6 +192,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GroupChar123GroupIdChar125PriceWatchIndexRouteImport
       parentRoute: typeof GroupChar123GroupIdChar125RouteRoute
     }
+    '/group/{-$groupId}/plan/': {
+      id: '/group/{-$groupId}/plan/'
+      path: '/plan'
+      fullPath: '/group/{-$groupId}/plan/'
+      preLoaderRoute: typeof GroupChar123GroupIdChar125PlanIndexRouteImport
+      parentRoute: typeof GroupChar123GroupIdChar125RouteRoute
+    }
     '/group/{-$groupId}/members/': {
       id: '/group/{-$groupId}/members/'
       path: '/members'
@@ -199,6 +219,7 @@ declare module '@tanstack/react-router' {
 interface GroupChar123GroupIdChar125RouteRouteChildren {
   GroupChar123GroupIdChar125ContractsIndexRoute: typeof GroupChar123GroupIdChar125ContractsIndexRoute
   GroupChar123GroupIdChar125MembersIndexRoute: typeof GroupChar123GroupIdChar125MembersIndexRoute
+  GroupChar123GroupIdChar125PlanIndexRoute: typeof GroupChar123GroupIdChar125PlanIndexRoute
   GroupChar123GroupIdChar125PriceWatchIndexRoute: typeof GroupChar123GroupIdChar125PriceWatchIndexRoute
 }
 
@@ -208,6 +229,8 @@ const GroupChar123GroupIdChar125RouteRouteChildren: GroupChar123GroupIdChar125Ro
       GroupChar123GroupIdChar125ContractsIndexRoute,
     GroupChar123GroupIdChar125MembersIndexRoute:
       GroupChar123GroupIdChar125MembersIndexRoute,
+    GroupChar123GroupIdChar125PlanIndexRoute:
+      GroupChar123GroupIdChar125PlanIndexRoute,
     GroupChar123GroupIdChar125PriceWatchIndexRoute:
       GroupChar123GroupIdChar125PriceWatchIndexRoute,
   }

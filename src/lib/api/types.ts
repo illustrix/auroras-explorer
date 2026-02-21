@@ -27,6 +27,7 @@ export interface UserPlan {
   createdAt: string
   updatedAt: string
   createdBy: string
+  buildings: string[]
   inputs: string[]
   outputs: string[]
 }

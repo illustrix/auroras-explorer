@@ -15,7 +15,11 @@ import { Services } from '../services'
 import { exchangeFromFioToken } from '../services/user'
 import { type ListContractsOptions, listContracts } from '../store/contract'
 import { getGroupUserInfos, getGroupUsernames } from '../store/group'
-import { listGroupPlans, setUserPlanetPlan } from '../store/plan'
+import {
+  deleteUserPlanetPlan,
+  listGroupPlans,
+  setUserPlanetPlan,
+} from '../store/plan'
 import { SetUserPlanetPlanSchema } from './schema'
 import { parseArray, parseRange } from './util'
 
@@ -141,6 +145,16 @@ const setupRoutes = (app: Hono<Env>) => {
       return c.json(plan)
     },
   )
+
+  app.delete('/api/group/:groupId/plan/:planId', async c => {
+    const groupId = c.req.param('groupId')
+    const planId = c.req.param('planId')
+    const user = c.get('user')
+    assert(user)
+
+    await deleteUserPlanetPlan(groupId, planId)
+    return c.json({ success: true })
+  })
 
   return app
 }

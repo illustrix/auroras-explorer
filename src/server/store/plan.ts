@@ -53,10 +53,15 @@ export const setUserPlanetPlan = async (
       plan: params.plan,
       updated_at: new Date(),
       created_by: operator,
+      buildings: info.buildings,
       inputs: info.inputs,
       outputs: info.outputs,
     })
     .returning('*')
 
   return toCamelCaseKeys(userPlan) as UserPlan
+}
+
+export const deleteUserPlanetPlan = async (groupId: string, planId: string) => {
+  await db('user_plans').where({ id: planId, group_id: groupId }).delete()
 }

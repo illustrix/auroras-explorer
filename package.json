@@ -11,7 +11,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@base-ui/react": "^1.1.0",
+    "@base-ui/react": "^1.2.0",
     "@dagrejs/dagre": "^1.1.8",
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/modifiers": "^9.0.0",
@@ -33,9 +33,11 @@
     "@radix-ui/react-toggle-group": "^1.1.11",
     "@radix-ui/react-tooltip": "^1.2.8",
     "@tabler/icons-react": "^3.36.1",
+    "@tanstack/react-form": "^1.28.3",
     "@tanstack/react-query": "^5.90.20",
     "@tanstack/react-router": "^1.157.3",
     "@tanstack/react-table": "^8.21.3",
+    "@uiw/react-json-view": "^2.0.0-alpha.41",
     "@xyflow/react": "^12.10.0",
     "@zenfs/core": "^2.4.4",
     "@zenfs/dom": "^1.2.7",

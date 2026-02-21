@@ -238,6 +238,58 @@ export interface Building {
   Timestamp: string
 }
 
+// {
+//   "Needs": [
+//     {
+//       "MaterialId": "9788890100fd2191fb065cb0d5e624cb",
+//       "MaterialName": "pioneerClothing",
+//       "MaterialTicker": "OVE",
+//       "MaterialCategory": "3f047ec3043bdd795fd7272d6be98799",
+//       "Amount": 0.5
+//     },
+//     {
+//       "MaterialId": "820d081096fd3e8fbd98b4344f6250ad",
+//       "MaterialName": "pioneerLuxuryClothing",
+//       "MaterialTicker": "PWO",
+//       "MaterialCategory": "8a0bd8b6a329c3d632da9da63c818b3d",
+//       "Amount": 0.200000002980232
+//     },
+//     {
+//       "MaterialId": "83dd61885cf6879ff49fe1419f068f10",
+//       "MaterialName": "rations",
+//       "MaterialTicker": "RAT",
+//       "MaterialCategory": "3f047ec3043bdd795fd7272d6be98799",
+//       "Amount": 4
+//     },
+//     {
+//       "MaterialId": "9842ad8d9dfdf8e4c2e80117e7b5ebaf",
+//       "MaterialName": "pioneerLuxuryDrink",
+//       "MaterialTicker": "COF",
+//       "MaterialCategory": "8a0bd8b6a329c3d632da9da63c818b3d",
+//       "Amount": 0.5
+//     },
+//     {
+//       "MaterialId": "4fca6f5b5e6c3b8a1b887c6dc99db146",
+//       "MaterialName": "drinkingWater",
+//       "MaterialTicker": "DW",
+//       "MaterialCategory": "3f047ec3043bdd795fd7272d6be98799",
+//       "Amount": 4
+//     }
+//   ],
+//   "WorkforceType": "PIONEER"
+// },
+export interface WorkforceNeedItem {
+  MaterialId: string
+  MaterialName: string
+  MaterialTicker: string
+  MaterialCategory: string
+  Amount: number
+}
+export interface WorkforceNeed {
+  Needs: WorkforceNeedItem[]
+  WorkforceType: string
+}
+
 // "Dependencies": [],
 // "Address": null,
 // "MaterialId": null,

@@ -5,6 +5,7 @@ import MdiAccountGroupOutline from '~icons/mdi/account-group-outline'
 import MdiCompassOutline from '~icons/mdi/compass-outline'
 import MdiDollar from '~icons/mdi/dollar'
 import MdiInvoiceListOutline from '~icons/mdi/invoice-list-outline'
+import MdiPlannerOutline from '~icons/mdi/planner-outline'
 
 export const useNavigates = () => {
   return [
@@ -41,6 +42,12 @@ export const useNavigates = () => {
       title: 'Price Watch',
       url: '/group/873386/price-watch/',
       icon: MdiDollar,
+      category: 'Group Tools',
+    },
+    {
+      title: 'Group Plan',
+      url: '/group/873386/plan/',
+      icon: MdiPlannerOutline,
       category: 'Group Tools',
     },
   ]
