@@ -1,6 +1,6 @@
+import type { GameData } from '@/server/services/game-data'
 import { assert } from './assert'
 import { filterTradingsByExchangePairs } from './fio/util'
-import type { GameData } from './store'
 
 export interface Acquisition {
   materialId: string

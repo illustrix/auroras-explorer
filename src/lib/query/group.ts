@@ -19,5 +19,6 @@ export const groupPlansQuery = (groupId: string) => {
       const res = await apiClient.get<UserPlan[]>(`/api/group/${groupId}/plans`)
       return res.data
     },
+    enabled: !!groupId,
   })
 }

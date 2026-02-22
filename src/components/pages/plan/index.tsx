@@ -1,12 +1,13 @@
 import { useQuery } from '@tanstack/react-query'
 import type { FC } from 'react'
 import { dialog } from 'redyc'
+import { inspect } from '@/components/common/dialog'
 import { AutoOpenDialog } from '@/components/common/dialog/auto-open-dialog'
 import { Button } from '@/components/ui/button'
 import { apiClient } from '@/lib/api'
 import { groupPlansQuery } from '@/lib/query/group'
 import MdiLink from '~icons/mdi/link'
-import { SetUserPlanDialog } from './set-user-plan'
+import { SetUserPlanDialogContent } from './set-user-plan'
 
 export const GroupPlanPage: FC<{
   groupId: string
@@ -16,7 +17,20 @@ export const GroupPlanPage: FC<{
     <div className="p-4">
       <div className="w-full flex justify-between ">
         <h1>Group Plans</h1>
-        <SetUserPlanDialog groupId={groupId} />
+        <Button
+          onClick={() => {
+            const ref = dialog(
+              <AutoOpenDialog>
+                <SetUserPlanDialogContent
+                  groupId={groupId}
+                  close={() => ref.current?.close()}
+                />
+              </AutoOpenDialog>,
+            )
+          }}
+        >
+          Add Plan
+        </Button>
       </div>
 
       <div className="mt-4">
@@ -43,14 +57,30 @@ export const GroupPlanPage: FC<{
               <div>{plan.username}</div>
               <Button
                 onClick={() => {
-                  dialog(
+                  inspect(plan)
+                }}
+              >
+                inspect
+              </Button>
+              <Button
+                onClick={() => {
+                  const ref = dialog(
                     <AutoOpenDialog>
-                      <div>123</div>
+                      <SetUserPlanDialogContent
+                        groupId={groupId}
+                        defaultValue={{
+                          plan: `https://prunplanner.org/shared/${plan.plan}`,
+                          username: plan.username,
+                        }}
+                        close={() => {
+                          ref.current?.close()
+                        }}
+                      />
                     </AutoOpenDialog>,
                   )
                 }}
               >
-                inspect
+                edit
               </Button>
               <Button
                 onClick={() => {
