@@ -38,7 +38,7 @@ export function DatePickerWithRange({
   setDate,
 }: DatePickerWithRangeProps) {
   const [open, setOpen] = useState(false)
-  const [value, setValue] = useState('today')
+  const [value, setValue] = useState('last-7-days')
 
   return (
     <Field className="w-60">

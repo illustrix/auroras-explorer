@@ -55,6 +55,7 @@ export const ContractPageTabs = () => {
             value={tab.value}
             onClick={() => {
               table.setColumnVisibility(tab.view)
+              table.resetPageIndex()
               if (tab.type) {
                 setType(tab.type)
               }

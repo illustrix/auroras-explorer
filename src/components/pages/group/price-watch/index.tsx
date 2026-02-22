@@ -15,7 +15,7 @@ export const GroupPriceWatchPage: FC<{
   groupId: string
 }> = ({ groupId }) => {
   const [date, setDate] = useState<DateRange | undefined>(() =>
-    getDateRange('today'),
+    getDateRange('last-7-days'),
   )
 
   const [usernames, setUsernames] = useState<string[]>([])

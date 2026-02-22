@@ -24,7 +24,7 @@ export const GroupContractsPageContextProvider: FC<{
   const [type, setType] = useState<string>('All')
   const [status, setStatus] = useState<string>('All')
   const [date, setDate] = useState<DateRange | undefined>(() =>
-    getDateRange('today'),
+    getDateRange('last-7-days'),
   )
   const [tags, setTags] = useState<string[]>([])
 

@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { useParams } from '@tanstack/react-router'
 import { type FC, useMemo } from 'react'
+import { Spinner } from '@/components/ui/spinner'
 import {
   Tooltip,
   TooltipContent,
@@ -28,7 +29,7 @@ export const ContractValidation: FC<{
     return validateContract(data, contract, plans)
   }, [data, contract, plans])
 
-  if (!result) return null
+  if (!result) return <Spinner />
 
   return (
     <div className="flex flex-col gap-2">

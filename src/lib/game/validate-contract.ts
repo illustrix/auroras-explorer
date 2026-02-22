@@ -74,7 +74,11 @@ export const validateContract = (
 
   const contractPlanetId = normalizeAddress(location)
 
-  const plan = allPlans.find(plan => plan.planetId === contractPlanetId)
+  const plan = allPlans.find(
+    plan =>
+      plan.planetId === contractPlanetId &&
+      contract.ProviderUsername.toUpperCase() === plan.username.toUpperCase(),
+  )
 
   if (!plan) {
     return result
