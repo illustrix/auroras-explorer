@@ -15,6 +15,7 @@ import {
 } from '@/components/ui/table'
 import { getTradingSummariesByMaterial } from '@/lib/calculation'
 import { useGameData } from '@/lib/store'
+import { Spinner } from '../ui/spinner'
 
 export const TradingSummary: FC<{ ticker: string }> = ({ ticker }) => {
   const { data } = useGameData()
@@ -89,22 +90,30 @@ export const TradingSummaryTooltip: FC<{
   ticker: string
   children: React.ReactNode
 }> = ({ ticker, children }) => {
-  const { data } = useGameData()
+  const { data, isLoading } = useGameData()
 
   const material = data?.materialsByTicker[ticker]
-
-  if (!material) return <>{children}</>
 
   return (
     <HoverCard>
       <HoverCardTrigger>{children}</HoverCardTrigger>
       <HoverCardContent className="min-w-180">
-        <div className="flex items-center gap-2 mb-4">
-          <div className="text-lg font-bold capitalize">
-            {snakeCase(material.Name).replaceAll('_', ' ')}
+        {isLoading ? (
+          <div className="flex items-center justify-center h-10 gap-4">
+            <Spinner /> Loading...
           </div>
-        </div>
-        <TradingSummary ticker={ticker} />
+        ) : (
+          <>
+            <div className="flex items-center gap-2 mb-4">
+              <div className="text-lg font-bold capitalize">
+                {material
+                  ? snakeCase(material.Name).replaceAll('_', ' ')
+                  : ticker}
+              </div>
+            </div>
+            <TradingSummary ticker={ticker} />
+          </>
+        )}
       </HoverCardContent>
     </HoverCard>
   )

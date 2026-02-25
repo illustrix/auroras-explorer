@@ -1,5 +1,4 @@
 import { type FC, useMemo } from 'react'
-import { TradingSummaryTooltip } from '@/components/game/trading-summary'
 import {
   calculateRecipeDailyProfit,
   getInfraNeedsForBuilding,
@@ -58,14 +57,12 @@ export const RecipePreview: FC<{ recipe: Recipe }> = ({ recipe }) => {
         {recipe.Inputs.map(input => {
           return (
             <div key={input.Ticker}>
-              <TradingSummaryTooltip ticker={input.Ticker}>
-                <MaterialTile
-                  ticker={input.Ticker}
-                  number={input.Amount}
-                  className="cursor-pointer hover:outline-2"
-                  onClick={() => setMat(input.Ticker)}
-                />
-              </TradingSummaryTooltip>
+              <MaterialTile
+                ticker={input.Ticker}
+                number={input.Amount}
+                className="cursor-pointer hover:outline-2"
+                onClick={() => setMat(input.Ticker)}
+              />
             </div>
           )
         })}
@@ -75,14 +72,12 @@ export const RecipePreview: FC<{ recipe: Recipe }> = ({ recipe }) => {
         {recipe.Outputs.map(output => {
           return (
             <div key={output.Ticker}>
-              <TradingSummaryTooltip ticker={output.Ticker}>
-                <MaterialTile
-                  ticker={output.Ticker}
-                  number={output.Amount}
-                  className="cursor-pointer hover:outline-2"
-                  onClick={() => setMat(output.Ticker)}
-                />
-              </TradingSummaryTooltip>
+              <MaterialTile
+                ticker={output.Ticker}
+                number={output.Amount}
+                className="cursor-pointer hover:outline-2"
+                onClick={() => setMat(output.Ticker)}
+              />
             </div>
           )
         })}

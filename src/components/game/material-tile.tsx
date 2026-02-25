@@ -2,6 +2,7 @@ import { type FC, type HTMLAttributes, memo } from 'react'
 import { cn } from '@/lib/utils'
 import '@/assets/css/materials.css'
 import { useGameData } from '@/lib/store'
+import { TradingSummaryTooltip } from './trading-summary'
 
 export interface MaterialTileProps extends HTMLAttributes<HTMLDivElement> {
   ticker: string
@@ -43,4 +44,12 @@ const _MaterialTile: FC<MaterialTileProps> = ({
   )
 }
 
-export const MaterialTile = memo(_MaterialTile)
+const MaterialTileBase = memo(_MaterialTile)
+
+export const MaterialTile: FC<MaterialTileProps> = props => {
+  return (
+    <TradingSummaryTooltip ticker={props.ticker}>
+      <MaterialTileBase {...props} />
+    </TradingSummaryTooltip>
+  )
+}
