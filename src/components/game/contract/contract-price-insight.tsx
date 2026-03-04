@@ -1,3 +1,4 @@
+import { uniqBy } from 'es-toolkit'
 import { type FC, useMemo } from 'react'
 import {
   Collapsible,
@@ -18,13 +19,16 @@ export const ContractPriceInsight: FC<{ contract: Contract }> = ({
     matcher.match()
     if (!['BUYING', 'SELLING'].includes(contract.Type)) return []
 
-    return matcher.tradings
+    return uniqBy(matcher.tradings, i => {
+      const price = (i.totalPrice / i.quantity) << 0
+      return i.ticker + i.currency + price.toString()
+    })
   }, [contract])
 
   return (
     <Collapsible>
       <CollapsibleTrigger asChild>
-        <div className="flex gap-4 border-b py-2">
+        <div className="flex gap-4 border-b py-2 max-w-full overflow-auto">
           <div className="text-sm text-gray-500 font-mono">
             {contract.ContractLocalId}
           </div>
