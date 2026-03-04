@@ -48,14 +48,14 @@ export const bulkSaveUserContracts = async (
   }
   for (const chunkedContracts of chunk(contractsToSave, 50)) {
     await db('fio_user_contracts')
-      .insert(chunkedContracts)
+      .insert(chunkedContracts.map(normalizeContractIdForContract))
       .onConflict(['ContractId', 'UserNameSubmitted'])
       .merge()
   }
 
   for (const chunkedConditions of chunk(conditionsToSave, 50)) {
     await db('fio_user_contract_conditions')
-      .insert(chunkedConditions)
+      .insert(chunkedConditions.map(normalizeContractIdForContract))
       .onConflict(['ConditionId', 'UserNameSubmitted'])
       .merge()
   }
@@ -398,6 +398,17 @@ export interface MergeAndSaveContractsResult {
 
 export const normalizeContractId = (contractId: string) =>
   contractId.includes('-') ? contractId.split('-')[0] : contractId
+
+export const normalizeContractIdForContract = <
+  T extends { ContractId: string },
+>(
+  contract: T,
+): T => {
+  return {
+    ...contract,
+    ContractId: normalizeContractId(contract.ContractId),
+  }
+}
 
 export const mergeAndSaveContracts = async (contracts: UserContract[]) => {
   const contractIds = contracts.map(c => normalizeContractId(c.ContractId))
