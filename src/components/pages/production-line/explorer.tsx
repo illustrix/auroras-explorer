@@ -89,10 +89,8 @@ const GraphView: FC = () => {
 
 const ProductionLineExplorerPageInner = () => {
   return (
-    <div className="p-4 size-full flex flex-col">
-      <div className="mt-4 w-full flex-1 border border-border rounded-md">
-        <GraphView />
-      </div>
+    <div className="size-full">
+      <GraphView />
     </div>
   )
 }

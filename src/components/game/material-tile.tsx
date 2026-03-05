@@ -1,7 +1,7 @@
 import { type FC, type HTMLAttributes, memo } from 'react'
-import { cn } from '@/lib/utils'
-import '@/assets/css/materials.css'
 import { useGameData } from '@/lib/store'
+import { cn } from '@/lib/utils'
+import { getMaterialCategoryTheme } from './material-category'
 import { TradingSummaryTooltip } from './trading-summary'
 
 export interface MaterialTileProps extends HTMLAttributes<HTMLDivElement> {
@@ -27,7 +27,7 @@ const _MaterialTile: FC<MaterialTileProps> = ({
         isBuilding
           ? 'building-tile'
           : mat
-            ? `material-category-${mat.CategoryName.toLowerCase().replace(/ /g, '-').replaceAll(/\(|\)/g, '')}`
+            ? getMaterialCategoryTheme(mat.CategoryName)
             : '',
         className,
       )}
@@ -44,7 +44,7 @@ const _MaterialTile: FC<MaterialTileProps> = ({
   )
 }
 
-const MaterialTileBase = memo(_MaterialTile)
+export const MaterialTileBase = memo(_MaterialTile)
 
 export const MaterialTile: FC<MaterialTileProps> = props => {
   return (

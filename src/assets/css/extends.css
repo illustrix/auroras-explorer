@@ -1,0 +1,17 @@
+@theme inline {
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+  --color-info: var(--info);
+}
+
+:root {
+  --warning: oklch(0.85 0.2 90);
+  --success: oklch(0.6 0.2 140);
+  --info: oklch(0.6 0.2 250);
+}
+
+.dark {
+  --warning: oklch(0.85 0.2 90);
+  --success: oklch(0.6 0.2 140);
+  --info: oklch(0.6 0.2 250);
+}

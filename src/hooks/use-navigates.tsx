@@ -4,6 +4,7 @@ import HugeiconsCargoShip from '~icons/hugeicons/cargo-ship'
 import MdiAccountGroupOutline from '~icons/mdi/account-group-outline'
 import MdiCompassOutline from '~icons/mdi/compass-outline'
 import MdiDollar from '~icons/mdi/dollar'
+import MdiFileDocumentOutline from '~icons/mdi/file-document-outline'
 import MdiInvoiceListOutline from '~icons/mdi/invoice-list-outline'
 import MdiPlannerOutline from '~icons/mdi/planner-outline'
 
@@ -11,7 +12,7 @@ export const useNavigates = () => {
   return [
     {
       title: 'Shipment',
-      url: '/shipment',
+      url: '/shipment/',
       icon: HugeiconsCargoShip,
       preview: ShipmentPreviewImg,
       description:
@@ -24,6 +25,13 @@ export const useNavigates = () => {
       icon: MdiCompassOutline,
       preview: ProductionLinePreviewImg,
       description: 'Visualization of production lines and their dependencies.',
+      category: 'Explorer Tools',
+    },
+    {
+      title: 'Catalog',
+      url: '/catalog/',
+      icon: MdiFileDocumentOutline,
+      description: 'Browse all materials in the game and their details.',
       category: 'Explorer Tools',
     },
     {

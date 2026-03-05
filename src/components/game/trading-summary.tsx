@@ -1,5 +1,5 @@
 import { snakeCase } from 'es-toolkit'
-import { type FC, useMemo } from 'react'
+import { type FC, useCallback, useMemo } from 'react'
 import {
   HoverCard,
   HoverCardContent,
@@ -17,12 +17,46 @@ import { getTradingSummariesByMaterial } from '@/lib/calculation'
 import { useGameData } from '@/lib/store'
 import { Spinner } from '../ui/spinner'
 
-export const TradingSummary: FC<{ ticker: string }> = ({ ticker }) => {
+export const TradingSummary: FC<{ ticker: string; thin?: boolean }> = ({
+  ticker,
+  thin,
+}) => {
   const { data } = useGameData()
   const orders = useMemo(() => {
     if (!data) return
-    return getTradingSummariesByMaterial(data, ticker)
-  }, [data, ticker])
+    const orders = getTradingSummariesByMaterial(data, ticker)
+    if (thin) return orders.slice(0, 4)
+    return orders
+  }, [data, ticker, thin])
+
+  const formatNumber = useCallback(
+    (num: number) => {
+      if (thin) {
+        if (num >= 1e9) return `${(num / 1e9).toFixed(1)}B`
+        if (num >= 1e6) return `${(num / 1e6).toFixed(1)}M`
+        if (num >= 1e3) return `${(num / 1e3).toFixed(1)}K`
+      }
+      return num.toLocaleString()
+    },
+    [thin],
+  )
+
+  const maxAsk = useMemo(() => {
+    if (!orders) return 0
+    return Math.max(...orders.map(o => o.Ask || 0))
+  }, [orders])
+  const minAsk = useMemo(() => {
+    if (!orders) return 0
+    return Math.min(...orders.map(o => o.Ask || Infinity))
+  }, [orders])
+  const maxBid = useMemo(() => {
+    if (!orders) return 0
+    return Math.max(...orders.map(o => o.Bid || 0))
+  }, [orders])
+  const minBid = useMemo(() => {
+    if (!orders) return 0
+    return Math.min(...orders.map(o => o.Bid || Infinity))
+  }, [orders])
 
   if (!orders) return null
 
@@ -42,8 +76,17 @@ export const TradingSummary: FC<{ ticker: string }> = ({ ticker }) => {
           {orders.map(order => (
             <TableCell key={order.ExchangeCode}>
               {order.Ask ? (
-                <span className="text-sm text-destructive">
-                  ${order.Ask?.toLocaleString()}
+                <span
+                  className="text-sm text-destructive"
+                  style={{
+                    opacity:
+                      maxAsk === minAsk
+                        ? 1
+                        : 0.5 +
+                          (0.5 * (maxAsk - order.Ask)) / (maxAsk - minAsk),
+                  }}
+                >
+                  ${formatNumber(order.Ask)}
                 </span>
               ) : (
                 <span className="text-muted-foreground">N/A</span>
@@ -56,8 +99,17 @@ export const TradingSummary: FC<{ ticker: string }> = ({ ticker }) => {
           {orders.map(order => (
             <TableCell key={order.ExchangeCode}>
               {order.Bid ? (
-                <span className="text-sm text-success">
-                  ${order.Bid?.toLocaleString()}
+                <span
+                  className="text-sm text-success"
+                  style={{
+                    opacity:
+                      maxBid === minBid
+                        ? 1
+                        : 0.5 +
+                          (0.5 * (order.Bid - minBid)) / (maxBid - minBid),
+                  }}
+                >
+                  ${formatNumber(order.Bid)}
                 </span>
               ) : (
                 <span className="text-muted-foreground">N/A</span>
@@ -69,7 +121,7 @@ export const TradingSummary: FC<{ ticker: string }> = ({ ticker }) => {
           <TableCell>Supply</TableCell>
           {orders.map(order => (
             <TableCell key={order.ExchangeCode}>
-              {order.Supply?.toLocaleString()}
+              {formatNumber(order.Supply)}
             </TableCell>
           ))}
         </TableRow>
@@ -77,7 +129,7 @@ export const TradingSummary: FC<{ ticker: string }> = ({ ticker }) => {
           <TableCell>Demand</TableCell>
           {orders.map(order => (
             <TableCell key={order.ExchangeCode}>
-              {order.Demand?.toLocaleString()}
+              {formatNumber(order.Demand)}
             </TableCell>
           ))}
         </TableRow>
