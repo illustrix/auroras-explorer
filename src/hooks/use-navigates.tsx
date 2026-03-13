@@ -35,6 +35,13 @@ export const useNavigates = () => {
       category: 'Explorer Tools',
     },
     {
+      title: 'Planner',
+      url: '/planner/',
+      icon: MdiPlannerOutline,
+      description: 'Plan your production and transportation.',
+      category: 'Explorer Tools',
+    },
+    {
       title: 'Group Members',
       url: '/group/873386/members/',
       icon: MdiAccountGroupOutline,
