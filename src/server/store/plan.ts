@@ -46,11 +46,11 @@ export const addGroupPlan = async (
     })
   })
 
-  if (plan.baseplanner.planet_id !== params.planetId) {
+  if (plan.plan_details.planet_natural_id !== params.planetId) {
     throw new AppError('Planet ID does not match the plan data')
   }
 
-  const planInfo = getPlanInfo(plan.baseplanner)
+  const planInfo = getPlanInfo(plan.plan_details)
 
   const [groupPlan] = await db('group_plans')
     .insert({
@@ -58,8 +58,8 @@ export const addGroupPlan = async (
       group_id: params.groupId,
       planet_id: params.planetId,
       plan_id: params.planId,
-      plan_name: plan.baseplanner.name,
-      data: plan.baseplanner,
+      plan_name: plan.plan_details.plan_name,
+      data: plan.plan_details,
       buildings: planInfo.buildings,
       inputs: planInfo.inputs,
       outputs: planInfo.outputs,

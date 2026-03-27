@@ -1,4 +1,4 @@
-import type { BasePlanner } from './types'
+import type { PlanDetails } from './types'
 
 export const parseRecipeId = (recipeId: string) => {
   const [building, recipe] = recipeId.split('#')
@@ -29,12 +29,12 @@ export const parseRecipeId = (recipeId: string) => {
   }
 }
 
-export const getPlanInfo = (plan: BasePlanner) => {
+export const getPlanInfo = (plan: PlanDetails) => {
   const inputs = new Set<string>()
   const outputs = new Set<string>()
   const buildings = new Set<string>()
 
-  for (const building of plan.baseplanner_data.buildings) {
+  for (const building of plan.plan_data.buildings) {
     for (const recipe of building.active_recipes) {
       const r = parseRecipeId(recipe.recipeid)
       buildings.add(r.building)

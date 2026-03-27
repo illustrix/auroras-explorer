@@ -7,6 +7,6 @@ const plannerClient = axios.create({
 })
 
 export const getSharedPlan = async (id: string) => {
-  const res = await plannerClient.get<SharedPlan>(`/shared/${id}`)
+  const res = await plannerClient.get<SharedPlan>(`/planning/shared/${id}`)
   return res.data
 }

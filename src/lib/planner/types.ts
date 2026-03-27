@@ -1,50 +1,30 @@
 export interface SharedPlan {
   uuid: string
-  created_date: string
+  plan_details: PlanDetails
   view_count: number
-  baseplanner: BasePlanner
+  created_at: string
 }
 
-export interface BasePlanner {
-  name: string
+export interface PlanDetails {
   uuid: string
-  planet_id: string
-  faction: string
-  permits_used: number
-  permits_total: number
-  override_empire: boolean
-  baseplanner_data: BasePlannerData
+  plan_name: string
+  planet_natural_id: string
+  plan_permits_used: number
+  plan_cogc: string
+  plan_corphq: boolean
+  plan_data: PlanData
   empires: Empire[]
 }
 
-export interface BasePlannerData {
-  planet: Planet
-  infrastructure: Infrastructure[]
-  buildings: Building[]
-}
-
-export interface Planet {
-  planetid: string
-  permits: number
-  corphq: boolean
-  cogc: string
+export interface PlanData {
   experts: Expert[]
+  buildings: Building[]
   workforce: Workforce[]
+  infrastructure: Infrastructure[]
 }
 
 export interface Expert {
   type: string
-  amount: number
-}
-
-export interface Workforce {
-  type: string
-  lux1: boolean
-  lux2: boolean
-}
-
-export interface Infrastructure {
-  building: string
   amount: number
 }
 
@@ -55,15 +35,44 @@ export interface Building {
 }
 
 export interface ActiveRecipe {
-  recipeid: string
   amount: number
+  recipeid: string
+}
+
+export interface Workforce {
+  lux1: boolean
+  lux2: boolean
+  type: string
+}
+
+export interface Infrastructure {
+  amount: number
+  building: string
 }
 
 export interface Empire {
-  faction: string
-  permits_used: number
-  permits_total: number
   uuid: string
-  name: string
-  use_fio_storage: boolean
+  empire_name: string
+  empire_faction: string
+  empire_permits_used: number
+  empire_permits_total: number
+  cx: Cx
+}
+
+export interface Cx {
+  uuid: string
+  cx_name: string
+  cx_data: CxData
+}
+
+export interface CxData {
+  cx_empire: CxEmpire[]
+  cx_planets: unknown[]
+  ticker_empire: unknown[]
+  ticker_planets: unknown[]
+}
+
+export interface CxEmpire {
+  type: string
+  exchange: string
 }
