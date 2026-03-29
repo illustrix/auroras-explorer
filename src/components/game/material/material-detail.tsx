@@ -1,10 +1,11 @@
 import chroma from 'chroma-js'
-import { snakeCase, uniq } from 'es-toolkit'
+import { uniq } from 'es-toolkit'
 import { type FC, memo, useMemo } from 'react'
 import {
   getRecipesByInput,
   getRecipesByOutput,
 } from '@/components/pages/production-line/graph'
+import { formatMaterialName } from '@/lib/game/format'
 // import { RecipePreview } from '@/components/pages/production-line/recipe-preview'
 import { useGameData } from '@/lib/store'
 import { cn } from '@/lib/utils'
@@ -65,11 +66,7 @@ const _MaterialDetail: FC<MaterialDetailProps> = ({
           }}
         >
           <div className="text-lg font-bold capitalize">
-            {snakeCase(mat.Name)
-              .replaceAll('_', ' ')
-              .split(' ')
-              .map(w => w[0].toUpperCase() + w.slice(1))
-              .join(' ')}
+            {formatMaterialName(mat.Name)}
           </div>
         </div>
 

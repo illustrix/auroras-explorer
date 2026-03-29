@@ -14,6 +14,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ShipmentIndexRouteImport } from './routes/shipment/index'
 import { Route as ProductionLineIndexRouteImport } from './routes/production-line/index'
 import { Route as GroupIndexRouteImport } from './routes/group/index'
+import { Route as ConfigTransformIndexRouteImport } from './routes/config-transform/index'
 import { Route as CatalogIndexRouteImport } from './routes/catalog/index'
 import { Route as GroupChar123GroupIdChar125RouteRouteImport } from './routes/group/{-$groupId}/route'
 import { Route as GroupChar123GroupIdChar125PriceWatchIndexRouteImport } from './routes/group/{-$groupId}/price-watch/index'
@@ -44,6 +45,11 @@ const ProductionLineIndexRoute = ProductionLineIndexRouteImport.update({
 const GroupIndexRoute = GroupIndexRouteImport.update({
   id: '/group/',
   path: '/group/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConfigTransformIndexRoute = ConfigTransformIndexRouteImport.update({
+  id: '/config-transform/',
+  path: '/config-transform/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CatalogIndexRoute = CatalogIndexRouteImport.update({
@@ -87,6 +93,7 @@ export interface FileRoutesByFullPath {
   '/error': typeof ErrorRoute
   '/group/{-$groupId}': typeof GroupChar123GroupIdChar125RouteRouteWithChildren
   '/catalog/': typeof CatalogIndexRoute
+  '/config-transform/': typeof ConfigTransformIndexRoute
   '/group/': typeof GroupIndexRoute
   '/production-line/': typeof ProductionLineIndexRoute
   '/shipment/': typeof ShipmentIndexRoute
@@ -100,6 +107,7 @@ export interface FileRoutesByTo {
   '/error': typeof ErrorRoute
   '/group/{-$groupId}': typeof GroupChar123GroupIdChar125RouteRouteWithChildren
   '/catalog': typeof CatalogIndexRoute
+  '/config-transform': typeof ConfigTransformIndexRoute
   '/group': typeof GroupIndexRoute
   '/production-line': typeof ProductionLineIndexRoute
   '/shipment': typeof ShipmentIndexRoute
@@ -114,6 +122,7 @@ export interface FileRoutesById {
   '/error': typeof ErrorRoute
   '/group/{-$groupId}': typeof GroupChar123GroupIdChar125RouteRouteWithChildren
   '/catalog/': typeof CatalogIndexRoute
+  '/config-transform/': typeof ConfigTransformIndexRoute
   '/group/': typeof GroupIndexRoute
   '/production-line/': typeof ProductionLineIndexRoute
   '/shipment/': typeof ShipmentIndexRoute
@@ -129,6 +138,7 @@ export interface FileRouteTypes {
     | '/error'
     | '/group/{-$groupId}'
     | '/catalog/'
+    | '/config-transform/'
     | '/group/'
     | '/production-line/'
     | '/shipment/'
@@ -142,6 +152,7 @@ export interface FileRouteTypes {
     | '/error'
     | '/group/{-$groupId}'
     | '/catalog'
+    | '/config-transform'
     | '/group'
     | '/production-line'
     | '/shipment'
@@ -155,6 +166,7 @@ export interface FileRouteTypes {
     | '/error'
     | '/group/{-$groupId}'
     | '/catalog/'
+    | '/config-transform/'
     | '/group/'
     | '/production-line/'
     | '/shipment/'
@@ -169,6 +181,7 @@ export interface RootRouteChildren {
   ErrorRoute: typeof ErrorRoute
   GroupChar123GroupIdChar125RouteRoute: typeof GroupChar123GroupIdChar125RouteRouteWithChildren
   CatalogIndexRoute: typeof CatalogIndexRoute
+  ConfigTransformIndexRoute: typeof ConfigTransformIndexRoute
   GroupIndexRoute: typeof GroupIndexRoute
   ProductionLineIndexRoute: typeof ProductionLineIndexRoute
   ShipmentIndexRoute: typeof ShipmentIndexRoute
@@ -209,6 +222,13 @@ declare module '@tanstack/react-router' {
       path: '/group'
       fullPath: '/group/'
       preLoaderRoute: typeof GroupIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/config-transform/': {
+      id: '/config-transform/'
+      path: '/config-transform'
+      fullPath: '/config-transform/'
+      preLoaderRoute: typeof ConfigTransformIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/catalog/': {
@@ -286,6 +306,7 @@ const rootRouteChildren: RootRouteChildren = {
   GroupChar123GroupIdChar125RouteRoute:
     GroupChar123GroupIdChar125RouteRouteWithChildren,
   CatalogIndexRoute: CatalogIndexRoute,
+  ConfigTransformIndexRoute: ConfigTransformIndexRoute,
   GroupIndexRoute: GroupIndexRoute,
   ProductionLineIndexRoute: ProductionLineIndexRoute,
   ShipmentIndexRoute: ShipmentIndexRoute,

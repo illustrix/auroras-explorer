@@ -8,6 +8,7 @@ import MdiFileDocumentOutline from '~icons/mdi/file-document-outline'
 import MdiInvoiceListOutline from '~icons/mdi/invoice-list-outline'
 import MdiListBoxOutline from '~icons/mdi/list-box-outline'
 import MdiPlannerOutline from '~icons/mdi/planner-outline'
+import MdiSwapHorizontal from '~icons/mdi/swap-horizontal'
 
 export const useGroupTools = () => {
   return [
@@ -73,5 +74,12 @@ export const useNavigates = () => {
       category: 'Group Tools',
     },
     ...groupTools,
+    {
+      title: 'Config Transform',
+      url: '/config-transform/',
+      icon: MdiSwapHorizontal,
+      description: 'Transform 3rd party config JSON into target format.',
+      category: 'Misc Tools',
+    },
   ]
 }
