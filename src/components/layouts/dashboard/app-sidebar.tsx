@@ -1,5 +1,6 @@
 import { IconInnerShadowTop } from '@tabler/icons-react'
 import { Link } from '@tanstack/react-router'
+import { useTranslation } from 'react-i18next'
 import { Time } from '@/components/common/time'
 import { Button } from '@/components/ui/button'
 import {
@@ -21,6 +22,7 @@ import TablerBrandGithub from '~icons/tabler/brand-github'
 import { NavMain } from './nav-main'
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const { t } = useTranslation()
   const dataUpdatedAt = useLocalStorage<number>('ct:orders')
   const navigates = useNavigates()
   const identity = useIdentity()
@@ -50,30 +52,29 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarFooter>
         <div className="text-muted-foreground flex flex-col text-xs gap-4">
           <div>
-            <span>Data Updated:</span>{' '}
-            {dataUpdatedAt ? <Time time={dataUpdatedAt} /> : 'N/A'}
+            <span>{t('ui.sidebarFooter.dataUpdated')}</span>{' '}
+            {dataUpdatedAt ? <Time time={dataUpdatedAt} /> : t('ui.sidebarFooter.na')}
           </div>
           <span>
-            Data Source:{' '}
+            {t('ui.sidebarFooter.dataSource')}{' '}
             <a
               href="https://fio.fnar.net/"
               target="_blank"
               rel="noreferrer"
               className="underline"
             >
-              FIO API
+              {t('ui.sidebarFooter.fioApi')}
             </a>
           </span>
           <div>
-            <div>Feedback Welcome!</div>
+            <div>{t('ui.sidebarFooter.feedbackWelcome')}</div>
             <a
               href="https://discord.gg/BMtwkgUY6D"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-1 underline"
             >
-              <TablerBrandDiscord className="inline-block" /> PrUn Community
-              Tools #auroras-explorer
+              <TablerBrandDiscord className="inline-block" /> {t('ui.sidebarFooter.prunCommunity')}
             </a>
             <a
               href="https://github.com/illustrix/auroras-explorer"
@@ -81,14 +82,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               rel="noreferrer"
               className="flex items-center gap-1 underline"
             >
-              <TablerBrandGithub className="inline-block" /> GitHub
+              <TablerBrandGithub className="inline-block" /> {t('ui.sidebarFooter.github')}
             </a>
           </div>
         </div>
 
         {identity.data && (
           <div className="mt-4 text-xs text-muted-foreground gap-1 flex items-center">
-            Logged in as
+            {t('ui.sidebarFooter.loggedInAs')}
             <span className="underline">{identity.data.username}</span>
             <Button
               type="button"
@@ -101,7 +102,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               variant="ghost"
             >
               <MdiLogoutVariant />
-              logout
+              {t('ui.sidebarFooter.logout')}
             </Button>
           </div>
         )}

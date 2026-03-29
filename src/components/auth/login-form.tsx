@@ -1,5 +1,6 @@
 import { useMutation } from '@tanstack/react-query'
 import { type FC, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button'
 import {
   Card,
@@ -26,6 +27,7 @@ export interface LoginFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export const LoginForm: FC<LoginFormProps> = ({ className, ...props }) => {
   const [token, setToken] = useState('')
+  const { t } = useTranslation()
 
   const exchangeTokenMutation = useMutation({
     mutationFn: async (fioToken: string) => {
@@ -50,10 +52,9 @@ export const LoginForm: FC<LoginFormProps> = ({ className, ...props }) => {
     >
       <Card className="min-w-md">
         <CardHeader>
-          <CardTitle>This Page Requires Authorization</CardTitle>
+          <CardTitle>{t('login.title')}</CardTitle>
           <CardDescription>
-            We will use FIO token to identify your account. Please enter your
-            FIO token to continue.
+            {t('login.description')}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -65,7 +66,7 @@ export const LoginForm: FC<LoginFormProps> = ({ className, ...props }) => {
           >
             <FieldGroup>
               <Field>
-                <FieldLabel htmlFor="fioToken">FIO Token</FieldLabel>
+                <FieldLabel htmlFor="fioToken">{t('login.fioToken')}</FieldLabel>
                 <Input
                   id="fioToken"
                   type="text"
@@ -79,7 +80,7 @@ export const LoginForm: FC<LoginFormProps> = ({ className, ...props }) => {
                     {exchangeTokenMutation.error instanceof AppError ? (
                       exchangeTokenMutation.error.message
                     ) : (
-                      <p>A network error occurred. Please try again.</p>
+                      <p>{t('login.networkError')}</p>
                     )}
                   </FieldDescription>
                 )}
@@ -89,20 +90,20 @@ export const LoginForm: FC<LoginFormProps> = ({ className, ...props }) => {
                 {exchangeTokenMutation.isPending ? (
                   <Button type="submit">
                     <Spinner data-icon="inline-start" />
-                    Loading...
+                    {t('login.loading')}
                   </Button>
                 ) : (
-                  <Button type="submit">Authorize</Button>
+                  <Button type="submit">{t('login.button')}</Button>
                 )}
                 <FieldDescription className="text-center">
-                  We will never share your token with anyone else.
+                  {t('login.privacy')}
                   <br />
                   <a
                     href="https://fio.fnar.net/settings"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Get your FIO token
+                    {t('login.getToken')}
                   </a>
                 </FieldDescription>
               </Field>

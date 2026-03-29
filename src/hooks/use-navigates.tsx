@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import ProductionLinePreviewImg from '@/assets/images/production-line-preview.webp'
 import ShipmentPreviewImg from '@/assets/images/shipment-preview.webp'
 import HugeiconsCargoShip from '~icons/hugeicons/cargo-ship'
@@ -10,67 +11,68 @@ import MdiListBoxOutline from '~icons/mdi/list-box-outline'
 import MdiPlannerOutline from '~icons/mdi/planner-outline'
 
 export const useGroupTools = () => {
+  const { t } = useTranslation()
   return [
     {
-      title: 'Group Members',
+      title: t('ui.sidebar.groupMembers'),
       url: '/group/{-$groupId}/members/',
       icon: MdiAccountGroupOutline,
-      category: 'Group Tools',
+      category: t('ui.sidebar.groupTools'),
     },
     {
-      title: 'Group Contracts',
+      title: t('ui.sidebar.groupContracts'),
       url: '/group/{-$groupId}/contracts/',
       icon: MdiInvoiceListOutline,
-      category: 'Group Tools',
+      category: t('ui.sidebar.groupTools'),
     },
     {
-      title: 'Price Watch',
+      title: t('ui.sidebar.priceWatch'),
       url: '/group/{-$groupId}/price-watch/',
       icon: MdiDollar,
-      category: 'Group Tools',
+      category: t('ui.sidebar.groupTools'),
     },
     {
-      title: 'Group Plan',
+      title: t('ui.sidebar.groupPlan'),
       url: '/group/{-$groupId}/plan/',
       icon: MdiPlannerOutline,
-      category: 'Group Tools',
+      category: t('ui.sidebar.groupTools'),
     },
   ]
 }
 
 export const useNavigates = () => {
+  const { t } = useTranslation()
   const groupTools = useGroupTools()
 
   return [
     {
-      title: 'Shipment',
+      title: t('tools.shipment.title'),
       url: '/shipment/',
       icon: HugeiconsCargoShip,
       preview: ShipmentPreviewImg,
-      description:
-        'Calculation of optimal transportation plans for commodities between exchanges.',
-      category: 'Explorer Tools',
+      description: t('tools.shipment.description'),
+      category: t('ui.sidebar.explorerTools'),
     },
     {
-      title: 'Production Line',
+      title: t('tools.productionLine.title'),
       url: '/production-line/',
       icon: MdiCompassOutline,
       preview: ProductionLinePreviewImg,
-      description: 'Visualization of production lines and their dependencies.',
-      category: 'Explorer Tools',
+      description: t('tools.productionLine.description'),
+      category: t('ui.sidebar.explorerTools'),
     },
     {
-      title: 'Catalog',
+      title: t('ui.sidebar.catalog'),
       url: '/catalog/',
       icon: MdiFileDocumentOutline,
-      description: 'Browse all materials in the game and their details.',
-      category: 'Explorer Tools',
+      description: t('ui.sidebar.catalogDescription'),
+      category: t('ui.sidebar.explorerTools'),
     },
     {
-      title: 'Group List',
+      title: t('ui.sidebar.groupList'),
       url: '/group/',
       icon: MdiListBoxOutline,
-      category: 'Group Tools',
+      category: t('ui.sidebar.groupTools'),
     },
     ...groupTools,
   ]

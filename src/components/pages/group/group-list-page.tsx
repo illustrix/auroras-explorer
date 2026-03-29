@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { PlusIcon } from 'lucide-react'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { LoadingPage } from '@/components/common/loading'
 import { Button } from '@/components/ui/button'
 import type { Group } from '@/lib/api/types'
@@ -11,6 +12,7 @@ import { GroupEmptyState } from './management/group-empty-state'
 import { GroupFormDialog } from './management/group-form-dialog'
 
 const GroupListPage = () => {
+  const { t } = useTranslation()
   const identity = useIdentity()
   const groupsQuery = useQuery(myGroupsQuery())
   const [dialogOpen, setDialogOpen] = useState(false)
@@ -36,13 +38,9 @@ const GroupListPage = () => {
     <div className="p-4 flex flex-col gap-4">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Groups List</h1>
+          <h1 className="text-2xl font-bold">{t('groupList.title')}</h1>
           <p className="text-muted-foreground text-sm mt-2">
-            Hi, {identity.data?.username}. This is a collaboration tool for
-            viewing and managing contracts and plans with your group members.
-            You can create a group on FIO. Create a token and set it here, then
-            you can view the group's contracts and plans, and manage them
-            together.
+            {t('groupList.welcome', { username: identity.data?.username })}
           </p>
         </div>
       </div>
@@ -59,7 +57,7 @@ const GroupListPage = () => {
 
       <Button onClick={openCreate} variant="outline">
         <PlusIcon className="mr-1 size-4" />
-        New Group
+        {t('groupList.newGroup')}
       </Button>
 
       <GroupFormDialog

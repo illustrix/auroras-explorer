@@ -4,6 +4,7 @@ import {
   useReactTable,
 } from '@tanstack/react-table'
 import { type FC, type ReactNode, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useGameData } from '@/lib/store'
 import { type Acquisition, getBestAcquisitions } from '@/lib/trade'
 import { ShipmentContext } from './context'
@@ -12,6 +13,7 @@ import { getColumns } from './result-table/columns'
 export const ShipmentContextProvider: FC<{ children: ReactNode }> = ({
   children,
 }) => {
+  const { t } = useTranslation()
   const { data } = useGameData()
 
   const [fromCX, setFromCX] = useState<string>('NC1')
@@ -30,8 +32,8 @@ export const ShipmentContextProvider: FC<{ children: ReactNode }> = ({
     )
   }, [data, fromCX, toCX, weightCapacity, volumeCapacity])
   const columns = useMemo(() => {
-    return getColumns({ fromCX, toCX }) as ColumnDef<Acquisition>[]
-  }, [fromCX, toCX])
+    return getColumns({ fromCX, toCX, t }) as ColumnDef<Acquisition>[]
+  }, [fromCX, toCX, t])
 
   const [rowSelection, setRowSelection] = useState({})
   const table = useReactTable({

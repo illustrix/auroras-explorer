@@ -1,5 +1,6 @@
 import copy from 'copy-to-clipboard'
 import { useCallback, useState, useTransition } from 'react'
+import { useTranslation } from 'react-i18next'
 import { GameDataLoadingWrapper } from '@/components/common/game-data-loading-wrapper'
 import { CommodityExchangeSelect } from '@/components/game/select/cx-select'
 import { Button } from '@/components/ui/button'
@@ -20,6 +21,7 @@ import { ShipmentResultTable } from './result-table'
 import { getRows } from './result-table/columns'
 
 const ShipmentPageInner = () => {
+  const { t } = useTranslation()
   const {
     fromCX,
     setFromCX,
@@ -48,7 +50,7 @@ const ShipmentPageInner = () => {
     <div className="p-8">
       <div className="flex gap-4 items-end">
         <Field className="w-60">
-          <FieldLabel>Source Commodity Exchange</FieldLabel>
+          <FieldLabel>{t('tools.shipment.sourceCX')}</FieldLabel>
           <CommodityExchangeSelect
             value={fromCX}
             onValueChange={value => {
@@ -74,7 +76,7 @@ const ShipmentPageInner = () => {
         </Button>
 
         <Field className="w-60">
-          <FieldLabel>Target Commodity Exchange</FieldLabel>
+          <FieldLabel>{t('tools.shipment.targetCX')}</FieldLabel>
           <CommodityExchangeSelect
             value={toCX}
             onValueChange={value => {
@@ -86,7 +88,7 @@ const ShipmentPageInner = () => {
         </Field>
 
         <Field className="w-40">
-          <FieldLabel>Weight Capacity</FieldLabel>
+          <FieldLabel>{t('tools.shipment.weightCapacity')}</FieldLabel>
 
           <InputGroup>
             <InputGroupInput
@@ -108,7 +110,7 @@ const ShipmentPageInner = () => {
         </Field>
 
         <Field className="w-40">
-          <FieldLabel>Volume Capacity</FieldLabel>
+          <FieldLabel>{t('tools.shipment.volumeCapacity')}</FieldLabel>
 
           <InputGroup>
             <InputGroupInput
@@ -130,17 +132,17 @@ const ShipmentPageInner = () => {
         </Field>
         <div className="flex-1"></div>
         <div className="flex items-center gap-2">
-          <div className="text-sm">items: {getRows(table).length}</div>
+          <div className="text-sm">{t('tools.shipment.items')}: {getRows(table).length}</div>
           <Button className="" variant="outline" onClick={handleCopy}>
             {copied ? (
               <>
                 <MdiCheck className="size-5!" />
-                Copied!
+                {t('tools.shipment.copied')}
               </>
             ) : (
               <>
                 <MdiContentCopy className="size-5!" />
-                Copy XIT Action
+                {t('tools.shipment.copyXIT')}
               </>
             )}
           </Button>

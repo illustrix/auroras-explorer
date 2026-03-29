@@ -2,6 +2,7 @@ import { AppBreadcrumb } from '@/components/common/breadcrumb/app-breadcrumb'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { SidebarTrigger } from '@/components/ui/sidebar'
+import { LanguageSelector } from '@/components/ui/language-selector'
 import { IconBrandGithub } from '@tabler/icons-react'
 
 export function SiteHeader() {
@@ -17,6 +18,7 @@ export function SiteHeader() {
         <AppBreadcrumb />
 
         <div className="ml-auto flex items-center gap-2">
+          <LanguageSelector />
           <Button variant="ghost" asChild size="icon">
             <a
               href="https://github.com/illustrix/auroras-explorer"

@@ -4,6 +4,7 @@ import {
   type Table as TanStackTable,
 } from '@tanstack/react-table'
 import type { ComponentType, MouseEvent } from 'react'
+import { useTranslation } from 'react-i18next'
 import {
   Collapsible,
   CollapsibleContent,
@@ -34,6 +35,7 @@ export const DataTable = <T,>({
   collapsibleContent: CustomCollapsibleContent,
   onRowClick,
 }: DataTableProps<T>) => {
+  const { t } = useTranslation()
   const rowModel = table.getRowModel()
   const footerGroups = table.getFooterGroups()
 
@@ -104,7 +106,7 @@ export const DataTable = <T,>({
           ) : (
             <TableRow>
               <TableCell colSpan={100} className="h-24 text-center">
-                No results.
+                {t('tools.shipment.table.noResults')}
               </TableCell>
             </TableRow>
           )}

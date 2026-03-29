@@ -16,7 +16,7 @@ export const getRows = (table: Table<Acquisition>) => {
     : rowModel.rows
 }
 
-export const getColumns = (props: { fromCX: string; toCX: string }) => [
+export const getColumns = (props: { fromCX: string; toCX: string; t: (key: string) => string }) => [
   columnHelper.display({
     id: 'select',
     header: ({ table }) => (
@@ -26,23 +26,23 @@ export const getColumns = (props: { fromCX: string; toCX: string }) => [
           (table.getIsSomePageRowsSelected() && 'indeterminate')
         }
         onCheckedChange={value => table.toggleAllPageRowsSelected(!!value)}
-        aria-label="Select all"
+        aria-label={props.t('tools.shipment.table.select')}
       />
     ),
     cell: ({ row }) => (
       <Checkbox
         checked={row.getIsSelected()}
         onCheckedChange={value => row.toggleSelected(!!value)}
-        aria-label="Select row"
+        aria-label={props.t('tools.shipment.table.select')}
       />
     ),
-    footer: 'Total',
+    footer: props.t('tools.shipment.table.total'),
     enableSorting: false,
     enableHiding: false,
     size: 20,
   }),
   columnHelper.accessor('materialTicker', {
-    header: 'Material',
+    header: props.t('tools.shipment.table.material'),
     cell: row => {
       return <MaterialTile ticker={row.getValue()} className="h-6 text-xs" />
     },
@@ -50,14 +50,14 @@ export const getColumns = (props: { fromCX: string; toCX: string }) => [
   }),
   columnHelper.accessor('sellingPricePerItem', {
     id: 'ask',
-    header: `${props.fromCX} Ask`,
+    header: `${props.fromCX} ${props.t('tools.shipment.table.ask')}`,
     cell: row => (
       <div className="text-right">{formatCurrency(row.getValue())}</div>
     ),
     maxSize: 60,
   }),
   columnHelper.accessor('costPerItem', {
-    header: `${props.toCX} Bid`,
+    header: `${props.toCX} ${props.t('tools.shipment.table.bid')}`,
     cell: row => (
       <div className="text-right">{formatCurrency(row.getValue())}</div>
     ),
@@ -65,7 +65,7 @@ export const getColumns = (props: { fromCX: string; toCX: string }) => [
   }),
   columnHelper.accessor(row => row.costPerItem - row.sellingPricePerItem, {
     id: 'spread',
-    header: 'Spread',
+    header: props.t('tools.shipment.table.spread'),
     cell: row => {
       return (
         <div className="flex items-center gap-1 justify-between">
@@ -80,7 +80,7 @@ export const getColumns = (props: { fromCX: string; toCX: string }) => [
     maxSize: 80,
   }),
   columnHelper.accessor('count', {
-    header: 'Amount',
+    header: props.t('tools.shipment.table.amount'),
     meta: { align: 'right' },
     cell: row => (
       <div className="text-right">{row.getValue().toLocaleString()}</div>
@@ -95,7 +95,7 @@ export const getColumns = (props: { fromCX: string; toCX: string }) => [
     maxSize: 80,
   }),
   columnHelper.accessor('profit', {
-    header: 'Profit',
+    header: props.t('tools.shipment.table.profit'),
     cell: row => (
       <div className="text-right">{formatCurrency(row.getValue())}</div>
     ),
@@ -109,7 +109,7 @@ export const getColumns = (props: { fromCX: string; toCX: string }) => [
     maxSize: 80,
   }),
   columnHelper.accessor('totalSellingPrice', {
-    header: 'Cost',
+    header: props.t('tools.shipment.table.cost'),
     cell: row => (
       <div className="text-right">{formatCurrency(row.getValue())}</div>
     ),
@@ -128,7 +128,7 @@ export const getColumns = (props: { fromCX: string; toCX: string }) => [
     row => ({ weight: row.totalWeight, volume: row.totalVolume }),
     {
       id: 'vol',
-      header: 'Weight / Volume',
+      header: props.t('tools.shipment.table.weightVolume'),
       cell: row => {
         const { weight, volume } = row.getValue()
         return (

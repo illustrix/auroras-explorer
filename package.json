@@ -55,6 +55,8 @@
     "dotenv": "^17.2.4",
     "es-toolkit": "^1.44.0",
     "hono": "^4.11.9",
+    "i18next": "^26.0.1",
+    "i18next-browser-languagedetector": "^8.2.1",
     "jose": "^6.1.3",
     "knex": "^3.1.0",
     "lucide-react": "^0.563.0",
@@ -67,6 +69,7 @@
     "react-day-picker": "^9.13.2",
     "react-dom": "^18.3.1",
     "react-hotkeys-hook": "^5.2.4",
+    "react-i18next": "^17.0.1",
     "recharts": "2.15.4",
     "redyc": "^1.0.5",
     "sonner": "^2.0.7",
@@ -113,7 +116,7 @@
     "tw-animate-css": "^1.4.0",
     "typescript": "^5.2.2",
     "unplugin-icons": "^23.0.1",
-    "vite": "^5.3.1",
+    "vite": "^8.0.3",
     "vitest": "^4.0.18",
     "wrangler": "^4.61.0"
   }
