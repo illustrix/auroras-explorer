@@ -6,6 +6,7 @@ import { MaterialTileBase } from '@/components/game/material-tile'
 import { Button } from '@/components/ui/button'
 import { useGameData } from '@/lib/store'
 import { cn } from '@/lib/utils'
+import { useTranslation } from 'react-i18next'
 import CbiMealie from '~icons/cbi/mealie'
 import Fa7SolidAtom from '~icons/fa7-solid/atom'
 import Fa7SolidBox from '~icons/fa7-solid/box'
@@ -69,6 +70,7 @@ const categoriesIconMap: Record<string, ComponentType | null> = {
 
 export const CatalogPage = () => {
   const { data } = useGameData()
+  const { t } = useTranslation()
 
   const categories = useMemo(() => {
     if (!data) return
@@ -92,6 +94,7 @@ export const CatalogPage = () => {
       >
         {categories?.flatMap(([category, mats]) => {
           const Icon = categoriesIconMap[category]
+          const displayCategory = t(`catalog.categories.${category}`, { defaultValue: category })
           return [
             <div
               key={`cate-${category}`}
@@ -102,7 +105,7 @@ export const CatalogPage = () => {
                   <Icon />
                 </span>
               )}
-              {category}
+              {displayCategory}
             </div>,
             ...mats.map(mat => {
               const active = activeMat === mat.Ticker

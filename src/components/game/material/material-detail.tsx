@@ -8,6 +8,7 @@ import {
 // import { RecipePreview } from '@/components/pages/production-line/recipe-preview'
 import { useGameData } from '@/lib/store'
 import { cn } from '@/lib/utils'
+import { useTranslation } from 'react-i18next'
 import { getMaterialCategoryTheme } from '../material-category'
 import { MaterialTileBase } from '../material-tile'
 import { TradingSummary } from '../trading-summary'
@@ -25,6 +26,7 @@ const _MaterialDetail: FC<MaterialDetailProps> = ({
   ...props
 }) => {
   const { data } = useGameData()
+  const { t } = useTranslation()
   const mat = ticker ? data?.materialsByTicker[ticker] : undefined
 
   const densityColor = useMemo(() => {
@@ -50,6 +52,8 @@ const _MaterialDetail: FC<MaterialDetailProps> = ({
     recipes.cur?.map(recipe => recipe.BuildingTicker) || [],
   )
 
+  const materialName = t(`catalog.materials.${ticker}`, { defaultValue: mat.Name })
+
   return (
     <div className={cn('flex flex-col gap-4', className)} {...props}>
       <div className="flex w-full gap-4 items-center">
@@ -65,11 +69,7 @@ const _MaterialDetail: FC<MaterialDetailProps> = ({
           }}
         >
           <div className="text-lg font-bold capitalize">
-            {snakeCase(mat.Name)
-              .replaceAll('_', ' ')
-              .split(' ')
-              .map(w => w[0].toUpperCase() + w.slice(1))
-              .join(' ')}
+            {materialName}
           </div>
         </div>
 
