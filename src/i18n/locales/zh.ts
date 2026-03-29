@@ -87,7 +87,9 @@ export default {
   // Error Page
   error: {
     title: '糟糕，出了点问题！',
-    description: '抱歉，发生了意外情况。请稍后再试。'
+    description: '抱歉，发生了意外情况。',
+    secondary: '请尝试刷新页面，或如果问题持续存在，请联系我们。',
+    backToHome: '返回首页'
   },
   
   // Not Found Page
@@ -102,7 +104,8 @@ export default {
     description: '探索 Prosperous Universe 的工具集合。使用下面的链接导航到 Auroras Explorer 中可用的不同工具和资源。',
     featuredTitle: '推荐工具和资源',
     featuredDescription: '以下工具不是由我们提供的，但它们是非常重要的工具。我们推荐您使用它们。',
-    suggestions: '如果您对添加到画廊的工具有任何建议，请随时与我们联系。我们一直在寻找方法来改进 Auroras Explorer 并为 Prosperous Universe 社区提供更多价值。'
+    suggestions: '如果您对添加到画廊的工具有任何建议，请随时与我们联系。我们一直在寻找方法来改进 Auroras Explorer 并为 Prosperous Universe 社区提供更多价值。',
+    previewAlt: '{{toolName}} 的预览'
   },
   
   // Tools

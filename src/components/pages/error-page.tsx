@@ -10,16 +10,7 @@ export const ErrorPage = () => {
         <h2 className="mb-6 text-5xl font-semibold">{t('error.title')}</h2>
         <h3 className="mb-1.5 text-3xl font-semibold">{t('error.description')}</h3>
         <p className="text-muted-foreground mb-6 max-w-md">
-          {t('error.description')} Please try refreshing the page, or{' '}
-          <a
-            href="mailto:inquires@auroras.xyz"
-            target="_blank"
-            rel="noopener"
-            className="underline"
-          >
-            {t('common.contact')}
-          </a>{' '}
-          if the problem persists.
+          {t('error.secondary')}
         </p>
         <Button
           asChild
@@ -27,7 +18,7 @@ export const ErrorPage = () => {
           className="rounded-lg text-base"
           variant="outline"
         >
-          <Link to="/">{t('common.back')} to home page</Link>
+          <Link to="/">{t('error.backToHome')}</Link>
         </Button>
       </div>
     </div>

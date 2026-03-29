@@ -87,7 +87,9 @@ export default {
   // Error Page
   error: {
     title: 'Oops, something went wrong!',
-    description: 'We\'re sorry, but something unexpected happened. Please try again later.'
+    description: 'We\'re sorry, but something unexpected happened.',
+    secondary: 'Please try refreshing the page, or contact us if the problem persists.',
+    backToHome: 'Back to home page'
   },
   
   // Not Found Page
@@ -101,8 +103,9 @@ export default {
     title: 'Welcome to Auroras Explorer',
     description: 'Explore the collection of tools for Prosperous Universe. Use the links below to navigate to different tools and resources available in Auroras Explorer.',
     featuredTitle: 'Recommended Tools and Resources',
-    featuredDescription: 'The following tools are not provided by us, but they are very important tools. We recommend you to use them.',
-    suggestions: 'If you have any suggestions for tools to add to the gallery, please feel free to contact us. We are always looking for ways to improve Auroras Explorer and provide more value to the Prosperous Universe community.'
+    featuredDescription: 'The following tools are not provided by us, but they are very important tools. We recommend you use them.',
+    suggestions: 'If you have any suggestions for tools to add to the gallery, please feel free to contact us. We are always looking for ways to improve Auroras Explorer and provide more value to the Prosperous Universe community.',
+    previewAlt: '{{toolName}} preview'
   },
   
   // Tools

@@ -1,14 +1,12 @@
-// 从材料表生成材料名称映射
 import fs from 'fs'
 import path from 'path'
 
-function generateMaterialNameMap() {
-  const materialTablePath = 'c:\\Users\\kilsa\\Desktop\\code\\资料\\材料表.md'
+function generateMaterialNameMap(materialTablePath) {
   const content = fs.readFileSync(materialTablePath, 'utf8')
-  
+
   const lines = content.split('\n')
   const materialMap = {}
-  
+
   for (const line of lines) {
     if (line.trim().startsWith('|') && !line.includes('物品') && !line.includes('---')) {
       const parts = line.split('|').map(p => p.trim()).filter(p => p)
@@ -21,13 +19,13 @@ function generateMaterialNameMap() {
       }
     }
   }
-  
+
   return materialMap
 }
 
-const materialNames = generateMaterialNameMap()
+const materialTablePath = process.argv[2] || process.env.MATERIAL_TABLE_PATH || path.join(process.cwd(), '材料表.md')
+const materialNames = generateMaterialNameMap(materialTablePath)
 
-// 生成 i18n 格式的材料名称
 const materialNamesI18n = Object.entries(materialNames).reduce((acc, [ticker, name]) => {
   acc[ticker] = name
   return acc

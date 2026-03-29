@@ -3,46 +3,28 @@ import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { externalTools, tools } from './tools'
 
-export const ToolsGallery: FC<{ tools: typeof tools }> = ({ tools }) => {
+type ToolItem = (typeof tools)[0] | (typeof externalTools)[0]
+
+export const ToolsGallery: FC<{ tools: ToolItem[] }> = ({ tools }) => {
   const { t } = useTranslation()
-  
-  const getToolTitle = (item: typeof tools[0]) => {
-    switch (item.title) {
-      case 'Shipment':
-        return t('tools.shipment.title')
-      case 'Production Line':
-        return t('tools.productionLine.title')
-      case 'PRUNPlanner':
-        return t('tools.prunPlanner.title')
-      case 'FIO':
-        return t('tools.fio.title')
-      case 'PCT Wiki':
-        return t('tools.pctWiki.title')
-      default:
-        return item.title
+
+  const getToolTitle = (item: ToolItem) => {
+    if ('i18nKey' in item && item.i18nKey) {
+      return t(`${item.i18nKey}.title`)
     }
+    return item.title
   }
-  
-  const getToolDescription = (item: typeof tools[0]) => {
-    switch (item.title) {
-      case 'Shipment':
-        return t('tools.shipment.description')
-      case 'Production Line':
-        return t('tools.productionLine.description')
-      case 'PRUNPlanner':
-        return t('tools.prunPlanner.description')
-      case 'FIO':
-        return t('tools.fio.description')
-      case 'PCT Wiki':
-        return t('tools.pctWiki.description')
-      default:
-        return item.description
+
+  const getToolDescription = (item: ToolItem) => {
+    if ('i18nKey' in item && item.i18nKey) {
+      return t(`${item.i18nKey}.description`)
     }
+    return item.description
   }
-  
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
-      {tools.map(item => {
+      {tools.map((item) => {
         if (!item.preview) {
           return null
         }
@@ -56,7 +38,7 @@ export const ToolsGallery: FC<{ tools: typeof tools }> = ({ tools }) => {
           >
             <div className="overflow-hidden w-full h-60 rounded-lg bg-muted/50">
               <img
-                alt={`${getToolTitle(item)} 的预览`}
+                alt={t('gallery.previewAlt', { toolName: getToolTitle(item) })}
                 src={item.preview}
                 className="w-full h-60 group-hover:scale-110 transition-all"
               />

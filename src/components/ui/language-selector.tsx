@@ -3,7 +3,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 
 export const LanguageSelector = () => {
   const { i18n } = useTranslation()
-  const currentLanguage = i18n.language
+  const currentLanguage = i18n.resolvedLanguage?.split('-')[0] ?? 'en'
 
   const handleLanguageChange = (value: string) => {
     i18n.changeLanguage(value)
