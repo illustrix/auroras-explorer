@@ -2,6 +2,7 @@ import type { PopoverProps } from '@radix-ui/react-popover'
 import { startCase } from 'es-toolkit/string'
 import { Check, ChevronsUpDown } from 'lucide-react'
 import * as React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button'
 import {
   Command,
@@ -31,6 +32,7 @@ export function MaterialSelector({
   onValueChange: setSelected,
   ...props
 }: MaterialSelectorProps) {
+  const { t } = useTranslation()
   const [open, setOpen] = React.useState(false)
 
   const groupedMaterials = React.useMemo(() => {
@@ -60,10 +62,10 @@ export function MaterialSelector({
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          aria-label="Select a material"
+          aria-label={t('game.selectAMaterial')}
           className="justify-between"
         >
-          {selected ? selected : 'Select a material...'}
+          {selected ? selected : t('game.selectAMaterial')}
           <ChevronsUpDown className="text-muted-foreground" />
         </Button>
       </PopoverTrigger>
@@ -85,8 +87,8 @@ export function MaterialSelector({
           }}
         >
           <CommandList className="h-(--cmdk-list-height) max-h-100">
-            <CommandInput placeholder="Search Materials..." />
-            <CommandEmpty>No Material found.</CommandEmpty>
+            <CommandInput placeholder={t('game.searchMaterials')} />
+            <CommandEmpty>{t('game.noMaterialFound')}</CommandEmpty>
             {groupedMaterials.map(category => (
               <CommandGroup key={category.value} heading={category.value}>
                 {category.items?.map(material => (

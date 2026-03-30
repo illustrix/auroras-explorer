@@ -91,7 +91,7 @@ export const ConfigTransformPage = () => {
       <h1 className="text-xl font-semibold">{t('configTransform.title')}</h1>
 
       <p className="text-xs text-muted-foreground">
-        Don't ask me what this is. If you know it, you know it.
+        {t('configTransform.description')}
       </p>
 
       <div className="grid flex-1 grid-cols-2 gap-6 overflow-hidden">
@@ -139,10 +139,10 @@ export const ConfigTransformPage = () => {
               {field => (
                 <Field>
                   <FieldLabel htmlFor={field.name}>
-                    Source Config JSON
+                    {t('configTransform.sourceConfigJson')}
                   </FieldLabel>
                   <FieldDescription>
-                    Paste the XIT ACT config JSON to transform.
+                    {t('configTransform.pasteConfigHint')}
                   </FieldDescription>
                   <Textarea
                     id={field.name}
@@ -188,7 +188,7 @@ export const ConfigTransformPage = () => {
           <Textarea
             readOnly
             value={error ?? result ?? ''}
-            placeholder="No result yet. Paste a config and the result will appear here."
+            placeholder={t('configTransform.noResultYet')}
             className={`flex-1 max-h-120 resize-none font-mono text-sm ${error ? 'text-destructive' : ''}`}
           />
         </div>
