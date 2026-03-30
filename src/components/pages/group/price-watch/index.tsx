@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
-import { useTranslation } from 'react-i18next'
 import { type FC, useState } from 'react'
 import type { DateRange } from 'react-day-picker'
+import { useTranslation } from 'react-i18next'
 import { LoadingPage } from '@/components/common/loading'
 import { Pagination } from '@/components/common/pagination'
 import { ContractPriceInsight } from '@/components/game/contract/contract-price-insight'

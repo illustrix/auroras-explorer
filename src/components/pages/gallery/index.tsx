@@ -1,6 +1,6 @@
 import { Link } from '@tanstack/react-router'
-import { useTranslation } from 'react-i18next'
 import type { FC } from 'react'
+import { useTranslation } from 'react-i18next'
 import { externalTools, tools } from './tools'
 
 export const ToolsGallery: FC<{ tools: typeof tools }> = ({ tools }) => {

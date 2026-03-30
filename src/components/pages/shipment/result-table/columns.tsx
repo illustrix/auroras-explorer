@@ -1,6 +1,6 @@
 import {
-  createColumnHelper,
   type ColumnDef,
+  createColumnHelper,
   type Table,
 } from '@tanstack/react-table'
 import { sumBy } from 'es-toolkit'

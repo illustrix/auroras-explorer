@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
 import type { DateRange } from 'react-day-picker'
+import { useTranslation } from 'react-i18next'
 import { Calendar } from '@/components/ui/calendar'
 import { Field, FieldLabel } from '@/components/ui/field'
 import {
@@ -49,11 +49,21 @@ export function DatePickerWithRange({
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="today">{t('dateRange.today')}</SelectItem>
-              <SelectItem value="yesterday">{t('dateRange.yesterday')}</SelectItem>
-              <SelectItem value="last-7-days">{t('dateRange.last7Days')}</SelectItem>
-              <SelectItem value="last-30-days">{t('dateRange.last30Days')}</SelectItem>
-              <SelectItem value="this-month">{t('dateRange.thisMonth')}</SelectItem>
-              <SelectItem value="last-month">{t('dateRange.lastMonth')}</SelectItem>
+              <SelectItem value="yesterday">
+                {t('dateRange.yesterday')}
+              </SelectItem>
+              <SelectItem value="last-7-days">
+                {t('dateRange.last7Days')}
+              </SelectItem>
+              <SelectItem value="last-30-days">
+                {t('dateRange.last30Days')}
+              </SelectItem>
+              <SelectItem value="this-month">
+                {t('dateRange.thisMonth')}
+              </SelectItem>
+              <SelectItem value="last-month">
+                {t('dateRange.lastMonth')}
+              </SelectItem>
             </SelectContent>
           </Select>
         </PopoverTrigger>

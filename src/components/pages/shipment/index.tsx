@@ -1,6 +1,6 @@
-import { useTranslation } from 'react-i18next'
 import copy from 'copy-to-clipboard'
 import { useCallback, useState, useTransition } from 'react'
+import { useTranslation } from 'react-i18next'
 import { GameDataLoadingWrapper } from '@/components/common/game-data-loading-wrapper'
 import { CommodityExchangeSelect } from '@/components/game/select/cx-select'
 import { Button } from '@/components/ui/button'

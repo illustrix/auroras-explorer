@@ -1,6 +1,6 @@
-import { useTranslation } from 'react-i18next'
 import { Link, useMatches } from '@tanstack/react-router'
 import { type ComponentType, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 import {
   SidebarGroup,
   SidebarGroupContent,

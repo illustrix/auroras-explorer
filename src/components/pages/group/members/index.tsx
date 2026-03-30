@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { getRouteApi } from '@tanstack/react-router'
-import { useTranslation } from 'react-i18next'
 import { getCoreRowModel, useReactTable } from '@tanstack/react-table'
+import { useTranslation } from 'react-i18next'
 import { DataTable } from '@/components/common/data-table'
 import { LoadingPage } from '@/components/common/loading'
 import { groupUsersQuery } from '@/lib/query/group'

@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
-import { useTranslation } from 'react-i18next'
 import { PlusIcon } from 'lucide-react'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { LoadingPage } from '@/components/common/loading'
 import { Button } from '@/components/ui/button'
 import type { Group } from '@/lib/api/types'

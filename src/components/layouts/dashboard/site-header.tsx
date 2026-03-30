@@ -1,15 +1,15 @@
+import { IconBrandGithub, IconLanguage } from '@tabler/icons-react'
 import { useTranslation } from 'react-i18next'
 import { AppBreadcrumb } from '@/components/common/breadcrumb/app-breadcrumb'
 import { Button } from '@/components/ui/button'
-import { Separator } from '@/components/ui/separator'
-import { SidebarTrigger } from '@/components/ui/sidebar'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { IconBrandGithub, IconLanguage } from '@tabler/icons-react'
+import { Separator } from '@/components/ui/separator'
+import { SidebarTrigger } from '@/components/ui/sidebar'
 
 export function SiteHeader() {
   const { i18n } = useTranslation()

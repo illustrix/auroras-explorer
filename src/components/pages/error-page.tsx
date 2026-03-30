@@ -12,16 +12,18 @@ export const ErrorPage = () => {
         </h2>
         <h3 className="mb-1.5 text-3xl font-semibold">{t('errors.generic')}</h3>
         <p className="text-muted-foreground mb-6 max-w-md">
-          {t('errors.genericDescription', { contactLink: (
-            <a
-              href="mailto:inquires@auroras.xyz"
-              target="_blank"
-              rel="noopener"
-              className="underline"
-            >
-              {t('errors.contactLink')}
-            </a>
-          ) })}
+          {t('errors.genericDescription', {
+            contactLink: (
+              <a
+                href="mailto:inquires@auroras.xyz"
+                target="_blank"
+                rel="noopener"
+                className="underline"
+              >
+                {t('errors.contactLink')}
+              </a>
+            ),
+          })}
         </p>
         <Button
           asChild

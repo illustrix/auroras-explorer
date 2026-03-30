@@ -1,7 +1,7 @@
 import { Link } from '@tanstack/react-router'
-import { useTranslation } from 'react-i18next'
 import { SettingsIcon } from 'lucide-react'
 import type { FC } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button'
 import { useGroupTools } from '@/hooks/use-navigates'
 import type { Group } from '@/lib/api/types'

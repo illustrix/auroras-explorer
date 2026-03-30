@@ -1,7 +1,7 @@
-import { useTranslation } from 'react-i18next'
 import type { FC } from 'react'
-import { Button } from '@/components/ui/button'
+import { useTranslation } from 'react-i18next'
 import { EmptyState } from '@/components/common/result'
+import { Button } from '@/components/ui/button'
 
 interface GroupEmptyStateProps {
   onCreate: () => void

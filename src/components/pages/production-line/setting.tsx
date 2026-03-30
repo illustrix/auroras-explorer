@@ -1,6 +1,6 @@
 import { startCase } from 'es-toolkit/string'
-import { useTranslation } from 'react-i18next'
 import type { FC } from 'react'
+import { useTranslation } from 'react-i18next'
 import { MaterialSelector } from '@/components/game/material-selector'
 import { CommodityExchangeSelect } from '@/components/game/select/cx-select'
 import { Field, FieldLabel } from '@/components/ui/field'

@@ -1,10 +1,10 @@
-import { useTranslation } from 'react-i18next'
 import {
   ChevronFirstIcon,
   ChevronLastIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
 } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import {
   PaginationContent,
   PaginationItem,
