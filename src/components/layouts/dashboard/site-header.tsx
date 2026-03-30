@@ -46,7 +46,7 @@ export function SiteHeader() {
                 onClick={() => toggleLanguage('en')}
                 className={currentLang === 'en' ? 'bg-accent' : ''}
               >
-                EN
+                English
               </DropdownMenuItem>
               <DropdownMenuItem
                 onClick={() => toggleLanguage('zh')}
