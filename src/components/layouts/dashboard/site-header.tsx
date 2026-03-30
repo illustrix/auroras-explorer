@@ -3,13 +3,19 @@ import { AppBreadcrumb } from '@/components/common/breadcrumb/app-breadcrumb'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { SidebarTrigger } from '@/components/ui/sidebar'
-import { IconBrandGithub } from '@tabler/icons-react'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu'
+import { IconBrandGithub, IconLanguage } from '@tabler/icons-react'
 
 export function SiteHeader() {
   const { i18n } = useTranslation()
   const currentLang = i18n.language
-  const toggleLanguage = () => {
-    i18n.changeLanguage(currentLang === 'en' ? 'zh' : 'en')
+  const toggleLanguage = (lang: 'en' | 'zh') => {
+    i18n.changeLanguage(lang)
   }
 
   return (
@@ -24,15 +30,32 @@ export function SiteHeader() {
         <AppBreadcrumb />
 
         <div className="ml-auto flex items-center gap-2">
-          <Button
-            type="button"
-            onClick={toggleLanguage}
-            size="sm"
-            variant="ghost"
-            className="font-normal"
-          >
-            {currentLang === 'en' ? '中文' : 'English'}
-          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                type="button"
+                variant="ghost"
+                size="icon"
+                title={currentLang === 'en' ? '切换语言' : 'Switch Language'}
+              >
+                <IconLanguage className="size-5" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem
+                onClick={() => toggleLanguage('en')}
+                className={currentLang === 'en' ? 'bg-accent' : ''}
+              >
+                English
+              </DropdownMenuItem>
+              <DropdownMenuItem
+                onClick={() => toggleLanguage('zh')}
+                className={currentLang === 'zh' ? 'bg-accent' : ''}
+              >
+                中文
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <Button variant="ghost" asChild size="icon">
             <a
               href="https://github.com/illustrix/auroras-explorer"
