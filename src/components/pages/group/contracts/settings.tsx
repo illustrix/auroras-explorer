@@ -60,7 +60,7 @@ export const Settings = () => {
       </Field>
 
       <Field className="w-40">
-        <FieldLabel>{t('group.members.syncStatus')}</FieldLabel>
+        <FieldLabel>{t('group.contracts.status')}</FieldLabel>
         <Select value={status} onValueChange={setStatus}>
           <SelectTrigger className="w-full">
             <SelectValue placeholder={t('common.filter')} />

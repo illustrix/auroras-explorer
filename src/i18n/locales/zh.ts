@@ -95,6 +95,7 @@ export const zh = {
     contracts: {
       title: '合同',
       all: '全部合同',
+      status: '状态',
       supplyRequest: '供应请求',
       shipment: '货运',
       type: '类型',
@@ -256,7 +257,8 @@ export const zh = {
     goHome: '返回首页',
     genericTitle: '哎呀！',
     generic: '发生意外错误，请重试。',
-    genericDescription: '如果问题持续存在，请联系我们。',
+    genericDescription: '如果问题持续存在，请{{contactLink}}。',
+    contactLink: '联系我们',
   },
   dataTable: {
     noResults: '暂无数据。',
@@ -269,5 +271,6 @@ export const zh = {
     nextPage: '下一页',
     lastPage: '跳转到末页',
     page: '第',
+    of: '共',
   },
 }

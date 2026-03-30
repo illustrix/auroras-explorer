@@ -13,7 +13,8 @@ import { IconBrandGithub, IconLanguage } from '@tabler/icons-react'
 
 export function SiteHeader() {
   const { i18n } = useTranslation()
-  const currentLang = i18n.language
+  const resolvedLang = i18n.resolvedLanguage ?? 'en'
+  const currentLang = resolvedLang.split('-')[0]
   const toggleLanguage = (lang: 'en' | 'zh') => {
     i18n.changeLanguage(lang)
   }

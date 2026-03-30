@@ -4,8 +4,8 @@ import {
   type Row,
   type Table as TanStackTable,
 } from '@tanstack/react-table'
-import type { ComponentType, MouseEvent } from 'react'
-import { Collapsible } from '@/components/ui/collapsible'
+import { useState, type ComponentType, type MouseEvent } from 'react'
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
 import {
   Table,
   TableBody,
@@ -32,8 +32,21 @@ export const DataTable = <T,>({
   onRowClick,
 }: DataTableProps<T>) => {
   const { t } = useTranslation()
+  const [expandedRows, setExpandedRows] = useState<Set<string>>(new Set())
   const rowModel = table.getRowModel()
   const footerGroups = table.getFooterGroups()
+
+  const toggleRow = (rowId: string) => {
+    setExpandedRows(prev => {
+      const next = new Set(prev)
+      if (next.has(rowId)) {
+        next.delete(rowId)
+      } else {
+        next.add(rowId)
+      }
+      return next
+    })
+  }
 
   return (
     <div className="overflow-hidden rounded-md border">
@@ -63,32 +76,49 @@ export const DataTable = <T,>({
         <TableBody>
           {rowModel.rows?.length ? (
             rowModel.rows.map(row => {
-              const rowContent = (
-                <TableRow
-                  key={row.id}
-                  data-state={row.getIsSelected() && 'selected'}
-                  onClick={onRowClick ? e => onRowClick(e, row) : undefined}
-                >
-                  {row.getVisibleCells().map(cell => (
-                    <TableCell
-                      key={cell.id}
-                      style={{ width: cell.column.getSize() }}
-                    >
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext(),
-                      )}
-                    </TableCell>
-                  ))}
-                </TableRow>
-              )
+              const isExpanded = expandedRows.has(row.id)
 
-              return CustomCollapsibleContent ? (
-                <Collapsible key={row.id} asChild>
-                  {rowContent}
+              return (
+                <Collapsible
+                  key={row.id}
+                  open={isExpanded}
+                  onOpenChange={() => toggleRow(row.id)}
+                  asChild
+                >
+                  <>
+                    <CollapsibleTrigger asChild>
+                      <TableRow
+                        data-state={row.getIsSelected() && 'selected'}
+                        onClick={onRowClick ? e => onRowClick(e, row) : undefined}
+                        className="cursor-pointer"
+                      >
+                        {row.getVisibleCells().map(cell => (
+                          <TableCell
+                            key={cell.id}
+                            style={{ width: cell.column.getSize() }}
+                          >
+                            {flexRender(
+                              cell.column.columnDef.cell,
+                              cell.getContext(),
+                            )}
+                          </TableCell>
+                        ))}
+                      </TableRow>
+                    </CollapsibleTrigger>
+                    {CustomCollapsibleContent && (
+                      <CollapsibleContent>
+                        <TableRow>
+                          <TableCell
+                            colSpan={row.getVisibleCells().length}
+                            className="bg-muted/50 p-4"
+                          >
+                            <CustomCollapsibleContent row={row} />
+                          </TableCell>
+                        </TableRow>
+                      </CollapsibleContent>
+                    )}
+                  </>
                 </Collapsible>
-              ) : (
-                rowContent
               )
             })
           ) : (

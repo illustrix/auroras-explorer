@@ -97,6 +97,7 @@ export const en = {
     contracts: {
       title: 'Contracts',
       all: 'All Contracts',
+      status: 'Status',
       supplyRequest: 'Supply Request',
       shipment: 'Shipment',
       type: 'Type',
@@ -259,7 +260,8 @@ export const en = {
     goHome: 'Go Home',
     genericTitle: 'Whoops!',
     generic: 'An unexpected error occurred. Please try again.',
-    genericDescription: 'If the problem persists, please contact us.',
+    genericDescription: 'If the problem persists, please {{contactLink}}.',
+    contactLink: 'contact me',
   },
   dataTable: {
     noResults: 'No results.',
@@ -272,5 +274,6 @@ export const en = {
     nextPage: 'Go to next page',
     lastPage: 'Go to last page',
     page: 'Page',
+    of: 'of',
   },
 }
