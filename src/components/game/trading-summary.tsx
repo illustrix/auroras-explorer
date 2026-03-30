@@ -1,5 +1,6 @@
 import { snakeCase } from 'es-toolkit'
 import { type FC, useCallback, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 import {
   HoverCard,
   HoverCardContent,
@@ -21,6 +22,7 @@ export const TradingSummary: FC<{ ticker: string; thin?: boolean }> = ({
   ticker,
   thin,
 }) => {
+  const { t } = useTranslation()
   const { data } = useGameData()
   const orders = useMemo(() => {
     if (!data) return
@@ -72,7 +74,7 @@ export const TradingSummary: FC<{ ticker: string; thin?: boolean }> = ({
       </TableHeader>
       <TableBody>
         <TableRow>
-          <TableCell>Ask</TableCell>
+          <TableCell>{t('game.ask')}</TableCell>
           {orders.map(order => (
             <TableCell key={order.ExchangeCode}>
               {order.Ask ? (
@@ -95,7 +97,7 @@ export const TradingSummary: FC<{ ticker: string; thin?: boolean }> = ({
           ))}
         </TableRow>
         <TableRow>
-          <TableCell>Bid</TableCell>
+          <TableCell>{t('game.bid')}</TableCell>
           {orders.map(order => (
             <TableCell key={order.ExchangeCode}>
               {order.Bid ? (
@@ -118,7 +120,7 @@ export const TradingSummary: FC<{ ticker: string; thin?: boolean }> = ({
           ))}
         </TableRow>
         <TableRow>
-          <TableCell>Supply</TableCell>
+          <TableCell>{t('game.supply')}</TableCell>
           {orders.map(order => (
             <TableCell key={order.ExchangeCode}>
               {formatNumber(order.Supply)}
@@ -126,7 +128,7 @@ export const TradingSummary: FC<{ ticker: string; thin?: boolean }> = ({
           ))}
         </TableRow>
         <TableRow>
-          <TableCell>Demand</TableCell>
+          <TableCell>{t('game.demand')}</TableCell>
           {orders.map(order => (
             <TableCell key={order.ExchangeCode}>
               {formatNumber(order.Demand)}
@@ -142,6 +144,7 @@ export const TradingSummaryTooltip: FC<{
   ticker: string
   children: React.ReactNode
 }> = ({ ticker, children }) => {
+  const { t } = useTranslation()
   const { data, isLoading } = useGameData()
 
   const material = data?.materialsByTicker[ticker]
@@ -152,7 +155,7 @@ export const TradingSummaryTooltip: FC<{
       <HoverCardContent className="min-w-180">
         {isLoading ? (
           <div className="flex items-center justify-center h-10 gap-4">
-            <Spinner /> Loading...
+            <Spinner /> {t('common.loading')}
           </div>
         ) : (
           <>

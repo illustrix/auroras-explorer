@@ -1,5 +1,6 @@
 import { useMutation } from '@tanstack/react-query'
 import { type FC, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button'
 import {
   Card,
@@ -25,6 +26,7 @@ import { AppError } from '@/server/common/error'
 export interface LoginFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export const LoginForm: FC<LoginFormProps> = ({ className, ...props }) => {
+  const { t } = useTranslation()
   const [token, setToken] = useState('')
 
   const exchangeTokenMutation = useMutation({
@@ -50,7 +52,7 @@ export const LoginForm: FC<LoginFormProps> = ({ className, ...props }) => {
     >
       <Card className="min-w-md">
         <CardHeader>
-          <CardTitle>This Page Requires Authorization</CardTitle>
+          <CardTitle>{t('auth.thisPageRequiresAuthorization')}</CardTitle>
           <CardDescription>
             We will use FIO token to identify your account. Please enter your
             FIO token to continue.
@@ -65,7 +67,7 @@ export const LoginForm: FC<LoginFormProps> = ({ className, ...props }) => {
           >
             <FieldGroup>
               <Field>
-                <FieldLabel htmlFor="fioToken">FIO Token</FieldLabel>
+                <FieldLabel htmlFor="fioToken">{t('auth.fioToken')}</FieldLabel>
                 <Input
                   id="fioToken"
                   type="text"
@@ -89,10 +91,10 @@ export const LoginForm: FC<LoginFormProps> = ({ className, ...props }) => {
                 {exchangeTokenMutation.isPending ? (
                   <Button type="submit">
                     <Spinner data-icon="inline-start" />
-                    Loading...
+                    {t('common.loading')}
                   </Button>
                 ) : (
-                  <Button type="submit">Authorize</Button>
+                  <Button type="submit">{t('auth.authorize')}</Button>
                 )}
                 <FieldDescription className="text-center">
                   We will never share your token with anyone else.

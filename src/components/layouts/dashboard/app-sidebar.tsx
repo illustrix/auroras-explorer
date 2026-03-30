@@ -1,5 +1,6 @@
 import { IconInnerShadowTop } from '@tabler/icons-react'
 import { Link } from '@tanstack/react-router'
+import { useTranslation } from 'react-i18next'
 import { Time } from '@/components/common/time'
 import { Button } from '@/components/ui/button'
 import {
@@ -21,6 +22,7 @@ import TablerBrandGithub from '~icons/tabler/brand-github'
 import { NavMain } from './nav-main'
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const { t } = useTranslation()
   const dataUpdatedAt = useLocalStorage<number>('ct:orders')
   const navigates = useNavigates()
   const identity = useIdentity()
@@ -50,11 +52,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarFooter>
         <div className="text-muted-foreground flex flex-col text-xs gap-4">
           <div>
-            <span>Data Updated:</span>{' '}
+            <span>{t('sidebar.dataUpdated')}:</span>{' '}
             {dataUpdatedAt ? <Time time={dataUpdatedAt} /> : 'N/A'}
           </div>
           <span>
-            Data Source:{' '}
+            {t('sidebar.dataSource')}:{' '}
             <a
               href="https://fio.fnar.net/"
               target="_blank"
@@ -65,7 +67,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             </a>
           </span>
           <div>
-            <div>Feedback Welcome!</div>
+            <div>{t('sidebar.feedbackWelcome')}</div>
             <a
               href="https://discord.gg/BMtwkgUY6D"
               target="_blank"
@@ -88,7 +90,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
         {identity.data && (
           <div className="mt-4 text-xs text-muted-foreground gap-1 flex items-center">
-            Logged in as
+            {t('sidebar.loggedInAs')}
             <span className="underline">{identity.data.username}</span>
             <Button
               type="button"
@@ -101,7 +103,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               variant="ghost"
             >
               <MdiLogoutVariant />
-              logout
+              {t('sidebar.logout')}
             </Button>
           </div>
         )}

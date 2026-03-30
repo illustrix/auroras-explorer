@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { Link, useMatches } from '@tanstack/react-router'
 import { type ComponentType, useMemo } from 'react'
 import {
@@ -15,12 +16,13 @@ export function NavMain({
   items,
 }: {
   items: {
-    title: string
+    titleKey: string
     url: string
     icon?: ComponentType
-    category?: string
+    categoryKey: string
   }[]
 }) {
+  const { t } = useTranslation()
   const matches = useMatches()
 
   const groupId = useMemo(() => {
@@ -31,10 +33,13 @@ export function NavMain({
   }, [matches])
 
   const groupedItems = useMemo(() => {
-    const grouped = Object.groupBy(items, item => item.category ?? 'Other')
+    const grouped = Object.groupBy(
+      items,
+      item => item.categoryKey ?? 'nav.other',
+    )
 
-    return Object.entries(grouped).map(([category, items]) => ({
-      category,
+    return Object.entries(grouped).map(([categoryKey, items]) => ({
+      categoryKey,
       items,
     }))
   }, [items])
@@ -42,25 +47,29 @@ export function NavMain({
   return groupedItems.map(group => {
     if (!group.items) return null
     return (
-      <SidebarGroup key={group.category}>
-        <SidebarGroupLabel>{group.category}</SidebarGroupLabel>
+      <SidebarGroup key={group.categoryKey}>
+        <SidebarGroupLabel>{t(group.categoryKey)}</SidebarGroupLabel>
         <SidebarGroupContent className="flex flex-col gap-2">
           <SidebarMenu>
             {group.items.map(item => {
               const isActive = matches.some(
                 match => match.fullPath === item.url,
               )
+              const translatedTitle = t(item.titleKey)
 
               return (
                 <Link
                   to={item.url}
-                  key={item.title}
+                  key={item.titleKey}
                   params={{ groupId: groupId ?? PLACEHOLDER_GROUP_ID }}
                 >
                   <SidebarMenuItem>
-                    <SidebarMenuButton isActive={isActive} tooltip={item.title}>
+                    <SidebarMenuButton
+                      isActive={isActive}
+                      tooltip={translatedTitle}
+                    >
                       {item.icon && <item.icon />}
-                      <span>{item.title}</span>
+                      <span>{translatedTitle}</span>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 </Link>

@@ -1,4 +1,5 @@
 import { Link } from '@tanstack/react-router'
+import { useTranslation } from 'react-i18next'
 import type { FC } from 'react'
 import { externalTools, tools } from './tools'
 
@@ -41,31 +42,22 @@ export const ToolsGallery: FC<{ tools: typeof tools }> = ({ tools }) => {
 }
 
 export const ToolGalleryPage = () => {
+  const { t } = useTranslation()
   return (
     <div className="p-8">
-      <h1 className="text-2xl font-bold">Welcome to Auroras Explorer</h1>
-      <p className="mt-4 text-muted-foreground">
-        Explore the collection of tools for Prosperous Universe. Use the links
-        below to navigate to different tools and resources available in the
-        Auroras Explorer.
-      </p>
+      <h1 className="text-2xl font-bold">{t('home.welcome')}</h1>
+      <p className="mt-4 text-muted-foreground">{t('home.description')}</p>
       <ToolsGallery tools={tools} />
 
-      <h2 className="mt-8 text-xl font-semibold">
-        Featured Tools and Resources
-      </h2>
+      <h2 className="mt-8 text-xl font-semibold">{t('home.featuredTools')}</h2>
       <p className="mt-4 text-muted-foreground">
-        The following tools are not provided by us, but they are very essential
-        tools. We recommend you to use them.
+        {t('home.featuredToolsDescription')}
       </p>
 
       <ToolsGallery tools={externalTools} />
 
       <div className="mt-8 text-sm text-muted-foreground">
-        If you have any suggestions for tools to be added to the gallery, please
-        feel free to contact us. We are always looking for ways to improve the
-        Auroras Explorer and provide more value to the Prosperous Universe
-        community.
+        {t('home.contactSuggestion')}
       </div>
     </div>
   )

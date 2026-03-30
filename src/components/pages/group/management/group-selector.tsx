@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { Link, useMatchRoute } from '@tanstack/react-router'
+import { useTranslation } from 'react-i18next'
 import { ArrowRightIcon, UsersIcon } from 'lucide-react'
 import type { FC } from 'react'
 import { LoadingPage } from '@/components/common/loading'
@@ -8,6 +9,7 @@ import { useGroupTools } from '@/hooks/use-navigates'
 import { myGroupsQuery } from '@/lib/query/group'
 
 export const GroupSelector: FC = () => {
+  const { t } = useTranslation()
   const groupsQuery = useQuery(myGroupsQuery())
   const groups = groupsQuery.data ?? []
   const groupTools = useGroupTools()
@@ -26,7 +28,7 @@ export const GroupSelector: FC = () => {
       <div className="p-6 flex-1 max-w-xl flex flex-col gap-4">
         <div className="mb-6">
           <h1 className="text-2xl font-bold">
-            {currentTool?.title ?? 'Group Tools'}
+            {currentTool ? t(currentTool.titleKey) : t('nav.groupTools')}
           </h1>
           <p className="text-muted-foreground text-sm mt-1">
             Select a group to continue.
@@ -68,7 +70,7 @@ export const GroupSelector: FC = () => {
 
         <Button variant="ghost" asChild>
           <Link to="/group/{-$groupId}" params={{ groupId: '' }}>
-            Go to Group List
+            {t('nav.groupList')}
             <ArrowRightIcon className="mr-1 size-4" />
           </Link>
         </Button>

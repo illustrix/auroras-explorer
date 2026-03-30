@@ -1,5 +1,6 @@
 import { useForm, useStore } from '@tanstack/react-form'
 import { useMutation, useQuery } from '@tanstack/react-query'
+import { useTranslation } from 'react-i18next'
 import type { FC } from 'react'
 import { Button } from '@/components/ui/button'
 import {
@@ -36,6 +37,7 @@ export const SetUserPlanDialogContent: FC<{
   close: () => void
   defaultValue?: SetUserPlanFormValues
 }> = ({ groupId, close, defaultValue }) => {
+  const { t } = useTranslation()
   const setUserPlan = useMutation({
     mutationKey: ['set-user-planet-plan', groupId],
     mutationFn: async ({ username, planUrl }: SetUserPlanFormValues) => {
@@ -84,7 +86,7 @@ export const SetUserPlanDialogContent: FC<{
       }}
     >
       <DialogHeader>
-        <DialogTitle>Set User Plan on Planet</DialogTitle>
+        <DialogTitle>{t('plan.setUserPlanOnPlanet')}</DialogTitle>
         <DialogDescription>
           Setup user base plan on planet to view contracts and production
           overview.
@@ -116,7 +118,7 @@ export const SetUserPlanDialogContent: FC<{
                 field.state.meta.isTouched && !field.state.meta.isValid
               return (
                 <Field data-invalid={isInvalid}>
-                  <FieldLabel htmlFor={field.name}>User</FieldLabel>
+                  <FieldLabel htmlFor={field.name}>{t('plan.user')}</FieldLabel>
 
                   <GroupMemberSelectSingle
                     groupId={groupId}
@@ -152,7 +154,9 @@ export const SetUserPlanDialogContent: FC<{
                 field.state.meta.isTouched && !field.state.meta.isValid
               return (
                 <Field data-invalid={isInvalid}>
-                  <FieldLabel htmlFor={field.name}>Plan Link</FieldLabel>
+                  <FieldLabel htmlFor={field.name}>
+                    {t('plan.planLink')}
+                  </FieldLabel>
                   <Input
                     id={field.name}
                     value={field.state.value}
@@ -172,22 +176,24 @@ export const SetUserPlanDialogContent: FC<{
 
       {planInfo.data ? (
         <div className="mt-4 p-4 border rounded">
-          <div className="mb-2 text-sm text-muted-foreground">Plan Info</div>
+          <div className="mb-2 text-sm text-muted-foreground">
+            {t('plan.planInfo')}
+          </div>
           <div className="flex flex-col gap-1">
             <div className="flex gap-2 items-center">
-              <div className="text-sm font-medium">Name</div>
+              <div className="text-sm font-medium">{t('plan.name')}</div>
               <div className="text-sm text-muted-foreground">
                 {planInfo.data.plan_details.plan_name}
               </div>
             </div>
             <div className="flex gap-2 items-center">
-              <div className="text-sm font-medium">Planet ID</div>
+              <div className="text-sm font-medium">{t('plan.planetId')}</div>
               <div className="text-sm text-muted-foreground">
                 {planInfo.data.plan_details.planet_natural_id}
               </div>
             </div>
             <div className="flex gap-2 items-center">
-              <div className="text-sm font-medium">Buildings</div>
+              <div className="text-sm font-medium">{t('plan.buildings')}</div>
               <div className="flex gap-1 text-sm text-muted-foreground">
                 {planInfo.data.plan_details.plan_data.buildings.map(i => {
                   return (
@@ -214,12 +220,12 @@ export const SetUserPlanDialogContent: FC<{
       <DialogFooter className="mt-8">
         <DialogClose asChild>
           <Button variant="outline" disabled={setUserPlan.isPending}>
-            Cancel
+            {t('common.cancel')}
           </Button>
         </DialogClose>
         <Button type="submit" disabled={setUserPlan.isPending}>
           {setUserPlan.isPending ? <Spinner data-icon="inline-start" /> : null}
-          Save
+          {t('common.save')}
         </Button>
       </DialogFooter>
     </form>

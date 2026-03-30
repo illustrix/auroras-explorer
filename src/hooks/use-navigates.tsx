@@ -13,28 +13,28 @@ import MdiSwapHorizontal from '~icons/mdi/swap-horizontal'
 export const useGroupTools = () => {
   return [
     {
-      title: 'Group Members',
+      titleKey: 'nav.groupMembers',
       url: '/group/{-$groupId}/members/',
       icon: MdiAccountGroupOutline,
-      category: 'Group Tools',
+      categoryKey: 'nav.groupTools',
     },
     {
-      title: 'Group Contracts',
+      titleKey: 'nav.groupContracts',
       url: '/group/{-$groupId}/contracts/',
       icon: MdiInvoiceListOutline,
-      category: 'Group Tools',
+      categoryKey: 'nav.groupTools',
     },
     {
-      title: 'Price Watch',
+      titleKey: 'nav.priceWatch',
       url: '/group/{-$groupId}/price-watch/',
       icon: MdiDollar,
-      category: 'Group Tools',
+      categoryKey: 'nav.groupTools',
     },
     {
-      title: 'Group Plan',
+      titleKey: 'nav.groupPlan',
       url: '/group/{-$groupId}/plan/',
       icon: MdiPlannerOutline,
-      category: 'Group Tools',
+      categoryKey: 'nav.groupTools',
     },
   ]
 }
@@ -44,42 +44,42 @@ export const useNavigates = () => {
 
   return [
     {
-      title: 'Shipment',
+      titleKey: 'nav.shipment',
       url: '/shipment/',
       icon: HugeiconsCargoShip,
       preview: ShipmentPreviewImg,
       description:
         'Calculation of optimal transportation plans for commodities between exchanges.',
-      category: 'Explorer Tools',
+      categoryKey: 'nav.explorerTools',
     },
     {
-      title: 'Production Line',
+      titleKey: 'nav.productionLine',
       url: '/production-line/',
       icon: MdiCompassOutline,
       preview: ProductionLinePreviewImg,
       description: 'Visualization of production lines and their dependencies.',
-      category: 'Explorer Tools',
+      categoryKey: 'nav.explorerTools',
     },
     {
-      title: 'Catalog',
+      titleKey: 'nav.catalog',
       url: '/catalog/',
       icon: MdiFileDocumentOutline,
       description: 'Browse all materials in the game and their details.',
-      category: 'Explorer Tools',
+      categoryKey: 'nav.explorerTools',
     },
     {
-      title: 'Group List',
+      titleKey: 'nav.groupList',
       url: '/group/',
       icon: MdiListBoxOutline,
-      category: 'Group Tools',
+      categoryKey: 'nav.groupTools',
     },
     ...groupTools,
     {
-      title: 'Config Transform',
+      titleKey: 'nav.configTransform',
       url: '/config-transform/',
       icon: MdiSwapHorizontal,
       description: 'Transform 3rd party config JSON into target format.',
-      category: 'Misc Tools',
+      categoryKey: 'nav.miscTools',
     },
   ]
 }

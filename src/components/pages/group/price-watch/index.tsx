@@ -1,4 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
+import { useTranslation } from 'react-i18next'
 import { type FC, useState } from 'react'
 import type { DateRange } from 'react-day-picker'
 import { LoadingPage } from '@/components/common/loading'
@@ -15,6 +16,7 @@ import { GroupMemberSelect } from '../group-member-select'
 export const GroupPriceWatchPage: FC<{
   groupId: string
 }> = ({ groupId }) => {
+  const { t } = useTranslation()
   const [date, setDate] = useState<DateRange | undefined>(() =>
     getDateRange('last-7-days'),
   )
@@ -42,13 +44,13 @@ export const GroupPriceWatchPage: FC<{
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Price Watch</h1>
+      <h1 className="text-2xl font-bold mb-4">{t('group.priceWatch.title')}</h1>
 
       <div className="flex gap-4 justify-start">
         <DatePickerWithRange date={date} setDate={setDate} />
 
         <Field className="w-50">
-          <FieldLabel>Users</FieldLabel>
+          <FieldLabel>{t('group.members.title')}</FieldLabel>
           <GroupMemberSelect
             groupId={groupId}
             value={usernames}
@@ -69,7 +71,7 @@ export const GroupPriceWatchPage: FC<{
               )
             })
           ) : (
-            <div>No contracts found</div>
+            <div>{t('dataTable.noResults')}</div>
           )
         ) : (
           <LoadingPage />

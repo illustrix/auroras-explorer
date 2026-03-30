@@ -1,9 +1,11 @@
+import { useTranslation } from 'react-i18next'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/motion-tabs'
 import { ContractTags } from '@/lib/constants'
 import { defaultColumnVisibility } from './column-visibility'
 import { useGroupContractsPageContext } from './context'
 
 export const ContractPageTabs = () => {
+  const { t } = useTranslation()
   const { setType, setTags, setStatus, table } = useGroupContractsPageContext()
 
   const tabs: {
@@ -16,14 +18,14 @@ export const ContractPageTabs = () => {
   }[] = [
     {
       value: 'all',
-      label: 'All Contracts',
+      label: t('group.contracts.all'),
       view: defaultColumnVisibility,
       type: 'All',
       status: 'All',
     },
     {
       value: 'supply',
-      label: 'Supply Request',
+      label: t('group.contracts.supplyRequest'),
       view: {
         ...defaultColumnVisibility,
         Items: true,
@@ -36,7 +38,7 @@ export const ContractPageTabs = () => {
     },
     {
       value: 'shipment',
-      label: 'Shipment',
+      label: t('group.contracts.shipment'),
       view: {
         ...defaultColumnVisibility,
         Location: true,

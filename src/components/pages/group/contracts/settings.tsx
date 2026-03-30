@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { DataTableViewOptions } from '@/components/common/data-table/column-toggle'
 import { DatePickerWithRange } from '@/components/ui/date-range-picker'
 import { Field, FieldLabel } from '@/components/ui/field'
@@ -13,6 +14,7 @@ import { StatusMap, TypesMap } from './constants'
 import { useGroupContractsPageContext } from './context'
 
 export const Settings = () => {
+  const { t } = useTranslation()
   const {
     groupId,
     usernames,
@@ -33,7 +35,7 @@ export const Settings = () => {
       <div className="flex-1" />
 
       <Field className="w-50">
-        <FieldLabel>Users</FieldLabel>
+        <FieldLabel>{t('group.members.title')}</FieldLabel>
         <GroupMemberSelect
           groupId={groupId}
           value={usernames}
@@ -42,10 +44,10 @@ export const Settings = () => {
       </Field>
 
       <Field className="w-40">
-        <FieldLabel>Type</FieldLabel>
+        <FieldLabel>{t('group.contracts.type')}</FieldLabel>
         <Select value={type} onValueChange={setType}>
           <SelectTrigger className="w-full">
-            <SelectValue placeholder="Select contract type" />
+            <SelectValue placeholder={t('common.filter')} />
           </SelectTrigger>
           <SelectContent>
             {Object.keys(TypesMap).map(type => (
@@ -58,10 +60,10 @@ export const Settings = () => {
       </Field>
 
       <Field className="w-40">
-        <FieldLabel>Status</FieldLabel>
+        <FieldLabel>{t('group.contracts.status')}</FieldLabel>
         <Select value={status} onValueChange={setStatus}>
           <SelectTrigger className="w-full">
-            <SelectValue placeholder="Select contract status" />
+            <SelectValue placeholder={t('common.filter')} />
           </SelectTrigger>
           <SelectContent>
             {Object.keys(StatusMap).map(status => (

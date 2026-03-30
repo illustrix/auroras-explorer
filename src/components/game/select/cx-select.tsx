@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import type { FC } from 'react'
 import {
   Select,
@@ -18,12 +19,13 @@ export const CommodityExchangeSelect: FC<CommodityExchangeSelectProps> = ({
   value: cx,
   onValueChange: setCx,
 }) => {
+  const { t } = useTranslation()
   const { data } = useGameData()
 
   return (
     <Select value={cx} onValueChange={value => setCx(value)}>
       <SelectTrigger className="w-full max-w-xs">
-        <SelectValue placeholder="Select Commodity Exchange" />
+        <SelectValue placeholder={t('game.selectCommodityExchange')} />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
@@ -38,7 +40,7 @@ export const CommodityExchangeSelect: FC<CommodityExchangeSelectProps> = ({
             )
           }) ?? (
             <SelectItem value="loading" disabled>
-              Loading...
+              {t('game.loading')}
             </SelectItem>
           )}
         </SelectGroup>
