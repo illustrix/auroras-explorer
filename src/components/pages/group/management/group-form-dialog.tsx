@@ -1,5 +1,6 @@
 import { useForm, useStore } from '@tanstack/react-form'
 import { useMutation } from '@tanstack/react-query'
+import { useTranslation } from 'react-i18next'
 import type { FC } from 'react'
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
@@ -37,6 +38,7 @@ export const GroupFormDialog: FC<{
   onOpenChange: (open: boolean) => void
   group?: Group
 }> = ({ open, onOpenChange, group }) => {
+  const { t } = useTranslation()
   const isEdit = !!group
 
   const mutation = useMutation({
@@ -79,11 +81,13 @@ export const GroupFormDialog: FC<{
           }}
         >
           <DialogHeader>
-            <DialogTitle>{isEdit ? 'Edit Group' : 'Create Group'}</DialogTitle>
+            <DialogTitle>
+              {isEdit ? t('group.form.editTitle') : t('group.form.createTitle')}
+            </DialogTitle>
             <DialogDescription>
               {isEdit
-                ? 'Update the group settings. You must be an admin of the FIO group.'
-                : 'Link a FIO group to start tracking. You must be an admin of the FIO group.'}
+                ? t('group.form.editDescription')
+                : t('group.form.createDescription')}
             </DialogDescription>
           </DialogHeader>
 
@@ -93,7 +97,7 @@ export const GroupFormDialog: FC<{
               validators={{
                 onSubmit: ({ value }) => {
                   if (!value.trim()) {
-                    return { message: 'Group name is required.' }
+                    return { message: t('group.form.nameRequired') }
                   }
                 },
               }}
@@ -103,10 +107,12 @@ export const GroupFormDialog: FC<{
                   field.state.meta.isTouched && !field.state.meta.isValid
                 return (
                   <Field data-invalid={isInvalid}>
-                    <FieldLabel htmlFor={field.name}>Group Name</FieldLabel>
+                    <FieldLabel htmlFor={field.name}>
+                      {t('group.form.nameLabel')}
+                    </FieldLabel>
                     <Input
                       id={field.name}
-                      placeholder="My Corp Group"
+                      placeholder={t('group.form.namePlaceholder')}
                       value={field.state.value}
                       onBlur={field.handleBlur}
                       onChange={e => field.handleChange(e.target.value)}
@@ -125,7 +131,7 @@ export const GroupFormDialog: FC<{
               validators={{
                 onSubmit: ({ value }) => {
                   if (!value.trim()) {
-                    return { message: 'FIO Group ID is required.' }
+                    return { message: t('group.form.fioGroupIdRequired') }
                   }
                 },
               }}
@@ -135,10 +141,12 @@ export const GroupFormDialog: FC<{
                   field.state.meta.isTouched && !field.state.meta.isValid
                 return (
                   <Field data-invalid={isInvalid}>
-                    <FieldLabel htmlFor={field.name}>FIO Group ID</FieldLabel>
+                    <FieldLabel htmlFor={field.name}>
+                      {t('group.form.fioGroupIdLabel')}
+                    </FieldLabel>
                     <Input
                       id={field.name}
-                      placeholder="e.g. 12345"
+                      placeholder={t('group.form.fioGroupIdPlaceholder')}
                       disabled={isEdit}
                       value={field.state.value}
                       onBlur={field.handleBlur}
@@ -163,7 +171,7 @@ export const GroupFormDialog: FC<{
                       onCheckedChange={v => field.handleChange(v === true)}
                     />
                     <FieldLabel htmlFor={field.name} className="mb-0">
-                      Use my FIO API token
+                      {t('group.form.useMyToken')}
                     </FieldLabel>
                   </div>
                 </Field>
@@ -176,7 +184,7 @@ export const GroupFormDialog: FC<{
                 validators={{
                   onSubmit: ({ value }) => {
                     if (!useMyToken && !value.trim()) {
-                      return { message: 'FIO API Token is required.' }
+                      return { message: t('group.form.fioApiTokenRequired') }
                     }
                   },
                 }}
@@ -187,19 +195,19 @@ export const GroupFormDialog: FC<{
                   return (
                     <Field data-invalid={isInvalid}>
                       <FieldLabel htmlFor={field.name}>
-                        FIO API Token
+                        {t('group.form.fioApiTokenLabel')}
                       </FieldLabel>
                       <Input
                         id={field.name}
                         type="text"
-                        placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+                        placeholder={t('group.form.fioApiTokenPlaceholder')}
                         value={field.state.value}
                         onBlur={field.handleBlur}
                         onChange={e => field.handleChange(e.target.value)}
                         aria-invalid={isInvalid}
                       />
                       <FieldDescription>
-                        A FIO API token with access to this group.
+                        {t('group.form.fioApiTokenDescription')}
                       </FieldDescription>
                       {isInvalid && (
                         <FieldError errors={field.state.meta.errors} />
@@ -214,7 +222,7 @@ export const GroupFormDialog: FC<{
               <p className="text-destructive text-sm">
                 {mutation.error instanceof AppError
                   ? mutation.error.message
-                  : 'An error occurred. Please try again.'}
+                  : t('group.form.submitError')}
               </p>
             )}
           </FieldGroup>
@@ -225,11 +233,11 @@ export const GroupFormDialog: FC<{
               variant="outline"
               onClick={() => onOpenChange(false)}
             >
-              Cancel
+              {t('common.cancel')}
             </Button>
             <Button type="submit" disabled={mutation.isPending}>
               {mutation.isPending && <Spinner data-icon="inline-start" />}
-              {isEdit ? 'Update' : 'Create'}
+              {isEdit ? t('common.update') : t('common.create')}
             </Button>
           </DialogFooter>
         </form>

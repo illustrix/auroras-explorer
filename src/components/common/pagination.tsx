@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import {
   ChevronFirstIcon,
   ChevronLastIcon,
@@ -30,13 +31,14 @@ export interface PaginationProps {
 }
 
 export const Pagination = ({ table, pagination }: PaginationProps) => {
+  const { t } = useTranslation()
   return (
     <PaginationRoot>
       <PaginationContent>
         <PaginationItem>
           <PaginationLink
             href="#"
-            aria-label="Go to first page"
+            aria-label={t('pagination.firstPage') ?? undefined}
             size="icon"
             onClick={() => table.firstPage()}
             disabled={pagination.pageIndex !== 0}
@@ -47,7 +49,7 @@ export const Pagination = ({ table, pagination }: PaginationProps) => {
         <PaginationItem>
           <PaginationLink
             href="#"
-            aria-label="Go to previous page"
+            aria-label={t('pagination.previousPage') ?? undefined}
             size="icon"
             onClick={() => table.getCanPreviousPage() && table.previousPage()}
             disabled={!table.getCanPreviousPage()}
@@ -58,16 +60,16 @@ export const Pagination = ({ table, pagination }: PaginationProps) => {
 
         <PaginationItem>
           <p className="text-muted-foreground text-sm" aria-live="polite">
-            Page{' '}
+            {t('pagination.page')}{' '}
             <span className="text-foreground">{pagination.pageIndex + 1}</span>{' '}
-            of <span className="text-foreground">{table.getPageCount()}</span>
+            {t('pagination.of')} <span className="text-foreground">{table.getPageCount()}</span>
           </p>
         </PaginationItem>
 
         <PaginationItem>
           <PaginationLink
             href="#"
-            aria-label="Go to next page"
+            aria-label={t('pagination.nextPage') ?? undefined}
             size="icon"
             onClick={() => table.getCanNextPage() && table.nextPage()}
             disabled={!table.getCanNextPage()}
@@ -79,7 +81,7 @@ export const Pagination = ({ table, pagination }: PaginationProps) => {
         <PaginationItem>
           <PaginationLink
             href="#"
-            aria-label="Go to last page"
+            aria-label={t('pagination.lastPage') ?? undefined}
             size="icon"
             onClick={() => table.lastPage()}
             disabled={pagination.pageIndex !== table.getPageCount() - 1}

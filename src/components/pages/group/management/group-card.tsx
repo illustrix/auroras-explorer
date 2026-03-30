@@ -1,4 +1,5 @@
 import { Link } from '@tanstack/react-router'
+import { useTranslation } from 'react-i18next'
 import { SettingsIcon } from 'lucide-react'
 import type { FC } from 'react'
 import { Button } from '@/components/ui/button'
@@ -9,6 +10,7 @@ export const GroupCard: FC<{
   group: Group
   onEdit: (group: Group) => void
 }> = ({ group, onEdit }) => {
+  const { t } = useTranslation()
   const groupTools = useGroupTools()
 
   return (
@@ -21,14 +23,14 @@ export const GroupCard: FC<{
         <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-all">
           <Button variant="ghost" onClick={() => onEdit(group)}>
             <SettingsIcon />
-            Edit
+            {t('common.edit')}
           </Button>
         </div>
       </div>
       <div className="flex gap-4">
         {groupTools.map(tool => {
           return (
-            <Button key={tool.title} variant="outline" size="sm" asChild>
+            <Button key={tool.titleKey} variant="outline" size="sm" asChild>
               <Link
                 to={tool.url}
                 params={{
@@ -36,7 +38,7 @@ export const GroupCard: FC<{
                 }}
               >
                 {tool.icon && <tool.icon className="mr-1 size-4" />}
-                {tool.title}
+                {t(tool.titleKey)}
               </Link>
             </Button>
           )

@@ -1,23 +1,22 @@
-import { PlusIcon, UsersIcon } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import type { FC } from 'react'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
+import { EmptyState } from '@/components/common/result'
 
-export const GroupEmptyState: FC<{
+interface GroupEmptyStateProps {
   onCreate: () => void
-}> = ({ onCreate }) => {
+}
+
+export const GroupEmptyState: FC<GroupEmptyStateProps> = ({ onCreate }) => {
+  const { t } = useTranslation()
   return (
-    <Card>
-      <CardContent className="flex flex-col items-center justify-center py-12">
-        <UsersIcon className="text-muted-foreground mb-3 size-10" />
-        <p className="text-muted-foreground mb-4 text-sm">
-          You don't have any groups yet.
-        </p>
-        <Button variant="outline" onClick={onCreate}>
-          <PlusIcon className="mr-1.5 size-4" />
-          Create your first group
-        </Button>
-      </CardContent>
-    </Card>
+    <EmptyState
+      icon={<div className="text-4xl">📦</div>}
+      title={t('group.list.empty.title')}
+      description={t('group.list.empty.description')}
+      action={
+        <Button onClick={onCreate}>{t('group.list.empty.createButton')}</Button>
+      }
+    />
   )
 }

@@ -1,14 +1,11 @@
+import { useTranslation } from 'react-i18next'
 import {
   flexRender,
   type Row,
   type Table as TanStackTable,
 } from '@tanstack/react-table'
 import type { ComponentType, MouseEvent } from 'react'
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from '@/components/ui/collapsible'
+import { Collapsible } from '@/components/ui/collapsible'
 import {
   Table,
   TableBody,
@@ -34,6 +31,7 @@ export const DataTable = <T,>({
   collapsibleContent: CustomCollapsibleContent,
   onRowClick,
 }: DataTableProps<T>) => {
+  const { t } = useTranslation()
   const rowModel = table.getRowModel()
   const footerGroups = table.getFooterGroups()
 
@@ -87,15 +85,7 @@ export const DataTable = <T,>({
 
               return CustomCollapsibleContent ? (
                 <Collapsible key={row.id} asChild>
-                  {/** biome-ignore lint/complexity/noUselessFragments: children accept only 1 element */}
-                  <>
-                    <CollapsibleTrigger asChild>
-                      {rowContent}
-                    </CollapsibleTrigger>
-                    <CollapsibleContent asChild>
-                      <CustomCollapsibleContent row={row} />
-                    </CollapsibleContent>
-                  </>
+                  {rowContent}
                 </Collapsible>
               ) : (
                 rowContent
@@ -104,7 +94,7 @@ export const DataTable = <T,>({
           ) : (
             <TableRow>
               <TableCell colSpan={100} className="h-24 text-center">
-                No results.
+                {t('dataTable.noResults')}
               </TableCell>
             </TableRow>
           )}

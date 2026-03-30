@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { Link, useMatches } from '@tanstack/react-router'
+import { useTranslation } from 'react-i18next'
 import { useMemo } from 'react'
 import {
   Breadcrumb,
@@ -19,6 +20,7 @@ const useGroupName = (groupId: string | undefined) => {
 }
 
 const useBreadcrumbs = () => {
+  const { t } = useTranslation()
   const matches = useMatches()
   const groupTools = useGroupTools()
   const navigates = useNavigates()
@@ -42,7 +44,7 @@ const useBreadcrumbs = () => {
 
     // For group sub-routes: Groups > GroupName > Tool
     if (groupId && groupId !== '_') {
-      crumbs.push({ label: 'Groups', to: '/group/' })
+      crumbs.push({ label: t('nav.groups'), to: '/group/' })
       crumbs.push({
         label: groupName ?? groupId,
         to: '/group/{-$groupId}/members/',
@@ -51,7 +53,7 @@ const useBreadcrumbs = () => {
 
       const groupTool = groupTools.find(t => t.url === leafMatch.fullPath)
       if (groupTool) {
-        crumbs.push({ label: groupTool.title })
+        crumbs.push({ label: t(groupTool.titleKey) })
       }
       return crumbs
     }
@@ -59,11 +61,11 @@ const useBreadcrumbs = () => {
     // For non-group routes, find the nav item label
     const navItem = navigates.find(n => n.url === leafMatch.fullPath)
     if (navItem) {
-      crumbs.push({ label: navItem.title })
+      crumbs.push({ label: t(navItem.titleKey) })
     }
 
     return crumbs
-  }, [matches, groupId, groupName, groupTools, navigates])
+  }, [matches, groupId, groupName, groupTools, navigates, t])
 }
 
 export const AppBreadcrumb = () => {

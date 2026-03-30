@@ -1,6 +1,7 @@
 import { useForm, useStore } from '@tanstack/react-form'
 import { debounce } from 'es-toolkit'
 import { useEffect, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button'
 import {
   Field,
@@ -23,6 +24,7 @@ import IconContentCopy from '~icons/mdi/content-copy'
 import { transformConfig } from './transform-config'
 
 export const ConfigTransformPage = () => {
+  const { t } = useTranslation()
   const [result, setResult] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [copied, setCopied] = useState(false)
@@ -86,7 +88,7 @@ export const ConfigTransformPage = () => {
 
   return (
     <div className="flex h-full flex-col gap-4 p-4">
-      <h1 className="text-xl font-semibold">Config Transform</h1>
+      <h1 className="text-xl font-semibold">{t('configTransform.title')}</h1>
 
       <p className="text-xs text-muted-foreground">
         Don't ask me what this is. If you know it, you know it.
@@ -99,7 +101,7 @@ export const ConfigTransformPage = () => {
             <form.Field name="location">
               {field => (
                 <Field>
-                  <FieldLabel htmlFor={field.name}>Location</FieldLabel>
+                  <FieldLabel htmlFor={field.name}>{t('configTransform.location')}</FieldLabel>
                   <Input
                     id={field.name}
                     value={field.state.value}
@@ -114,7 +116,7 @@ export const ConfigTransformPage = () => {
             <form.Field name="currency">
               {field => (
                 <Field>
-                  <FieldLabel htmlFor={field.name}>Currency</FieldLabel>
+                  <FieldLabel htmlFor={field.name}>{t('configTransform.currency')}</FieldLabel>
                   <Select
                     value={field.state.value}
                     onValueChange={field.handleChange}
@@ -159,7 +161,7 @@ export const ConfigTransformPage = () => {
         {/* Right Column - Result */}
         <div className="flex flex-col gap-2 overflow-hidden">
           <div className="flex items-center justify-between">
-            <FieldLabel>Transformed Result</FieldLabel>
+            <FieldLabel>{t('configTransform.transformedResult')}</FieldLabel>
             <Button
               variant="outline"
               size="sm"
@@ -174,11 +176,11 @@ export const ConfigTransformPage = () => {
             >
               {copied ? (
                 <>
-                  <IconCheck className="size-4" /> Copied
+                  <IconCheck className="size-4" /> {t('common.copied')}
                 </>
               ) : (
                 <>
-                  <IconContentCopy className="size-4" /> Copy
+                  <IconContentCopy className="size-4" /> {t('common.copy')}
                 </>
               )}
             </Button>

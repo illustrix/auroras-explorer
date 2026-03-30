@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { useQuery } from '@tanstack/react-query'
 import { compact } from 'es-toolkit'
 import { type FC, useCallback, useMemo } from 'react'
@@ -23,6 +24,7 @@ import { SetUserPlanDialogContent } from './set-user-plan'
 export const GroupPlanPage: FC<{
   groupId: string
 }> = ({ groupId }) => {
+  const { t } = useTranslation()
   const { data: plans } = useQuery(groupPlansQuery(groupId))
 
   const refetchPlans = useCallback(() => {
@@ -37,7 +39,7 @@ export const GroupPlanPage: FC<{
   return (
     <div className="p-4">
       <div className="w-full flex justify-between ">
-        <h1>Group Plans</h1>
+        <h1>{t('group.plans.title')}</h1>
       </div>
 
       <div className="mt-4 flex flex-col gap-4">
@@ -61,7 +63,7 @@ export const GroupPlanPage: FC<{
                   >
                     <a href={getPlanLinkFromId(plan.planId)} target="_blank">
                       <MdiLink />
-                      Plan Link
+                      {t('group.plans.planLink')}
                     </a>
                   </Button>
 
@@ -88,7 +90,7 @@ export const GroupPlanPage: FC<{
                       }}
                     >
                       <MdiEdit />
-                      Edit
+                      {t('group.plans.edit')}
                     </Button>
 
                     <Button
@@ -106,15 +108,13 @@ export const GroupPlanPage: FC<{
                       }}
                     >
                       <MdiTrash />
-                      Delete
+                      {t('group.plans.delete')}
                     </Button>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
                   {plans.map(plan => {
                     return (
-                      // biome-ignore lint/a11y/noStaticElementInteractions: debug only
-                      // biome-ignore lint/a11y/useKeyWithClickEvents: debug only
                       <div
                         key={plan.username}
                         onClick={() => {
@@ -166,7 +166,7 @@ export const GroupPlanPage: FC<{
                     }}
                   >
                     <MdiPlus />
-                    Add User
+                    {t('group.plans.addUser')}
                   </Button>
                 </div>
               </div>
@@ -191,7 +191,7 @@ export const GroupPlanPage: FC<{
             )
           }}
         >
-          Add Plan
+          {t('group.plans.addPlan')}
         </Button>
       </div>
     </div>

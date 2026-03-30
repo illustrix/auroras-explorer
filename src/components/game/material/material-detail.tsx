@@ -1,12 +1,12 @@
 import chroma from 'chroma-js'
 import { uniq } from 'es-toolkit'
 import { type FC, memo, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 import {
   getRecipesByInput,
   getRecipesByOutput,
 } from '@/components/pages/production-line/graph'
 import { formatMaterialName } from '@/lib/game/format'
-// import { RecipePreview } from '@/components/pages/production-line/recipe-preview'
 import { useGameData } from '@/lib/store'
 import { cn } from '@/lib/utils'
 import { getMaterialCategoryTheme } from '../material-category'
@@ -25,6 +25,7 @@ const _MaterialDetail: FC<MaterialDetailProps> = ({
   className,
   ...props
 }) => {
+  const { t } = useTranslation()
   const { data } = useGameData()
   const mat = ticker ? data?.materialsByTicker[ticker] : undefined
 
@@ -87,7 +88,7 @@ const _MaterialDetail: FC<MaterialDetailProps> = ({
 
       <div>
         <div>
-          <div className="text-sm font-bold mb-2">Produced by</div>
+          <div className="text-sm font-bold mb-2">{t('game.producedBy')}</div>
           <div className="flex flex-col gap-2">
             {produceBuilding?.map(building => (
               <div
@@ -99,28 +100,6 @@ const _MaterialDetail: FC<MaterialDetailProps> = ({
             ))}
           </div>
         </div>
-
-        {/* {recipes.cur?.length ? (
-          <div className="mb-4">
-            <div className="text-sm font-bold mb-2">Produced by</div>
-            <div className="flex flex-col gap-2">
-              {recipes.cur.map(recipe => (
-                <RecipePreview key={recipe.RecipeName} recipe={recipe} />
-              ))}
-            </div>
-          </div>
-        ) : null}
-
-        {recipes.fur?.length ? (
-          <div>
-            <div className="text-sm font-bold mb-2">Consumed by</div>
-            <div className="flex flex-col gap-2">
-              {recipes.fur.map(recipe => (
-                <RecipePreview key={recipe.RecipeName} recipe={recipe} />
-              ))}
-            </div>
-          </div>
-        ) : null} */}
       </div>
     </div>
   )

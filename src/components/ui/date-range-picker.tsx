@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import type { DateRange } from 'react-day-picker'
 import { Calendar } from '@/components/ui/calendar'
 import { Field, FieldLabel } from '@/components/ui/field'
@@ -23,26 +24,17 @@ export interface DatePickerWithRangeProps {
   setDate: (date: DateRange | undefined) => void
 }
 
-const options = [
-  { value: 'today', label: 'Today' },
-  { value: 'yesterday', label: 'Yesterday' },
-  { value: 'last-7-days', label: 'Last 7 days' },
-  { value: 'last-30-days', label: 'Last 30 days' },
-  { value: 'this-month', label: 'This month' },
-  { value: 'last-month', label: 'Last month' },
-  // { value: 'custom', label: 'Custom' },
-]
-
 export function DatePickerWithRange({
   date,
   setDate,
 }: DatePickerWithRangeProps) {
+  const { t } = useTranslation()
   const [open, setOpen] = useState(false)
   const [value, setValue] = useState('last-7-days')
 
   return (
     <Field className="w-60">
-      <FieldLabel htmlFor="date-picker-range">Date</FieldLabel>
+      <FieldLabel htmlFor="date-picker-range">{t('ui.date')}</FieldLabel>
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Select
@@ -53,14 +45,15 @@ export function DatePickerWithRange({
             }}
           >
             <SelectTrigger>
-              <SelectValue placeholder="Select date" />
+              <SelectValue placeholder={t('ui.selectDate')} />
             </SelectTrigger>
             <SelectContent>
-              {options.map(option => (
-                <SelectItem key={option.value} value={option.value}>
-                  {option.label}
-                </SelectItem>
-              ))}
+              <SelectItem value="today">{t('dateRange.today')}</SelectItem>
+              <SelectItem value="yesterday">{t('dateRange.yesterday')}</SelectItem>
+              <SelectItem value="last-7-days">{t('dateRange.last7Days')}</SelectItem>
+              <SelectItem value="last-30-days">{t('dateRange.last30Days')}</SelectItem>
+              <SelectItem value="this-month">{t('dateRange.thisMonth')}</SelectItem>
+              <SelectItem value="last-month">{t('dateRange.lastMonth')}</SelectItem>
             </SelectContent>
           </Select>
         </PopoverTrigger>
