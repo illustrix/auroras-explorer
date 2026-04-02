@@ -30,7 +30,8 @@ export const fsCache: Cache = {
     await ensureFs()
 
     const expireTime = getItem<number>(cacheExpireTimeKey(key))
-    if (expireTime && Date.now() > expireTime) {
+
+    if (!expireTime || Date.now() > expireTime) {
       await fs.unlink(getCachePath(key)).catch(() => {})
       return
     }

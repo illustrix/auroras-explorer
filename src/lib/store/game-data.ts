@@ -24,7 +24,6 @@ const gameDataService = new GameDataService(fsCache)
 const gameDataQuery = queryOptions({
   queryKey: ['gameData'],
   queryFn: () => gameDataService.loadAll(),
-  staleTime: Infinity,
 })
 
 export const useGameData = () => useQuery(gameDataQuery)
