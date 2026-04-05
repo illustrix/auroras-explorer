@@ -1,5 +1,6 @@
 import { groupBy, sortBy } from 'es-toolkit'
 import { type ComponentType, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { MaterialDetail } from '@/components/game/material/material-detail'
 import { getMaterialCategoryTheme } from '@/components/game/material-category'
 import { MaterialTileBase } from '@/components/game/material-tile'
@@ -68,6 +69,7 @@ const categoriesIconMap: Record<string, ComponentType | null> = {
 }
 
 export const CatalogPage = () => {
+  const { t } = useTranslation(['translation', 'game'])
   const { data } = useGameData()
 
   const categories = useMemo(() => {
@@ -102,7 +104,9 @@ export const CatalogPage = () => {
                   <Icon />
                 </span>
               )}
-              {category}
+              {t(
+                `game:MaterialCategory.${category.toLowerCase().replaceAll(' ', '')}`,
+              )}
             </div>,
             ...mats.map(mat => {
               const active = activeMat === mat.Ticker

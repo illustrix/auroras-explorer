@@ -6,7 +6,6 @@ import {
   getRecipesByInput,
   getRecipesByOutput,
 } from '@/components/pages/production-line/graph'
-import { formatMaterialName } from '@/lib/game/format'
 import { useGameData } from '@/lib/store'
 import { cn } from '@/lib/utils'
 import { getMaterialCategoryTheme } from '../material-category'
@@ -25,7 +24,7 @@ const _MaterialDetail: FC<MaterialDetailProps> = ({
   className,
   ...props
 }) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation(['translation', 'game'])
   const { data } = useGameData()
   const mat = ticker ? data?.materialsByTicker[ticker] : undefined
 
@@ -66,15 +65,21 @@ const _MaterialDetail: FC<MaterialDetailProps> = ({
             background: 'transparent',
           }}
         >
-          <div className="text-lg font-bold capitalize">
-            {formatMaterialName(mat.Name)}
+          <div className="text-lg font-bold">
+            {t(`game:Material.${mat.Name}.name`)}
           </div>
         </div>
 
         {decorator}
       </div>
 
-      <div className="flex-1">
+      <div>
+        <div className="text-sm font-bold mb-2 text-muted-foreground">
+          {t(`game:Material.${mat.Name}.description`)}
+        </div>
+      </div>
+
+      <div className="flex-1 font-mono text-sm">
         {mat.Weight.toFixed(1)}t/
         {mat.Volume.toFixed(1)}m³
         <span className="ml-2" style={{ color: densityColor?.hex() }}>
@@ -90,14 +95,23 @@ const _MaterialDetail: FC<MaterialDetailProps> = ({
         <div>
           <div className="text-sm font-bold mb-2">{t('game.producedBy')}</div>
           <div className="flex flex-col gap-2">
-            {produceBuilding?.map(building => (
-              <div
-                key={building}
-                className="text-sm text-muted-foreground cursor-pointer hover:underline"
-              >
-                {building}
-              </div>
-            ))}
+            {produceBuilding?.map(building => {
+              const buildingName = data?.buildingsByTicker[building]?.Name
+
+              return (
+                <div
+                  key={building}
+                  className="text-sm text-muted-foreground cursor-pointer hover:underline"
+                >
+                  {building}{' '}
+                  {buildingName ? (
+                    <span>{t(`game:Reactor.${buildingName}_name`)}</span>
+                  ) : (
+                    'Unknown'
+                  )}
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>

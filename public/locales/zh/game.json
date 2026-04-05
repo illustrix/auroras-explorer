@@ -1,0 +1,1701 @@
+{
+  "Material": {
+    "advancedBulkhead": {
+      "description": "跟它小弟比起来，高级隔板更厚更重且更耐用。",
+      "name": "高级隔板"
+    },
+    "advancedDeckElements": {
+      "description": "又厚又耐用，这些3D打印的楼板常见于部分建筑以及高级航天器中。",
+      "name": "高级预制地板"
+    },
+    "advancedEngine": {
+      "description": "高级低光速引擎，带有更大推力因此相对更耗油。",
+      "name": "高级低光速引擎"
+    },
+    "advancedFuelPump": {
+      "description": "高推力航天器引擎使用的高级燃料泵。",
+      "name": "高级燃料泵"
+    },
+    "advancedFuelRod": {
+      "description": "裂变反应堆使用的高级反应堆燃料棒。",
+      "name": "高级燃料棒"
+    },
+    "advancedHeatShield": {
+      "description": "船表面安装这些隔热瓦可用极大减轻其遭受极端高温时受到的损伤。",
+      "name": "高级隔热瓦"
+    },
+    "advancedHighgSeats": {
+      "description": "特制的允许船员承受更高G力过载的座椅。",
+      "name": "高级高G力座椅"
+    },
+    "advancedHullPlate": {
+      "description": "高级船板。其会极大减轻船只的整体损伤并允许其承受超高的最大G力过载。",
+      "name": "高级船板"
+    },
+    "advancedNozzle": {
+      "description": "中等推力航天器引擎使用的高级喷嘴。",
+      "name": "高级喷嘴"
+    },
+    "advancedRadiationShielding": {
+      "description": "这些护板保护船只免遭一般中等恒星辐射水平的损伤。",
+      "name": "高级防辐射板"
+    },
+    "advancedStructuralElements": {
+      "description": "通过添加钛合金制成的更坚固但更轻的强化结构部件。",
+      "name": "高级结构部件"
+    },
+    "advancedThermalProtectionMaterial": {
+      "description": "一种浸渍硼硅酸盐的用于抵御极端高温的陶瓷织物。",
+      "name": "高级隔热材料"
+    },
+    "advancedWhippleShielding": {
+      "description": "极大减轻穿过小行星密集区时受到的损伤的护盾。",
+      "name": "高级惠普尔护盾"
+    },
+    "advancedWindow": {
+      "description": "配有强化框架和纳米涂层玻璃的窗户，在建筑和电子产品中具有非常特殊的用途。",
+      "name": "高级透光部件"
+    },
+    "aerostatFoundation": {
+      "description": "这款模块化中空的平台可以充入升力气体以便在气态巨行星的上层大气建造浮力结构。",
+      "name": "悬空自稳定地基"
+    },
+    "airScrubber": {
+      "description": "移除致命污染物的空气净化设备。",
+      "name": "空气洗涤器"
+    },
+    "allPurposeFodder": {
+      "description": "可喂食任何动物的万能饲料。",
+      "name": "全需求饲料"
+    },
+    "aluminium": {
+      "description": "铝和铝合金自航空航天工业诞生以来一直是其主要材料，至今仍在现代宇宙飞船的几乎所有结构部件中使用。",
+      "name": "铝"
+    },
+    "aluminiumIronAlloy": {
+      "description": "作为钛的低成本替代品的一种铁基合金，没什么神奇之处。",
+      "name": "铁铝合金"
+    },
+    "aluminiumOre": {
+      "description": "熔炼可获得纯铝的矿石，因此是造船业的重要一环。",
+      "name": "铝矿石"
+    },
+    "aluminiumTitaniumAlloy": {
+      "description": "这种与地球钛同名的轻质、柔韧且耐用的材料，已成为宇宙飞船建造的事实标准。",
+      "name": "α稳定型钛合金"
+    },
+    "alurhenium": {
+      "description": "一种结合了铝的柔韧性以及铼的耐磨性的合金。",
+      "name": "铝铼合金"
+    },
+    "ammonia": {
+      "description": "现代燃料生产中重要原料，氨可以使用氢和氮合成。但是直接从大气中分离提纯已被证实是最低价的方法。",
+      "name": "氨"
+    },
+    "antennaArray": {
+      "description": "使用弧面聚焦信号至焦点以便收集。",
+      "name": "天线阵列"
+    },
+    "antibacterialTreeFlowers": {
+      "description": "蛇麻（Humulus Lupulus）的花，用于酿造啤酒和制作草药。",
+      "name": "花香啤酒花"
+    },
+    "argon": {
+      "description": "常充当冶炼、金属加工和其它用途的保护气的惰性气体。",
+      "name": "氩"
+    },
+    "artificialSoil": {
+      "description": "100%实验室制土。",
+      "name": "人造土壤"
+    },
+    "audioDistributionSystem": {
+      "description": "在预定义的空间内分配音频信号。",
+      "name": "音频分配系统"
+    },
+    "audioTransmitter": {
+      "description": "在两个端点之间传输音频信号。",
+      "name": "音频传输器"
+    },
+    "autoDoc": {
+      "description": "扫描病人的身体以扫描任何伤势并通过注射化学品进行治疗处理。",
+      "name": "自助医生"
+    },
+    "automatedCoolingSystem": {
+      "description": "检测并控制超光速反应堆热量的系统。",
+      "name": "自动化冷却系统"
+    },
+    "bacteria": {
+      "description": "这些微生物在例如发酵和净化过程中发挥关键作用。",
+      "name": "有益细菌"
+    },
+    "bandages": {
+      "description": "用于包扎表皮损伤。",
+      "name": "绷带"
+    },
+    "basicAiFramework": {
+      "description": "一组基本人工智能算法，可作为任何远程智能机器的起点。",
+      "name": "基础AI框架"
+    },
+    "basicBulkhead": {
+      "description": "将船只和建筑分成几个隔间以增加其结构刚度，并可在发生事故时封闭火灾或破损部分。",
+      "name": "基础隔板"
+    },
+    "basicDeckElements": {
+      "description": "适用于船只和建筑的耐用塑料地板，可打印成多种尺寸或形状。",
+      "name": "基础预制地板"
+    },
+    "basicFuelPump": {
+      "description": "低推力航天器引擎使用的标准燃料泵。",
+      "name": "基础燃料泵"
+    },
+    "basicFuelRod": {
+      "description": "装载用于超光速跃迁需要的燃料的管状物。",
+      "name": "基础燃料棒"
+    },
+    "basicHeatShield": {
+      "description": "船外部覆盖这些瓦可以减少其在极端热量下受到的损伤。",
+      "name": "基础隔热瓦"
+    },
+    "basicHighgSeats": {
+      "description": "特质的增加船员可承受的最高G力过载的座椅。",
+      "name": "基础高G力座椅"
+    },
+    "basicHullPlate": {
+      "description": "基础航天器外板。",
+      "name": "基础船板"
+    },
+    "basicNozzle": {
+      "description": "低推力航天器引擎使用的基础喷嘴。",
+      "name": "基础喷嘴"
+    },
+    "basicRadiationShielding": {
+      "description": "这些护板保护船只免遭一般小型恒星辐射水平的损伤。",
+      "name": "基础防辐射板"
+    },
+    "basicStructuralElements": {
+      "description": "对于既不是墙板又不是地板的中等大小船只和建筑结构件的统称。",
+      "name": "基础结构部件"
+    },
+    "basicThermalProtectionMaterial": {
+      "description": "一种用于制作各种隔热罩的浸渍铍的陶瓷织物。",
+      "name": "基础隔热材料"
+    },
+    "basicWhippleShielding": {
+      "description": "减轻穿过小行星密集区时受到的损伤的护盾。",
+      "name": "基础惠普尔护盾"
+    },
+    "basicWindow": {
+      "description": "由金属框架和多层透明塑料组成并带有紧急闭合装置，以应对其在不可呼吸大气或太空中破损的情况。",
+      "name": "基础透光部件"
+    },
+    "beryl": {
+      "description": "铍铝环硅酸盐。最广为人知的形式是祖母绿和海蓝宝石。",
+      "name": "绿柱石晶体"
+    },
+    "beryllium": {
+      "description": "铍的热导率和低密度使其可用于太空结构和船只。由于其会在恒星内部聚变成更重的元素导致相当稀有。",
+      "name": "铍"
+    },
+    "bioreactiveMineral": {
+      "description": "一组用途极为广泛的矿物质，可作为不同种类化学试剂的基础。",
+      "name": "生物反应性矿物质"
+    },
+    "biosphereUnit": {
+      "description": "一座大规模的人工生态设施，通常用于为长期宇宙航行提供食物和草药。",
+      "name": "生态穹单元"
+    },
+    "bleach": {
+      "description": "脱饱和剂，或着我们一般叫它“漂白剂”，用于消除原始纺织品的天然颜色、纹理和气味。",
+      "name": "脱饱和剂"
+    },
+    "blueGoldConnectors": {
+      "description": "带屏蔽的接头有助于降低信号干扰的风险。",
+      "name": "屏蔽罩接头"
+    },
+    "bodyScanner": {
+      "description": "通常用于检测受伤或违禁品的人体扫描仪。",
+      "name": "人体扫描仪"
+    },
+    "boronCrystals": {
+      "description": "硼因其绝佳耐热性被广泛应用于热防护领域。",
+      "name": "硼晶体"
+    },
+    "borosilicate": {
+      "description": "对热冲击有极高抗性的材料。",
+      "name": "硼硅酸盐"
+    },
+    "breathableLiquid": {
+      "description": "防止肺部在高加速度或高气压环境下溃缩的高含氧量溶液。",
+      "name": "可呼吸液体"
+    },
+    "caffeinatedBeans": {
+      "description": "咖啡植株可在低重力行星上生长至20米高，尽管难以种植——其需要在适当的时期获得充沛的降水。",
+      "name": "咖啡豆"
+    },
+    "calcium": {
+      "description": "自太空时代开始以来人类的骨骼就面临着一系列新的挑战，定期摄入钙也就变得更加重要。",
+      "name": "钙"
+    },
+    "caliche": {
+      "description": "钙质岩是一种通常因其碘含量而被开采的沉积岩。碘则是一种常用于现代照明技术的稳定的卤素。",
+      "name": "钙质岩"
+    },
+    "capacitor": {
+      "description": "非极性电容由两片间距极小但不接触的导体薄板组成。当电压施加到两片薄板时其间会产生电场。",
+      "name": "电场电容"
+    },
+    "carbohydrateGrains": {
+      "description": "谷物自新石器革命时代以来一直是人类营养的主要成分，其在太空探索时代仍然用途广泛。",
+      "name": "高碳水谷物"
+    },
+    "carbohydrateMaize": {
+      "description": "玉米是一种营养丰富的必需品，在宇宙中的农场和温室中都有种植。有些人将其焚烧以获取碳，而有些人则只想吃爆米花。",
+      "name": "高碳水玉米"
+    },
+    "carbon": {
+      "description": "碳是所有生命和某些行业的基石，被用于矿石纯化和各种其他过程。",
+      "name": "碳"
+    },
+    "ceramicFabric": {
+      "description": "事实证明，陶瓷织物在涂覆宇宙飞船船体以保护其免受极端温度影响方面非常有用。",
+      "name": "陶瓷纤维"
+    },
+    "ceramicTungstenFabric": {
+      "description": "陶瓷纤维的钨纤维增强版本，非常适合想在热屏蔽领域一骑绝尘的人。",
+      "name": "钨增强陶瓷纤维"
+    },
+    "chemicalReagents": {
+      "description": "用于制造各种药物和其他化学产品。",
+      "name": "化学试剂"
+    },
+    "chlorine": {
+      "description": "氯是一种具有许多优异特性的化学物质，在食品、服装和建筑行业有多种用途。",
+      "name": "氯"
+    },
+    "climateController": {
+      "description": "气候控制系统将船只或建筑物内的环境维持在舒适的水平。",
+      "name": "气候控制"
+    },
+    "combustionChamber": {
+      "description": "由于燃烧室内的温度极高，因此它们默认带有多层硼硅酸盐涂层。",
+      "name": "燃烧室"
+    },
+    "commandBridge1": {
+      "description": "可以装配至几乎任何航天器中的标准舰桥。",
+      "name": "一型舰桥"
+    },
+    "commandBridge2": {
+      "description": "使用更复杂引擎和反应堆的航天器装配的更高级舰桥。",
+      "name": "二型舰桥"
+    },
+    "commandBridgeShort": {
+      "description": "对亚光速恒星系内飞行专项设计的舰桥模块。",
+      "name": "短距舰桥"
+    },
+    "communicationSystem": {
+      "description": "已就绪且可部署为更大综合体的一部分的完整通信系统。",
+      "name": "通信系统"
+    },
+    "coolingFan": {
+      "description": "一种通过使大气气体流经设备表面来主动冷却设备的风扇。",
+      "name": "主动冷却装置"
+    },
+    "copper": {
+      "description": "由于铜绝佳的电导性和热导性以及抗变形和腐蚀的特性，因此它成为各种电子元件中的主要成分。",
+      "name": "铜"
+    },
+    "copperAluminiumAlloy": {
+      "description": "除常见用途之外，这种铜铝合金还可以显著提高太阳能电池板的效率。",
+      "name": "青铜"
+    },
+    "copperConnectors": {
+      "description": "便宜但有效的铜质接头。",
+      "name": "廉价接头"
+    },
+    "copperOre": {
+      "description": "这种矿石可以冶炼成铜，铜则是一种目前主要用于电子设备的金属。",
+      "name": "铜矿石"
+    },
+    "coreModuleKit": {
+      "description": "提供建造第一座基地所需的全部物品！",
+      "name": "核心部件包"
+    },
+    "cottonProcessed": {
+      "description": "一种由棉制成的布，可用于制作衣服，也可在医药中作为绷带的组成部分。",
+      "name": "棉织布"
+    },
+    "cottonRaw": {
+      "description": "圆顶棉田温暖且湿度适中，为未来所有时尚潮流提供了基础。",
+      "name": "棉花生丝"
+    },
+    "crewQuarters": {
+      "description": "一个大型的随时可用的可供全船机组人员生活和睡眠的单元。",
+      "name": "大型乘员舱"
+    },
+    "crewQuartersMed": {
+      "description": "一个中型的随时可用的可供全船机组人员生活和睡眠的单元。",
+      "name": "中型乘员舱"
+    },
+    "crewQuartersSmall": {
+      "description": "一个小型的随时可用的可供全船机组人员生活和睡眠的单元。",
+      "name": "小型乘员舱"
+    },
+    "crewQuartersTiny": {
+      "description": "理论上最小的乘员舱。没有任何豪华可言！",
+      "name": "微型乘员舱"
+    },
+    "crowdControlDrone": {
+      "description": "带有必要装备的用于控制骚乱和检测违禁品的安防无人机。",
+      "name": "控众无人机"
+    },
+    "cryoUnit": {
+      "description": "低温冷冻装置可以安全地将生物样本置于低温冷冻状态保存，也可以将其从低温冷冻状态中取出。",
+      "name": "低温冷冻单元"
+    },
+    "cryogenicFluid": {
+      "description": "这种在低温储罐上使用的透明的胶状物质主要用于世代飞船。它通过皮肤接触提供营养，甚至可以减轻高加速度的影响。",
+      "name": "低温稳定剂"
+    },
+    "cryopreservationUnit": {
+      "description": "为长期宇宙航行保存生物冷冻保存罐的单元。",
+      "name": "冷冻保存单元"
+    },
+    "dataAnalyzer": {
+      "description": "数据分析系统将人工智能技术应用于数据分析以获取见解。",
+      "name": "数据分析系统"
+    },
+    "dataVisualizer": {
+      "description": "数据可视化工具创建地图、图形、图表和其他可视化效果来阐明从数据分析中获得的见解。",
+      "name": "数据可视化系统"
+    },
+    "decorativeElements": {
+      "description": "各种形状奇特的物品，设计用途为在适当的场所充当装饰。",
+      "name": "装饰物品"
+    },
+    "distributedDatabase": {
+      "description": "分布式数据存储，通常用于维护分布式系统组件之间的状态。",
+      "name": "分布式数据库"
+    },
+    "drinkingWater": {
+      "description": "经过处理的水可安全饮用、用于食品加工以及人类其他日常用途。",
+      "name": "饮用水"
+    },
+    "droneChassis": {
+      "description": "所有类型无人机的基础底座。",
+      "name": "无人机底座"
+    },
+    "droneFrame": {
+      "description": "所有无人机底座都需要紧固框架。",
+      "name": "无人机框架"
+    },
+    "droneOperationsUnit": {
+      "description": "控制并监视无人机操作的控制系统的部署单元。",
+      "name": "无人机控制单元"
+    },
+    "einsteinium": {
+      "description": "一种在地球上自然界中不存在的放射性元素。一些有高放射性的锿同位素会产生肉眼可见的光芒。",
+      "name": "锿"
+    },
+    "engineerBundle": {
+      "description": "为100名工程师提供10天供给的全部物品。",
+      "name": "工程师消耗品套包"
+    },
+    "engineerClothing": {
+      "description": "这件服装一半是衣服，一半是电脑，可帮助工程师完成日常任务。",
+      "name": "智能太空服"
+    },
+    "engineerFood": {
+      "description": "这种比标准口粮更辣的版本在工程师中很受欢迎，他们似乎甚至在午休时间也喜欢出汗。",
+      "name": "风味速食餐"
+    },
+    "engineerLuxuryDrink": {
+      "description": "喝一瓶杜松子酒已经成为了一天工作后最流行的放松方式之一。添加的锿元素增加了一定的致幻效果，让人难以拒绝。",
+      "name": "锿琴酒"
+    },
+    "engineerLuxuryHealth": {
+      "description": "这种药膏对缓解关节疼痛有奇效。维它胶（VitaGel）曾是一个商标名，但很快也被所有充斥市场的仿制品所使用。",
+      "name": "维它胶"
+    },
+    "engineerTools": {
+      "description": "手持式分析工具，可执行诊断检查并协助维修。",
+      "name": "个人数据助手"
+    },
+    "enrichedEinsteinium": {
+      "description": "通过特殊化学工艺浓缩后的锿，可用于裂变反应堆。",
+      "name": "浓缩锿"
+    },
+    "enrichedTechnetium": {
+      "description": "虽然锝的放射性不如其他物质那么强，但浓缩锝已被证明非常有用，可以为放射性同位素发生器提供动力。",
+      "name": "浓缩锝"
+    },
+    "entertainmentDataCore": {
+      "description": "游戏、电影、节目、音乐以及您梦想的一切。",
+      "name": "娱乐数据核心"
+    },
+    "entertainmentUnit": {
+      "description": "一整套娱乐硬件和控制设备。",
+      "name": "娱乐单元"
+    },
+    "epoxy": {
+      "description": "一种高粘度的合成树脂，硬化后可作为建筑和船只部件的粘合增强材料。",
+      "name": "环氧树脂"
+    },
+    "fastenerKitMedium": {
+      "description": "一套中等大小的标准紧固件。",
+      "name": "中型紧固套装"
+    },
+    "fastenerKitSmall": {
+      "description": "一套较小尺寸的标准紧固件。",
+      "name": "小型紧固套装"
+    },
+    "fattyNuts": {
+      "description": "坚果提供重要的富含能量的甘油三酯。一定要时刻关注你的血脂，不要吃得太多。",
+      "name": "甘油三酯坚果"
+    },
+    "fattyVegetables": {
+      "description": "甘油三酯水果看起来与地球上的水果相似，但更奶油化且吃起来几乎就是脂肪的味道。与它们的祖先相比，它对健康的益处较少，但能量更多。",
+      "name": "甘油三酯水果"
+    },
+    "fissionReactor": {
+      "description": "通过链式反应进行受控核裂变，产生大量能量。",
+      "name": "裂变反应堆"
+    },
+    "floatingTank": {
+      "description": "一个与人大小相当的水箱，可让您体验令人心旷神怡的漂浮体验。",
+      "name": "漂浮水箱"
+    },
+    "flowControl": {
+      "description": "该装置根据用户需要以复杂的方式控制液体的流动。",
+      "name": "流体控制装置"
+    },
+    "fluidPiping": {
+      "description": "该流体管道系统利用其覆盖层中的氦气以辅助查找泄漏点。",
+      "name": "流体管道"
+    },
+    "fluorine": {
+      "description": "最轻的卤素元素，反应性极强。氟既有医疗用途，也有工业用途。",
+      "name": "氟"
+    },
+    "flux": {
+      "description": "这种化学物质在添加到矿石精炼过程中时可以更有效地将金属与炉渣分离，从而使得相同的原料获得更高的产出。",
+      "name": "助熔剂"
+    },
+    "ftlFieldController": {
+      "description": "超光速场控制器通过使用巨量能量弯曲飞船周围的时空以允许超光速飞行。",
+      "name": "超光速场控制器"
+    },
+    "ftlFuel": {
+      "description": "在正确的驱动器的使用下，这些小颗粒会发出一种能够扭曲时空并为飞船开辟一条隧道的能量。",
+      "name": "超光速燃料"
+    },
+    "fuelSavingEngine": {
+      "description": "不如标准低光速引擎有力，但是同时会节省不少燃油。",
+      "name": "节油低光速引擎"
+    },
+    "fullBodyInteractionDevice": {
+      "description": "本质上是一种高科技工作服，允许穿着者通过手势和动作来控制各种软件。",
+      "name": "全身交互设备"
+    },
+    "galerite": {
+      "description": "尽管在太阳系找不到一点，寰亘石在人类的新家园中被发现后迅速引领了低光速燃料科技的革命。",
+      "name": "寰亘石"
+    },
+    "gasContainer": {
+      "description": "由于其形状和材质，该气罐可以以远高于大气压的压强容纳物质。",
+      "name": "圆柱气瓶"
+    },
+    "gasVent": {
+      "description": "可控的气体出口。",
+      "name": "排气口"
+    },
+    "gatewaySegment": {
+      "description": "几个跃迁门分段用来构建跃迁门那家喻户晓的环状结构。",
+      "name": "跃迁门分段"
+    },
+    "glassCombustionChamber": {
+      "description": "事实证明，强化玻璃可以承受相当高的热量。",
+      "name": "玻璃燃烧室"
+    },
+    "glassEngine": {
+      "description": "当他们发现如何制造玻璃发动机时，这真是一项了不起的壮举。它虽然不是很强大，但却是一种经济实惠的替代品！",
+      "name": "玻璃基低光速引擎"
+    },
+    "glassNozzle": {
+      "description": "务必需要非常小心仔细地处置，但效果却出奇地好。",
+      "name": "玻璃喷嘴"
+    },
+    "gold": {
+      "description": "尽管黄金仍不是一种丰富的资源，但几个世纪以来，人类对黄金的看法更加务实——愈发欣赏它的导电性而不是外观。",
+      "name": "金"
+    },
+    "goldCopperAlloy": {
+      "description": "这种合金结合了金和铜的优异导电性。",
+      "name": "玫瑰金"
+    },
+    "goldIronAlloy": {
+      "description": "金与镓或铟的合金。",
+      "name": "蓝金"
+    },
+    "goldOre": {
+      "description": "自二十世纪以来，水力采矿一直是从露天矿场和矿井中开采金块的常用方法。",
+      "name": "金矿石"
+    },
+    "grapes": {
+      "description": "尽管葡萄在太空时代中愈发稀有，但是只要对高质量红酒的需求还在，其就不会从宇宙中消失。",
+      "name": "酿酒葡萄"
+    },
+    "habitatUnit": {
+      "description": "人工但足够自然的生活空间。",
+      "name": "栖息地单元"
+    },
+    "habitationModule": {
+      "description": "为拓殖船提供长期栖居支持的模块。",
+      "name": "栖居模块"
+    },
+    "halite": {
+      "description": "这些晶体是岩盐的天然形态，不仅看起来很漂亮，而且吃起来味道也很好。",
+      "name": "岩盐晶体"
+    },
+    "handcraftWorkshopUnit": {
+      "description": "手工艺术品已经变得相当稀有，而这里正是它们焕发活力的地方。",
+      "name": "手工工坊单元"
+    },
+    "hardenedHullPlate": {
+      "description": "硬化船板。其会减轻船只的整体损伤并允许其承受更高的最大G力过载。",
+      "name": "硬化船板"
+    },
+    "hardenedStructuralElements": {
+      "description": "对于金属制船只和建筑构件的统称，包括比如大梁和横梁。",
+      "name": "硬化结构部件"
+    },
+    "heliotropeExtract": {
+      "description": "在足够高的浓度下，天芥菜提取物被发现对整个人体有镇静作用，从而扩大了可承受的重力值范围。",
+      "name": "天芥菜提取物"
+    },
+    "helium": {
+      "description": "焊接用保护气，同时也是让你声音变得好笑的最优解。",
+      "name": "氦"
+    },
+    "helium3": {
+      "description": "氦-3最常见于暴露在宇宙射线下的表面，是超光速燃料的关键成分。",
+      "name": "氦-3同位素"
+    },
+    "herbs": {
+      "description": "香料是一些营养价值低但对健康有益的草本植物。因此，并非每艘船的餐厅都有香料，但医疗舱里可以找到一些。",
+      "name": "辛辣香料"
+    },
+    "highLoadCargoBay": {
+      "description": "构建高负荷货舱所需的一切。但它只能容纳体积相对较小的材料。",
+      "name": "高负荷货舱套装"
+    },
+    "highPowerReactor": {
+      "description": "高功率超光速反应堆一般需要更长时间完全充能。",
+      "name": "高功率超光速反应堆"
+    },
+    "highVolumeCargoBay": {
+      "description": "构建高容积货舱所需的一切。但它只能容纳密度相对较小的材料。",
+      "name": "高容积货舱套装"
+    },
+    "holographicDisplay": {
+      "description": "全息显示器可以创建肉眼可见的三维物体图像。",
+      "name": "全息显示器"
+    },
+    "holographicGlasses": {
+      "description": "高科技眼镜能够显示各种附加信息和逼真的视觉效果。",
+      "name": "全息眼镜"
+    },
+    "hugeCargoBay": {
+      "description": "用于构建能满足你一切运输需求的最硕大的货舱。",
+      "name": "巨型货舱套装"
+    },
+    "hydrocarbonPlants": {
+      "description": "碳氢化合物作物有多种个体样式，但如今大多数都是在大型盆地中生长的用于各种用途的藻类。",
+      "name": "碳氢化合物作物"
+    },
+    "hydrogen": {
+      "description": "元素周期表第一名，氢在很多化合物比如船只燃料中都有踪迹。",
+      "name": "氢"
+    },
+    "hyperPowerReactor": {
+      "description": "极高功率的超光速反应堆。为保证稳定其充能速率被极大限制。",
+      "name": "超功率反应堆"
+    },
+    "hyperthrustEngine": {
+      "description": "此低光速引擎可产生极高推力，但是同时也消耗很多燃油。",
+      "name": "超推力低光速引擎"
+    },
+    "hyperthrustNozzle": {
+      "description": "超推力航天器引擎使用的特殊喷嘴。",
+      "name": "超推力喷嘴"
+    },
+    "indigo": {
+      "description": "当你绝对肯定地需要将它染成靛蓝色时使用。",
+      "name": "靛蓝着色剂"
+    },
+    "informationDataCore": {
+      "description": "位于一个小型数据核心中的一整座图书馆。",
+      "name": "信息数据核心"
+    },
+    "informationManagementSystem": {
+      "description": "支持用户分析和解释大量数据的系统。",
+      "name": "信息管理系统"
+    },
+    "insuFoam": {
+      "description": "这种建筑泡沫使建筑物免受平均气温低于-25°C的不适宜居住星球的寒冷影响。",
+      "name": "绝热泡沫"
+    },
+    "iodine": {
+      "description": "这种稳定的卤素是从钙质岩中提取出来的，用于LED技术无法取代的某些灯具中。",
+      "name": "碘"
+    },
+    "iron": {
+      "description": "铁是岩石行星上最丰富的元素之一，用于制造各种合金以及建筑物和金属零件。",
+      "name": "铁"
+    },
+    "ironOre": {
+      "description": "铁矿石中含有的铁是人类最早冶炼的金属之一，可以追溯到公元前2000年。",
+      "name": "铁矿石"
+    },
+    "ironTitaniumAlloy": {
+      "description": "一种铁钛合金，可用于影响炼钢过程中的晶粒大小。",
+      "name": "铁钛合金"
+    },
+    "kevlar": {
+      "description": "这些纤维通常被纺成复合材料再制成绳索或织物，用于加固从服装到建筑结构元素等各种物品。",
+      "name": "对位芳纶"
+    },
+    "krypton": {
+      "description": "最初大部分用于照明和激光器，而跃迁门技术的发现揭示了此惰性气体在稳定跃迁门奇点涡旋方面非常有效。",
+      "name": "氪"
+    },
+    "kryptonium": {
+      "description": "氪和锿的化合物，最初是为了给跃迁门奇点这种新发现的船只航行方式提供燃料而创造的。",
+      "name": "氪化锿"
+    },
+    "laboratoryUnit": {
+      "description": "一个随时可用的实验室，可以作为大型建筑群的一部分使用。",
+      "name": "实验室单元"
+    },
+    "largeCapacitorBank": {
+      "description": "储存大量能量。",
+      "name": "大型电容组"
+    },
+    "largeCargoBay": {
+      "description": "构建大型货舱所需的一切。",
+      "name": "大型货舱套装"
+    },
+    "largeDeviceCover": {
+      "description": "适用于大型电子设备的3D打印塑料外壳。",
+      "name": "大型耐用外壳"
+    },
+    "largeEmitter": {
+      "description": "需要较多能量以便创建囊括较大空间的超光速场释放器。",
+      "name": "大型超光速场释放器"
+    },
+    "largeFtlTank": {
+      "description": "构建大型超光速油罐所需的一切。",
+      "name": "大型超光速燃料罐套装"
+    },
+    "largePlasticsBoard": {
+      "description": "……",
+      "name": "大型聚合物片材"
+    },
+    "largeShipRepairDroneUnit": {
+      "description": "能够持续修复船舶在太空飞行过程中受到的任何损坏的大型无人机的控制单元。",
+      "name": "大型船只维修无人机控制单元"
+    },
+    "largeStlTank": {
+      "description": "构建大型低光速油罐所需的一切。",
+      "name": "大型低光速燃料罐套装"
+    },
+    "laserDiode": {
+      "description": "将能量直接转化为光的激光二极管。",
+      "name": "激光二极管"
+    },
+    "lifeSupportSystem": {
+      "description": "监控并控制大气及其它生命必需环境条件的生命支持系统。",
+      "name": "生命支持系统"
+    },
+    "lightweightBulkhead": {
+      "description": "略薄但更轻便的提供有限的建筑稳定性的墙板。",
+      "name": "轻质隔板"
+    },
+    "lightweightDeckElements": {
+      "description": "薄而耐用的具有各种形状和尺寸的塑料地板元件。",
+      "name": "轻质预制地板"
+    },
+    "lightweightHullPlate": {
+      "description": "轻质船板。其会帮助减轻船重，但是更容易损坏。",
+      "name": "轻质船板"
+    },
+    "lightweightStructuralElements": {
+      "description": "船只和建筑使用的多种轻质部件。可以升级为更耐用但更重的部件。",
+      "name": "轻质结构部件"
+    },
+    "lightweightWindow": {
+      "description": "这些双层窗户主要用于建筑内部，在行星和船只上有着广泛的应用。",
+      "name": "轻质透光部件"
+    },
+    "limestone": {
+      "description": "这种富含钙的矿物存在于地壳和许多岩石行星的表面。其用途包括建筑和营养。",
+      "name": "石灰石"
+    },
+    "liquidCrystals": {
+      "description": "这些晶体用于制造液晶显示器，或简称LCD。",
+      "name": "液晶"
+    },
+    "liquidEinsteinium": {
+      "description": "处理为液态的锿。还在辐射和发光。",
+      "name": "液态锿"
+    },
+    "lithium": {
+      "description": "常用于生产电池和药品。",
+      "name": "锂"
+    },
+    "lithiumOre": {
+      "description": "有锂矿石才能生产锂。",
+      "name": "锂矿石"
+    },
+    "localDatabase": {
+      "description": "本地数据存储中心。",
+      "name": "本地数据库"
+    },
+    "logisticsSystem": {
+      "description": "帮助处理库管，转账或其它等等的系统。",
+      "name": "后勤系统"
+    },
+    "lowHeatFuelPump": {
+      "description": "价格实惠的燃油泵。不应用作高温发动机的一部分。",
+      "name": "低热量燃料泵"
+    },
+    "machineLearningInterface": {
+      "description": "创建自学习人工智能的第一步。",
+      "name": "机器学习交互端"
+    },
+    "magnesite": {
+      "description": "一种富含镁的矿物。",
+      "name": "菱镁矿"
+    },
+    "magnesium": {
+      "description": "宇宙中最丰富的元素之一。镁有多种用途，包括用作结构材料、制造铝合金和溶剂净化。",
+      "name": "镁"
+    },
+    "magneticFloor": {
+      "description": "磁性地面覆盖物可让您在低重力环境中建立坚实的基础。",
+      "name": "磁性地面覆层"
+    },
+    "magnetite": {
+      "description": "一种氧化铁同时也是常见的铁矿石。磁铁矿具有铁磁性，可被磁化。",
+      "name": "磁铁矿"
+    },
+    "mainFrameBlank": {
+      "description": "“主机架”承载着早期计算机的中央处理器和主内存。当今的主机架是大型集中式计算设施，通常用于关键应用程序。",
+      "name": "基础主机架"
+    },
+    "meat": {
+      "description": "工业化畜牧业的时代早已过去，从此“肉”这一词就有了另一层含义，仅仅指食物的质地和味道。",
+      "name": "肉类组织饼"
+    },
+    "medicalStretcher": {
+      "description": "移动医疗床的最基本形式。",
+      "name": "医用担架"
+    },
+    "mediumCapacitorBank": {
+      "description": "储存中等量的能量。",
+      "name": "中型电容组"
+    },
+    "mediumCargoBay": {
+      "description": "构建中型货舱所需的一切。",
+      "name": "中型货舱套装"
+    },
+    "mediumDeviceCover": {
+      "description": "适用于中型电子设备的3D打印塑料外壳。",
+      "name": "中型耐用外壳"
+    },
+    "mediumEmitter": {
+      "description": "需要中等能量以便创建囊括中等大小空间的超光速场释放器。",
+      "name": "中型超光速场释放器"
+    },
+    "mediumFtlTank": {
+      "description": "构建中型超光速油罐所需的一切。",
+      "name": "中型超光速燃料罐套装"
+    },
+    "mediumPlasticsBoard": {
+      "description": "……",
+      "name": "中型聚合物片材"
+    },
+    "mediumStlTank": {
+      "description": "构建中型低光速油罐所需的一切。",
+      "name": "中型低光速燃料罐套装"
+    },
+    "megaTubeCoating": {
+      "description": "巨型管由什么构成？就是直径非常大到需要以微米为单位的碳纳米管。",
+      "name": "巨型管涂层"
+    },
+    "memoryBank": {
+      "description": "为其他电子元件提供闪电般快速的应用程序内存。",
+      "name": "内存组"
+    },
+    "metalHalideLamp": {
+      "description": "这些灯已经成为水培设施的主要设备，使得某些植物（尤其是藻类）无需阳光就能生长。",
+      "name": "金属卤化物照明系统"
+    },
+    "microHeadphones": {
+      "description": "非常小的扬声器。小心不要把它们弄丢到耳朵里！",
+      "name": "微型扬声器"
+    },
+    "microProcessor": {
+      "description": "在单个集成电路上实现的中央处理单元。",
+      "name": "微处理器"
+    },
+    "mineralConstructionGranulate": {
+      "description": "这些微小的颗粒经过熔化、成型和冷却，为岩石行星上所有建筑物提供了坚硬的基础。",
+      "name": "矿物建筑颗粒"
+    },
+    "motherBoard": {
+      "description": "通用计算机的主印刷电路板。",
+      "name": "主板"
+    },
+    "mushrooms": {
+      "description": "木耳科真菌因其独特的栽培方法以及极快的生长速度而闻名。",
+      "name": "富蛋白质蘑菇"
+    },
+    "nanoCarbonSheeting": {
+      "description": "基底上覆盖有碳纳米管，纳米管上再覆盖一层气凝胶。将气凝胶拉开，纳米管随之一起形成薄片。",
+      "name": "碳纳米片"
+    },
+    "nanoFiber": {
+      "description": "直径在纳米尺寸范围内的纤维。本例中为涂有石墨烯的硅纤维。",
+      "name": "纳米纤维"
+    },
+    "nanoGlass": {
+      "description": "带有纳米材料涂层的玻璃具有疏水、疏油和其他特性。",
+      "name": "纳米涂层玻璃"
+    },
+    "nanoResin": {
+      "description": "工业领域应用的纳米粒子增强树脂。",
+      "name": "纳米增强树脂"
+    },
+    "navigation1": {
+      "description": "控制装有简易引擎的船只的基础导航模块。",
+      "name": "一型导航模块"
+    },
+    "navigation2": {
+      "description": "控制装有更复杂引擎的船只的高级导航模块。",
+      "name": "二型导航模块"
+    },
+    "neon": {
+      "description": "无色无味的稀有气体。氖气在电场中会发出红橙色光芒。",
+      "name": "氖"
+    },
+    "neonLightingSystem": {
+      "description": "霓虹灯让我们回忆起一个不那么复杂的世界。它们也很有趣！",
+      "name": "霓虹灯照明系统"
+    },
+    "networkingFramework": {
+      "description": "构建网络应用的软件。",
+      "name": "网络框架"
+    },
+    "neuralNetwork": {
+      "description": "通过模糊模拟实际大脑神经元的工作方式，可以对大量数据进行人工智能学习。",
+      "name": "神经网络"
+    },
+    "nitrogen": {
+      "description": "氮气以气体或液体形式存在，可形成多种化合物并在食品保鲜中发挥作用。",
+      "name": "氮"
+    },
+    "nonVolatileMemory": {
+      "description": "通电和断电后均可检索信息的计算机存储器。",
+      "name": "非易失性存储器"
+    },
+    "nutrientSolution": {
+      "description": "虽然营养液浓度较高，不应单独食用，但它却可以出现于多种可食用和不可食用的最终产品的原料表中。",
+      "name": "营养液"
+    },
+    "nylon": {
+      "description": "一种用途广泛的塑料织物，传统上用于服装和战争，现在也在建筑施工中发挥着作用。",
+      "name": "尼龙纤维"
+    },
+    "officeSupplies": {
+      "description": "没人知道这些都是啥，但是它们持续性地在“工作”中被消耗掉。",
+      "name": "办公用品"
+    },
+    "olfactorySubstances": {
+      "description": "泰好闻辣！",
+      "name": "嗅觉物质"
+    },
+    "operatingSystem": {
+      "description": "为其他应用程序提供通用服务和计算机系统硬件资源接口的软件。",
+      "name": "操作系统"
+    },
+    "oxygen": {
+      "description": "从合金生产到我们自己的肺，氧气是人类赖以生存的物质。警告：高浓度的氧气只能在低重力环境下吸入。",
+      "name": "氧"
+    },
+    "painkillers": {
+      "description": "全宇宙最受欢迎的药品。",
+      "name": "止痛片"
+    },
+    "pesticides": {
+      "description": "虽然这种杀虫剂对小生物有毒，但少量摄入对人类来说仍是安全的。",
+      "name": "DDT植物毒剂"
+    },
+    "pineberries": {
+      "description": "看起来像白色草莓，吃起来像菠萝，营养丰富！",
+      "name": "松莓"
+    },
+    "pioneerBundle": {
+      "description": "为100名先驱者提供10天供给的全部物品。",
+      "name": "先驱者消耗品套包"
+    },
+    "pioneerClothing": {
+      "description": "这种全身套装通常作为个人衣物的额外层来穿着，当然并不花哨，但实用且耐用。",
+      "name": "基础工服"
+    },
+    "pioneerLuxuryClothing": {
+      "description": "这件衣服看起来可能不怎么样，但是它附加的塑料垫却能日复一日地防止宇宙中发生无数的伤害。",
+      "name": "护垫工服"
+    },
+    "pioneerLuxuryDrink": {
+      "description": "有些人用豆浆送服精神药物，而另一些则喜欢喝纯的。",
+      "name": "咖啡因饮料"
+    },
+    "polarityFieldGenerator": {
+      "description": "结合多种反应堆类型的特定功能以大面积覆盖不稳定奇点场。",
+      "name": "奇点场发生器"
+    },
+    "polyEthylene": {
+      "description": "聚乙烯是过去几个世纪以来最常用的塑料，它在包装、服装、印刷建筑部件和电子产品中仍然发挥着至关重要的作用。",
+      "name": "聚乙烯"
+    },
+    "polymerGranulate": {
+      "description": "谁若认为自己长大后可以成为任何一个人，那他一定是没有见过聚合物颗粒，而聚合物颗粒几乎是所有工业部门的塑料供应商。",
+      "name": "聚合物颗粒"
+    },
+    "powerCell": {
+      "description": "高能移动能量源。",
+      "name": "动力电池"
+    },
+    "premiumFertilizer": {
+      "description": "令人惊讶的是它可以有效地产生看似天然的植物群。",
+      "name": "优质肥料"
+    },
+    "pressureShielding": {
+      "description": "屏蔽和保护船员与货物免受高压环境的影响。",
+      "name": "压力屏蔽"
+    },
+    "printedCircuitBoard": {
+      "description": "一片表面覆盖有一层导体的非导电性基板，电子电路蚀刻于其上。",
+      "name": "印刷电路板"
+    },
+    "proteinAlgae": {
+      "description": "人类需要一种高效的蛋白质来源，于是发明了这种藻类。而且，它甚至可以在太空中生长。",
+      "name": "富蛋白质藻类"
+    },
+    "proteinBeans": {
+      "description": "尽管水培豆类效率不高，但它是行星农业的主要作物，也是整个宇宙蛋白质的重要提供者。",
+      "name": "富蛋白质豆类"
+    },
+    "proteinPaste": {
+      "description": "这种糊状物由磨碎的植物制成，是现代“肉”中必不可少的成分。单独食用可一点也不好吃。",
+      "name": "蛋白糊"
+    },
+    "quickChargeReactor": {
+      "description": "可以快速充能的中等能量反应堆。",
+      "name": "快充超光速反应堆"
+    },
+    "radiationShielding": {
+      "description": "保护船员和货物免受辐射环境影响的屏蔽瓦。",
+      "name": "辐射屏蔽瓦"
+    },
+    "radioDevice": {
+      "description": "当你那小手机不够用的时候！",
+      "name": "无线电设备"
+    },
+    "radioisotopeGenerator": {
+      "description": "将辐射衰变的热量转化为中等量的能量。",
+      "name": "放射性同位素发电机"
+    },
+    "rations": {
+      "description": "作为宇宙中菜单上最常见的东西，这种植物基砖块状的即食餐具有很高的营养值以便弥补其在味道上的缺陷。",
+      "name": "基础口粮"
+    },
+    "reactorControlSystem": {
+      "description": "监视超光速反应堆的多项性能数据并自动做出必要调整。",
+      "name": "反应堆控制系统"
+    },
+    "redGoldConnectors": {
+      "description": "适合特化应用的高流量连接器。",
+      "name": "高流量接头"
+    },
+    "reinforcedBulkhead": {
+      "description": "由于添加了钛和硬化环氧树脂，墙体元件的耐用性更高。",
+      "name": "加固隔板"
+    },
+    "reinforcedDeckElements": {
+      "description": "一些大型航天器和行星结构需要这些明显比基础和高级版更重的地板块。",
+      "name": "加固预制地板"
+    },
+    "reinforcedHullPlate": {
+      "description": "加固船板。其会略微减少船只整体损伤并允许其承受较高的最大G力过载。",
+      "name": "加固船板"
+    },
+    "reinforcedStructuralElements": {
+      "description": "这些用钢和树脂强化制成的部件用于对结构完整性要求较高的建筑物和航天器上。",
+      "name": "加固结构部件"
+    },
+    "reinforcedTranslucentMaterial": {
+      "description": "这种老式玻璃与塑料玻璃的混合物可用于制造窗户或屏幕等产品。",
+      "name": "加固玻璃"
+    },
+    "reinforcedWindow": {
+      "description": "混合了硅基和塑料基玻璃的更加厚实和坚固的窗户，因此可以在以更大尺寸建造同时仍能承受巨大的力量。",
+      "name": "加固透光部件"
+    },
+    "rescueDrone": {
+      "description": "设计为用于定位并救援伤员的无人机。对，它真的能带个人飞。",
+      "name": "救援无人机"
+    },
+    "rhenium": {
+      "description": "一种稀有耐热金属，以古老地球上的莱茵河命名。",
+      "name": "铼"
+    },
+    "rheniumOre": {
+      "description": "已知宇宙中最稀有的矿石之一。",
+      "name": "铼矿石"
+    },
+    "safetyUniform": {
+      "description": "一种碳纤维工作服。",
+      "name": "安全制服"
+    },
+    "scientistBundle": {
+      "description": "为100名科学家提供10天供给的全部物品。",
+      "name": "科学家消耗品套包"
+    },
+    "scientistClothing": {
+      "description": "这件外套配有自己的全息显示屏，可以协助穿着者完成复杂的程序，甚至可以在实验出现问题时执行维持生命的措施。",
+      "name": "AI辅助实验服"
+    },
+    "scientistFood": {
+      "description": "如今即便是高品质的食物其成分也不会有太大差异，但至少它们呈现出不同的形状和大小。",
+      "name": "优质肉餐"
+    },
+    "scientistLuxuryDrink": {
+      "description": "自古希腊以来，伟人们就依靠这种液体进行思考。而太空时代，他们甚至运用人工智能来创造这种独特的风味。",
+      "name": "科技仙粉黛"
+    },
+    "scientistLuxuryHealth": {
+      "description": "让你嗨一下的那么个小玩意。",
+      "name": "神经兴奋剂"
+    },
+    "scientistTools": {
+      "description": "可用于各种用途的多功能计算机，但主要用于科学领域。",
+      "name": "科学工作站"
+    },
+    "sealant": {
+      "description": "液态聚合物对许多常见材料有良好的附着力，同时在固化后富有柔韧性。可能不适合用于某些塑料。",
+      "name": "聚亚硫酸盐密封胶"
+    },
+    "searchAlgorithm": {
+      "description": "从数据中搜索信息的算法。",
+      "name": "搜索算法"
+    },
+    "sedativeSubstance": {
+      "description": "一种通过特殊的高重力座椅直接注入人体的物质，有助于人类承受极高的G力过载。",
+      "name": "镇静物剂"
+    },
+    "sensor": {
+      "description": "测量物理特性的多种设备，例如用于测量温度的热敏电阻或用于测量光照水平的电荷耦合器件。",
+      "name": "传感器"
+    },
+    "sensorArray": {
+      "description": "一整套主动和被动遥感系统。",
+      "name": "传感阵列"
+    },
+    "settlerBundle": {
+      "description": "为100名定居者提供10天供给的全部物品。",
+      "name": "定居者消耗品套包"
+    },
+    "settlerClothing": {
+      "description": "这套服装可以让穿着者无论当地重力如何都可获得霸下般的力量，它已成为了体力劳动的必需品。",
+      "name": "外骨骼工服"
+    },
+    "settlerLuxuryDrink": {
+      "description": "虽然康普茶不是生存的必需品，但它对健康和情绪都有很积极的影响。",
+      "name": "康普茶"
+    },
+    "settlerLuxuryTools": {
+      "description": "修东西的工具。有啥不能理解的？回去干活。",
+      "name": "维修套装"
+    },
+    "settlerTools": {
+      "description": "自从地球上出现第一块尖锐的岩石以来，这些伴随现代定居者并不时闪光的嘈杂伙伴已经走过了漫漫长路。",
+      "name": "电动工具"
+    },
+    "shipRepairDrone": {
+      "description": "设置为自动在任何航天器上自动执行基础维护修理工作的无人机。",
+      "name": "船维无人机"
+    },
+    "shockwaveDampeningModule": {
+      "description": "控制一组稳定结构，以确保即使大规模的冲击波也不会造成负面影响。",
+      "name": "缓冲阻尼模块"
+    },
+    "silicon": {
+      "description": "一种硬而脆的晶体固体，常因其特性而用作半导体。最常见于各种形式的二氧化硅（硅石）或硅酸盐矿物中。",
+      "name": "硅"
+    },
+    "siliconOre": {
+      "description": "在市场上，“硅矿石”一词被作为用于冶炼生产硅的不同产品的统称，例如石英岩或沙子。",
+      "name": "硅矿石"
+    },
+    "silkProcessed": {
+      "description": "丝绸是少数几种剩余的天然纤维之一，如今在服装行业有一些特殊用途。",
+      "name": "丝绸面料"
+    },
+    "silkRaw": {
+      "description": "这是迈向AI辅助实验服等精密服装的漫长旅程的开始。",
+      "name": "生丝品系"
+    },
+    "singularityStabilizer": {
+      "description": "在首次利用奇点进行实验后，科学家很快发现需要专门的稳定模块。不过他们并不愿意详细谈论他们是如何发现这一点的。",
+      "name": "奇点稳点仪"
+    },
+    "smallCapacitorBank": {
+      "description": "储存少量能量。",
+      "name": "小型电容组"
+    },
+    "smallCargoBay": {
+      "description": "构建小型货舱所需的一切。",
+      "name": "小型货舱套装"
+    },
+    "smallDeviceCover": {
+      "description": "适用于小型电子设备的3D打印塑料外壳。",
+      "name": "小型耐用外壳"
+    },
+    "smallEmitter": {
+      "description": "需要较少能量以便创建囊括较小空间的超光速场释放器。",
+      "name": "小型超光速场释放器"
+    },
+    "smallFtlTank": {
+      "description": "构建小型超光速油罐所需的一切。",
+      "name": "小型超光速燃料罐套装"
+    },
+    "smallPlasticsBoard": {
+      "description": "……",
+      "name": "小型聚合物片材"
+    },
+    "smallShipRepairDroneUnit": {
+      "description": "能够持续修复船只航行阶段受到的任何损伤的无人机的控制单元。",
+      "name": "小型船维无人机操作单元"
+    },
+    "smallStlTank": {
+      "description": "构建小型低光速油罐所需的一切。",
+      "name": "小型低光速燃料罐套装"
+    },
+    "sodium": {
+      "description": "人类生物学和工业中必不可少的元素。",
+      "name": "钠"
+    },
+    "sodiumBorohydride": {
+      "description": "一种用途广泛的化学剂，化学家依靠它来完成工作。由于其极易燃烧因此最好将其妥善存放。这种化合物的大规模生产起源于旧地球，最早由Gladi研究小组（Gladi Research Group）0-99实验室的化学家实现。",
+      "name": "硼氢化钠"
+    },
+    "solarCell": {
+      "description": "可将阳光转化为电能的单个太阳能电池。",
+      "name": "太阳能电池"
+    },
+    "solarPanel": {
+      "description": "高效太阳能电池板已经成为太空和阳光充足的星球上最普遍的能量获取手段。",
+      "name": "太阳能板"
+    },
+    "sortingAlgorithm": {
+      "description": "用于排列数据的算法。",
+      "name": "排列算法"
+    },
+    "spaceTether": {
+      "description": "用于将大型空间结构固定到位的一组坚固的编织绳索。",
+      "name": "太空系绳"
+    },
+    "specializedRadiationShielding": {
+      "description": "这些护板保护船只免遭一般大型恒星辐射水平的损伤。",
+      "name": "专业防辐射板"
+    },
+    "stabilitySupportSystem": {
+      "description": "帮助引航穿越极低/高重力星球大气的系统。",
+      "name": "稳定支持系统"
+    },
+    "standardEngine": {
+      "description": "可产生适中大小推力并油耗合理的标准低光速引擎。",
+      "name": "标准低光速引擎"
+    },
+    "standardReactor": {
+      "description": "标准超光速反应堆。",
+      "name": "标准超光速反应堆"
+    },
+    "steel": {
+      "description": "钢是一种具有高抗拉强度的铁基合金。它对于太空中的大多数用途来说还是太重了，但仍然是许多行星结构部件的理想解决方案。",
+      "name": "钢"
+    },
+    "stlFuel": {
+      "description": "尽管这种液体在气味和粘度上仍与过去几个世纪的燃料相似，但由于驱动效率大大提高，所需的量要少得多。",
+      "name": "低光速燃料"
+    },
+    "structuralSpacecraftComponent": {
+      "description": "航天器由许多不同的部件组成，这些部件通过结构部件固定在一起。",
+      "name": "航天器结构件"
+    },
+    "sulfur": {
+      "description": "硫元素在室温下呈亮黄色固体。",
+      "name": "硫"
+    },
+    "sulfurCrystals": {
+      "description": "硫在自然界中通常存在于硫化物和硫酸盐矿物中。",
+      "name": "硫磺晶体"
+    },
+    "surgeryUnit": {
+      "description": "一座可直接建造的用于执行外科手术的医疗单元。",
+      "name": "外科单元"
+    },
+    "surgicalDrone": {
+      "description": "专为支持外科医生工作的无人机。一旦你习惯了嗡嗡声，它就会非常有用！",
+      "name": "外科无人机"
+    },
+    "surgicalEquipment": {
+      "description": "各种手术刀、夹子和拭子。",
+      "name": "外科用品"
+    },
+    "surveillanceDrone": {
+      "description": "用于观察、扫描和报告的无人机。大多数人不喜欢它们。",
+      "name": "监控无人机"
+    },
+    "tantalite": {
+      "description": "钽矿石富含钽元素，与铌矿石类似，两者通常被称为钶钽铁矿。钽用于制造钽电容器，而钶钽铁矿也是铌的重要来源。",
+      "name": "钽铁矿"
+    },
+    "tantalum": {
+      "description": "一种稀有且耐腐蚀性强的金属。",
+      "name": "钽"
+    },
+    "targetingComputer": {
+      "description": "三思而后行。",
+      "name": "靶标计算机"
+    },
+    "tclAcid": {
+      "description": "对苯二甲酰氯是生产对位芳纶所必需的成分之一。",
+      "name": "TCL"
+    },
+    "technetium": {
+      "description": "锝的所有同位素都具有放射性，通常在自然界中仅以铀和钍等其他元素的衰变产物的形式存在。",
+      "name": "锝"
+    },
+    "technetiumOxide": {
+      "description": "黄色挥发性固体。",
+      "name": "氧化锝"
+    },
+    "technetiumStabilizers": {
+      "description": "锝同位素锝-97是处于完全电离状态的锝的稳定形式。",
+      "name": "稳态锝"
+    },
+    "technicianBundle": {
+      "description": "为100名职技工提供10天供给的全部物品。",
+      "name": "职技工消耗品套包"
+    },
+    "technicianClothing": {
+      "description": "这套工作服采用近乎不透水的面料，背部装有气罐，可以用于处理危险材料和在恶劣环境下工作。",
+      "name": "危险品工服"
+    },
+    "technicianHealth": {
+      "description": "该医疗包主要用于帮助治疗受伤。除了常见的急救设备外，还包含一个手持扫描仪和自膨胀医用泡沫。",
+      "name": "基础医疗包"
+    },
+    "technicianLuxuryDrink": {
+      "description": "用水、啤酒花和麦芽酿造的淡啤酒。有人声称它无法与其地球祖先相提并论。",
+      "name": "星辰淡啤酒"
+    },
+    "technicianLuxuryHealth": {
+      "description": "衰老曾被认为是一个不可逆转的过程。但在未来，这一说法将不再成立。",
+      "name": "干细胞治疗"
+    },
+    "technicianTools": {
+      "description": "这是一个强大且必不可少的工具，能够运行诊断并查找各种机器的故障。",
+      "name": "多功能扫描仪"
+    },
+    "technoKevlar": {
+      "description": "适合特殊用途的锝增强对位芳纶织物。",
+      "name": "增强型对位芳纶"
+    },
+    "tectosilisite": {
+      "description": "硅质岩是一种常见于大气层稀薄或没有大气层的行星的富含硅的风化层。其氦-3含量相当高，因此非常适合用作燃料生产材料。",
+      "name": "硅质岩"
+    },
+    "tensionReliefStructure": {
+      "description": "通常用作空间基础设施的核心部件，以确保其能够承受陨石撞击和压力变化的应变力。",
+      "name": "张力释放结构"
+    },
+    "tensorProcessingUnit": {
+      "description": "专门设计用于快速处理神经网络和其他应用的张量的电子系统。",
+      "name": "张量处理单元"
+    },
+    "testTubes": {
+      "description": "一种常用来盛放测试样品的实验室设备。",
+      "name": "试管"
+    },
+    "thermalShielding": {
+      "description": "这些主动冷却热量偏转模块必须安装在平均温度超过75°C的行星上的建筑物外墙上。",
+      "name": "热屏蔽"
+    },
+    "thermoFluid": {
+      "description": "这种高性能传热流体可用于从例如 CPU 冷却器的小型设备到建筑物大小的隔热罩上。",
+      "name": "热流体"
+    },
+    "tinyCargoBay": {
+      "description": "构建微型货舱所需的一切。",
+      "name": "微型货舱套装"
+    },
+    "titanium": {
+      "description": "钛和钛合金具有重量轻、强度高、耐腐蚀等特点，已成为但不仅限于航空航天工业的主要材料。",
+      "name": "钛"
+    },
+    "titaniumOre": {
+      "description": "钛氧化物矿物金红石和钛铁矿是钛矿体中最常见的矿物。",
+      "name": "钛矿石"
+    },
+    "torusSegment": {
+      "description": "圆形结构的一部分，可长期存在于太空中。",
+      "name": "圆环段"
+    },
+    "touchDeviceBlank": {
+      "description": "数据和计算能力就在您的掌中。",
+      "name": "手持个人控制台"
+    },
+    "touchScreen": {
+      "description": "通常部署在电子显示屏顶部的输入设备。通常称为触摸屏。",
+      "name": "电容式显示屏"
+    },
+    "transistor": {
+      "description": "晶体管可放大或切换电信号和功率。这款是一种高级版。",
+      "name": "高级晶体管"
+    },
+    "translucentMaterial": {
+      "description": "这种传统形式的玻璃如今很少单独使用，而是与新材料结合使用，以承受太空时代的压力和应变。",
+      "name": "玻璃"
+    },
+    "traumaCareUnit": {
+      "description": "遇到意外了吗？这里会照顾你的。",
+      "name": "创伤关照单元"
+    },
+    "truss": {
+      "description": "结构构件之间的稳定关系建立在桁架之上。",
+      "name": "桁架"
+    },
+    "tungstenAluminiumAlloy": {
+      "description": "这种合金能够承受极端高温，通常作为宇宙飞船或大推力发动机的热防护。",
+      "name": "α稳定型钨合金"
+    },
+    "tungstenResource": {
+      "description": "钨可以通过利用微生物吸收废料中的钨来实现回收。当微生物与含钨矿物接触时，这个过程有时会自然发生。",
+      "name": "细菌钨溶液"
+    },
+    "twoDimensionalDisplay": {
+      "description": "显示数据的输出设备。",
+      "name": "信息显示器"
+    },
+    "universalToolset": {
+      "description": "一套高品质的工具，可用于修理日常用具或磨练您的手工技能。",
+      "name": "通用工具集"
+    },
+    "universeMap": {
+      "description": "已知宇宙和其全部相关信息的地图。",
+      "name": "空间导航地图"
+    },
+    "verySmallCargoBay": {
+      "description": "构建超小货舱所需的一切。",
+      "name": "超小货舱套装"
+    },
+    "vitaEssence": {
+      "description": "健康美味有营养。",
+      "name": "维他精华"
+    },
+    "vortexEngine": {
+      "description": "一种允许拓殖船不依赖已建立的超光速航道进行航行的包含涡流反应堆的船只引擎。",
+      "name": "涡流引擎"
+    },
+    "vortexFuelTank": {
+      "description": "一种在拓殖船上装配的能够容纳足以完成一次由临近区块的往返航行的巨型燃料罐。",
+      "name": "涡流燃料罐"
+    },
+    "vortexReactor": {
+      "description": "利用一部分跃迁点航行技术的供拓殖船使用的特制反应堆。",
+      "name": "涡流反应堆"
+    },
+    "vortexStimulationFuel": {
+      "description": "事实证明，锿是控制曾被认为无法控制的奇点涡流的最后一块拼图。",
+      "name": "涡流燃料"
+    },
+    "waferMedium": {
+      "description": "用于制造电子产品的中等尺寸的硅晶体圆盘。",
+      "name": "中型晶圆"
+    },
+    "waferSmall": {
+      "description": "用于制造电子产品的较小尺寸的硅晶体圆盘。",
+      "name": "小型晶圆"
+    },
+    "water": {
+      "description": "占我们身体60%的液体被用于宇宙中几乎所有与营养生产有关的过程应该不会令你惊讶。",
+      "name": "水"
+    },
+    "waterFilter": {
+      "description": "主动监测水状况并根据需要采取补救措施的水过滤设备。",
+      "name": "主动水过滤器"
+    },
+    "waterRecycler": {
+      "description": "从生物废物和工业废水中回收可用清洁水的设备。",
+      "name": "水回收器"
+    },
+    "weakArtificalIntelligence": {
+      "description": "针对特定任务或应用进行优化的人工智能。绝对不是以惊人的速度学习、具有自我意识并为人类创造问题的通用人工智能。",
+      "name": "弱人工智能"
+    },
+    "windowManager": {
+      "description": "……",
+      "name": "窗口管理器"
+    },
+    "wolfram": {
+      "description": "一种稀有金属，熔点是已知元素中最高的。古称钨为“重石“。",
+      "name": "钨"
+    },
+    "wolfrhenium": {
+      "description": "事实证明，将两种熔点极高的金属结合在一起会产生一种有用的合金，特别是在建造有弹性的空间基础设施时。",
+      "name": "钨铼合金"
+    },
+    "workstationBlank": {
+      "description": "一个基本的计算机工作站。",
+      "name": "基础工作站"
+    },
+    "zircon": {
+      "description": "锆石矿物可加工成金属锆。",
+      "name": "锆晶体"
+    },
+    "zirconium": {
+      "description": "锆有许多应用，包括在核反应堆中用作燃料棒的包层和在化学加工设备中用作耐腐蚀材料。",
+      "name": "锆"
+    }
+  },
+  "MaterialCategory": {
+    "agriculturalproducts": "农产品",
+    "alloys": "合金",
+    "chemicals": "化学品",
+    "constructionmaterials": "建材",
+    "constructionparts": "建筑部件",
+    "constructionprefabs": "建筑预制件",
+    "consumablebundles": "消耗品套包",
+    "consumables(basic)": "消耗品（基础）",
+    "consumables(luxury)": "消耗品（奢华）",
+    "drones": "无人机",
+    "electronicdevices": "电子设备",
+    "electronicparts": "电子部件",
+    "electronicpieces": "电子元件",
+    "electronicsystems": "电子系统",
+    "elements": "元素",
+    "energysystems": "能量系统",
+    "fuels": "燃料",
+    "gases": "气体",
+    "infrastructure": "基建",
+    "liquids": "液体",
+    "medicalequipment": "医疗设备",
+    "metals": "金属",
+    "minerals": "矿物",
+    "ores": "矿石",
+    "plastics": "塑料",
+    "shipengines": "船只引擎",
+    "shipkits": "船只套装",
+    "shipparts": "船只部件",
+    "shipshields": "船只防护",
+    "softwarecomponents": "软件部件",
+    "softwaresystems": "软件系统",
+    "softwaretools": "软件工具",
+    "textiles": "纺织品",
+    "unitprefabs": "单元预制件",
+    "utility": "公共用品"
+  },
+  "Reactor": {
+    "advancedAppliancesFactory_description": "生产常用于航天器和空间站的高级电器。",
+    "advancedAppliancesFactory_name": "高级电器工厂",
+    "advancedMaterialLab_description": "将中级稀有材料提炼为更可用的形式。",
+    "advancedMaterialLab_name": "高级材料实验室",
+    "advancedSmelter_description": "允许生产高性能金属合金。",
+    "advancedSmelter_name": "高功率高炉",
+    "appliancesFactory_description": "生产常用于航天器和空间站的大型电器。",
+    "appliancesFactory_name": "电器工厂",
+    "basicMaterialsPlant_description": "生产建立殖民地所需的大量材料和最终产品。",
+    "basicMaterialsPlant_name": "基础材料厂",
+    "chemPlant_description": "生产多种化合物和中间产物。",
+    "chemPlant_name": "化工厂",
+    "cleanRoom_description": "生产集成电路和基础电脑部件。",
+    "cleanRoom_name": "无尘室",
+    "clothingFactory_description": "利用不同的纤维制造服装乃至造船所需的纺织品。",
+    "clothingFactory_name": "纺织品制造厂",
+    "collector_description": "从大气中分离气体。",
+    "collector_name": "采气站",
+    "coreModule_description": "在某颗行星上建立基地所必需的维生系统和基础模块。",
+    "coreModule_name": "核心模块",
+    "corporationProjectFTLLaboratory_description": "当前无功能性！——威望建筑",
+    "corporationProjectFTLLaboratory_name": "集团超光速实验室",
+    "corporationProjectHeadquarters_description": "任何集团的实体总部，执行基础监管功能。",
+    "corporationProjectHeadquarters_name": "集团总部",
+    "corporationProjectImmortality_description": "当前无功能性！——威望建筑",
+    "corporationProjectImmortality_name": "集团不朽中心",
+    "corporationProjectRepresentationCenter_description": "APEX代表中心允许集团为APEX基金会贡献部分获利。基金会使用这部分基金资助新注册的CEO，提供给他们启航企业历程的必要资本和船只。拥有更高的代表等级被广泛认为是财富和成功的证明。",
+    "corporationProjectRepresentationCenter_name": "APEX代表中心",
+    "corporationProjectTerraforming_description": "当前无功能性！——威望建筑",
+    "corporationProjectTerraforming_name": "集团地化改造站",
+    "droneShop_description": "所有无人机的组装厂。",
+    "droneShop_name": "无人机厂",
+    "einsteiniumEnrichmentPlant_description": "特化的将液态锿变为更稳定可用形态的工厂。",
+    "einsteiniumEnrichmentPlant_name": "锿浓缩厂",
+    "electronicDeviceManufactory_description": "制造多种可供最终用户使用的小型设备。",
+    "electronicDeviceManufactory_name": "电子设备制造厂",
+    "electronicsPlant_description": "使用基本的计算机部件来制造更大的计算机和控制单元。",
+    "electronicsPlant_name": "电子厂",
+    "energyComponentAssembly_description": "生产各式各样的供能系统和设备。",
+    "energyComponentAssembly_name": "能源部件总装厂",
+    "extractor_description": "从地表开采矿物矿石。",
+    "extractor_name": "矿场",
+    "farm_description": "产出如五谷杂粮等农产品。需要肥沃土壤。",
+    "farm_name": "农场",
+    "fermentationFacility_description": "生产那些可以让宇宙生活不是那么难熬的饮料。",
+    "fermentationFacility_name": "酿造厂",
+    "fineSmithy_description": "生产通常被忽视但又构建了许多装置核心的小金属配件。",
+    "fineSmithy_name": "金属工作室",
+    "foodProcessor_description": "使用农产品生产可食用消耗品。",
+    "foodProcessor_name": "食品加工厂",
+    "glassFurnace_description": "在极高的温度下产生不同的玻璃和其他坚固的材料。",
+    "glassFurnace_name": "玻璃熔炉",
+    "habitationBarracks_description": "为75名先驱者和75名定居者提供住所。",
+    "habitationBarracks_name": "营房",
+    "habitationCommune_description": "为75名定居者和75名职技工提供住所。",
+    "habitationCommune_name": "公共居所",
+    "habitationEngineer_description": "为100名工程师提供住所。",
+    "habitationEngineer_name": "工程师家园",
+    "habitationLuxury_description": "为75名工程师和75名科学家提供住所。",
+    "habitationLuxury_name": "豪华住房",
+    "habitationManagers_description": "为75名职技工和75名工程师提供住所。",
+    "habitationManagers_name": "管理住房",
+    "habitationPioneer_description": "为100名先驱者提供住所。",
+    "habitationPioneer_name": "先驱者家园",
+    "habitationScientist_description": "为100名科学家提供住所。",
+    "habitationScientist_name": "科学家家园",
+    "habitationSettler_description": "为100名定居者提供住所。",
+    "habitationSettler_name": "定居者家园",
+    "habitationTechnician_description": "为100名职技工提供住所。",
+    "habitationTechnician_name": "职技工家园",
+    "hullWeldingPlant_description": "生产多种船板和防护屏蔽。",
+    "hullWeldingPlant_name": "船板焊接厂",
+    "hydroponicsFarm_description": "生产如碳氢化合物作物之类的农产品。不需要肥沃土地但是需要大量水。",
+    "hydroponicsFarm_name": "水培农场",
+    "inVitroPlant_description": "涉及人工生命和肉类产品的创造生产。",
+    "inVitroPlant_name": "体外生命培育厂",
+    "incinerator_description": "将有机生长的植物转化为生命最基本的资源——碳。",
+    "incinerator_name": "焚化炉",
+    "laboratory_description": "处理更复杂化学反应的高级实验室。",
+    "laboratory_name": "实验室",
+    "mediumComponentsAssembly_description": "将技术零件组装成更大的部件，以备在许多设备中使用。",
+    "mediumComponentsAssembly_name": "中型部件总装厂",
+    "orchard_description": "生产用于高端消费品有较高维护需求的水果的专业农场。",
+    "orchard_name": "果园",
+    "packagingCenter_description": "实践证明在太空中成套打包的物品比单件分散运输而言更高效！",
+    "packagingCenter_name": "打包中心",
+    "pharmaFactory_description": "一家配备生产药物和治疗支持产品的设备的多功能工厂。",
+    "pharmaFactory_name": "制药厂",
+    "planetaryProjectAdminCenter_description": "监管中心允许举行选举以选出行星管理者。管理者可设置例如生产费用等的税款。每名场地所有者均有选举权，但是完成由传薪计划发起的任务也可获得选票。",
+    "planetaryProjectAdminCenter_name": "监管中心",
+    "planetaryProjectCogc_description": "允许社群实施工业支持计划。",
+    "planetaryProjectCogc_name": "全球商会",
+    "planetaryProjectComfortBig_description": "满足大量舒适需求。",
+    "planetaryProjectComfortBig_name": "4D游乐中心",
+    "planetaryProjectComfortCulture_description": "满足少量舒适和文化需求。",
+    "planetaryProjectComfortCulture_name": "艺术餐厅",
+    "planetaryProjectComfortSmall_description": "满足少量舒适需求。",
+    "planetaryProjectComfortSmall_name": "野生动物园",
+    "planetaryProjectCultureBig_description": "满足大量文化需求。",
+    "planetaryProjectCultureBig_name": "VR剧院",
+    "planetaryProjectCultureEducation_description": "满足少量文化和教育需求。",
+    "planetaryProjectCultureEducation_name": "行星广播站",
+    "planetaryProjectCultureSmall_description": "满足少量文化需求。",
+    "planetaryProjectCultureSmall_name": "画廊",
+    "planetaryProjectEducationBig_description": "满足大量教育需求。",
+    "planetaryProjectEducationBig_name": "大学",
+    "planetaryProjectEducationSmall_description": "满足少量教育需求。",
+    "planetaryProjectEducationSmall_name": "图书馆",
+    "planetaryProjectHealthBig_description": "满足大量健康需求。",
+    "planetaryProjectHealthBig_name": "医院",
+    "planetaryProjectHealthComfort_description": "满足少量健康和舒适需求。",
+    "planetaryProjectHealthComfort_name": "健康中心",
+    "planetaryProjectHealthSmall_description": "满足少量健康需求。",
+    "planetaryProjectHealthSmall_name": "医务室",
+    "planetaryProjectLocalMarket_description": "一个简单、不受监管、公告板风格的市场。",
+    "planetaryProjectLocalMarket_name": "本地市场",
+    "planetaryProjectPopulation_description": "这个星球项目是所有与当地人口相关的基础设施项目的集合",
+    "planetaryProjectPopulation_name": "公共基础设施",
+    "planetaryProjectSafetyBig_description": "满足大量安全需求。",
+    "planetaryProjectSafetyBig_name": "安防无人机站",
+    "planetaryProjectSafetyHealth_description": "满足少量安全和健康需求。",
+    "planetaryProjectSafetyHealth_name": "应急中心",
+    "planetaryProjectSafetySmall_description": "满足少量安全需求。",
+    "planetaryProjectSafetySmall_name": "安全站",
+    "planetaryProjectShipyard_description": "带着你的图纸和零件到这来造船。",
+    "planetaryProjectShipyard_name": "行星船厂",
+    "planetaryProjectWarehouse_description": "不需要本地拥有基地即可供出租的仓储空间。",
+    "planetaryProjectWarehouse_name": "行星仓库",
+    "plasticsPrinterFacility_description": "用塑料颗粒打印物体。",
+    "plasticsPrinterFacility_name": "3D打印厂",
+    "polymerPlant_description": "将基本元素转化为用于技术的各个阶段的柔性聚合物的化工厂。",
+    "polymerPlant_name": "聚合物厂",
+    "prefabPlant1_description": "生产建筑工程所需的基本预制件。",
+    "prefabPlant1_name": "一型预制件厂",
+    "prefabPlant2_description": "生产建筑工程所需的轻质预制件。",
+    "prefabPlant2_name": "二型预制件厂",
+    "prefabPlant3_description": "生产建筑工程所需的加固预制件。",
+    "prefabPlant3_name": "三型预制件厂",
+    "prefabPlant4_description": "生产建筑工程所需的高级预制件。",
+    "prefabPlant4_name": "四型预制件厂",
+    "refinery_description": "为星际航行生产燃料。",
+    "refinery_name": "炼油厂",
+    "rig_description": "抽取液体资源。",
+    "rig_name": "钻井",
+    "shipKitFactory_description": "组装各种标准化货舱和燃料罐套件的工厂。",
+    "shipKitFactory_name": "船只套装厂",
+    "smallComponentsAssembly_description": "将技术零件组装成更小的部件，以备在许多设备中使用。",
+    "smallComponentsAssembly_name": "小型部件总装厂",
+    "smelter_description": "用矿石生产金属。",
+    "smelter_name": "冶炼厂",
+    "softwareDevelopment_description": "这里开发用于更复杂的工具和系统的基本软件组件。",
+    "softwareDevelopment_name": "软件开发部门",
+    "softwareEngineering_description": "基本软件组件组合成可应用于各种设备或用作更复杂系统的一部分的工具。",
+    "softwareEngineering_name": "软件工程部门",
+    "softwareLabs_description": "架构师利用基本算法和工具搭建更先进的软件应用程序，供高端设备使用。",
+    "softwareLabs_name": "软件实验部门",
+    "spacecraftPrefabPlant_description": "用于生产各种套件和标准化航天器组件的设施。",
+    "spacecraftPrefabPlant_name": "航天器预制件厂",
+    "spacecraftPropulsionFactory_description": "生产移动航天器所需的一切东西，即各种低光速引擎和超光速反应堆。",
+    "spacecraftPropulsionFactory_name": "航天器推进设备厂",
+    "storageBig_description": "将存储容量提升10000吨/10000立方米的大规模仓储设施。",
+    "storageBig_name": "扩容仓储",
+    "storageFacility_description": "将存储容量提升5000吨/5000立方米。",
+    "storageFacility_name": "仓储设施",
+    "storageSmall_description": "将存储容量提升2500吨/2500立方米的小规模仓储设施。",
+    "storageSmall_name": "附属仓储",
+    "storageVolume_description": "将存储容量提升2500吨/7500立方米的容量特化仓储设施。",
+    "storageVolume_name": "高容积仓储",
+    "storageWeight_description": "将存储容量提升7500吨/2500立方米的载重特化仓储设施。",
+    "storageWeight_name": "高负荷仓储",
+    "technetiumProcessing_description": "将基本锝加工成更稳定的元素结构。",
+    "technetiumProcessing_name": "锝加工厂",
+    "unitPrefabPlant_description": "生产可用作更大建筑项目一部分的建筑单元。",
+    "unitPrefabPlant_name": "单元预制件厂",
+    "weavingPlant_description": "用纤维制作最基本的织物。",
+    "weavingPlant_name": "纺织厂",
+    "weldingPlant_description": "生产用于建筑和设备制造的多种金属产品。",
+    "weldingPlant_name": "焊接棚"
+  }
+}

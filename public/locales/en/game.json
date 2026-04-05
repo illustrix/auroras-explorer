@@ -1,0 +1,1701 @@
+{
+  "Material": {
+    "advancedBulkhead": {
+      "description": "Compared to its little brother, the advanced bulkhead is slightly thicker and heavier, offering greater durability.",
+      "name": "Advanced Bulkhead"
+    },
+    "advancedDeckElements": {
+      "description": "Thick and durable, these 3D-printed floor tiles can be found in certain buildings and high-end spacecraft.",
+      "name": "Advanced Deck Elements"
+    },
+    "advancedEngine": {
+      "description": "An advanced-level STL engine with lots of thrust power and thus a relatively high fuel consumption.",
+      "name": "Advanced STL Engine"
+    },
+    "advancedFuelPump": {
+      "description": "An advanced fuel pump used in high-thrust spacecraft engines.",
+      "name": "Advanced Fuel Pump"
+    },
+    "advancedFuelRod": {
+      "description": "An advanced form of fuel rod that can be applied in fission reactors.",
+      "name": "Advanced Fuel Rod"
+    },
+    "advancedHeatShield": {
+      "description": "Surrounding a ship with these tiles will significantly reduce the damage it takes from extreme heat.",
+      "name": "Advanced Thermal Protection Tile"
+    },
+    "advancedHighgSeats": {
+      "description": "A set of special seats significantly increasing the maximum g-force values a ship's crew can endure.",
+      "name": "Advanced High-G Seats"
+    },
+    "advancedHullPlate": {
+      "description": "An advanced spaceship hull plate. It will significantly reduce a ship's overall deterioration and allow it to endure very high maximum g-force values.",
+      "name": "Advanced Hull Plate"
+    },
+    "advancedNozzle": {
+      "description": "An advanced nozzle used in medium-thrust spacecraft engines.",
+      "name": "Advanced Nozzle"
+    },
+    "advancedRadiationShielding": {
+      "description": "These plates protect a ship from taking damage from typical medium-star radiation levels.",
+      "name": "Advanced Anti-rad Plate"
+    },
+    "advancedStructuralElements": {
+      "description": "Laced with titanium, these are an even sturdier, yet much lighter version of reinforced structural elements.",
+      "name": "Advanced Structural Elements"
+    },
+    "advancedThermalProtectionMaterial": {
+      "description": "A borosilicate-impregnated ceramic fabric used for thermal protection against extreme heat.",
+      "name": "Advanced Thermal Protection Material"
+    },
+    "advancedWhippleShielding": {
+      "description": "Shielding plates that significantly reduce damage from flying through systems with a high meteoroid density.",
+      "name": "Advanced Whipple Shielding"
+    },
+    "advancedWindow": {
+      "description": "Fitted with reinforced frames and nano-coated glass, these windows have very specific uses in buildings and electronics.",
+      "name": "Advanced Transparent Aperture"
+    },
+    "aerostatFoundation": {
+      "description": "This modular, hollow platform can be filled with a lifting gas to build the buoyant foundations for structures in the upper atmosphere of gas giants.",
+      "name": "Aerostat Foundation"
+    },
+    "airScrubber": {
+      "description": "Air processing equipment that removes pollutants that are detrimental to life.",
+      "name": "Air Scrubber"
+    },
+    "allPurposeFodder": {
+      "description": "Fodder for animals of all kinds.",
+      "name": "All-Purpose Fodder"
+    },
+    "aluminium": {
+      "description": "Aluminium and its alloys have been a staple of the aerospace industry since its early days, and they are still being used in virtually every structural part of modern spaceships.",
+      "name": "Aluminium"
+    },
+    "aluminiumIronAlloy": {
+      "description": "An iron-based alloy commonly used as a budget replacement for titanium, so no miracles are to be expected.",
+      "name": "Ferrominium"
+    },
+    "aluminiumOre": {
+      "description": "An ore that can be smelted down to pure aluminium, which in turn plays a vital role in ship construction.",
+      "name": "Aluminium Ore"
+    },
+    "aluminiumTitaniumAlloy": {
+      "description": "Lightweight, flexible and durable, this namesake of Earth's titanium has become the de facto standard in space ship construction.",
+      "name": "Alpha-Stabilized Titanium"
+    },
+    "alurhenium": {
+      "description": "An alloy that combines the flexibility of aluminium and the resistance of rhenium.",
+      "name": "Alurhenium"
+    },
+    "ammonia": {
+      "description": "A staple of modern fuel production, Ammonia could be synthesized from Nitrogen and Hydrogen. However, collecting it directly from the atmosphere has proven more cost-efficient.",
+      "name": "Ammonia"
+    },
+    "antennaArray": {
+      "description": "Uses a curved surface to direct signals to a focal point for collection.",
+      "name": "Antenna Array"
+    },
+    "antibacterialTreeFlowers": {
+      "description": "Flowers of the plant Humulus Iupulus used in the brewing of beer and herbal medicine.",
+      "name": "Flowery Hops"
+    },
+    "argon": {
+      "description": "A noble gas often used as inert atmosphere in smelting, metalworking and other applications.",
+      "name": "Argon"
+    },
+    "artificialSoil": {
+      "description": "Proper soil, created in the lab.",
+      "name": "Artificial Soil"
+    },
+    "audioDistributionSystem": {
+      "description": "Distributes audio signals within a pre-defined space.",
+      "name": "Audio Distribution System"
+    },
+    "audioTransmitter": {
+      "description": "Transmits audio signals between two end points.",
+      "name": "Audio Transmitter"
+    },
+    "autoDoc": {
+      "description": "Scans the patient's body for injuries and treats them via chemical injections.",
+      "name": "Auto-Doc"
+    },
+    "automatedCoolingSystem": {
+      "description": "A system monitoring and controlling heat in an FTL reactor.",
+      "name": "Automated Cooling System"
+    },
+    "bacteria": {
+      "description": "These microscopic organisms play a role in a number of processes such as fermentation and purification.",
+      "name": "Helpful Bacteria"
+    },
+    "bandages": {
+      "description": "Used to dress superficial injuries.",
+      "name": "Bandages"
+    },
+    "basicAiFramework": {
+      "description": "A collection of basic AI algorithms as a starting point for any even remotely intelligent machine.",
+      "name": "Basic AI Framework"
+    },
+    "basicBulkhead": {
+      "description": "Divide ships and buildings into several rooms, increase their structural rigidity and seal off fires or breached sections in case of an accident.",
+      "name": "Basic Bulkhead"
+    },
+    "basicDeckElements": {
+      "description": "Durable plastic floor plating for both buildings and spaceships, easily printable in various shapes and sizes.",
+      "name": "Basic Deck Elements"
+    },
+    "basicFuelPump": {
+      "description": "A standard fuel pump used in low-thrust spacecraft engines.",
+      "name": "Basic Fuel Pump"
+    },
+    "basicFuelRod": {
+      "description": "A tube to hold the fuel required to perform FTL jumps.",
+      "name": "Basic Fuel Rod"
+    },
+    "basicHeatShield": {
+      "description": "Surrounding a spaceship with these tiles will reduce the damage it takes from extreme heat.",
+      "name": "Basic Thermal Protection Tile"
+    },
+    "basicHighgSeats": {
+      "description": "A set of special seats increasing the maximum g-force values a ship's crew can endure.",
+      "name": "Basic High-G Seats"
+    },
+    "basicHullPlate": {
+      "description": "A basic spaceship hull plate.",
+      "name": "Basic Hull Plate"
+    },
+    "basicNozzle": {
+      "description": "A basic nozzle used in low-thrust spacecraft engines.",
+      "name": "Basic Nozzle"
+    },
+    "basicRadiationShielding": {
+      "description": "These plates protect a ship from taking damage from typical small-star radiation levels.",
+      "name": "Basic Anti-rad Plate"
+    },
+    "basicStructuralElements": {
+      "description": "General term for mid-sized structural ship and building components that are neither walls nor floors.",
+      "name": "Basic Structural Elements"
+    },
+    "basicThermalProtectionMaterial": {
+      "description": "A beryllium-impregnated ceramic fabric used in heat shields of all kinds.",
+      "name": "Basic Thermal Protection Material"
+    },
+    "basicWhippleShielding": {
+      "description": "Shielding plates that reduce damage from flying through systems with a high meteoroid density.",
+      "name": "Basic Whipple Shielding"
+    },
+    "basicWindow": {
+      "description": "Consisting of a metal frame, multiple layers of transparent plastic, and an emergency shutter in case the window gets compromised in non-breathable atmospheres or space.",
+      "name": "Basic Transparent Aperture"
+    },
+    "beryl": {
+      "description": "Beryllium Aluminum cyclosilicates. The most well known forms are emerald and aquamarine.",
+      "name": "Beryl Crystals"
+    },
+    "beryllium": {
+      "description": "Its thermal conductivity and low density make it useful for space based structures and ships. Beryllium is somewhat rare as it is fused into heavier elements inside stars.",
+      "name": "Beryllium"
+    },
+    "bioreactiveMineral": {
+      "description": "A set of highly versatile minerals that serve as a basis for different kinds of chemical reagents.",
+      "name": "Bioreactive Minerals"
+    },
+    "biosphereUnit": {
+      "description": "A large-scale biosphere, often used to grow food and herbs for long-term space travel.",
+      "name": "Biosphere Unit"
+    },
+    "bleach": {
+      "description": "Desaturation agent - or \"bleach\", as it is more commonly known - is used to eliminate the natural color, texture, and odor of raw textiles.",
+      "name": "Desaturation Agent"
+    },
+    "blueGoldConnectors": {
+      "description": "Shielded connectors help reduce the risk of signal interference.",
+      "name": "Shielded Connectors"
+    },
+    "bodyScanner": {
+      "description": "Scans human bodies, usually to detect injuries or contraband.",
+      "name": "Body Scanner"
+    },
+    "boronCrystals": {
+      "description": "Known for its resistance to heat, boron is widely applied for thermal protection purposes.",
+      "name": "Boron Crystals"
+    },
+    "borosilicate": {
+      "description": "A material highly resistant to thermal shock.",
+      "name": "Borosilicate"
+    },
+    "breathableLiquid": {
+      "description": "This oxygen-rich solution prevents lungs from collapsing under high acceleration or in high-pressure environments.",
+      "name": "Breathable Liquid"
+    },
+    "caffeinatedBeans": {
+      "description": "Coffee plants will rise up to 20 meters in height on low-gravity planets although they are generally tricky to grow, requiring heavy rain in just the right intervals.",
+      "name": "Caffeinated Beans"
+    },
+    "calcium": {
+      "description": "Human bones have been subjected to a host of new challenges since the space age began, making a regular calcium intake all the more important.",
+      "name": "Calcium"
+    },
+    "caliche": {
+      "description": "Caliche is a sedimentary rock mostly mined for its iodine, a stable halogen used in contemporary lighting technology.",
+      "name": "Caliche Rock"
+    },
+    "capacitor": {
+      "description": "Capacitors are made up of two conductive plates that are close together but not in contact. When a voltage is applied to the two plates an electrical field is formed between them.",
+      "name": "Electric Field Capacitor"
+    },
+    "carbohydrateGrains": {
+      "description": "A staple of human nutrition since the neolithic revolution, grains are still a versatile ingredient in the age of space exploration.",
+      "name": "High-Carb Grains"
+    },
+    "carbohydrateMaize": {
+      "description": "An essential, highly nutritional ingredient, maize is grown on farms and in greenhouse domes across the universe. Some incinerate it for its Carbon, others just want to make popcorn.",
+      "name": "High-Carb Maize"
+    },
+    "carbon": {
+      "description": "Basis of all life and some industries, Carbon is used in ore purification and a variety of other processes.",
+      "name": "Carbon"
+    },
+    "ceramicFabric": {
+      "description": "Ceramic fabrics have proven very useful when it comes to coating spaceship hulls to protect them from extreme temperatures.",
+      "name": "Ceramic Fabric"
+    },
+    "ceramicTungstenFabric": {
+      "description": "A tungsten-infused version of ceramic fabric for those who want to go the extra mile in terms of thermal protection.",
+      "name": "Ceramic-Tungsten Fabric"
+    },
+    "chemicalReagents": {
+      "description": "Used to create a variety of drugs and other chemically created products.",
+      "name": "Chemical Reagents"
+    },
+    "chlorine": {
+      "description": "A chemical with many stand-out properties, chlorine has various uses in the food, clothing, and construction industries.",
+      "name": "Chlorine"
+    },
+    "climateController": {
+      "description": "A climate controller maintains environmental factors at a comfortable level in a ship or structure.",
+      "name": "Climate Controller"
+    },
+    "combustionChamber": {
+      "description": "Due to the extreme temperatures reached in combustion chambers, they come with multiple layers of borosilicate coating by default.",
+      "name": "Combustion Chamber"
+    },
+    "commandBridge1": {
+      "description": "A standard command bridge ready to be implemented into pretty much any spacecraft.",
+      "name": "Command Bridge MK1"
+    },
+    "commandBridge2": {
+      "description": "An advanced command bridge applied in spaceships using more complex engines and reactors.",
+      "name": "Command Bridge MK2"
+    },
+    "commandBridgeShort": {
+      "description": "A command bridge module specifically designed for STL-only intra-system space flight.",
+      "name": "Short-distance Command Bridge"
+    },
+    "communicationSystem": {
+      "description": "Full communication system ready to be implemented as part of a bigger complex.",
+      "name": "Communication System"
+    },
+    "coolingFan": {
+      "description": "A fan used to actively cool equipment by moving atmospheric gases over its surfaces.",
+      "name": "Active Cooling Device"
+    },
+    "copper": {
+      "description": "Its high electrical and thermal conductivity as well as its resistance to deformation and corrosion make copper a versatile ingredient in various electronic components.",
+      "name": "Copper"
+    },
+    "copperAluminiumAlloy": {
+      "description": "Among other things, this alloy of copper and aluminium has been found to considerably increase the efficiency of solar panels.",
+      "name": "Bronze"
+    },
+    "copperConnectors": {
+      "description": "Cheap but effective copper based connectors.",
+      "name": "Budget Connectors"
+    },
+    "copperOre": {
+      "description": "This ore can be smelted down to copper, a metal that is nowadays used mostly in electronic devices.",
+      "name": "Copper Ore"
+    },
+    "coreModuleKit": {
+      "description": "Provides everything required to build one's first base!",
+      "name": "Core Module Kit"
+    },
+    "cottonProcessed": {
+      "description": "A cloth made from cotton used in clothing as well as in medicine as a component of bandages.",
+      "name": "Cotton Fabric"
+    },
+    "cottonRaw": {
+      "description": "Domed cotton fields are warm and moderately humid places, and provide the basis for all of tomorrow's fashion trends.",
+      "name": "Raw Cotton Fiber"
+    },
+    "crewQuarters": {
+      "description": "A large ready-to-go unit for a full spaceship crew to live and sleep in.",
+      "name": "Crew Quarters (Large)"
+    },
+    "crewQuartersMed": {
+      "description": "A medium-sized ready-to-go unit for a full spaceship crew to live and sleep in.",
+      "name": "Crew Quarters (Medium)"
+    },
+    "crewQuartersSmall": {
+      "description": "A small ready-to-go unit for a full spaceship crew to live and sleep in.",
+      "name": "Crew Quarters (Small)"
+    },
+    "crewQuartersTiny": {
+      "description": "The smallest possible crew quarters. Say goodbye to luxury!",
+      "name": "Crew Quarters (Tiny)"
+    },
+    "crowdControlDrone": {
+      "description": "A security drone equipped to control riots and detect contraband.",
+      "name": "Crowd Control Drone"
+    },
+    "cryoUnit": {
+      "description": "The cryogenic unit safely places biological specimens in, and takes them out, of cryogenic stasis.",
+      "name": "Cryogenic Unit"
+    },
+    "cryogenicFluid": {
+      "description": "This transparent, jelly-like substance is used in cryogenic tanks, mostly on generation ships. It provides nutrients via skin contact and even mitigates the effects of high acceleration.",
+      "name": "Cryogenic Stabilizer"
+    },
+    "cryopreservationUnit": {
+      "description": "A unit holding cryopreservation tanks for long-term space travel.",
+      "name": "Cryopreservation Unit"
+    },
+    "dataAnalyzer": {
+      "description": "The data analyzer applies artificial intelligence techniques to data in order to extract insights.",
+      "name": "Data Analyzer"
+    },
+    "dataVisualizer": {
+      "description": "The data visualizer creates, maps, graphs, charts and other visualizations to illustrate the insights gained from data analysis.",
+      "name": "Data Visualizer"
+    },
+    "decorativeElements": {
+      "description": "A variety of oddly shaped elements designed to serve as decorations at appropriate venues.",
+      "name": "Decorative Elements"
+    },
+    "distributedDatabase": {
+      "description": "A distributed data store. They are often used to maintain state between components of a distributed system.",
+      "name": "Distributed Database"
+    },
+    "drinkingWater": {
+      "description": "Treated water that is safe for drinking, food preparation and other day to day human uses.",
+      "name": "Drinking Water"
+    },
+    "droneChassis": {
+      "description": "The basic chassis for any kind of drone.",
+      "name": "Drone Chassis"
+    },
+    "droneFrame": {
+      "description": "Every drone chassis needs a proper holding frame.",
+      "name": "Drone Frame"
+    },
+    "droneOperationsUnit": {
+      "description": "Building unit set up for controlling and monitoring drone operations.",
+      "name": "Drone Operations Unit"
+    },
+    "einsteinium": {
+      "description": "A radioactive element that did not exist naturally on Earth. The high radioactivity of some Einsteinium isotopes produces a visible glow.",
+      "name": "Einsteinium"
+    },
+    "engineerBundle": {
+      "description": "Everything required to supply 100 engineers for 10 days.",
+      "name": "Engineer Consumable Bundle"
+    },
+    "engineerClothing": {
+      "description": "Half clothing, half computer, this garment assists engineers in their everyday tasks.",
+      "name": "Smart Space Suit"
+    },
+    "engineerFood": {
+      "description": "This spicier version of standard-issue rations enjoys great popularity among engineers, who seem to enjoy sweating even during lunch break.",
+      "name": "Flavoured Insta-Meal"
+    },
+    "engineerLuxuryDrink": {
+      "description": "Sharing a bottle of gin has become one of the most prevalent ways to unwind after a long day's work. The added Einsteinium adds a certain hallucinatory quality that is hard to say no to.",
+      "name": "Einsteinium-Infused Gin"
+    },
+    "engineerLuxuryHealth": {
+      "description": "This paste works wonders on sore joints. VitaGel used to be a trademarked name but was soon also used for all the copies that flooded the market.",
+      "name": "VitaGel"
+    },
+    "engineerTools": {
+      "description": "A handheld analysis tool with the ability to perform diagnostics checks and help with repairs.",
+      "name": "Personal Data Assistant"
+    },
+    "enrichedEinsteinium": {
+      "description": "Einsteinium enriched in a special chemical process for use in fission reactors.",
+      "name": "Enriched Einsteinium"
+    },
+    "enrichedTechnetium": {
+      "description": "While not as radioactive as other materials, an enriched form of technetium proved very useful to, among other things, power radioisotope generators.",
+      "name": "Enriched Technetium"
+    },
+    "entertainmentDataCore": {
+      "description": "Games, movies, shows, music, and everything that you dream of.",
+      "name": "Entertainment Data Core"
+    },
+    "entertainmentUnit": {
+      "description": "A full unit of entertainment hardware and control devices.",
+      "name": "Entertainment Unit"
+    },
+    "epoxy": {
+      "description": "A highly viscous synthetic resin which, when hardened, acts as an adhesive reinforcement in building and ship components.",
+      "name": "Epoxy Resin"
+    },
+    "fastenerKitMedium": {
+      "description": "A medium set of standard fasteners.",
+      "name": "Medium Fastener Kit"
+    },
+    "fastenerKitSmall": {
+      "description": "A small set of standard fasteners.",
+      "name": "Small Fastener Kit"
+    },
+    "fattyNuts": {
+      "description": "Nuts provide important triglycerides, which are rich in energy. Make sure to always keep an eye on your blood fat and do not overindulge.",
+      "name": "Triglyceride Nuts"
+    },
+    "fattyVegetables": {
+      "description": "Similar-looking to Earth's fruits, but creamier and almost fatty-tasting, Triglyceride Fruits provide fewer health benefits, but more energy than their ancestors.",
+      "name": "Triglyceride Fruits"
+    },
+    "fissionReactor": {
+      "description": "Performs controlled nuclear fission in a chain reaction to generate large amounts of energy.",
+      "name": "Fission Reactor"
+    },
+    "floatingTank": {
+      "description": "A person-sized tank to have a mind-expanding floating experience in.",
+      "name": "Floating Tank"
+    },
+    "flowControl": {
+      "description": "This unit controls the flow of liquids in as a complex a way as its user desires.",
+      "name": "Flow Control Device"
+    },
+    "fluidPiping": {
+      "description": "This fluid piping system makes use of helium in its mantle to facilitate the discovery of leakage.",
+      "name": "Fluid Piping"
+    },
+    "fluorine": {
+      "description": "The lightest halogen element and extremely reactive. Fluorine has both medical and industrial applications.",
+      "name": "Fluorine"
+    },
+    "flux": {
+      "description": "When added to an ore refining process, this chemical allows for a more efficient separation of metals from slag, resulting in higher outputs for the same input.",
+      "name": "Flux"
+    },
+    "ftlFieldController": {
+      "description": "The FTL field controller enables FTL travel by using large amounts of energy to bend spacetime around a ship.",
+      "name": "FTL Field Controller"
+    },
+    "ftlFuel": {
+      "description": "Used by the right drive, these small pellets emit an energy capable of warping spacetime and punching a tunnel for the ship to pass through.",
+      "name": "FTL Fuel"
+    },
+    "fuelSavingEngine": {
+      "description": "Less powerful than a standard STL engine, but saves quite a bit of fuel at the same time.",
+      "name": "Fuel-saving STL Engine"
+    },
+    "fullBodyInteractionDevice": {
+      "description": "Essentially a high-tech overall that allows its wearer to control all kinds of software via gestures and movement.",
+      "name": "Full-Body Interaction Device"
+    },
+    "galerite": {
+      "description": "Although nowhere to be found in the Solar System, Galerite has brought upon a revolution in STL fuel technology shortly after its discovery in humanity's new home systems.",
+      "name": "Galerite Rock"
+    },
+    "gasContainer": {
+      "description": "Due to its shape and material, this gas tank can hold substances far above atmospheric pressure.",
+      "name": "Cylindrical Gas Container"
+    },
+    "gasVent": {
+      "description": "A controllable outlet for gases.",
+      "name": "Gas Vent"
+    },
+    "gatewaySegment": {
+      "description": "Several gateway segments are used to form the well-known ring structure of a gateway.",
+      "name": "Gateway Segment"
+    },
+    "glassCombustionChamber": {
+      "description": "As it turns out, reinforced glass can withstand quite a bit of heat.",
+      "name": "Glass Combustion Chamber"
+    },
+    "glassEngine": {
+      "description": "It was quite the feat when they discovered how to make a glass-based engine. It's not very powerful, but an affordable alternative!",
+      "name": "Glass-based STL Engine"
+    },
+    "glassNozzle": {
+      "description": "Requires extremely careful handling, but works surprisingly well.",
+      "name": "Glass Nozzle"
+    },
+    "gold": {
+      "description": "Though it is still not an abundant resource, humanity has taken on a more pragmatic view of gold over the centuries, appreciating its conductivity more than its appearance.",
+      "name": "Gold"
+    },
+    "goldCopperAlloy": {
+      "description": "This alloy combines the excellent conductivity of both gold and copper.",
+      "name": "Red Gold"
+    },
+    "goldIronAlloy": {
+      "description": "An alloy of gold with Gallium or Indium.",
+      "name": "Blue Gold"
+    },
+    "goldOre": {
+      "description": "Ever since the 20th century, hydraulic mining has been the prevalent method of recovering gold nuggets from open pits and mine shafts.",
+      "name": "Gold Ore"
+    },
+    "grapes": {
+      "description": "Even though grapes have become rare in the space age, they will not die out as long as there is demand for decent wine in the universe.",
+      "name": "Wine-Quality Grapes"
+    },
+    "habitatUnit": {
+      "description": "An artificial, yet natural living space.",
+      "name": "Habitat Unit"
+    },
+    "habitationModule": {
+      "description": "A module supporting long-term habitation on a colony ship.",
+      "name": "Habitation Module"
+    },
+    "halite": {
+      "description": "The natural form of rock salt, these crystals are both pretty to look at and taste good when ingested.",
+      "name": "Halite Crystals"
+    },
+    "handcraftWorkshopUnit": {
+      "description": "Hand-made art has become quite rare. This is where it comes to life.",
+      "name": "Handcraft Workshop Unit"
+    },
+    "hardenedHullPlate": {
+      "description": "A hardened spaceship hull plate. It will reduce a ship's overall deterioration and allow it to endure significantly higher maximum g-force values.",
+      "name": "Hardened Hull Plate"
+    },
+    "hardenedStructuralElements": {
+      "description": "General term for metal components for ships and buildings, such as girders and beams.",
+      "name": "Hardened Structural Elements"
+    },
+    "heliotropeExtract": {
+      "description": "In high-enough concentrations, substances extracted from heliotropes were found to have a sedating effect on the human body as a whole, thereby expanding the range of endurable g-force values.",
+      "name": "Heliotrope Extract"
+    },
+    "helium": {
+      "description": "A protective gas in welding processes and still the most common solution to make your voice sound funny.",
+      "name": "Helium"
+    },
+    "helium3": {
+      "description": "Most commonly found on surfaces exposed to cosmic rays, helium-3 is a key component of faster-than-light fuel.",
+      "name": "Helium-3 Isotope"
+    },
+    "herbs": {
+      "description": "Spices are herbs low in nutritional value, but provide some health benefits. As a result, they are not a given in every ship's cafeteria, but some can be found in the med bay.",
+      "name": "Spicy Herbs"
+    },
+    "highLoadCargoBay": {
+      "description": "Everything you need to build a high-load cargo bay. It can only hold materials relatively small in volume though.",
+      "name": "High-load Cargo Bay Kit"
+    },
+    "highPowerReactor": {
+      "description": "A high-power FTL reactor that takes a relatively long time to fully charge up.",
+      "name": "High-power FTL Reactor"
+    },
+    "highVolumeCargoBay": {
+      "description": "Everything you need to build a high-volume cargo bay. It can only hold relatively lightweight materials though.",
+      "name": "High-volume Cargo Bay Kit"
+    },
+    "holographicDisplay": {
+      "description": "The holographic display creates a three dimensional image of an object that can be seen with the naked eye.",
+      "name": "Holographic Display"
+    },
+    "holographicGlasses": {
+      "description": "High-tech glasses able to display all kinds of additional information and lifelike visuals.",
+      "name": "Holographic Glasses"
+    },
+    "hugeCargoBay": {
+      "description": "Used to install the most massive of cargo bays for all your transportation needs.",
+      "name": "Huge Cargo Bay Kit"
+    },
+    "hydrocarbonPlants": {
+      "description": "Hydrocarbon plants come in many shapes and sizes, but most of them nowadays are algae grown in massive basins for a large variety of purposes.",
+      "name": "Hydrocarbon Plants"
+    },
+    "hydrogen": {
+      "description": "Number one on the periodic table, hydrogen is a vital ingredient in various chemical compounds including ship fuel.",
+      "name": "Hydrogen"
+    },
+    "hyperPowerReactor": {
+      "description": "An extremely high-power FTL reactor. Its charge-up speed had to be reduced significantly to guarantee stable results.",
+      "name": "Hyper-power Reactor"
+    },
+    "hyperthrustEngine": {
+      "description": "This STL engine reaches extremely high thrust powers, but also burns a lot of fuel in the process.",
+      "name": "Hyperthrust STL Engine"
+    },
+    "hyperthrustNozzle": {
+      "description": "A special nozzle used in high-thrust spacecraft engines.",
+      "name": "Hyperthrust Nozzle"
+    },
+    "indigo": {
+      "description": "When you absolutely, positively got to color it indigo.",
+      "name": "Indigo Colorant"
+    },
+    "informationDataCore": {
+      "description": "A whole library in one small data core.",
+      "name": "Information Data Core"
+    },
+    "informationManagementSystem": {
+      "description": "A system supporting its user in analyzing and interpreting large sets of data.",
+      "name": "Information Management System"
+    },
+    "insuFoam": {
+      "description": "This construction foam is used to insulate buildings against the cold of planets with non-habitable mean temperatures below -25°C.",
+      "name": "InsuFoam"
+    },
+    "iodine": {
+      "description": "This stable halogen is extracted from Caliche rock and used in certain lamps that cannot be replaced by LED technology.",
+      "name": "Iodine"
+    },
+    "iron": {
+      "description": "One of the most abundant elements on rocky planets, iron is used in a variety of alloys as well as the construction of buildings and metal parts.",
+      "name": "Iron"
+    },
+    "ironOre": {
+      "description": "Iron ore contains iron, one of the earliest metals to be smelted down by humanity, all the way back in 2000 BC.",
+      "name": "Iron Ore"
+    },
+    "ironTitaniumAlloy": {
+      "description": "An iron titanium alloy that can be used to influence grain sizes in steel making.",
+      "name": "Ferro-Titanium"
+    },
+    "kevlar": {
+      "description": "Often spun into ropes or fabric, these fibers are used as a composite material reinforcing anything from clothing to structural building elements.",
+      "name": "Para Aramid"
+    },
+    "krypton": {
+      "description": "Originally mostly used for lighting and laser systems, the discovery of the gateway technology revealed that this noble gas proved useful in the stabilization of gateway singularity vortices.",
+      "name": "Krypton"
+    },
+    "kryptonium": {
+      "description": "A compound of krypton and einsteinium originally created for the purpose of fueling singularity gateways as a newly discovered way of ship travel.",
+      "name": "Kryptonium"
+    },
+    "laboratoryUnit": {
+      "description": "A ready-to-go lab that can be used as part of a larger building complex.",
+      "name": "Laboratory Unit"
+    },
+    "largeCapacitorBank": {
+      "description": "Stores a large amount of energy.",
+      "name": "Large Capacitor Bank"
+    },
+    "largeCargoBay": {
+      "description": "Everything you need to build a large cargo bay.",
+      "name": "Large Cargo Bay Kit"
+    },
+    "largeDeviceCover": {
+      "description": "A 3D-printed, plastic-based cover for various large electronic devices.",
+      "name": "Durable Casing L"
+    },
+    "largeEmitter": {
+      "description": "A large FTL emitter requiring a relatively high amount of power to create an FTL field spanning a large volume.",
+      "name": "Large FTL Emitter"
+    },
+    "largeFtlTank": {
+      "description": "Everything you need to build a large FTL fuel tank.",
+      "name": "Large FTL Fuel Tank Kit"
+    },
+    "largePlasticsBoard": {
+      "description": "…",
+      "name": "Polymer Sheet Type L"
+    },
+    "largeShipRepairDroneUnit": {
+      "description": "A control unit for a large set of drones able to consistently repair any kind of damage a ship takes during space flight.",
+      "name": "Large Ship-Repair Drone Operations Unit"
+    },
+    "largeStlTank": {
+      "description": "Everything you need to build a large STL fuel tank.",
+      "name": "Large STL Fuel Tank Kit"
+    },
+    "laserDiode": {
+      "description": "Laser diodes directly convert electrical energy into light.",
+      "name": "Laser Diodes"
+    },
+    "lifeSupportSystem": {
+      "description": "Life support systems monitor and control the atmosphere and other environmental conditions essential to life.",
+      "name": "Life Support System"
+    },
+    "lightweightBulkhead": {
+      "description": "Slightly thinner, but considerably lighter wall elements offering little structural stability.",
+      "name": "Lightweight Bulkhead"
+    },
+    "lightweightDeckElements": {
+      "description": "Thin but long-lived plastic floor elements available in all shapes and sizes.",
+      "name": "Lightweight Deck Elements"
+    },
+    "lightweightHullPlate": {
+      "description": "A lightweight spaceship hull plate. It will help reduce a ship's mass, but is slightly more prone to deterioration.",
+      "name": "Lightweight Hull Plate"
+    },
+    "lightweightStructuralElements": {
+      "description": "Various lightweight components used in ship and building construction. Can be upgraded to be more durable, but also heavier.",
+      "name": "Lightweight Structural Elements"
+    },
+    "lightweightWindow": {
+      "description": "Primarily meant to be used on the inside of structures, these double-layered windows find a great variety of applications both on planets and ships.",
+      "name": "Lightweight Transparent Aperture"
+    },
+    "limestone": {
+      "description": "This Calcium-rich mineral can be found both in the crust and on the surface of many rocky planets. Its uses include construction and nutrition.",
+      "name": "Limestone"
+    },
+    "liquidCrystals": {
+      "description": "These crystals are used in the manufacturing of Liquid Crystal Displays, or LCDs for short.",
+      "name": "Liquid Crystals"
+    },
+    "liquidEinsteinium": {
+      "description": "Einstenium processed into liquid form. Still radioactive. Still glowing.",
+      "name": "Liquid Einsteinium"
+    },
+    "lithium": {
+      "description": "Commonly used for the production of batteries and pharmaceuticals.",
+      "name": "Lithium"
+    },
+    "lithiumOre": {
+      "description": "Lithium ore is required to produce lithium.",
+      "name": "Lithium Ore"
+    },
+    "localDatabase": {
+      "description": "A local data store.",
+      "name": "Local Database"
+    },
+    "logisticsSystem": {
+      "description": "A system to help with inventory management, transactions and the likes.",
+      "name": "Logistics System"
+    },
+    "lowHeatFuelPump": {
+      "description": "An affordable fuel pump. Should not be used as part of high-temperature engines.",
+      "name": "Low-heat Fuel Pump"
+    },
+    "machineLearningInterface": {
+      "description": "The first step in creating a self-learning artificial intelligence.",
+      "name": "Machine Learning Interface"
+    },
+    "magnesite": {
+      "description": "A magnesium-rich mineral.",
+      "name": "Magnesite"
+    },
+    "magnesium": {
+      "description": "One of the most abundant elements in the universe. Magnesium has many applications including as a structural material, in aluminium alloys and for the purification of solvents.",
+      "name": "Magnesium"
+    },
+    "magneticFloor": {
+      "description": "Magnetic ground cover allows you to establish a firm foundation in low gravity environments.",
+      "name": "Magnetic Ground Cover"
+    },
+    "magnetite": {
+      "description": "A iron oxide and common iron ore. Magnetite is ferromagnetic and can be magnetized.",
+      "name": "Magnetite"
+    },
+    "mainFrameBlank": {
+      "description": "The 'main frame' held the central processing and main memory of early computers. Today's mainframes are large centralized computing facilities often used for critical applications.",
+      "name": "Basic Mainframe"
+    },
+    "meat": {
+      "description": "The days of industrial livestock farming have long gone by, and the term \"meat\" has since taken on another meaning merely pertaining to a meal's texture and taste.",
+      "name": "Meat Tissue Patties"
+    },
+    "medicalStretcher": {
+      "description": "The most basic form of a mobile medical bed.",
+      "name": "Medical Stretcher"
+    },
+    "mediumCapacitorBank": {
+      "description": "Stores a medium amount of energy.",
+      "name": "Medium Capacitor Bank"
+    },
+    "mediumCargoBay": {
+      "description": "Everything you need to build a medium-sized cargo bay.",
+      "name": "Medium Cargo Bay Kit"
+    },
+    "mediumDeviceCover": {
+      "description": "A 3D-printed, plastic-based cover for various medium electronic devices.",
+      "name": "Durable Casing M"
+    },
+    "mediumEmitter": {
+      "description": "A medium-size FTL emitter requiring a moderate amount of power to create an FTL field spanning a mid-sized volume.",
+      "name": "Medium FTL Emitter"
+    },
+    "mediumFtlTank": {
+      "description": "Everything you need to build a medium-sized FTL fuel tank.",
+      "name": "Medium FTL Fuel Tank Kit"
+    },
+    "mediumPlasticsBoard": {
+      "description": "…",
+      "name": "Polymer Sheet Type M"
+    },
+    "mediumStlTank": {
+      "description": "Everything you need to build a medium-size STL fuel tank.",
+      "name": "Medium STL Fuel Tank Kit"
+    },
+    "megaTubeCoating": {
+      "description": "What makes a megatube? Carbon nanotubes with diameters so large they are measured in micrometers.",
+      "name": "MegaTube Coating"
+    },
+    "memoryBank": {
+      "description": "Provides other electronic components with lightning-fast application memory.",
+      "name": "Memory Bank"
+    },
+    "metalHalideLamp": {
+      "description": "These lamps have become a staple of hydroponics, allowing certain plants (especially algae) to grow without sunlight.",
+      "name": "Metal-Halide Lighting System"
+    },
+    "microHeadphones": {
+      "description": "Very tiny speakers. Be careful not to lose them in your ears!",
+      "name": "Micro Headphones"
+    },
+    "microProcessor": {
+      "description": "A central processing unit implemented on a single integrated circuit.",
+      "name": "Micro-Processor"
+    },
+    "mineralConstructionGranulate": {
+      "description": "Melted down, molded and then cooled off, these tiny pellets provide the hardened foundation of all buildings on rocky planets.",
+      "name": "Mineral Construction Granulate"
+    },
+    "motherBoard": {
+      "description": "The main printed circuit board for a general purpose computer.",
+      "name": "Motherboard"
+    },
+    "mushrooms": {
+      "description": "The Agaricaceae rubicatii family of fungi is not just known for unusual cultivation methods, but also rapid growth.",
+      "name": "Protein-Rich Mushrooms"
+    },
+    "nanoCarbonSheeting": {
+      "description": "A substrate is covered with carbon nanotubes then the nanotubes are covered by a layer of aerogel. The aerogel is pulled away taking the nanotubes with it to form a sheeting.",
+      "name": "Nano-Carbon Sheeting"
+    },
+    "nanoFiber": {
+      "description": "Fibers with diameters in the nanometer size range. In this case silicon fibers with graphene coating.",
+      "name": "Nano Fiber"
+    },
+    "nanoGlass": {
+      "description": "Glass with coatings of nanomaterials to give it hydrophobic, oleophobic and other properties.",
+      "name": "Nano-Coated Glass"
+    },
+    "nanoResin": {
+      "description": "A nanoparticle enhanced resin for industrial applications.",
+      "name": "Nano-Enhanced Resin"
+    },
+    "navigation1": {
+      "description": "A basic navigation module to control ships with simple engines.",
+      "name": "Navigation Module MK1"
+    },
+    "navigation2": {
+      "description": "An advanced navigation module to control ships with complex engines.",
+      "name": "Navigation Module MK2"
+    },
+    "neon": {
+      "description": "A colorless odorless noble gas. Neon produces a reddish orange glow when placed in an electric field.",
+      "name": "Neon"
+    },
+    "neonLightingSystem": {
+      "description": "Neon lights remind us of a world less complicated. They're also fun!",
+      "name": "Neon Lighting System"
+    },
+    "networkingFramework": {
+      "description": "Software for building networking applications.",
+      "name": "Networking Framework"
+    },
+    "neuralNetwork": {
+      "description": "Allows for artificial learning on large sets of data by vaguely simulating how actual brain neurons work.",
+      "name": "Neural Network"
+    },
+    "nitrogen": {
+      "description": "Traded as a gas or a liquid, Nitrogen forms a great variety of compounds and plays a role in food preservation.",
+      "name": "Nitrogen"
+    },
+    "nonVolatileMemory": {
+      "description": "Computer memory that can retrieve information after being powered on and off.",
+      "name": "Non-Volatile Memory"
+    },
+    "nutrientSolution": {
+      "description": "While nutrient solution should not be consumed on its own due to its high concentration, it is used in a great many recipes for both edible and inedible end products.",
+      "name": "Nutrient Solution"
+    },
+    "nylon": {
+      "description": "A versatile, plastic-based fabric traditionally used in clothing and warfare, which now also plays a role in building construction.",
+      "name": "Nylon Fabric"
+    },
+    "officeSupplies": {
+      "description": "No one knows exactly what they are, but yet they are constantly consumed for “work”.",
+      "name": "Office Supplies"
+    },
+    "olfactorySubstances": {
+      "description": "Smells nice in here!",
+      "name": "Olfactory Substances"
+    },
+    "operatingSystem": {
+      "description": "Software that provides common services and interfaces to a computer system's hardware resources for other applications.",
+      "name": "Operating System"
+    },
+    "oxygen": {
+      "description": "From alloy production to our own lungs, oxygen is what keeps humanity going. Warning: Higher concentrations only breathable in low gravity environments.",
+      "name": "Oxygen"
+    },
+    "painkillers": {
+      "description": "The most popular medical drug in the universe.",
+      "name": "Painkillers"
+    },
+    "pesticides": {
+      "description": "Although toxic to small organisms, this pesticide is safe for human consumption in moderate doses.",
+      "name": "DDT Plant Agent"
+    },
+    "pineberries": {
+      "description": "Looks like a white strawberry, tastes like pineapple, is highly nutritious!",
+      "name": "Pineberries"
+    },
+    "pioneerBundle": {
+      "description": "Everything required to supply 100 pioneers for 10 days.",
+      "name": "Pioneer Consumable Bundle"
+    },
+    "pioneerClothing": {
+      "description": "This full-body suit, usually worn as an extra layer on top of personal clothing, is certainly nothing fancy, but practical and durable.",
+      "name": "Basic Overalls"
+    },
+    "pioneerLuxuryClothing": {
+      "description": "This garment may not look like much, but its added plastic pads prevent countless injuries across the universe day after day.",
+      "name": "Padded Work Overall"
+    },
+    "pioneerLuxuryDrink": {
+      "description": "Some take their psychoactive drugs with soy milk, others prefer them pure.",
+      "name": "Caffeinated Infusion"
+    },
+    "polarityFieldGenerator": {
+      "description": "Combines the specific functionalities of several reactor types to span large fields of barely stable polarity.",
+      "name": "Polarity Field Generator"
+    },
+    "polyEthylene": {
+      "description": "The most commonly used plastic for the past few centuries, PE still plays a vital role in packaging, clothing, printed building parts, and electronics.",
+      "name": "Poly-Ethylene"
+    },
+    "polymerGranulate": {
+      "description": "Whoever thinks they can be anything when they grow up hasn't seen polymer granulate, a supplier of plastic in virtually every industrial branch out there.",
+      "name": "Polymer Granulate"
+    },
+    "powerCell": {
+      "description": "A high-energy mobile power source.",
+      "name": "Power Cell"
+    },
+    "premiumFertilizer": {
+      "description": "Surprisingly effective at generating a seemingly natural flora.",
+      "name": "Premium Fertilizer"
+    },
+    "pressureShielding": {
+      "description": "Shielding to protect crew and cargo from high pressure environments.",
+      "name": "Pressure Shielding"
+    },
+    "printedCircuitBoard": {
+      "description": "A sheet of non-conductive substrate covered with a layer of conductor which electronic circuits are etched onto.",
+      "name": "Printed Circuit Board"
+    },
+    "proteinAlgae": {
+      "description": "Humanity needed an efficient source of protein and came up with this strain of algae. What's more, it can even grow in space.",
+      "name": "Protein-Rich Algae"
+    },
+    "proteinBeans": {
+      "description": "While still inefficient in hydroponics, beans are a staple of planet-side farming and essential provider of protein across the universe.",
+      "name": "Protein-Rich Beans"
+    },
+    "proteinPaste": {
+      "description": "A goop of ground plants, this paste is an essential ingredient in modern \"meat\". Not at all enjoyable on its own.",
+      "name": "Protein Paste"
+    },
+    "quickChargeReactor": {
+      "description": "A moderate-power reactor able to charge up very quickly.",
+      "name": "Quick-charge FTL Reactor"
+    },
+    "radiationShielding": {
+      "description": "Shielding to protect crew and cargo from radiation environments.",
+      "name": "Radiation Shielding"
+    },
+    "radioDevice": {
+      "description": "When your regular mobile phone just isn't enough!",
+      "name": "Radio Device"
+    },
+    "radioisotopeGenerator": {
+      "description": "Converts the heat from radioactive decay into a medium amount of energy.",
+      "name": "Radioisotope Generator"
+    },
+    "rations": {
+      "description": "As the most common menu item in the universe, this plant-based and often brick-shaped meal has high nutritional value to make up for the lack of flavor and spices.",
+      "name": "Basic Rations"
+    },
+    "reactorControlSystem": {
+      "description": "Monitors a variety of performance factors of an FTL reactor and automatically makes adjustments where necessary.",
+      "name": "Reactor Control System"
+    },
+    "redGoldConnectors": {
+      "description": "High throughput connectors for specialized applications.",
+      "name": "High-Capacity Connectors"
+    },
+    "reinforcedBulkhead": {
+      "description": "A wall element offering greater durability due to the addition of titanium and hardened epoxy resin.",
+      "name": "Reinforced Bulkhead"
+    },
+    "reinforcedDeckElements": {
+      "description": "Considerably heavier than the basic and advanced versions, these floor tiles are required in some large spacecraft and planetary structures.",
+      "name": "Reinforced Deck Elements"
+    },
+    "reinforcedHullPlate": {
+      "description": "A reinforced spaceship hull plate. It will slightly reduce a ship's overall deterioration and allow it to endure higher maximum g-force values.",
+      "name": "Reinforced Hull Plate"
+    },
+    "reinforcedStructuralElements": {
+      "description": "Laced with steel and resin, these components are used in buildings and spacecraft with increased requirements on structural integrity.",
+      "name": "Reinforced Structural Elements"
+    },
+    "reinforcedTranslucentMaterial": {
+      "description": "This hybrid of old-fashioned glass and its plastic-based counterpart can be used for windows and screens alike.",
+      "name": "Reinforced Glass"
+    },
+    "reinforcedWindow": {
+      "description": "Much thicker and sturdier due to the mixture of silicon- and plastic-based glass, these windows can be built to larger dimensions while still being able to withstand huge forces.",
+      "name": "Reinforced Transparent Aperture"
+    },
+    "rescueDrone": {
+      "description": "A drone designed to locate and rescue living beings. Yes, it can actually carry a person.",
+      "name": "Rescue Drone"
+    },
+    "rhenium": {
+      "description": "A rare and heat-resistant metal named after the old-Earth river Rhine.",
+      "name": "Rhenium"
+    },
+    "rheniumOre": {
+      "description": "One of the rarest ores to be found throughout the known universe.",
+      "name": "Rhenium Ore"
+    },
+    "safetyUniform": {
+      "description": "A carbon-infused overall.",
+      "name": "Safety Uniform"
+    },
+    "scientistBundle": {
+      "description": "Everything required to supply 100 scientists for 10 days.",
+      "name": "Scientist Consumable Bundle"
+    },
+    "scientistClothing": {
+      "description": "This coat comes with its own holographic display to assists its wearer throughout complex procedures, and even performs life-sustaining measures if an experiment goes awry.",
+      "name": "AI-Assisted Lab Coat"
+    },
+    "scientistFood": {
+      "description": "Even high-quality foods nowadays do not vary much in ingredients, but at least they are presented in different shapes and sizes.",
+      "name": "Quality Meat Meal"
+    },
+    "scientistLuxuryDrink": {
+      "description": "Ever since ancient Greece, great minds have relied on this liquid to think. In the space-age they even apply artificial intelligence to create this unique flavor.",
+      "name": "Smart Zinfandel"
+    },
+    "scientistLuxuryHealth": {
+      "description": "Just a little something to perk you up.",
+      "name": "NeuroStimulants"
+    },
+    "scientistTools": {
+      "description": "A versatile computer for various purposes, but mostly used in scientific contexts.",
+      "name": "Scientific Work Station"
+    },
+    "sealant": {
+      "description": "Liquid polymer providing good adherence to many common materials and flexibility when cured. May not be suitable for use on some plastics.",
+      "name": "Poly-Sulfite Sealant"
+    },
+    "searchAlgorithm": {
+      "description": "An algorithm for searching through data.",
+      "name": "Search Algorithm"
+    },
+    "sedativeSubstance": {
+      "description": "A substance directly infused into the human body via special high-g seats. It helps endure particularly high g-force levels.",
+      "name": "Sedative Substance"
+    },
+    "sensor": {
+      "description": "A device that measures physical properties such as a thermistor for temperature measurements or a charge coupled device for measuring light levels.",
+      "name": "Sensor"
+    },
+    "sensorArray": {
+      "description": "A full suite of active and passive remote sensing systems.",
+      "name": "Sensor Array"
+    },
+    "settlerBundle": {
+      "description": "Everything required to supply 100 settlers for 10 days.",
+      "name": "Settler Consumable Bundle"
+    },
+    "settlerClothing": {
+      "description": "Equipping its wearer with superhuman strength, this suit has become a staple of physical work regardless of local gravity.",
+      "name": "Exoskeleton Work Suit"
+    },
+    "settlerLuxuryDrink": {
+      "description": "While Kombucha is not a necessity for survival, it provides a considerable boost to health and morale.",
+      "name": "Kombucha"
+    },
+    "settlerLuxuryTools": {
+      "description": "Tools that repair things. What's not to understand? Get back to work.",
+      "name": "Repair Kit"
+    },
+    "settlerTools": {
+      "description": "These whirring, blinking, and noisy companions of modern settlers have come a long way since the first sharpened rock back on Earth.",
+      "name": "Power Tools"
+    },
+    "shipRepairDrone": {
+      "description": "A drone set up to autonomously perform basic repair and maintenance tasks on all kinds of spaceships.",
+      "name": "Ship-Repair Drone"
+    },
+    "shockwaveDampeningModule": {
+      "description": "Controls a set of stabilizing structures to ensure even large-scale shockwaves will not result in negative impacts.",
+      "name": "Shockwave-dampening Module"
+    },
+    "silicon": {
+      "description": "A hard and brittle crystalline solid that is often used for its properties as a semiconductor. Most often found in various forms of silicon dioxide (silica) or silicate minerals.",
+      "name": "Silicon"
+    },
+    "siliconOre": {
+      "description": "On the markets, the term \"Silicon Ore\" is used as a shorthand for different products yielding silicone when smelted down, such as quartzite or sand.",
+      "name": "Silicon Ore"
+    },
+    "silkProcessed": {
+      "description": "One of the few remaining fibers with a natural origin, silk nowadays has some niche uses in the clothing industry.",
+      "name": "Silken Fabric"
+    },
+    "silkRaw": {
+      "description": "The start of a long journey to sophisticated clothing such as AI-assisted lab coats.",
+      "name": "Raw Silk Strains"
+    },
+    "singularityStabilizer": {
+      "description": "After the first experiments with making use of singularities, scientists quickly discovered the need for specialized stabilization modules. They do not like to talk about how they found out in too much detail though.",
+      "name": "Singularity Stabilizer"
+    },
+    "smallCapacitorBank": {
+      "description": "Stores a small amount of energy.",
+      "name": "Small Capacitor Bank"
+    },
+    "smallCargoBay": {
+      "description": "Everything you need to build a small cargo bay.",
+      "name": "Small Cargo Bay Kit"
+    },
+    "smallDeviceCover": {
+      "description": "A 3D-printed, plastic-based cover for various small electronic devices.",
+      "name": "Durable Casing S"
+    },
+    "smallEmitter": {
+      "description": "A small FTL emitter requiring relatively little power to create an FTL field spanning a small volume.",
+      "name": "Small FTL Emitter"
+    },
+    "smallFtlTank": {
+      "description": "Everything you need to build a small FTL fuel tank.",
+      "name": "Small FTL Fuel Tank Kit"
+    },
+    "smallPlasticsBoard": {
+      "description": "…",
+      "name": "Polymer Sheet Type S"
+    },
+    "smallShipRepairDroneUnit": {
+      "description": "A control unit for a small set of drones able to consistently repair any kind of damage a ship takes during space flight.",
+      "name": "Small Ship-Repair Drone Operations Unit"
+    },
+    "smallStlTank": {
+      "description": "Everything you need to build a small STL fuel tank.",
+      "name": "Small STL Fuel Tank Kit"
+    },
+    "sodium": {
+      "description": "An essential element in human biology and industry.",
+      "name": "Sodium"
+    },
+    "sodiumBorohydride": {
+      "description": "A versatile chemical agent that chemists rely upon to get the job done. Known to be extremely flammable if left unchecked, it’s best to store it in a safe location. Mass production of this compound originated on old Earth and was first achieved by chemists from Gladi Research Group, Lab 0-99.",
+      "name": "Sodium Borohydride"
+    },
+    "solarCell": {
+      "description": "A single solar cell to turn sunlight into energy.",
+      "name": "Solar Cell"
+    },
+    "solarPanel": {
+      "description": "High-efficiency solar panels have become the most prevalent means of energy extraction in space and on sunnier planets.",
+      "name": "Solar Panel"
+    },
+    "sortingAlgorithm": {
+      "description": "An algorithm for sorting data.",
+      "name": "Sorting Algorithm"
+    },
+    "spaceTether": {
+      "description": "A set of sturdy interwoven cords used to hold large space structures in place.",
+      "name": "Space Tether"
+    },
+    "specializedRadiationShielding": {
+      "description": "These plates protect a ship from taking damage from typical large-star radiation levels.",
+      "name": "Specialized Anti-rad Plate"
+    },
+    "stabilitySupportSystem": {
+      "description": "A system that helps pilot safely through extremely high- or low-gravity atmospheres.",
+      "name": "Stability Support System"
+    },
+    "standardEngine": {
+      "description": "Standard STL engine with decent thrust and manageable fuel consumption.",
+      "name": "Standard STL Engine"
+    },
+    "standardReactor": {
+      "description": "A standard FTL reactor.",
+      "name": "Standard FTL Reactor"
+    },
+    "steel": {
+      "description": "An iron-based alloy with high tensile strength, steel is considered too heavy for most uses in space, but remains the ideal solution for many planetary construction components.",
+      "name": "Steel"
+    },
+    "stlFuel": {
+      "description": "While this liquid still resembles fuel of past centuries in smell and viscosity, today's formula is required in much smaller amounts due to vastly more efficient drives.",
+      "name": "STL Fuel"
+    },
+    "structuralSpacecraftComponent": {
+      "description": "Spacecrafts consists of many different parts held together by structural components.",
+      "name": "Structural Spacecraft Component"
+    },
+    "sulfur": {
+      "description": "Elemental sulfur is bright yellow and solid at room temperature.",
+      "name": "Sulfur"
+    },
+    "sulfurCrystals": {
+      "description": "Sulfur is typically found in sulfide and sulfate minerals in nature.",
+      "name": "Sulfur Crystals"
+    },
+    "surgeryUnit": {
+      "description": "A building-ready medical unit to perform surgical procedures in.",
+      "name": "Surgery Unit"
+    },
+    "surgicalDrone": {
+      "description": "A drone designed to support a surgeon at work. Once you get used to the buzzing, it's very helpful!",
+      "name": "Surgical Drone"
+    },
+    "surgicalEquipment": {
+      "description": "All kinds of scalpels, clips and swabs.",
+      "name": "Surgical Equipment"
+    },
+    "surveillanceDrone": {
+      "description": "A drone designed to observe, scan and report. Most people don't like them.",
+      "name": "Surveillance Drone"
+    },
+    "tantalite": {
+      "description": "Rich in the element tantalum the mineral tantalite is similar to the mineral columbite and the two are commonly referred to as coltan. Tantalum is used in tantalum capacitors and coltan is also an important source of niobium.",
+      "name": "Tantalite Rock"
+    },
+    "tantalum": {
+      "description": "A rare and high corrosion resistant metal.",
+      "name": "Tantalum"
+    },
+    "targetingComputer": {
+      "description": "Measure twice, cut once.",
+      "name": "Targeting Computer"
+    },
+    "tclAcid": {
+      "description": "Terephthaloyl chloride is one of the components necessary in the production of para aramid.",
+      "name": "TCL Acid"
+    },
+    "technetium": {
+      "description": "All isotopes of Technetium are radioactive and it is typically found naturally only as a decay product of other elements such as Uranium and Thorium.",
+      "name": "Technetium"
+    },
+    "technetiumOxide": {
+      "description": "A yellow volatile solid.",
+      "name": "Technetium Oxide"
+    },
+    "technetiumStabilizers": {
+      "description": "The Technetium isotope Technetium-97 can be used as a stabilized form of Technetium is put into a fully ionized state.",
+      "name": "Stabilized Technetium"
+    },
+    "technicianBundle": {
+      "description": "Everything required to supply 100 technicians for 10 days.",
+      "name": "Technician Consumable Bundle"
+    },
+    "technicianClothing": {
+      "description": "With its near impervious fabric and the air tank installed on its back, this suit allows for work with hazardous materials and in hostile environments.",
+      "name": "HazMat Work Suit"
+    },
+    "technicianHealth": {
+      "description": "Mostly intended to help with injuries, this kit contains a handheld scanner and self-expanding medical foam alongside the usual first aid equipment.",
+      "name": "Basic Medical Kit"
+    },
+    "technicianLuxuryDrink": {
+      "description": "A light beer brewed from water, hop, and malt. Some claim that it can't hold a candle to its terrestrial ancestors.",
+      "name": "Stellar Pale Ale"
+    },
+    "technicianLuxuryHealth": {
+      "description": "Aging was considered an irreversible process. In the future that no longer rings true.",
+      "name": "Stem Cell Treatment"
+    },
+    "technicianTools": {
+      "description": "A powerful and essential tool able to run diagnostics and find faults in a great variety of machines.",
+      "name": "Multi-Purpose Scanner"
+    },
+    "technoKevlar": {
+      "description": "Technetium-enhanced para-aramid fabric for specialized applications.",
+      "name": "Enhanced Para Aramid"
+    },
+    "tectosilisite": {
+      "description": "Tectosilisite is a very silicon-rich regolith found on planets with a thin or no atmosphere at all. Its rather high He-3 contents make it interesting for fuel production.",
+      "name": "Tectosilisite"
+    },
+    "tensionReliefStructure": {
+      "description": "Often used as the central element of space infrastructure to ensure it endures the strains of meteorite impacts and pressure changes.",
+      "name": "Tension Relief Structure"
+    },
+    "tensorProcessingUnit": {
+      "description": "An electronic system specifically designed to quickly process tensors for neural networks and other applications.",
+      "name": "Tensor Processing Unit"
+    },
+    "testTubes": {
+      "description": "A popular piece of laboratory equipment used to hold test samples.",
+      "name": "Test Tubes"
+    },
+    "thermalShielding": {
+      "description": "These actively cooled, heat-deflecting modules must be distributed along the outer walls of buildings located on planets with an average temperature of more than 75° C.",
+      "name": "Thermal Shielding"
+    },
+    "thermoFluid": {
+      "description": "This high-performance heat transfer fluid can be used from small scale applications like CPU coolers up to building-sized thermal shields.",
+      "name": "ThermoFluid"
+    },
+    "tinyCargoBay": {
+      "description": "Everything you need to build a tiny cargo bay.",
+      "name": "Tiny Cargo Bay Kit"
+    },
+    "titanium": {
+      "description": "Lightweight, strong, and resistant to corrosion, titanium and its alloys have become a staple (not only) of the aerospace industry.",
+      "name": "Titanium"
+    },
+    "titaniumOre": {
+      "description": "Titanium oxide minerals rutile and ilmenite are the most common minerals in titanium ore bodies.",
+      "name": "Titanium Ore"
+    },
+    "torusSegment": {
+      "description": "Part of a circular structure made to endure long-term existence in space.",
+      "name": "Torus Segment"
+    },
+    "touchDeviceBlank": {
+      "description": "Data and computing power right in the palm of your hand.",
+      "name": "Handheld Personal Console"
+    },
+    "touchScreen": {
+      "description": "An input device typically deployed on top of an electronic display. More commonly known as a touch screen.",
+      "name": "Capacitive Display"
+    },
+    "transistor": {
+      "description": "A transistor amplifies or switches electrical signals and power. This is an advanced model.",
+      "name": "Advanced Transistor"
+    },
+    "translucentMaterial": {
+      "description": "This traditional form of glass is rarely used on its own nowadays, but rather combined with new materials to withstand the stress and strain of the space age.",
+      "name": "Glass"
+    },
+    "traumaCareUnit": {
+      "description": "Had an accident? This is where you'll be taken care of.",
+      "name": "Trauma Care Unit"
+    },
+    "truss": {
+      "description": "A stable relationship between structural components is built on truss.",
+      "name": "Truss"
+    },
+    "tungstenAluminiumAlloy": {
+      "description": "Able to endure extreme heat, this alloy is typically used for thermal protection purposes for spaceships or high-thrust engines.",
+      "name": "Alpha-Stabilized Tungsten"
+    },
+    "tungstenResource": {
+      "description": "Tungsten can be recovered from scrap by using microorganisms to absorb it enabling recovery. This process sometimes occurs naturally when microorganisms come in contact with tungsten bearing minerals.",
+      "name": "Bacterial Tungsten Solution"
+    },
+    "twoDimensionalDisplay": {
+      "description": "An output device that displays data.",
+      "name": "Information Display"
+    },
+    "universalToolset": {
+      "description": "A collection of high-quality tools to fix everyday appliances or to hone your handcrafting skills.",
+      "name": "Universal Toolset"
+    },
+    "universeMap": {
+      "description": "A map of the known universe and all its related data.",
+      "name": "Spatial Navigation Map"
+    },
+    "verySmallCargoBay": {
+      "description": "Everything you need to build a very small cargo bay.",
+      "name": "Very Small Cargo Bay Kit"
+    },
+    "vitaEssence": {
+      "description": "Healthy, tasty, nutritious.",
+      "name": "Vita Essence"
+    },
+    "vortexEngine": {
+      "description": "A ship engine incorporating a vortex reactor to enable colony ship travel independently from established FTL connections.",
+      "name": "Vortex Engine"
+    },
+    "vortexFuelTank": {
+      "description": "A giant tank able to hold enough vortex fuel on a colony ships to journey to a nearby sector and back.",
+      "name": "Vortex Fuel Tank"
+    },
+    "vortexReactor": {
+      "description": "A special reactor for colony ships making use of certain aspects of gateway travel technology.",
+      "name": "Vortex Reactor"
+    },
+    "vortexStimulationFuel": {
+      "description": "The addition of einsteinium proved to be the final puzzle piece in finding a way of taming the singularity vortex which was once believed to be uncontrollable.",
+      "name": "Vortex Fuel"
+    },
+    "waferMedium": {
+      "description": "A medium sized disk of crystalline silicon used in the fabrication of electronics.",
+      "name": "Medium Wafer"
+    },
+    "waferSmall": {
+      "description": "A small sized disk of crystalline silicon used in the fabrication of electronics.",
+      "name": "Small Wafer"
+    },
+    "water": {
+      "description": "It should be no surprise that the liquid making up 60 % of our bodies is used in almost all processes concerning the production of nourishment across the universe.",
+      "name": "Water"
+    },
+    "waterFilter": {
+      "description": "Water filtration equipment that actively monitors water conditions and applied remediation as needed.",
+      "name": "Active Water Filter"
+    },
+    "waterRecycler": {
+      "description": "Equipment for the reclaiming usable clean water from biological wastes and industrial effluents.",
+      "name": "Water Reclaimer"
+    },
+    "weakArtificalIntelligence": {
+      "description": "AI optimized for a specific task or application. Definitely not a general purpose AI that will learn at an alarming rate, become self aware and create problems for humanity.",
+      "name": "Weak Artificial Intelligence"
+    },
+    "windowManager": {
+      "description": "…",
+      "name": "Window Manager"
+    },
+    "wolfram": {
+      "description": "A rare metal with the highest melting point of all the known elements. Also known as Wolfram.",
+      "name": "Tungsten"
+    },
+    "wolfrhenium": {
+      "description": "Turns out combining two metals with extremely high melting points results in a useful alloy, especially when it comes to building resilient space infrastructure.",
+      "name": "Wolfrhenium"
+    },
+    "workstationBlank": {
+      "description": "A basic computer workstation.",
+      "name": "Basic Workstation"
+    },
+    "zircon": {
+      "description": "The mineral Zircon can be processed into metallic zirconium.",
+      "name": "Zircon Crystals"
+    },
+    "zirconium": {
+      "description": "Zirconium has many applications including in nuclear reactors as cladding for fuel rods and as corrosion resistant material in chemical processing equipment.",
+      "name": "Zirconium"
+    }
+  },
+  "MaterialCategory": {
+    "agriculturalproducts": "Agricultural Products",
+    "alloys": "Alloys",
+    "chemicals": "Chemicals",
+    "constructionmaterials": "Construction Materials",
+    "constructionparts": "Construction Parts",
+    "constructionprefabs": "Construction Prefabs",
+    "consumablebundles": "Consumable Bundles",
+    "consumables(basic)": "Consumables (basic)",
+    "consumables(luxury)": "Consumables (luxury)",
+    "drones": "Drones",
+    "electronicdevices": "Electronic Devices",
+    "electronicparts": "Electronic Parts",
+    "electronicpieces": "Electronic Pieces",
+    "electronicsystems": "Electronic Systems",
+    "elements": "Elements",
+    "energysystems": "Energy Systems",
+    "fuels": "Fuels",
+    "gases": "Gases",
+    "infrastructure": "Infrastructure",
+    "liquids": "Liquids",
+    "medicalequipment": "Medical Equipment",
+    "metals": "Metals",
+    "minerals": "Minerals",
+    "ores": "Ores",
+    "plastics": "Plastics",
+    "shipengines": "Ship Engines",
+    "shipkits": "Ship Kits",
+    "shipparts": "Ship Parts",
+    "shipshields": "Ship Shields",
+    "softwarecomponents": "Software Components",
+    "softwaresystems": "Software Systems",
+    "softwaretools": "Software Tools",
+    "textiles": "Textiles",
+    "unitprefabs": "Unit Prefabs",
+    "utility": "Utility"
+  },
+  "Reactor": {
+    "advancedAppliancesFactory_description": "Produces advanced appliances, often used in space ships and space stations.",
+    "advancedAppliancesFactory_name": "Advanced Appliances Factory",
+    "advancedMaterialLab_description": "Refines intermediate rare materials into more usable forms.",
+    "advancedMaterialLab_name": "Advanced Material Lab",
+    "advancedSmelter_description": "Allows for the creation of high-performance metal alloys.",
+    "advancedSmelter_name": "High-Power Blast Furnace",
+    "appliancesFactory_description": "Produces large appliances, often used in space ships and space stations.",
+    "appliancesFactory_name": "Appliances Factory",
+    "basicMaterialsPlant_description": "Produces a host of materials and end products needed to bootstrap a colony.",
+    "basicMaterialsPlant_name": "Basic Materials Plant",
+    "chemPlant_description": "Produces various chemical compounds and immediate products.",
+    "chemPlant_name": "Chemical Plant",
+    "cleanRoom_description": "Produces integrated circuits and basic computer parts.",
+    "cleanRoom_name": "Cleanroom",
+    "clothingFactory_description": "Manufactures textiles from different fibers, used in clothing and even ship construction.",
+    "clothingFactory_name": "Textile Manufacturing",
+    "collector_description": "Extracts gases from the atmosphere.",
+    "collector_name": "Collector",
+    "coreModule_description": "The basic module and life support necessary to start a new base on a planet.",
+    "coreModule_name": "Core Module",
+    "corporationProjectFTLLaboratory_description": "NO FUNCTIONALITY - Prestige Building",
+    "corporationProjectFTLLaboratory_name": "Corporation FTL Laboratory",
+    "corporationProjectHeadquarters_description": "The physical headquarter of any corporation, running basic administrative functions.",
+    "corporationProjectHeadquarters_name": "Corporation Headquarters",
+    "corporationProjectImmortality_description": "NO FUNCTIONALITY - Prestige Building",
+    "corporationProjectImmortality_name": "Corporate Immortality Center",
+    "corporationProjectRepresentationCenter_description": "The APEX representation center allows corporations to donate some of their profits to the APEX foundation. The foundation uses the money to supply new and upcoming CEOs with the necessary capital and ships to start their entrepreneurial journey. Having a high representation level is widely recognized as a testimony of wealth and success.",
+    "corporationProjectRepresentationCenter_name": "APEX Representation Center",
+    "corporationProjectTerraforming_description": "NO FUNCTIONALITY - Prestige Building",
+    "corporationProjectTerraforming_name": "Corporate Terraformer",
+    "droneShop_description": "The place where all things drones are put together.",
+    "droneShop_name": "Drone Shop",
+    "einsteiniumEnrichmentPlant_description": "Specialized plant that turns Liquid Einsteinium into its more usable, stabilized form.",
+    "einsteiniumEnrichmentPlant_name": "Einsteinium Enrichment",
+    "electronicDeviceManufactory_description": "Manufactures a variety of small end-user-ready devices.",
+    "electronicDeviceManufactory_name": "Electronic Device Manufactory",
+    "electronicsPlant_description": "Uses basic computer parts to manufacture larger computers and control units.",
+    "electronicsPlant_name": "Electronics Plant",
+    "energyComponentAssembly_description": "Creates energy supply systems and devices of all kinds.",
+    "energyComponentAssembly_name": "Energy Component Assembly",
+    "extractor_description": "Extracts ores and minerals from the surface.",
+    "extractor_name": "Extractor",
+    "farm_description": "Produces agricultural products like grains and soy. Needs fertile soil.",
+    "farm_name": "Farmstead",
+    "fermentationFacility_description": "Creates those beverages that make life in space just a little bit more bearable.",
+    "fermentationFacility_name": "Fermenter",
+    "fineSmithy_description": "Produces the often unnoticed small, metal pieces that make up the core of many installations.",
+    "fineSmithy_name": "Metalist Studio",
+    "foodProcessor_description": "Uses agricultural products to produce edible consumables.",
+    "foodProcessor_name": "Food Processor",
+    "glassFurnace_description": "Creates different glasses and other sturdy materials at very high temperatures.",
+    "glassFurnace_name": "Glass Furnace",
+    "habitationBarracks_description": "Offers housing for 75 pioneers and 75 settlers.",
+    "habitationBarracks_name": "Barracks",
+    "habitationCommune_description": "Offers housing for 75 settlers and 75 technicians.",
+    "habitationCommune_name": "Communal Abode",
+    "habitationEngineer_description": "Offers housing for 100 engineers.",
+    "habitationEngineer_name": "Engineer Habitation",
+    "habitationLuxury_description": "Offers housing for 75 engineers and 75 scientists.",
+    "habitationLuxury_name": "Luxury Residence",
+    "habitationManagers_description": "Offers housing for 75 technicians and 75 engineers.",
+    "habitationManagers_name": "Management Domicile",
+    "habitationPioneer_description": "Offers housing for 100 pioneers.",
+    "habitationPioneer_name": "Pioneer Habitation",
+    "habitationScientist_description": "Offers housing for 100 scientists.",
+    "habitationScientist_name": "Scientist Habitation",
+    "habitationSettler_description": "Offers housing for 100 settlers.",
+    "habitationSettler_name": "Settler Habitation",
+    "habitationTechnician_description": "Offers housing for 100 technicians.",
+    "habitationTechnician_name": "Technician Habitation",
+    "hullWeldingPlant_description": "Creates a variety of ship hull plates and shields.",
+    "hullWeldingPlant_name": "Hull Welding Plant",
+    "hydroponicsFarm_description": "Produces agricultural products like hydrocarbon plants. Does not need fertile soil but lots of water.",
+    "hydroponicsFarm_name": "Hydroponics Farm",
+    "inVitroPlant_description": "Deals with the creation of artificial life and meat products.",
+    "inVitroPlant_name": "In-Vitro Plant",
+    "incinerator_description": "Turns organically grown plants into life's most basic resource, Carbon.",
+    "incinerator_name": "Incinerator",
+    "laboratory_description": "Advanced laboratory that deals in more complex chemical reactions.",
+    "laboratory_name": "Laboratory",
+    "mediumComponentsAssembly_description": "Assembles technical pieces into larger parts, ready to be used in many devices.",
+    "mediumComponentsAssembly_name": "Medium Components Assembly",
+    "orchard_description": "A specialized farm that produces high-maintenance fruits for high-end consumables.",
+    "orchard_name": "Orchard",
+    "packagingCenter_description": "Turns out bundles of items are more efficient to move around in space than individual items!",
+    "packagingCenter_name": "Packaging Center",
+    "pharmaFactory_description": "A versatile factory equipped to produce medication as well as curative support products.",
+    "pharmaFactory_name": "Pharma Factory",
+    "planetaryProjectAdminCenter_description": "The Administration Center allows to hold elections for a planetary governor. The governor can set taxes and fees like a production fee for example. Every site owner has the right to vote, but votes can also be acquired by completing tasks set up by the Exodus Council.",
+    "planetaryProjectAdminCenter_name": "Administration Center",
+    "planetaryProjectCogc_description": "Allows for the communal implementation of industrial support programs.",
+    "planetaryProjectCogc_name": "Chamber of Global Commerce",
+    "planetaryProjectComfortBig_description": "Provides a large amount of comfort.",
+    "planetaryProjectComfortBig_name": "4D Arcades",
+    "planetaryProjectComfortCulture_description": "Provides a small amount of comfort and culture.",
+    "planetaryProjectComfortCulture_name": "Art Café",
+    "planetaryProjectComfortSmall_description": "Provides a small amount of comfort.",
+    "planetaryProjectComfortSmall_name": "Wildlife Park",
+    "planetaryProjectCultureBig_description": "Provides a large amount of culture.",
+    "planetaryProjectCultureBig_name": "VR Theater",
+    "planetaryProjectCultureEducation_description": "Provides a small amount of culture and education.",
+    "planetaryProjectCultureEducation_name": "Planetary Broadcasting Hub",
+    "planetaryProjectCultureSmall_description": "Provides a small amount of culture.",
+    "planetaryProjectCultureSmall_name": "Art Gallery",
+    "planetaryProjectEducationBig_description": "Provides a large amount of education.",
+    "planetaryProjectEducationBig_name": "University",
+    "planetaryProjectEducationSmall_description": "Provides a small amount of education.",
+    "planetaryProjectEducationSmall_name": "Library",
+    "planetaryProjectHealthBig_description": "Provides a large amount of health.",
+    "planetaryProjectHealthBig_name": "Hospital",
+    "planetaryProjectHealthComfort_description": "Provides a small amount of health and comfort.",
+    "planetaryProjectHealthComfort_name": "Wellness Center",
+    "planetaryProjectHealthSmall_description": "Provides a small amount of health.",
+    "planetaryProjectHealthSmall_name": "Infirmary",
+    "planetaryProjectLocalMarket_description": "A simple, unregulated, bulletin board style market place.",
+    "planetaryProjectLocalMarket_name": "Local Market",
+    "planetaryProjectPopulation_description": "This planetary project is a collection of all infrastructure projects that are relevant for the local population",
+    "planetaryProjectPopulation_name": "Population Infrastructure",
+    "planetaryProjectSafetyBig_description": "Provides a large amount of safety.",
+    "planetaryProjectSafetyBig_name": "Security Drone Post",
+    "planetaryProjectSafetyHealth_description": "Provides a small amount of safety and health.",
+    "planetaryProjectSafetyHealth_name": "Emergency Center",
+    "planetaryProjectSafetySmall_description": "Provides a small amount of safety.",
+    "planetaryProjectSafetySmall_name": "Safety Station",
+    "planetaryProjectShipyard_description": "Bring your blueprints and materials here to build new ships.",
+    "planetaryProjectShipyard_name": "Planetary Shipyard",
+    "planetaryProjectWarehouse_description": "Offers storage space for rent without the need to own a local site.",
+    "planetaryProjectWarehouse_name": "Planetary Warehouse",
+    "plasticsPrinterFacility_description": "Prints objects out of plastic pellets.",
+    "plasticsPrinterFacility_name": "3D Printer",
+    "polymerPlant_description": "Chemical plant that turns basic elements into flexible polymers, used in all stages of technology.",
+    "polymerPlant_name": "Polymer Plant",
+    "prefabPlant1_description": "Produces basic prefabs necessary to construct buildings.",
+    "prefabPlant1_name": "Prefab Plant MK1",
+    "prefabPlant2_description": "Produces lightweight prefabs necessary to construct buildings.",
+    "prefabPlant2_name": "Prefab Plant MK2",
+    "prefabPlant3_description": "Produces reinforced prefabs necessary to construct buildings.",
+    "prefabPlant3_name": "Prefab Plant MK3",
+    "prefabPlant4_description": "Produces advanced prefabs necessary to construct buildings.",
+    "prefabPlant4_name": "Prefab Plant MK4",
+    "refinery_description": "Produces fuels used for space flight.",
+    "refinery_name": "Refinery",
+    "rig_description": "Extracts liquid resources.",
+    "rig_name": "Rig",
+    "shipKitFactory_description": "A factory where all kinds of standardized cargo bay and fuel tank kits are put together.",
+    "shipKitFactory_name": "Ship Kit Factory",
+    "smallComponentsAssembly_description": "Assembles technical pieces into smaller parts, ready to be used in many devices.",
+    "smallComponentsAssembly_name": "Small Components Assembly",
+    "smelter_description": "Produces metals from ores.",
+    "smelter_name": "Smelter",
+    "softwareDevelopment_description": "Here basic software components are being developed for use in more complex tools and systems.",
+    "softwareDevelopment_name": "Software Development",
+    "softwareEngineering_description": "Basic software components are combined into tools that can be applied in a variety of devices or used as parts of more complex systems.",
+    "softwareEngineering_name": "Software Engineering",
+    "softwareLabs_description": "Architects form more advanced software applications from basic algorithms and tools for use in high-end devices.",
+    "softwareLabs_name": "Software Labs",
+    "spacecraftPrefabPlant_description": "A creation facility for all kinds of kits and standardized spaceship components.",
+    "spacecraftPrefabPlant_name": "Spacecraft Prefab Plant",
+    "spacecraftPropulsionFactory_description": "Produces anything necessary to move a spaceship, i.e. all kinds of STL engines and FTL reactors.",
+    "spacecraftPropulsionFactory_name": "Spacecraft Propulsion Factory",
+    "storageBig_description": "A large-scale storage facility that increases the capacity by 10000t / 10000m³.",
+    "storageBig_name": "Expansive Storage",
+    "storageFacility_description": "Increases the storage capacity by 5000t / 5000m³.",
+    "storageFacility_name": "Storage Facility",
+    "storageSmall_description": "A small-scale storage facility that increases the capacity by 2500t / 2500m³.",
+    "storageSmall_name": "Auxiliary Storage",
+    "storageVolume_description": "A volume-specialized form of storage that increases the capacity by 2500t / 7500m³.",
+    "storageVolume_name": "Volume Storage",
+    "storageWeight_description": "A weight-specialized form of storage that increases the capacity by 7500t / 2500m³.",
+    "storageWeight_name": "Weight Storage",
+    "technetiumProcessing_description": "Processes basic Technetium into a more stable configuration of the element.",
+    "technetiumProcessing_name": "Technetium Processing",
+    "unitPrefabPlant_description": "Produces building units ready to be used as parts of bigger construction projects.",
+    "unitPrefabPlant_name": "Unit Prefab Plant",
+    "weavingPlant_description": "Creates the most basic fabrics from fibers.",
+    "weavingPlant_name": "Weaving Plant",
+    "weldingPlant_description": "Creates a diverse set of metal products used in construction and device manufacturing.",
+    "weldingPlant_name": "Welding Plant"
+  }
+}
