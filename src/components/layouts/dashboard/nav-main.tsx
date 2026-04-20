@@ -52,9 +52,11 @@ export function NavMain({
         <SidebarGroupContent className="flex flex-col gap-2">
           <SidebarMenu>
             {group.items.map(item => {
-              const isActive = matches.some(
-                match => match.fullPath === item.url,
-              )
+              const isActive = matches.some(match => {
+                const a = match.fullPath.replace(/\/$/, '') || '/'
+                const b = item.url.replace(/\/$/, '') || '/'
+                return a === b
+              })
               const translatedTitle = t(item.titleKey)
 
               return (

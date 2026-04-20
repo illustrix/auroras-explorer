@@ -180,8 +180,79 @@
     "selectBuilding": "Select Building"
   },
   "catalog": {
-    "title": "Material Catalog",
-    "searchPlaceholder": "Search materials..."
+    "title": "Catalog",
+    "allMaterials": "All Materials",
+    "searchPlaceholder": "Search ticker or name...",
+    "filterByCategory": "Filter by category",
+    "sourceAll": "All",
+    "sourceRaw": "Raw",
+    "sourceProduced": "Produced",
+    "sortCategory": "Group by category",
+    "sortTicker": "Ticker A–Z",
+    "sortWeightAsc": "Weight: light → heavy",
+    "sortWeightDesc": "Weight: heavy → light",
+    "sortVolumeAsc": "Volume: small → large",
+    "sortVolumeDesc": "Volume: large → small",
+    "sortDensityAsc": "Density: low → high",
+    "sortDensityDesc": "Density: high → low",
+    "clearFilters": "Clear filters",
+    "resultCount_one": "{{count}} material",
+    "resultCount_other": "{{count}} materials"
+  },
+  "docs": {
+    "title": "Game Guide",
+    "description": "Learn about the game mechanics, materials, production chains, and more.",
+    "backToList": "Back to guide list",
+    "notFound": "Document not found.",
+    "editOnGithub": "Edit this page on GitHub",
+    "gettingStarted": {
+      "title": "Getting Started",
+      "description": "An introduction to Prosperous Universe — the core gameplay loop, your first base, and workforce tiers."
+    },
+    "materials": {
+      "title": "Material Categories",
+      "description": "Overview of all 370+ materials organized by category — from raw ores to endgame ship components."
+    },
+    "rawMaterials": {
+      "title": "Raw Materials",
+      "description": "Ores, gases, minerals, and elements — how planetary extraction works and which buildings process what."
+    },
+    "metalsAlloys": {
+      "title": "Metals & Alloys",
+      "description": "Smelting chains, alloy recipes, and which metals feed which downstream products."
+    },
+    "construction": {
+      "title": "Construction Materials",
+      "description": "The 4-tier prefab system, 12 construction parts, 11 bulk materials, and what each habitation costs."
+    },
+    "chemicalsPlastics": {
+      "title": "Chemicals & Plastics",
+      "description": "21 chemicals + 8 plastics + 3 liquids. CHP/LAB/POL chains, PE economics, and rare reagents."
+    },
+    "electronics": {
+      "title": "Electronics & Software",
+      "description": "The 4-tier electronics chain from pieces to systems, plus software dependencies (SD/SE/SL) and WAI."
+    },
+    "shipComponents": {
+      "title": "Ship Components",
+      "description": "63 ship parts across hulls, kits, engines, and shields. The deepest production chain in the game."
+    },
+    "specialty": {
+      "title": "Specialty Materials",
+      "description": "Textiles, unit prefabs, energy, drones, medical, and infrastructure — the smaller chains that connect everything."
+    },
+    "production": {
+      "title": "Production & Recipes",
+      "description": "How recipes work, production chain depth, key buildings, and planning tips."
+    },
+    "agriculturalProducts": {
+      "title": "Agricultural Products",
+      "description": "All 19 crops — food, beverage, textile, and industrial. Production buildings, RAT recipes, and efficiency tips."
+    },
+    "consumables": {
+      "title": "Consumables",
+      "description": "What every workforce tier needs to keep working — basic needs, luxuries, and pre-packaged bundles."
+    }
   },
   "configTransform": {
     "title": "Config Transform",
@@ -213,7 +284,11 @@
     "loading": "Loading...",
     "selectAMaterial": "Select a material...",
     "searchMaterials": "Search Materials...",
-    "noMaterialFound": "No Material found."
+    "noMaterialFound": "No Material found.",
+    "canBeProducedBy": "Can be produced by",
+    "usedInRecipes": "Used in recipes",
+    "noRecipesProducing": "No recipes produce this material.",
+    "noRecipesUsing": "No recipes use this material."
   },
   "ui": {
     "previous": "Previous",

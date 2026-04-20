@@ -18,10 +18,10 @@ function RootComponent() {
       }
     >
       <AppSidebar variant="inset" />
-      <SidebarInset>
+      <SidebarInset className="h-svh md:h-[calc(100svh-1rem)] overflow-hidden">
         <SiteHeader />
-        <div className="flex flex-1 flex-col">
-          <div className="@container/main flex flex-1 flex-col gap-2">
+        <div className="flex flex-1 flex-col min-h-0">
+          <div className="@container/main flex flex-1 flex-col gap-2 min-h-0">
             <Outlet />
           </div>
         </div>

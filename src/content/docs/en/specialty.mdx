@@ -1,0 +1,212 @@
+# Specialty Materials
+
+The rest of the production tree — **~50 items** across textiles, unit prefabs, energy, drones, medical, and infrastructure. Each category is small but critical: no textiles means no HMS/HSS/LC clothing; no energy cells means no advanced engines; no unit prefabs means no HAM. These are the glue holding the bigger chains together.
+
+## Textiles (7)
+
+Fabric chain — feeds clothing, shields, ship interiors. Main buildings: **WPL** (Weaving Plant) and **CLF** (Clothing Factory).
+
+### Weaving Plant (WPL) — 70 Settler
+
+| Ticker | Name | Recipe | Time | Used For |
+|--------|------|--------|------|----------|
+| **COT** | Cotton | 1× RCO → 1× COT | 7.2h | OVE, MED, textiles |
+| **SIL** | Silk | 1× RSI → 1× SIL | 12h | LC, BND, luxury |
+| **NL** | Nylon | 50× PG → 1× NL | 12h | HMS, HSS, LDE |
+| **KV** | Kevlar | 5× TCL + 75× PG → 1× KV | 19.2h | BWH, BRP, AAR (shields) |
+| **TK** | Tricalin | 1× TC + 1× KV → 1× TK | 21.6h | AWH, ARP, AGS |
+
+### Other textile sources
+
+| Ticker | Name | Plant | Recipe | Time |
+|--------|------|-------|--------|------|
+| **CF** | Ceramic Fiber | SME | 4× AL + 2× O + 1× SI → 1× CF | 9.6h |
+| **CTF** | Ceramic Treated Fiber | ASM | 2× WAL + 1× O + 1× SI → 1× CTF | 9.6h |
+
+> **CF/CTF are smelted, not woven.** Despite being "textiles," they're made in SME/ASM — ceramic fibers used heavily in ship construction (THP, BWH, ship engines).
+
+## Unit Prefabs (18)
+
+Made in **UPF** (Unit Prefab Plant — 20 Pioneer + 50 Settler). These are the "furniture" of ships and advanced habitations. Many feed directly into HAM or ship interiors.
+
+### Basic Units
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **HAB** | Habitation | 6× BBH + 10× BSE + 50× SOI + 10× BDE → 1× HAB | 48h |
+| **LU** | Lab Unit | 1× WS + 6× PSM + 10× PSL + 1× DA → 1× LU | 36h |
+| **SU** | Sickbay Unit | 2× BSC + 4× SEQ + 8× PSM + 12× PSL + 10× NG → 1× SU | 48h |
+| **WOR** | Workstation | 12× PSM + 20× PSL + 6× UTS → 1× WOR | 43.2h |
+| **FUN** | Fun Unit | 4× PCB + 8× PSL + 1× BWS + 1× BID → 1× FUN | 52.8h |
+
+### Crew Quarters (4 tiers)
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **CQT** | Tiny Quarters | 5× AL + 1× DEC + 1× TCU + 2× PSL + 5× PSM + 1× BMF → 1× CQT | 40.8h |
+| **CQS** | Small Quarters | 5× PSL + 1× TCU + 1× LIS + 5× FAL + 2× DEC + 10× PSM → 1× CQS | 48h |
+| **CQM** | Medium Quarters | 10× TI + 1× LIS + 1× TCU + 10× PSL + 20× PSM + 10× DEC → 1× CQM | 60h |
+| **CQL** | Large Quarters | 30× PSM + 20× PSL + 1× TCU + 1× LIS + 20× FET + 20× DEC → 1× CQL | 72h |
+
+### Ship Bridges
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **BRS** | Small Bridge | 10× TI + 4× RAD + 5× SAR + 20× PSM + 10× PSL → 1× BRS | 72h |
+| **BR1** | Bridge Mk1 | 10× FET + 5× SAR + 20× PSM + 1× NV1 + 10× PSL + 1× COM → 1× BR1 | 96h |
+| **BR2** | Bridge Mk2 | 10× SAR + 10× FET + 1× NV2 + 1× COM + 20× PSM + 10× PSL → 1× BR2 | 120h |
+
+### HAM Building Blocks
+
+HAM (from ship-components doc) uses these 6 units:
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **BSU** | Bay Support Unit | 1× LIS + 60× DDT + 200× PFE + 1× HAB → 1× BSU | 120h |
+| **CPU** | Command Processing Unit | 1× CRU + 1× LIS + 100× FLO → 1× CPU | 144h |
+| **TCU** | Temp Control Unit | 1× ADR + 12× PSL + 8× PSM → 1× TCU | 38.4h |
+| **DOU** | Docking Unit | 4× SAR + 10× PSL + 1× COM → 1× DOU | 43.2h |
+| **RDS** | Radome Small | 20× PSL + 4× SRD + 30× PSM → 1× RDS | 72h |
+| **RDL** | Radome Large | 8× SRD + 30× PSL + 50× PSM → 1× RDL | 120h |
+
+> **HAM = 15 days of production through 6 different UPF recipes + 1000 PFE.** If you see a ship contract asking for HAM delivery, plan a full 2-week lead time.
+
+## Energy Systems (6)
+
+All made in **ECA** (Energy Component Assembly — 20 Sett + 20 Tech).
+
+| Ticker | Name | Recipe | Time | Used For |
+|--------|------|--------|------|----------|
+| **POW** | Power Cell | 1× NCS + 4× LI → 1× POW | 4.8h | RAD, basic electronics |
+| **SOL** | Solar Panel | 1× BRO + 4× BCO + 2× SI + 2× CU → 12× SOL | 4.8h | Power generation, SP |
+| **SP** | Solar Array | 8× GL + 24× SOL → 12× SP | 7.2h | Large-scale solar power |
+| **CBS** | Battery Small | 20× BCO + 6× LI + 6× BE + 60× PG → 1× CBS | 7.2h | QCR, RCT, SFE |
+| **CBM** | Battery Medium | 120× PG + 8× LI + 40× BGC + 8× BE → 1× CBM | 9.6h | HPR, MFE, PFG |
+| **CBL** | Battery Large | 150× PG + 12× BE + 60× HCC + 12× LI → 1× CBL | 12h | HYR, VOE, LFE |
+
+> **CBL is the ship-engine choke point.** Needed for the top-tier FTL engines (HYR, VOE). Each CBL uses 60× HCC (gold-based) and 12× Be (rare) — expensive and slow.
+
+## Drones (7)
+
+All from **DRS** (Drone Shop — 40 Tech + 20 Eng). Drones are specialty equipment for infrastructure projects and rare production chains.
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **DRF** | Drone Frame | 1× HE + 6× AL → 1× DRF (in WEL) | 2.4h |
+| **DCH** | Drone Chassis | 1× DRF + 1× MPC + 1× SOL + 1× POW → 1× DCH | 6.7h |
+| **CCD** | Cargo Carrier Drone | 1× DCH + 1× BSC → 1× CCD | 12h |
+| **RED** | Reconnaissance Drone | 1× DCH + 1× SAR → 1× RED | 12h |
+| **SRD** | Surveyor Drone | 1× DCH + 1× SAR + 2× UTS → 1× SRD | 12h |
+| **SUD** | Subsurface Drone | 1× SAR + 1× BSC + 1× DCH → 1× SUD | 14.4h |
+| **SDR** | Scanner Drone | 1× DCH + 1× SEQ + 1× BSC → 1× SDR | 16.8h |
+
+## Medical Equipment (6)
+
+Split across **PHF** (Pharma Factory), **BMP**, **FS**, and **GF**.
+
+| Ticker | Name | Building | Recipe | Time |
+|--------|------|----------|--------|------|
+| **BND** | Bandages | PHF | 1× SIL + 1× NL → 20× BND | 4.8h |
+| **PK** | Pain Killers | PHF | 10× REA + 4× LI + 2× CA → 10× PK | 7.9h |
+| **ADR** | Adrenaline | PHF | 2× DCM + 1× BSC + 20× REA + 4× MFK → 1× ADR | 21.6h |
+| **SEQ** | Sequencer | FS | 2× TI + 1× HOG + 2× STL → 1× SEQ | 7.2h |
+| **STR** | Stretcher | BMP | 50× PE + 4× AL → 2× STR | 7.2h |
+| **TUB** | Test Tubes | GF | 10× GL → 20× TUB | 4.8h |
+
+## Infrastructure (7)
+
+Late-game planetary infrastructure — these are buildings/projects, not consumables. Most need AAF and rare engineering.
+
+| Ticker | Name | Building | Recipe | Time |
+|--------|------|----------|--------|------|
+| **SPT** | Support Plate | CLF | 1× KV + 10× MTC → 100× SPT | 12h |
+| **TRS** | Truss System | PP4 | 4× PSH + 100× MFK + 8× HSE → 1× TRS | 48h |
+| **TOR** | Torpedo | WEL | 200× ALR + 40× HE → 1× TOR | 96h |
+| **SDM** | Sub-Surface Drill Module | APF | 10× TRS + 1× STS → 1× SDM | 24h |
+| **SST** | System Stabilizer | AAF | 1× PFG + 1× SDM + 200× WRH → 1× SST | 48h |
+| **PFG** | Planetary Force Generator | AAF | 2× RAG + 2× FIR + 2× CBM + 1× FFC → 1× PFG | **144h** |
+| **GWS** | Gateway System | AAF | 2× TOR + 1× SST + 10× SAR + 4× TRS + 1000× SPT + 1× SNM → 1× GWS | **192h** |
+
+> **GWS is THE endgame building.** Creates FTL gateways. 192h cycle + 1000 SPT + 1 SNM. If any recipe defines "late game," it's this one.
+
+## Utility (3)
+
+Miscellaneous small items that don't fit other categories:
+
+| Ticker | Name | Building | Recipe | Time | Use |
+|--------|------|----------|--------|------|-----|
+| **OFF** | Office Supplies | BMP | 20× EPO + 20× PG → 50× OFF | 4.8h | Admin buildings |
+| **SUN** | Sun Protection Gear | BMP | 20× OVE + 10× C → 20× SUN | 4.8h | Sun-exposed worksites |
+| **UTS** | Utility Stand | FS | 2× SFK + 6× FE → 1× UTS | 9.6h | WOR, SRD production |
+
+## Where Each Fits
+
+import { Mermaid } from '@/components/mdx/mermaid'
+
+<Mermaid chart={`
+graph LR
+  Farms[Farms] --> WPL[WPL\nSettler]
+  Plastic[Plastics] --> WPL
+  WPL --> Textiles[Textiles\nCOT SIL NL KV TK]
+
+  SME_ASM[SME / ASM] --> CeramFiber[Ceramic Fiber\nCF CTF]
+
+  Electronics[Electronics] --> UPF[UPF\nPio+Sett]
+  Textiles --> UPF
+  UPF --> Units[Unit Prefabs\n18 items\nCQ BR HAB FUN WOR ...]
+  Units --> HAM_Ship[HAM / Ship Interiors]
+
+  Metals[Metals] --> ECA[ECA\nSett+Tech]
+  Elements[Elements\nLI BE] --> ECA
+  Goldpcs[BCO BGC HCC] --> ECA
+  ECA --> Energy[Energy\nPOW SOL SP CBS CBM CBL]
+
+  ECA --> Reactors[Ship Reactors\nRCT HPR QCR HYR VOE]
+
+  Metal_PLC[Metals+Plastics] --> DRS[DRS\nTech+Eng]
+  DRS --> Drones[Drones\nDRF DCH CCD RED\nSRD SUD SDR]
+
+  Chem[Chemicals] --> PHF[PHF\nSett+Tech]
+  Textiles --> PHF
+  PHF --> Medical[Medical\nBND PK ADR SEQ STR TUB]
+
+  Metal_Chem[Metals+Energy+Chem] --> Infra[Infra\nWEL / AAF / PP4]
+  Infra --> Infrastructure[Infrastructure\nSPT TRS TOR SDM\nSST PFG GWS]
+
+  style Farms fill:#b08620,stroke:#e0b040,color:#fff
+  style Plastic fill:#b08620,stroke:#e0b040,color:#fff
+  style Electronics fill:#b08620,stroke:#e0b040,color:#fff
+  style Metals fill:#b08620,stroke:#e0b040,color:#fff
+  style Elements fill:#b08620,stroke:#e0b040,color:#fff
+  style Goldpcs fill:#b08620,stroke:#e0b040,color:#fff
+  style Metal_PLC fill:#b08620,stroke:#e0b040,color:#fff
+  style Chem fill:#b08620,stroke:#e0b040,color:#fff
+  style Metal_Chem fill:#b08620,stroke:#e0b040,color:#fff
+  style WPL fill:#2d6a4f,stroke:#52b788,color:#fff
+  style SME_ASM fill:#2d6a4f,stroke:#52b788,color:#fff
+  style UPF fill:#2d6a4f,stroke:#52b788,color:#fff
+  style ECA fill:#2d6a4f,stroke:#52b788,color:#fff
+  style DRS fill:#2d6a4f,stroke:#52b788,color:#fff
+  style PHF fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Infra fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Textiles fill:#3b6ea5,stroke:#6aacf0,color:#fff
+  style CeramFiber fill:#3b6ea5,stroke:#6aacf0,color:#fff
+  style Units fill:#c05030,stroke:#e07050,color:#fff
+  style Energy fill:#c05030,stroke:#e07050,color:#fff
+  style Drones fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Medical fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Infrastructure fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+  style HAM_Ship fill:#8b4513,stroke:#d2691e,color:#fff
+  style Reactors fill:#8b4513,stroke:#d2691e,color:#fff
+`} />
+
+## Tips
+
+1. **WPL is a great Settler-only business.** Just needs 1 RCO supply for COT, 1 RSI for SIL. Steady consumer goods demand.
+2. **CF vs CTF matters for ship grades.** CF goes in basic hulls; CTF goes in advanced hulls and engines. Keep them separate in your planning.
+3. **UPF is deceptively deep.** CQS (48h) needs LIS which needs AIR which needs 9 inputs. Basic crew quarters = weeks of chain setup.
+4. **ECA is one of the highest-value buildings.** Batteries (CBS/CBM/CBL) are small but feed into every FTL reactor. Low area, high margin.
+5. **Drones are niche.** Consumed by specific infrastructure and survey projects. Don't speculate — make on contract.
+6. **PHF is tiny but stable.** 6 medical items, 5 of them with Settler+Tech workforce. Great side business for a mid-game colony.
+7. **GWS requires basically everything.** 6 input items, including SNM (Scientist software) and 1000 SPT. Pre-plan supply by months.
+8. **OFF/SUN are overlooked.** Small, cheap, used in background activities. Check prices — sometimes selling 50× OFF beats making 1 advanced item.

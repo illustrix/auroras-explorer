@@ -54,7 +54,7 @@ export const RecipePreview: FC<{ recipe: Recipe }> = ({ recipe }) => {
           {formatDuration(recipe.TimeMs)}
         </div>
       </div>
-      <div className="flex gap-1 items-center">
+      <div className="flex gap-1 items-center overflow-x-auto p-1">
         {recipe.Inputs.map(input => {
           return (
             <div key={input.Ticker}>

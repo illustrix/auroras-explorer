@@ -1,0 +1,191 @@
+# 建筑材料
+
+你在星球上盖的每个建筑都需要**预制件**，而预制件又消耗**零件**和**材料**。这条链没有 CX 上的终局产品；它纯粹是为支撑基地扩张而存在的。但规模很大：**44 项**分布在预制件、零件、材料三类，由 4 级预制件工厂主导。
+
+## 预制件等级系统
+
+预制件分 4 个等级，对应它们所建的 4 个工人等级住房：
+
+| 等级 | 工厂 | 前缀 | 工人 | 建造 |
+|------|------|------|------|------|
+| **基础** | PP1（预制件厂 1） | `B-` | 80 先锋 | 先锋住房（HB1, HBB） |
+| **轻型** | PP2 | `L-` | 25 先锋 + 25 移民 | 移民/技工住房（HB2, HB3） |
+| **加固** | PP3 | `R-` | 20 移民 + 40 技工 | 工程师住房（HB4）、专用 |
+| **高级** | PP4 | `A-` | 40 技工 + 30 工程师 | 科学家住房（HB5）、豪华住房（HBL, HBM） |
+
+每级都做 4 种标准预制件 —— **隔板（BH）**、**穹顶（DE）**、**支架（SE）**、**塔（TA）** —— 用对应字母前缀命名。
+
+## 标准预制件（16 种）
+
+### 基础等级（PP1）—— 先锋工人
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **BBH** | 基础隔板 | 1× LST + 2× FE → 1× BBH | 7.9h |
+| **BDE** | 基础穹顶 | 150× PE → 1× BDE | 7.2h |
+| **BSE** | 基础支架 | 2× LST + 1× FE → 1× BSE | 6h |
+| **BTA** | 基础塔 | 50× PE + 1× FE → 1× BTA | 3.6h |
+
+### 轻型等级（PP2）—— 先锋 + 移民
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **LBH** | 轻型隔板 | 3× AL + 35× PE → 1× LBH | 6h |
+| **LDE** | 轻型穹顶 | 3× AL + 1× NL → 1× LDE | 6h |
+| **LSE** | 轻型支架 | 3× AL + 120× PG → 1× LSE | 6h |
+| **LTA** | 轻型塔 | 5× GL + 1× AL → 1× LTA | 6h |
+
+### 加固等级（PP3）—— 移民 + 技工
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **RBH** | 加固隔板 | 1× BBH + 50× EPO + 1× STL → 1× RBH | 9.6h |
+| **RDE** | 加固穹顶 | 1× LDE + 100× EPO + 1× KV → 2× RDE | 16.8h |
+| **RSE** | 加固支架 | 2× BSE + 1× STL + 225× EPO → 2× RSE | 16.8h |
+| **RTA** | 加固塔 | 1× LTA + 6× RG → 1× RTA | 9.6h |
+
+### 高级等级（PP4）—— 技工 + 工程师
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **ABH** | 高级隔板 | 2× RBH + 125× NR → 2× ABH | 16.8h |
+| **ADE** | 高级穹顶 | 2× KV + 2× LDE → 2× ADE | 14.4h |
+| **ASE** | 高级支架 | 1× RSE + 2× TI → 1× ASE | 13.2h |
+| **ATA** | 高级塔 | 1× RTA + 1× NG → 1× ATA | 13.2h |
+
+> **升级链：** 很多高级预制件**消耗低级的**（RBH 用 BBH，ABH 用 RBH）。可以垂直生产 —— 一个星球上 PP1→PP3→PP4 生产 ABH。
+
+## 专用预制件（4 种）
+
+非分级预制件，用于特定目的：
+
+| 代号 | 名称 | 工厂 | 配方 | 用途 |
+|------|------|------|------|------|
+| **HSE** | 重型支架 | PP3 | 1× TCS + 2× LSE → 2× HSE | 重载结构（TOR 等） |
+| **MGC** | 电磁线圈 | PP3 | 1× LDE + 1× MAG → 1× MGC | 电磁类建筑 |
+| **PSH** | 塑料屏蔽 | PP3 | 250× NFI + 1× TI → 1× PSH | 反应堆屏蔽 |
+| **RSH** | 辐射屏蔽 | PP4 | 1× TA + 1× STL + 1× LST → 1× RSH | 核类建筑 |
+| **TSH** | 热屏蔽 | PP4 | 2× THP + 2× LBH + 150× PE → 1× TSH | 高温建筑 |
+
+## 建筑零件（12 种）
+
+用于更大组件内部的小零件。主要来自 **WEL**（焊接厂）和 **FS**（精密锻造厂）：
+
+| 代号 | 名称 | 工厂 | 配方 | 时间 |
+|------|------|------|------|------|
+| **GC** | 玻璃罐 | WEL | 1× FE + 1× HE + 1× AL → 10× GC | 7.2h |
+| **GV** | 玻璃容器 | WEL | 1× HE + 1× AL → 1× GV | 6h |
+| **TRU** | 桁架 | WEL | 2× AL + 1× HE → 6× TRU | 4.8h |
+| **FC** | 流量控制器 | WEL | 1× AL + 1× BSE + 1× HE → 1× FC | 9.6h |
+| **FLP** | 流体管道 | WEL | 1× AL + 1× FE + 1× HE → 6× FLP | 12h |
+| **MHL** | 金属软管 | WEL | 1× HE + 1× FE + 1× I → 1× MHL | 16.8h |
+| **FLO** | 地板 | FS | 10× AL + 4× STL → 1× FLO | 19.2h |
+| **LIT** | 灯管 | GF | 16× NE + 8× RG → 1× LIT | 19.2h |
+| **AEF** | 大气排放过滤 | PP2 | 50× PG + 1× NE → 1× AEF | 12h |
+| **DEC** | 装饰元素 | POL | 70× EPO + 150× PG → 1× DEC | 12h |
+| **TCS** | 锝供应单元 | TNP | 1× TC → 3× TCS | 12h |
+| **AIR** | 空气循环器 | APF | 1× WAI + 1× HCP + 1× BAC + 1× SAR + 1× GV + 1× NS + 1× H2O + 1× FC + 1× PCB → 1× AIR | 60h |
+
+> **AIR 是游戏中最复杂的单品** —— 9 项输入来自 5 条生产链。很少有玩家自己造它。
+
+## 建筑材料（11 种）
+
+供给预制件生产的批量原料：
+
+| 代号 | 名称 | 建筑 | 配方 | 时间 |
+|------|------|------|------|------|
+| **EPO** | 环氧树脂 | POL | 1× C + 1× O + 1× CL + 1× H → 50× EPO | 24h |
+| **GL** | 玻璃 | GF | 1× FLX + 2× SIO + 1× NA → 12× GL | 17.3h |
+| **INS** | 绝缘材料 | PP3 | 1× THF + 1× AR + 100× PE → 24× INS | 6h |
+| **MCG** | 矿物混凝土 | BMP | 2× SIO + 4× LST → 50× MCG | 6h |
+| **MTC** | 金属涂层塑料 | CLR | 2× NCS → 2× MTC | 9.6h |
+| **NCS** | 非导电基板 | CLR | 1× C → 100× NCS | 14.4h |
+| **NFI** | 纳米纤维 | CLR | 2× SI + 10× C → 1200× NFI | 19.2h |
+| **NG** | 耐燃玻璃 | GF | 10× GL + 10× NCS → 10× NG | 28.8h |
+| **RG** | 强化玻璃 | GF | 15× PG + 1× SEN + 10× GL → 10× RG | 27.6h |
+| **SEA** | 密封胶 | BMP | 1× SI + 1× S + 30× PG → 30× SEA | 7.2h |
+
+**CMK**（建筑材料包）出现在材料列表中但没有生产配方 —— 是遗留的捆包或仅合同项目。
+
+## 住房成本（各级住房所需预制件）
+
+真正的问题：建每种住房需要多少预制件？
+
+| 住房 | 用于 | 预制件清单 |
+|------|------|-----------|
+| **HB1** | 先锋 | 4× BBH + 2× BDE + 2× BSE + 1× BTA |
+| **HBB** | 先锋（兵营） | 4× BBH + 4× BDE + 2× LSE + 2× LTA |
+| **HB2** | 移民 | 2× BBH + 2× BDE + 2× BSE + 2× BTA + 2× TRU |
+| **HB3** | 技工 | 4× LBH + 4× LDE + 4× LSE + 8× LTA |
+| **HBC** | 技工（公社） | 4× LBH + 2× LDE + 2× RSE + 4× RTA + 2× TRU |
+| **HB4** | 工程师 | 6× RBH + 6× RDE + 4× RSE + 4× RTA |
+| **HBM** | 工程师（管理者） | 8× RBH + 8× RDE + 6× ASE + 4× ATA |
+| **HB5** | 科学家 | 6× ABH + 6× ADE + 4× ASE + 4× ATA |
+| **HBL** | 科学家（豪华） | 8× ABH + 8× ADE + 6× ASE + 6× ATA |
+
+> **提示：** HB1 用 9 个预制件；HBL 用 28 个。高级殖民地住房要**约 3 倍的建筑成本**。这是为什么后期基地扩张变慢的原因之一。
+
+## 生产链
+
+import { Mermaid } from '@/components/mdx/mermaid'
+
+<Mermaid chart={`
+graph LR
+  Raw[原料\nLST FE AL STL TI TA\nC O CL H SIO NA] --> Mats[材料\nEPO GL MCG NCS\nNFI RG NG INS SEA]
+  Raw --> Plastic[塑料\nPE PG NR NL NFI]
+
+  Mats --> PP1[PP1\n先锋]
+  Plastic --> PP1
+  PP1 --> Basic[B 级\nBBH BDE BSE BTA]
+
+  Mats --> PP2[PP2\n先锋+移民]
+  Plastic --> PP2
+  PP2 --> Light[L 级\nLBH LDE LSE LTA]
+
+  Basic --> PP3[PP3\n移民+技工]
+  Light --> PP3
+  Mats --> PP3
+  PP3 --> Reinforced[R 级\nRBH RDE RSE RTA]
+  PP3 --> Special[专用\nHSE MGC PSH]
+
+  Reinforced --> PP4[PP4\n技工+工程师]
+  Light --> PP4
+  Mats --> PP4
+  PP4 --> Advanced[A 级\nABH ADE ASE ATA]
+  PP4 --> Shield[屏蔽\nRSH TSH]
+
+  Basic --> Habs1[HB1 HBB]
+  Light --> Habs2[HB2 HB3 HBC]
+  Reinforced --> Habs3[HB4 HBM HBC]
+  Advanced --> Habs4[HB5 HBL HBM]
+  Shield --> Facilities[反应堆和\n专用建筑]
+
+  style Raw fill:#b08620,stroke:#e0b040,color:#fff
+  style Plastic fill:#b08620,stroke:#e0b040,color:#fff
+  style Mats fill:#3b6ea5,stroke:#6aacf0,color:#fff
+  style PP1 fill:#2d6a4f,stroke:#52b788,color:#fff
+  style PP2 fill:#2d6a4f,stroke:#52b788,color:#fff
+  style PP3 fill:#2d6a4f,stroke:#52b788,color:#fff
+  style PP4 fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Basic fill:#c05030,stroke:#e07050,color:#fff
+  style Light fill:#c05030,stroke:#e07050,color:#fff
+  style Reinforced fill:#c05030,stroke:#e07050,color:#fff
+  style Advanced fill:#c05030,stroke:#e07050,color:#fff
+  style Special fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Shield fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Habs1 fill:#8b4513,stroke:#d2691e,color:#fff
+  style Habs2 fill:#8b4513,stroke:#d2691e,color:#fff
+  style Habs3 fill:#8b4513,stroke:#d2691e,color:#fff
+  style Habs4 fill:#8b4513,stroke:#d2691e,color:#fff
+  style Facilities fill:#8b4513,stroke:#d2691e,color:#fff
+`} />
+
+## 小技巧
+
+1. **PP1+PP2 加先锋移民工人是很稳的起步生意。** BBH/LBH/LDE 等产品可以卖给区域内每个扩张中的殖民地。
+2. **EPO 是游戏的胶水。** 每个 R 级和 A 级预制件都用大量 EPO。早中期通常会专门建一个 POL 做 EPO。
+3. **PE 需求量巨大。** 单个 BDE 用 150 PE。做塑料生意的话，PE 是出货主力。
+4. **RBH 和 RSE 用 50–225 EPO。** EPO 成本在这些配方中占主导 —— 定价时要考虑进去。
+5. **科学家住房成本是先锋的 3 倍。** ABH 是 BBH→RBH→ABH 的垂直堆叠。要算上 3 倍的供应链时间。
+6. **屏蔽类（RSH/TSH/PSH）虽然小众但必不可少。** 只有特定建筑需要，但需要的时候没有替代品。
+7. **AIR 之类的复杂零件对大多数玩家来说只能合同购买。** 从零造 AIR 需要 5 条不同的专业链 —— 几乎总是买比做便宜。

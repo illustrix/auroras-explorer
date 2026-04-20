@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ErrorRouteImport } from './routes/error'
+import { Route as CatalogRouteRouteImport } from './routes/catalog/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ShipmentIndexRouteImport } from './routes/shipment/index'
 import { Route as ProductionLineIndexRouteImport } from './routes/production-line/index'
@@ -17,6 +18,8 @@ import { Route as GroupIndexRouteImport } from './routes/group/index'
 import { Route as ConfigTransformIndexRouteImport } from './routes/config-transform/index'
 import { Route as CatalogIndexRouteImport } from './routes/catalog/index'
 import { Route as GroupChar123GroupIdChar125RouteRouteImport } from './routes/group/{-$groupId}/route'
+import { Route as CatalogDocsIndexRouteImport } from './routes/catalog/docs/index'
+import { Route as CatalogDocsSlugRouteImport } from './routes/catalog/docs/$slug'
 import { Route as GroupChar123GroupIdChar125PriceWatchIndexRouteImport } from './routes/group/{-$groupId}/price-watch/index'
 import { Route as GroupChar123GroupIdChar125PlanIndexRouteImport } from './routes/group/{-$groupId}/plan/index'
 import { Route as GroupChar123GroupIdChar125MembersIndexRouteImport } from './routes/group/{-$groupId}/members/index'
@@ -25,6 +28,11 @@ import { Route as GroupChar123GroupIdChar125ContractsIndexRouteImport } from './
 const ErrorRoute = ErrorRouteImport.update({
   id: '/error',
   path: '/error',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CatalogRouteRoute = CatalogRouteRouteImport.update({
+  id: '/catalog',
+  path: '/catalog',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -53,9 +61,9 @@ const ConfigTransformIndexRoute = ConfigTransformIndexRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const CatalogIndexRoute = CatalogIndexRouteImport.update({
-  id: '/catalog/',
-  path: '/catalog/',
-  getParentRoute: () => rootRouteImport,
+  id: '/',
+  path: '/',
+  getParentRoute: () => CatalogRouteRoute,
 } as any)
 const GroupChar123GroupIdChar125RouteRoute =
   GroupChar123GroupIdChar125RouteRouteImport.update({
@@ -63,6 +71,16 @@ const GroupChar123GroupIdChar125RouteRoute =
     path: '/group/{-$groupId}',
     getParentRoute: () => rootRouteImport,
   } as any)
+const CatalogDocsIndexRoute = CatalogDocsIndexRouteImport.update({
+  id: '/docs/',
+  path: '/docs/',
+  getParentRoute: () => CatalogRouteRoute,
+} as any)
+const CatalogDocsSlugRoute = CatalogDocsSlugRouteImport.update({
+  id: '/docs/$slug',
+  path: '/docs/$slug',
+  getParentRoute: () => CatalogRouteRoute,
+} as any)
 const GroupChar123GroupIdChar125PriceWatchIndexRoute =
   GroupChar123GroupIdChar125PriceWatchIndexRouteImport.update({
     id: '/price-watch/',
@@ -90,6 +108,7 @@ const GroupChar123GroupIdChar125ContractsIndexRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/catalog': typeof CatalogRouteRouteWithChildren
   '/error': typeof ErrorRoute
   '/group/{-$groupId}': typeof GroupChar123GroupIdChar125RouteRouteWithChildren
   '/catalog/': typeof CatalogIndexRoute
@@ -97,6 +116,8 @@ export interface FileRoutesByFullPath {
   '/group/': typeof GroupIndexRoute
   '/production-line/': typeof ProductionLineIndexRoute
   '/shipment/': typeof ShipmentIndexRoute
+  '/catalog/docs/$slug': typeof CatalogDocsSlugRoute
+  '/catalog/docs/': typeof CatalogDocsIndexRoute
   '/group/{-$groupId}/contracts/': typeof GroupChar123GroupIdChar125ContractsIndexRoute
   '/group/{-$groupId}/members/': typeof GroupChar123GroupIdChar125MembersIndexRoute
   '/group/{-$groupId}/plan/': typeof GroupChar123GroupIdChar125PlanIndexRoute
@@ -111,6 +132,8 @@ export interface FileRoutesByTo {
   '/group': typeof GroupIndexRoute
   '/production-line': typeof ProductionLineIndexRoute
   '/shipment': typeof ShipmentIndexRoute
+  '/catalog/docs/$slug': typeof CatalogDocsSlugRoute
+  '/catalog/docs': typeof CatalogDocsIndexRoute
   '/group/{-$groupId}/contracts': typeof GroupChar123GroupIdChar125ContractsIndexRoute
   '/group/{-$groupId}/members': typeof GroupChar123GroupIdChar125MembersIndexRoute
   '/group/{-$groupId}/plan': typeof GroupChar123GroupIdChar125PlanIndexRoute
@@ -119,6 +142,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/catalog': typeof CatalogRouteRouteWithChildren
   '/error': typeof ErrorRoute
   '/group/{-$groupId}': typeof GroupChar123GroupIdChar125RouteRouteWithChildren
   '/catalog/': typeof CatalogIndexRoute
@@ -126,6 +150,8 @@ export interface FileRoutesById {
   '/group/': typeof GroupIndexRoute
   '/production-line/': typeof ProductionLineIndexRoute
   '/shipment/': typeof ShipmentIndexRoute
+  '/catalog/docs/$slug': typeof CatalogDocsSlugRoute
+  '/catalog/docs/': typeof CatalogDocsIndexRoute
   '/group/{-$groupId}/contracts/': typeof GroupChar123GroupIdChar125ContractsIndexRoute
   '/group/{-$groupId}/members/': typeof GroupChar123GroupIdChar125MembersIndexRoute
   '/group/{-$groupId}/plan/': typeof GroupChar123GroupIdChar125PlanIndexRoute
@@ -135,6 +161,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/catalog'
     | '/error'
     | '/group/{-$groupId}'
     | '/catalog/'
@@ -142,6 +169,8 @@ export interface FileRouteTypes {
     | '/group/'
     | '/production-line/'
     | '/shipment/'
+    | '/catalog/docs/$slug'
+    | '/catalog/docs/'
     | '/group/{-$groupId}/contracts/'
     | '/group/{-$groupId}/members/'
     | '/group/{-$groupId}/plan/'
@@ -156,6 +185,8 @@ export interface FileRouteTypes {
     | '/group'
     | '/production-line'
     | '/shipment'
+    | '/catalog/docs/$slug'
+    | '/catalog/docs'
     | '/group/{-$groupId}/contracts'
     | '/group/{-$groupId}/members'
     | '/group/{-$groupId}/plan'
@@ -163,6 +194,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/catalog'
     | '/error'
     | '/group/{-$groupId}'
     | '/catalog/'
@@ -170,6 +202,8 @@ export interface FileRouteTypes {
     | '/group/'
     | '/production-line/'
     | '/shipment/'
+    | '/catalog/docs/$slug'
+    | '/catalog/docs/'
     | '/group/{-$groupId}/contracts/'
     | '/group/{-$groupId}/members/'
     | '/group/{-$groupId}/plan/'
@@ -178,9 +212,9 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CatalogRouteRoute: typeof CatalogRouteRouteWithChildren
   ErrorRoute: typeof ErrorRoute
   GroupChar123GroupIdChar125RouteRoute: typeof GroupChar123GroupIdChar125RouteRouteWithChildren
-  CatalogIndexRoute: typeof CatalogIndexRoute
   ConfigTransformIndexRoute: typeof ConfigTransformIndexRoute
   GroupIndexRoute: typeof GroupIndexRoute
   ProductionLineIndexRoute: typeof ProductionLineIndexRoute
@@ -194,6 +228,13 @@ declare module '@tanstack/react-router' {
       path: '/error'
       fullPath: '/error'
       preLoaderRoute: typeof ErrorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/catalog': {
+      id: '/catalog'
+      path: '/catalog'
+      fullPath: '/catalog'
+      preLoaderRoute: typeof CatalogRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -233,10 +274,10 @@ declare module '@tanstack/react-router' {
     }
     '/catalog/': {
       id: '/catalog/'
-      path: '/catalog'
+      path: '/'
       fullPath: '/catalog/'
       preLoaderRoute: typeof CatalogIndexRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof CatalogRouteRoute
     }
     '/group/{-$groupId}': {
       id: '/group/{-$groupId}'
@@ -244,6 +285,20 @@ declare module '@tanstack/react-router' {
       fullPath: '/group/{-$groupId}'
       preLoaderRoute: typeof GroupChar123GroupIdChar125RouteRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/catalog/docs/': {
+      id: '/catalog/docs/'
+      path: '/docs'
+      fullPath: '/catalog/docs/'
+      preLoaderRoute: typeof CatalogDocsIndexRouteImport
+      parentRoute: typeof CatalogRouteRoute
+    }
+    '/catalog/docs/$slug': {
+      id: '/catalog/docs/$slug'
+      path: '/docs/$slug'
+      fullPath: '/catalog/docs/$slug'
+      preLoaderRoute: typeof CatalogDocsSlugRouteImport
+      parentRoute: typeof CatalogRouteRoute
     }
     '/group/{-$groupId}/price-watch/': {
       id: '/group/{-$groupId}/price-watch/'
@@ -276,6 +331,22 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface CatalogRouteRouteChildren {
+  CatalogIndexRoute: typeof CatalogIndexRoute
+  CatalogDocsSlugRoute: typeof CatalogDocsSlugRoute
+  CatalogDocsIndexRoute: typeof CatalogDocsIndexRoute
+}
+
+const CatalogRouteRouteChildren: CatalogRouteRouteChildren = {
+  CatalogIndexRoute: CatalogIndexRoute,
+  CatalogDocsSlugRoute: CatalogDocsSlugRoute,
+  CatalogDocsIndexRoute: CatalogDocsIndexRoute,
+}
+
+const CatalogRouteRouteWithChildren = CatalogRouteRoute._addFileChildren(
+  CatalogRouteRouteChildren,
+)
+
 interface GroupChar123GroupIdChar125RouteRouteChildren {
   GroupChar123GroupIdChar125ContractsIndexRoute: typeof GroupChar123GroupIdChar125ContractsIndexRoute
   GroupChar123GroupIdChar125MembersIndexRoute: typeof GroupChar123GroupIdChar125MembersIndexRoute
@@ -302,10 +373,10 @@ const GroupChar123GroupIdChar125RouteRouteWithChildren =
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CatalogRouteRoute: CatalogRouteRouteWithChildren,
   ErrorRoute: ErrorRoute,
   GroupChar123GroupIdChar125RouteRoute:
     GroupChar123GroupIdChar125RouteRouteWithChildren,
-  CatalogIndexRoute: CatalogIndexRoute,
   ConfigTransformIndexRoute: ConfigTransformIndexRoute,
   GroupIndexRoute: GroupIndexRoute,
   ProductionLineIndexRoute: ProductionLineIndexRoute,

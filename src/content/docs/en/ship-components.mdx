@@ -1,0 +1,238 @@
+# Ship Components
+
+The deepest production chain in the game. A single ship requires **63 different components** across engines, hulls, kits, and shields. Many endgame engines sit **16+ production steps** from raw ores, and the rarest (HYR, VOE) take 5–7 days per unit. Understanding this chain is optional for most players — but if you want to sell ships or the parts to build them, this is the top of the pyramid.
+
+## Processing Buildings
+
+| Building | Name | Workforce | Area | Makes |
+|----------|------|-----------|------|-------|
+| **HWP** | Hull Welding Plant | 40 Sett + 10 Tech | 25 | Hull Plates (LHP, BHP, RHP, AHP, HHP, THP, BWH, AWH), ATP |
+| **SKF** | Ship Kit Factory | 40 Sett + 10 Tech | 40 | All 15 ship kits (cargo bays, fuel tanks, STL tanks) |
+| **SPP** | Spacecraft Prefab Plant | 50 Tech + 30 Eng | 60 | Ship parts (AGS, BGS), shield plates (APT, ARP, BPT, BRP, SRP) |
+| **SPF** | Spacecraft Propulsion Factory | 50 Eng + 20 Sci | 40 | Most engines (AEN, ENG, AFP, BFP, ANZ, NOZ, HNZ, FSE, HPR, HTE, HYR, VOE, etc.) |
+| **ECA** | Energy Component Assembly | 20 Sett + 20 Tech | 35 | Reactor cores (FIR, RAG, VOR) |
+| **UPF** | Unit Prefab Plant | 20 Pio + 50 Sett | 50 | HAM (habitation module) and unit cabins (CQS/CQM/CQL/CQT, FUN, etc.) |
+| **FS** | Fine Smithy | 50 Settler | 25 | AFR, BFR (small engine components) |
+| **WEL** | Welding Plant | 70 Pioneer | 19 | CHA, SSC, THP |
+| **GF** | Glass Furnace | 80 Settler | 27 | GCH, GNZ, GEN (glass-based engine parts) |
+| **ELP**/**CLR**/**PPF** | (electronics chain) | varies | varies | MFE, SFE, LFE, LFP |
+
+## Ship Hull Parts (13)
+
+The body of a ship — plates, shielding, and core structural components.
+
+### Hull Welding Plant (HWP) — Sett + Tech
+
+| Ticker | Name | Recipe | Time | Used For |
+|--------|------|--------|------|----------|
+| **LHP** | Lightweight Hull Plate | 12× AL + 1× HE → 4× LHP | 7.2h | Light ships — repair material |
+| **BHP** | Basic Hull Plate | 12× AL + 1× STL + 1× HE → 4× BHP | 7.2h | Small/mid ships |
+| **RHP** | Reinforced Hull Plate | 12× AL + 1× HE + 4× TI → 4× RHP | 16.8h | Mid-tier ships |
+| **AHP** | Advanced Hull Plate | 1× HE + 10× FET + 8× AL → 4× AHP | 21.6h | Heavy ships |
+| **HHP** | Heavy Hull Plate | 12× AL + 1× HE + 4× AST → 4× HHP | 12h | Heavy-duty ships |
+| **THP** | Thermal Hull Plate | 2× CF + 2× BE + 1× HE → 4× THP | 4.3h | Heat-resistant sections |
+| **BWH** | Basic Wall Hull | 4× CF + 2× FAL + 1× KV + 1× HE → 10× BWH | 7.2h | Interior walls |
+| **AWH** | Advanced Wall Hull | 1× HE + 4× CTF + 2× TI + 2× TK → 10× AWH | 12h | Advanced interior |
+
+### Welding Plant (WEL)
+
+| Ticker | Name | Recipe | Time | Used For |
+|--------|------|--------|------|----------|
+| **SSC** | Structural Spacecraft Component | 1× HE + 20× NFI + 2× AL → 6× SSC | 2.4h | Universal repair material — every ship uses it |
+| **ATP** | Advanced Thruster Part | 2× CTF + 2× BOS + 1× HE → 2× ATP | 6h | Used in AFP (engine fuel port) |
+
+### Spacecraft Prefab Plant (SPP)
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **AGS** | Advanced Gauge System | 20× AST + 8× TK + 100× PG → 1× AGS | 48h |
+| **BGS** | Basic Gauge System | 14× FAL + 80× PG + 4× KV → 1× BGS | 36h |
+
+### Unit Prefab Plant (UPF)
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **HAM** | Habitation Module | 1× BSU + 1× CPU + 1× TCU + 1× WOR + 1× FUN + 1× SU + 1000× PFE → 1× HAM | **360h** |
+
+> **HAM takes 15 days.** 6 different unit prefabs (BSU/CPU/TCU/WOR/FUN/SU) + **1000 PFE** — one of the heaviest recipes in the game by input count and cycle time.
+
+## Ship Navigation & Control (2)
+
+| Ticker | Name | Plant | Recipe | Time |
+|--------|------|-------|--------|------|
+| **NV1** | Nav Computer 1 | APF | 1× SNM + 1× WS → 1× NV1 | 36h |
+| **NV2** | Nav Computer 2 | AAF | 1× SNM + 1× BMF → 1× NV2 | 48h |
+
+SNM comes from SL (Scientist software). Without a scientist base, you can't make ship nav computers.
+
+## Ship Kits (15) — Cargo Holds, Fuel Tanks
+
+All 15 kits are made in **SKF** (Ship Kit Factory). These correspond to physical storage on a ship — cargo bays, fuel tanks, STL fuel storage.
+
+### Cargo Bays (7 sizes)
+
+Cargo bay kits used in ship building.
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **TCB** | Tiny Cargo Bay | 20× FE + 4× MFK → 1× TCB | 9.6h |
+| **VCB** | Very Small Cargo Bay | 20× MFK + 200× FET → 1× VCB | 19.2h |
+| **SCB** | Small Cargo Bay | 50× FAL + 12× MFK → 1× SCB | 14.4h |
+| **MCB** | Medium Cargo Bay | 16× MFK + 100× AST → 1× MCB | 15.6h |
+| **LCB** | Large Cargo Bay | 200× AST + 20× MFK → 1× LCB | 18h |
+| **HCB** | Heavy Cargo Bay | 100× MFK + 600× WAL → 1× HCB | 48h |
+| **WCB** | Wide Cargo Bay | 20× MFK + 100× FET + 100× AST → 1× WCB | 19.2h |
+
+### STL Fuel Tanks (3 sizes)
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **SSL** | Small STL Tank | 20× TI + 2× MFK → 1× SSL | 12h |
+| **MSL** | Medium STL Tank | 4× MFK + 50× FET → 1× MSL | 16.8h |
+| **LSL** | Large STL Tank | 125× FET + 8× MFK → 1× LSL | 21.6h |
+
+### FTL Fuel Tanks (3 sizes)
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **SFL** | Small FTL Tank | 5× ZR + 1× MFK → 1× SFL | 7.2h |
+| **MFL** | Medium FTL Tank | 10× ZR + 4× MFK → 1× MFL | 12h |
+| **LFL** | Large FTL Tank | 20× ZR + 8× MFK → 1× LFL | 16.8h |
+
+### Other
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **VSC** | Ventilation Sub-component | 35× FE + 8× MFK → 1× VSC | 12h |
+| **VFT** | Ventilation Fuel Tank | 50× ZR + 80× SRP + 24× MFK → 1× VFT | 72h |
+
+> **MFK is in every kit.** Every single ship kit requires MFK (Medium Fastener Kit). Plan MFK supply generously or everything stalls.
+
+## Engines (28)
+
+This is the main reason ships are so complex. Engines split into several categories by size, fuel type, and tech level.
+
+### Simple Engine Parts (FS / WEL / GF / CLR / PPF / ELP)
+
+| Ticker | Name | Plant | Recipe | Time |
+|--------|------|-------|--------|------|
+| **AFR** | Aux FTL Resonator | FS | 1× AL + 1× ZR → 1× AFR | 14.4h |
+| **BFR** | Basic FTL Resonator | FS | 1× AL + 1× STL → 1× BFR | 12h |
+| **CHA** | Chamber | WEL | 1× HE + 1× GV + 10× BOS → 1× CHA | 10.8h |
+| **NOZ** | Nozzle | SPF | 1× CHA + 10× FAL + 2× MFK → 1× NOZ | 12h |
+| **HNZ** | Heavy Nozzle | SPF | 20× WAL + 4× MFK + 1× CHA → 1× HNZ | 21.6h |
+| **GNZ** | Glass Nozzle | GF | 20× RG + 1× GCH + 1× TI → 1× GNZ | 36h |
+| **GCH** | Glass Chamber | GF | 20× RG + 1× GV → 1× GCH | 16.8h |
+| **ANZ** | Advanced Nozzle | SPF | 1× CHA + 4× MFK + 20× FET → 1× ANZ | 16.8h |
+| **AFP** | Aux Fuel Pipe | SPF | 50× PG + 10× ATP + 1× SFK → 1× AFP | 9.6h |
+| **BFP** | Basic Fuel Pipe | SPF | 50× PG + 1× SFK + 5× THP → 1× BFP | 7.2h |
+| **LFP** | Liquid Fuel Piping | PPF | 1× SFK + 10× THF + 50× PG → 1× LFP | 12h |
+| **LFE** | Low Flow Emitter | ELP | 3× CTF + 1× CBL → 1× LFE | 12h |
+| **MFE** | Medium Flow Emitter | CLR | 4× CF + 1× CBM → 1× MFE | 9.6h |
+| **SFE** | Small Flow Emitter | CLR | 2× CF + 1× CBS → 1× SFE | 4.8h |
+
+### STL Engines (SPF — Eng + Sci)
+
+The sublight engines. Named by size/power class.
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **ENG** | Engine (Standard) | 10× AST + 1× MFK + 1× ACS + 4× NOZ + 4× BFP → 1× ENG | 19.2h |
+| **AEN** | Advanced Engine | 20× FET + 1× ACS + 4× ANZ + 4× AFP + 1× MFK → 1× AEN | 48h |
+| **FSE** | Fuel Saving Engine | 1× ACS + 1× MFK + 6× NOZ + 25× BRO + 6× LFP → 1× FSE | 24h |
+| **HTE** | High Thrust Engine | 20× WAL + 1× MFK + 1× ACS + 8× AFP + 4× HNZ → 1× HTE | 96h |
+| **GEN** | Glass Engine | 1× MFK + 10× THF + 4× GNZ + 4× LFP + 50× NG → 1× GEN | 30h |
+
+### FTL Engines (SPF — Eng + Sci)
+
+Used for interstellar travel.
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **RCT** | Reactor (FTL core) | 1× CBS + 1× RAG + 10× AST → 1× RCT | 62.4h |
+| **HPR** | High Performance Reactor | 1× FIR + 1× CBM + 20× STL → 1× HPR | 120h |
+| **QCR** | Quickcharge Reactor | 1× CBS + 20× BGO + 1× RAG → 1× QCR | 72h |
+| **HYR** | Hyper Reactor | 2× FIR + 20× WAL + 1× CBL → 1× HYR | **168h** |
+| **VOE** | Void Engine | 1× VOR + 40× WAL + 1× CBL → 1× VOE | **240h** |
+
+### Reactor Cores (ECA)
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **RAG** | Reactor Grid | 4× BFR + 6× CF + 4× ETC + 1× RCS + 1× ACS + 8× AST → 1× RAG | 60h |
+| **FIR** | Fusion Ignition Reactor | 4× EES + 1× RCS + 8× AFR + 10× WAL + 10× CTF + 1× ACS → 1× FIR | 84h |
+| **VOR** | Void Reactor | 20× CTF + 1× AFR + 1× PFG + 10× KRE + 1× RCS + 1× ACS → 1× VOR | **192h** |
+| **RCS** | Reaction Control System | 1× OS + 1× SAR + 1× BWS + 1× DA → 1× RCS | 48h |
+
+> **VOE + VOR = 432 hours (18 days).** The top-tier FTL engine requires 240 hours to assemble from a Void Reactor that itself takes 192 hours. One VOE = one 18-day production window.
+
+## Ship Shields (7) — SPP & HWP
+
+| Ticker | Name | Plant | Recipe | Time |
+|--------|------|-------|--------|------|
+| **BPT** | Basic Plate Top | SPP | 5× THP + 20× THF → 12× BPT | 8.4h |
+| **APT** | Advanced Plate Top | SPP | 30× THF + 5× ATP → 12× APT | 12h |
+| **BRP** | Basic Radiation Plate | SPP | 2× KV + 5× LST → 12× BRP | 9.6h |
+| **ARP** | Advanced Radiation Plate | SPP | 2× TK + 5× LST → 10× ARP | 12h |
+| **SRP** | Superb Radiation Plate | SPP | 5× TA + 5× LST + 5× W → 10× SRP | 12h |
+| **BWH** | Basic Wall (already listed in hulls) | HWP | — | — |
+| **AWH** | Advanced Wall (already listed in hulls) | HWP | — | — |
+
+## Ship Production Chain
+
+import { Mermaid } from '@/components/mdx/mermaid'
+
+<Mermaid chart={`
+graph LR
+  Metals[Metals & Alloys\nFE AL STL TI W\nFET AST FAL WAL] --> Hulls[Hull Parts\nHWP]
+  Plastics[Plastics\nPE PG NFI] --> Hulls
+
+  Metals --> Kits[Ship Kits\nSKF]
+  MFK[MFK\nfrom FS] --> Kits
+  Kits --> CargoBays[Cargo Bays\n+ Fuel Tanks]
+
+  Electronics[Electronics\nACS RCS SAR] --> Engines[Engines\nSPF Eng+Sci]
+  Metals --> Engines
+  EnginePrts[Parts\nCHA NOZ BFP AFP\nAFR CTF CF] --> Engines
+  Engines --> STLEngines[STL Engines\nENG AEN FSE HTE GEN]
+
+  ECA[ECA\nRAG FIR VOR] --> FTLEngines[FTL Reactors\nRCT HPR QCR HYR VOE]
+  Software[Software\nSNM WAI] --> NavComp[Nav Computers\nNV1 NV2]
+
+  Hulls --> ShipBuild[Ship Build\nSpaceship Yard]
+  CargoBays --> ShipBuild
+  STLEngines --> ShipBuild
+  FTLEngines --> ShipBuild
+  NavComp --> ShipBuild
+  Shields[Shields\nBPT APT SRP etc.] --> ShipBuild
+  HAM[HAM\nHabitation 360h] --> ShipBuild
+
+  style Metals fill:#b08620,stroke:#e0b040,color:#fff
+  style Plastics fill:#b08620,stroke:#e0b040,color:#fff
+  style MFK fill:#b08620,stroke:#e0b040,color:#fff
+  style Electronics fill:#b08620,stroke:#e0b040,color:#fff
+  style Software fill:#b08620,stroke:#e0b040,color:#fff
+  style EnginePrts fill:#b08620,stroke:#e0b040,color:#fff
+  style Hulls fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Kits fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Engines fill:#2d6a4f,stroke:#52b788,color:#fff
+  style ECA fill:#2d6a4f,stroke:#52b788,color:#fff
+  style CargoBays fill:#3b6ea5,stroke:#6aacf0,color:#fff
+  style STLEngines fill:#c05030,stroke:#e07050,color:#fff
+  style FTLEngines fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style NavComp fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Shields fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+  style HAM fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+  style ShipBuild fill:#8b4513,stroke:#d2691e,color:#fff
+`} />
+
+## Tips
+
+1. **Don't try to vertically integrate.** With 63 components across 10+ buildings, one company cannot efficiently produce all of them. Specialize in 2–3 categories.
+2. **SSC is the universal ship product.** Every ship uses it for repairs. 2.4h cycle in WEL (Pioneer workforce) — start here if you want ship business with low entry.
+3. **SKF is the simplest ship-chain building.** Kits all follow a similar pattern (metal + MFK), Settler/Tech workforce, moderate times. Good first ship factory.
+4. **HAM is a contract item.** At 360h and 7 unit prefab inputs, it's rarely economical to build speculatively. Only make it on contract.
+5. **WAI / SNM = Scientist gate.** Nav computers (NV1/NV2) are locked behind SL. Plan scientist housing before investing in ship electronics.
+6. **VOE/HYR are 10-day+ cycles.** If you commit, expect a single ship factory to produce ~3 per month at maximum.
+7. **ACS is the engine unlocker.** ACS needs WAI + SAR + FC + THF. Without ACS, you can't make ENG, AEN, FSE, FIR, RAG, or HTE. It's the choke point.
+8. **KV (Kevlar textile) shows up in shields.** BRP and BWH use KV — from CLF (Clothing Factory). Don't forget the textile chain when planning shield production.

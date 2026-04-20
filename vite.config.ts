@@ -1,7 +1,11 @@
 import path from 'node:path'
+import mdx from '@mdx-js/rollup'
 import tailwindcss from '@tailwindcss/vite'
 import { tanstackRouter } from '@tanstack/router-plugin/vite'
 import react from '@vitejs/plugin-react-swc'
+import rehypeSlug from 'rehype-slug'
+import remarkFrontmatter from 'remark-frontmatter'
+import remarkGfm from 'remark-gfm'
 import icons from 'unplugin-icons/vite'
 import { defineConfig } from 'vite'
 
@@ -11,6 +15,10 @@ export default defineConfig({
     tanstackRouter({
       target: 'react',
       autoCodeSplitting: true,
+    }),
+    mdx({
+      remarkPlugins: [remarkGfm, remarkFrontmatter],
+      rehypePlugins: [rehypeSlug],
     }),
     react(),
     tailwindcss(),

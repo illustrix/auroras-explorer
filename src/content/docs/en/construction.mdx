@@ -1,0 +1,191 @@
+# Construction Materials
+
+Every building you place on a planet requires **construction prefabs** — and those prefabs consume **parts** and **materials**. This chain has no endgame CX product; it exists purely to support base expansion. But it's huge: **44 items** across prefabs, parts, and materials, dominated by 4 tiered Prefab Plants.
+
+## The Prefab Tier System
+
+Prefabs come in 4 tiers, matching the 4 workforce tiers they house:
+
+| Tier | Plant | Prefix | Workforce | Houses |
+|------|-------|--------|-----------|--------|
+| **Basic** | PP1 (Prefab Plant 1) | `B-` | 80 Pioneer | Pioneer habs (HB1, HBB) |
+| **Lightweight** | PP2 | `L-` | 25 Pio + 25 Sett | Settler/Technician habs (HB2, HB3) |
+| **Reinforced** | PP3 | `R-` | 20 Sett + 40 Tech | Engineer hab (HB4), specialty |
+| **Advanced** | PP4 | `A-` | 40 Tech + 30 Eng | Scientist hab (HB5), luxury (HBL, HBM) |
+
+Each tier makes 4 standard prefabs — **Bulkhead (BH)**, **Dome (DE)**, **Support (SE)**, **Tower (TA)** — in its corresponding letter prefix.
+
+## Standard Prefabs (16)
+
+### Basic Tier (PP1) — Pioneer workforce
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **BBH** | Basic Bulkhead | 1× LST + 2× FE → 1× BBH | 7.9h |
+| **BDE** | Basic Dome | 150× PE → 1× BDE | 7.2h |
+| **BSE** | Basic Support | 2× LST + 1× FE → 1× BSE | 6h |
+| **BTA** | Basic Tower | 50× PE + 1× FE → 1× BTA | 3.6h |
+
+### Lightweight Tier (PP2) — Pioneer + Settler
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **LBH** | Lightweight Bulkhead | 3× AL + 35× PE → 1× LBH | 6h |
+| **LDE** | Lightweight Dome | 3× AL + 1× NL → 1× LDE | 6h |
+| **LSE** | Lightweight Support | 3× AL + 120× PG → 1× LSE | 6h |
+| **LTA** | Lightweight Tower | 5× GL + 1× AL → 1× LTA | 6h |
+
+### Reinforced Tier (PP3) — Settler + Technician
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **RBH** | Reinforced Bulkhead | 1× BBH + 50× EPO + 1× STL → 1× RBH | 9.6h |
+| **RDE** | Reinforced Dome | 1× LDE + 100× EPO + 1× KV → 2× RDE | 16.8h |
+| **RSE** | Reinforced Support | 2× BSE + 1× STL + 225× EPO → 2× RSE | 16.8h |
+| **RTA** | Reinforced Tower | 1× LTA + 6× RG → 1× RTA | 9.6h |
+
+### Advanced Tier (PP4) — Technician + Engineer
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **ABH** | Advanced Bulkhead | 2× RBH + 125× NR → 2× ABH | 16.8h |
+| **ADE** | Advanced Dome | 2× KV + 2× LDE → 2× ADE | 14.4h |
+| **ASE** | Advanced Support | 1× RSE + 2× TI → 1× ASE | 13.2h |
+| **ATA** | Advanced Tower | 1× RTA + 1× NG → 1× ATA | 13.2h |
+
+> **Upgrade chain:** Many higher-tier prefabs **consume the lower tier** (RBH uses BBH, ABH uses RBH). You can often run vertical production — PP1→PP3→PP4 on one planet for ABH.
+
+## Specialty Prefabs (4)
+
+Non-tiered prefabs for specific purposes:
+
+| Ticker | Name | Plant | Recipe | Used For |
+|--------|------|-------|--------|----------|
+| **HSE** | Heavy Support | PP3 | 1× TCS + 2× LSE → 2× HSE | Heavy load structures (TOR, etc.) |
+| **MGC** | Magnetic Coil | PP3 | 1× LDE + 1× MAG → 1× MGC | Electromagnetic buildings |
+| **PSH** | Plastic Shielding | PP3 | 250× NFI + 1× TI → 1× PSH | Reactor shielding |
+| **RSH** | Radiation Shielding | PP4 | 1× TA + 1× STL + 1× LST → 1× RSH | Nuclear buildings |
+| **TSH** | Thermal Shielding | PP4 | 2× THP + 2× LBH + 150× PE → 1× TSH | High-temp buildings |
+
+## Construction Parts (12)
+
+Small parts used inside larger assemblies. Mostly from **WEL** (Welding Plant) and **FS** (Fine Smithy):
+
+| Ticker | Name | Plant | Recipe | Time |
+|--------|------|-------|--------|------|
+| **GC** | Glass Canister | WEL | 1× FE + 1× HE + 1× AL → 10× GC | 7.2h |
+| **GV** | Glass Vessel | WEL | 1× HE + 1× AL → 1× GV | 6h |
+| **TRU** | Truss | WEL | 2× AL + 1× HE → 6× TRU | 4.8h |
+| **FC** | Flow Controller | WEL | 1× AL + 1× BSE + 1× HE → 1× FC | 9.6h |
+| **FLP** | Fluid Piping | WEL | 1× AL + 1× FE + 1× HE → 6× FLP | 12h |
+| **MHL** | Metal Hose | WEL | 1× HE + 1× FE + 1× I → 1× MHL | 16.8h |
+| **FLO** | Floor | FS | 10× AL + 4× STL → 1× FLO | 19.2h |
+| **LIT** | Light Tube | GF | 16× NE + 8× RG → 1× LIT | 19.2h |
+| **AEF** | Atm Emission Filter | PP2 | 50× PG + 1× NE → 1× AEF | 12h |
+| **DEC** | Decorative Element | POL | 70× EPO + 150× PG → 1× DEC | 12h |
+| **TCS** | TC Supply | TNP | 1× TC → 3× TCS | 12h |
+| **AIR** | Air Recycler | APF | 1× WAI + 1× HCP + 1× BAC + 1× SAR + 1× GV + 1× NS + 1× H2O + 1× FC + 1× PCB → 1× AIR | 60h |
+
+> **AIR is the most complex single item in the game** — 9 inputs across 5 production chains. Very few players make it themselves.
+
+## Construction Materials (11)
+
+Bulk inputs that feed prefab production:
+
+| Ticker | Name | Building | Recipe | Time |
+|--------|------|----------|--------|------|
+| **EPO** | Epoxy | POL | 1× C + 1× O + 1× CL + 1× H → 50× EPO | 24h |
+| **GL** | Glass | GF | 1× FLX + 2× SIO + 1× NA → 12× GL | 17.3h |
+| **INS** | Insulation | PP3 | 1× THF + 1× AR + 100× PE → 24× INS | 6h |
+| **MCG** | Mineral Concrete | BMP | 2× SIO + 4× LST → 50× MCG | 6h |
+| **MTC** | Metal Coated Plastic | CLR | 2× NCS → 2× MTC | 9.6h |
+| **NCS** | Non-Conducting Substrate | CLR | 1× C → 100× NCS | 14.4h |
+| **NFI** | Nano Fiber | CLR | 2× SI + 10× C → 1200× NFI | 19.2h |
+| **NG** | Non-Flammable Glass | GF | 10× GL + 10× NCS → 10× NG | 28.8h |
+| **RG** | Reinforced Glass | GF | 15× PG + 1× SEN + 10× GL → 10× RG | 27.6h |
+| **SEA** | Sealant | BMP | 1× SI + 1× S + 30× PG → 30× SEA | 7.2h |
+
+**CMK** (Construction Materials Kit) appears in the material list but has no production recipe — it's a legacy bundle or contract-only item.
+
+## Habitation Costs (What Each Hab Needs)
+
+The real question: how much prefab to build each hab type?
+
+| Hab | For | Prefab Bill |
+|-----|-----|-------------|
+| **HB1** | Pioneer | 4× BBH + 2× BDE + 2× BSE + 1× BTA |
+| **HBB** | Pioneer (Barracks) | 4× BBH + 4× BDE + 2× LSE + 2× LTA |
+| **HB2** | Settler | 2× BBH + 2× BDE + 2× BSE + 2× BTA + 2× TRU |
+| **HB3** | Technician | 4× LBH + 4× LDE + 4× LSE + 8× LTA |
+| **HBC** | Tech (Commune) | 4× LBH + 2× LDE + 2× RSE + 4× RTA + 2× TRU |
+| **HB4** | Engineer | 6× RBH + 6× RDE + 4× RSE + 4× RTA |
+| **HBM** | Eng (Managers) | 8× RBH + 8× RDE + 6× ASE + 4× ATA |
+| **HB5** | Scientist | 6× ABH + 6× ADE + 4× ASE + 4× ATA |
+| **HBL** | Sci (Luxury) | 8× ABH + 8× ADE + 6× ASE + 6× ATA |
+
+> **Tip:** HB1 uses 9 prefabs; HBL uses 28. Housing a top-tier colony takes **~3× the construction** of a basic one. This is one reason late-game bases scale so slowly.
+
+## Build Chain
+
+import { Mermaid } from '@/components/mdx/mermaid'
+
+<Mermaid chart={`
+graph LR
+  Raw[Raw Materials\nLST FE AL STL TI TA\nC O CL H SIO NA] --> Mats[Materials\nEPO GL MCG NCS\nNFI RG NG INS SEA]
+  Raw --> Plastic[Plastics\nPE PG NR NL NFI]
+
+  Mats --> PP1[PP1\nPioneer]
+  Plastic --> PP1
+  PP1 --> Basic[B-Tier\nBBH BDE BSE BTA]
+
+  Mats --> PP2[PP2\nPio+Sett]
+  Plastic --> PP2
+  PP2 --> Light[L-Tier\nLBH LDE LSE LTA]
+
+  Basic --> PP3[PP3\nSett+Tech]
+  Light --> PP3
+  Mats --> PP3
+  PP3 --> Reinforced[R-Tier\nRBH RDE RSE RTA]
+  PP3 --> Special[Specialty\nHSE MGC PSH]
+
+  Reinforced --> PP4[PP4\nTech+Eng]
+  Light --> PP4
+  Mats --> PP4
+  PP4 --> Advanced[A-Tier\nABH ADE ASE ATA]
+  PP4 --> Shield[Shields\nRSH TSH]
+
+  Basic --> Habs1[HB1 HBB]
+  Light --> Habs2[HB2 HB3 HBC]
+  Reinforced --> Habs3[HB4 HBM HBC]
+  Advanced --> Habs4[HB5 HBL HBM]
+  Shield --> Facilities[Reactors &\nSpecialty Bldgs]
+
+  style Raw fill:#b08620,stroke:#e0b040,color:#fff
+  style Plastic fill:#b08620,stroke:#e0b040,color:#fff
+  style Mats fill:#3b6ea5,stroke:#6aacf0,color:#fff
+  style PP1 fill:#2d6a4f,stroke:#52b788,color:#fff
+  style PP2 fill:#2d6a4f,stroke:#52b788,color:#fff
+  style PP3 fill:#2d6a4f,stroke:#52b788,color:#fff
+  style PP4 fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Basic fill:#c05030,stroke:#e07050,color:#fff
+  style Light fill:#c05030,stroke:#e07050,color:#fff
+  style Reinforced fill:#c05030,stroke:#e07050,color:#fff
+  style Advanced fill:#c05030,stroke:#e07050,color:#fff
+  style Special fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Shield fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Habs1 fill:#8b4513,stroke:#d2691e,color:#fff
+  style Habs2 fill:#8b4513,stroke:#d2691e,color:#fff
+  style Habs3 fill:#8b4513,stroke:#d2691e,color:#fff
+  style Habs4 fill:#8b4513,stroke:#d2691e,color:#fff
+  style Facilities fill:#8b4513,stroke:#d2691e,color:#fff
+`} />
+
+## Tips
+
+1. **PP1+PP2 with Pioneer and Settler workforce is a solid starter business.** You can sell BBH/LBH/LDE etc. to every growing colony in the region.
+2. **EPO is the glue of the game.** Every R- and A-tier prefab uses massive quantities of EPO. A dedicated POL for EPO is a common early-mid-game investment.
+3. **PE demand is enormous.** BDE alone uses 150 PE per unit. If you're in plastics, PE is the volume leader.
+4. **RBH and RSE use 50–225 EPO.** The EPO cost dominates these recipes — price them accordingly.
+5. **Scientist housing is 3× the cost of Pioneer.** ABH is a vertical stack through BBH→RBH→ABH. Factor in 3× the supply chain time.
+6. **Shielding (RSH/TSH/PSH) is niche but necessary.** Only specific buildings need them, but when they do, there's no substitute.
+7. **AIR and similar complex parts are contract-only for most players.** Making AIR from scratch requires 5 different specialty chains — almost always cheaper to buy.

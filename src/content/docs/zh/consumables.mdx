@@ -1,0 +1,187 @@
+# 消耗品
+
+工人不会免费给你干活 —— **29 种消耗品**负责让他们吃饱、穿暖、健康、开心。缺少任何一种必需消耗品，对应等级的建筑就会减速或停工。自给自足通常比从 CX 买更省钱；给**其他**玩家的工人供货则是稳定的长线生意。
+
+## 工人等级
+
+PrUn 有 5 个工人等级，每级都有严格的消耗需求（每 100 人每天）：
+
+### 先锋 (PIONEER)
+
+| 代号 | 消耗品 | 类型 | 每 100/天 |
+|------|--------|------|-----------|
+| **DW** | 饮用水 | 基础 | 4.0 |
+| **RAT** | 口粮 | 基础 | 4.0 |
+| **OVE** | 连体工服 | 基础 | 0.5 |
+| **COF** | 咖啡 | 奢侈（饮品） | 0.5 |
+| **PWO** | 动力工服 | 奢侈（衣物） | 0.2 |
+
+### 移民 (SETTLER)
+
+| 代号 | 消耗品 | 类型 | 每 100/天 |
+|------|--------|------|-----------|
+| **DW** | 饮用水 | 基础 | 5.0 |
+| **RAT** | 口粮 | 基础 | 6.0 |
+| **EXO** | 外骨骼 | 基础 | 0.5 |
+| **PT** | 动力工具 | 基础 | 0.5 |
+| **KOM** | 康普茶 | 奢侈（饮品） | 1.0 |
+| **REP** | 维修包 | 奢侈（工具） | 0.2 |
+
+### 技工 (TECHNICIAN)
+
+| 代号 | 消耗品 | 类型 | 每 100/天 |
+|------|--------|------|-----------|
+| **DW** | 饮用水 | 基础 | 7.5 |
+| **RAT** | 口粮 | 基础 | 7.0 |
+| **HMS** | 防护服 | 基础 | 0.5 |
+| **MED** | 药品 | 基础 | 0.5 |
+| **SCN** | 扫描仪 | 基础 | 0.1 |
+| **ALE** | 麦酒 | 奢侈（饮品） | 1.0 |
+| **SC** | 智能芯片 | 奢侈（健康） | 0.1 |
+
+### 工程师 (ENGINEER)
+
+| 代号 | 消耗品 | 类型 | 每 100/天 |
+|------|--------|------|-----------|
+| **DW** | 饮用水 | 基础 | 10.0 |
+| **FIM** | 精制餐 | 基础 | 7.0 |
+| **HSS** | 高规格工服 | 基础 | 0.2 |
+| **MED** | 药品 | 基础 | 0.5 |
+| **PDA** | 掌上终端 | 基础 | 0.1 |
+| **GIN** | 金酒 | 奢侈（饮品） | 1.0 |
+| **VG** | 生命凝胶 | 奢侈（健康） | 0.2 |
+
+### 科学家 (SCIENTIST)
+
+| 代号 | 消耗品 | 类型 | 每 100/天 |
+|------|--------|------|-----------|
+| **DW** | 饮用水 | 基础 | 10.0 |
+| **MEA** | 高级餐 | 基础 | 7.0 |
+| **LC** | 实验室大褂 | 基础 | 0.2 |
+| **MED** | 药品 | 基础 | 0.5 |
+| **WS** | 工作站 | 基础 | 0.05 |
+| **WIN** | 葡萄酒 | 奢侈（饮品） | 1.0 |
+| **NST** | 益智药 | 奢侈（健康） | 0.1 |
+
+> **基础 vs 奢侈：** 基础消耗品是**必需**的 —— 缺了对应等级的建筑就停工。奢侈品是**可选**的，但能提升效率。每个等级都有食物 + 水 + 衣物 + 可选工具/健康品，再加一种标志性饮品。
+
+## 基础消耗品（14 种）
+
+| 代号 | 名称 | 建筑 | 配方 |
+|------|------|------|------|
+| **DW** | 饮用水 | FP | 10× H2O → 7× DW (2.4h) 或 1× PG + 10× H2O → 10× DW |
+| **RAT** | 口粮 | FP | 1× GRN + 1× ALG + 1× NUT → 10× RAT (6h) |
+| **FIM** | 精制餐 | FP | 1× HER + 2× RAT → 2× FIM (12h) |
+| **MEA** | 高级餐 | FP | 1× MTP + 2× FIM → 2× MEA (15.6h) |
+| **OVE** | 连体工服 | BMP | 10× PG + 1× COT → 30× OVE (7.2h) |
+| **EXO** | 外骨骼 | BMP | 1× SWF + 1× AL + 10× OVE → 10× EXO (3.6h) |
+| **HMS** | 防护服 | CLF | 6× GC + 1× IND + 1× NL → 10× HMS (16.8h) |
+| **HSS** | 高规格工服 | CLF | 1× BLE + 5× NL + 5× PCB + 5× SEN → 20× HSS (24h) |
+| **LC** | 实验室大褂 | CLF | 2× SIL + 10× PCB + 10× HD + 1× BLE → 10× LC (19.2h) |
+| **PT** | 动力工具 | BMP | 1× STL + 1× W → 15× PT (8.4h) |
+| **SCN** | 扫描仪 | EDM | 100× PE + 4× CU → 8× SCN (28.8h) |
+| **PDA** | 掌上终端 | APF | 1× LD + 2× HPC → 32× PDA (14.4h) |
+| **WS** | 工作站 | APF | 1× DA + 1× BWS → 20× WS (43.2h) |
+| **MED** | 药品 | CHP | 1× HER + 50× PE + 1× AL + 4× COT → 16× MED (19.2h) |
+
+## 奢侈消耗品（10 种）
+
+| 代号 | 名称 | 建筑 | 配方 |
+|------|------|------|------|
+| **COF** | 咖啡 | FP | 1× CAF + 3× DW → 3× COF (7.2h) |
+| **KOM** | 康普茶 | FER | 4× DW + 1× AMM + 1× HER → 6× KOM (8.4h) |
+| **ALE** | 麦酒 | FER | 1× HOP + 1× AMM + 3× DW + 2× GRN → 6× ALE (15.4h) |
+| **GIN** | 金酒 | FER | 1× ES + 2× GRN + 2× DW + 1× AMM → 4× GIN (15.6h) |
+| **WIN** | 葡萄酒 | FER | 15× GRA + 15× REA + 20× DW + 1× AMM → 10× WIN (19.2h) |
+| **PWO** | 动力工服 | BMP | 50× PG + 1× COT → 20× PWO (7.2h) |
+| **REP** | 维修包 | BMP | 1× SFK + 1× MFK + 10× INS → 4× REP (6h) |
+| **SC** | 智能芯片 | CHP | 1× MG + 1× TA + 2× CA → 20× SC (15.6h) |
+| **VG** | 生命凝胶 | IVP | 2× VIT + 2× BAC + 4× REA + 2× BL → 20× VG (24h) |
+| **NST** | 益智药 | LAB | 1× ES + 1× THF + 1× ALG → 4× NST (12h) |
+
+> **酒厂规律：** ALE、GIN、WIN、KOM 都需要 **AMM**（氨）作为发酵剂。建个 CHP 或进口 AMM —— 别低估这项。四种都需要 DW，所以酒厂星球通常自己运营一个 FP 来出水。
+
+## 消耗品捆包（5 种）
+
+捆包是在 **PAC**（包装）建筑中制作的**预打包**消耗品组合。主要用于玩家间供货合同 —— 一个 COLONY 消耗方案 = 每天一个捆包。
+
+| 代号 | 用途 | 配方 |
+|------|------|------|
+| **PBU** | 先锋 | 50× PE + 5× COF + 40× DW + 40× RAT + 5× OVE + 2× PWO → 1× PBU (4.8h) |
+| **SBU** | 移民 | 60× RAT + 100× PE + 10× KOM + 50× DW + 5× EXO + 5× PT + 2× REP → 1× SBU (5.3h) |
+| **TBU** | 技工 | 70× RAT + 1× PSS + 1× SCN + 1× SC + 40× PE + 5× HMS + 75× DW + 5× MED + 10× ALE → 1× TBU (6h) |
+| **EBU** | 工程师 | 4× PSS + 70× FIM + 1× PDA + 10× GIN + 160× PE + 5× MED + 2× HSS + 100× DW + 2× VG → 1× EBU (6.7h) |
+| **CBU** | 科学家 | 10× WIN + 280× PE + 5× MED + 2× LC + 1× WS + 100× DW + 70× MEA + 8× PSS + 1× NST → 1× CBU (7.2h) |
+
+> **PE（聚乙烯）是包装材料。** 每个捆包要用 50–280 PE —— 通常是最大的单项成本。
+
+## 生产建筑
+
+| 建筑 | 名称 | 工人 | 生产 |
+|------|------|------|------|
+| **FP** | 食品加工厂 | 10 先锋 | DW, RAT, FIM, MEA, COF |
+| **BMP** | 基础材料厂 | 20 先锋 | OVE, EXO, PT, PWO, REP |
+| **CLF** | 服装厂 | 移民 | HMS, HSS, LC |
+| **FER** | 发酵厂 | 移民 | ALE, GIN, WIN, KOM |
+| **CHP** | 化工厂 | 移民 | MED, SC |
+| **APF** | 电器厂 | 技工 | PDA, WS |
+| **EDM** | 电子设备厂 | 技工 | SCN |
+| **LAB** | 实验室 | 工程师/科学家 | NST |
+| **IVP** | 体外培养 | 技工 | VG |
+| **PAC** | 包装厂 | 移民 | 所有捆包 |
+
+## 消耗品流程
+
+import { Mermaid } from '@/components/mdx/mermaid'
+
+<Mermaid chart={`
+graph LR
+  Farms[FRM / HYF / ORC] --> Crops[作物\nGRN NUT ALG HER\nHOP GRA CAF VEG]
+  Crops --> FP[FP 食品加工厂]
+  Crops --> FER[FER 发酵厂]
+
+  FP --> Food[食物 + 水\nDW RAT FIM MEA COF]
+  FER --> Drinks[奢侈饮品\nALE GIN WIN KOM]
+
+  Chem[CHP / LAB / IVP] --> Health[健康品\nMED SC NST VG]
+  Metal[BMP / EDM / APF] --> Gear[衣物 + 工具\nOVE EXO HMS HSS LC\nPT SCN PDA WS PWO REP]
+  Textile[CLF] --> Gear
+
+  Food --> PAC[PAC 包装厂]
+  Drinks --> PAC
+  Health --> PAC
+  Gear --> PAC
+
+  PAC --> Bundles[捆包\nPBU SBU TBU EBU CBU]
+
+  Bundles --> Workers[工人\n先锋 移民\n技工 工程师\n科学家]
+  Food --> Workers
+  Drinks --> Workers
+  Health --> Workers
+  Gear --> Workers
+
+  style Farms fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Chem fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Metal fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Textile fill:#2d6a4f,stroke:#52b788,color:#fff
+  style FP fill:#2d6a4f,stroke:#52b788,color:#fff
+  style FER fill:#2d6a4f,stroke:#52b788,color:#fff
+  style PAC fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Crops fill:#b08620,stroke:#e0b040,color:#fff
+  style Food fill:#c05030,stroke:#e07050,color:#fff
+  style Drinks fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Health fill:#c05030,stroke:#e07050,color:#fff
+  style Gear fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+  style Bundles fill:#3b6ea5,stroke:#6aacf0,color:#fff
+  style Workers fill:#8b4513,stroke:#d2691e,color:#fff
+`} />
+
+## 小技巧
+
+1. **基础消耗品优先。** 缺奢侈品效率下降 10–20%。缺基础品生产直接停。永远优先保证基础品。
+2. **水是万能的。** 每个等级都需要 DW。可靠的水供应（本地开采 H2O 或进口）是大多数殖民地的头号瓶颈。
+3. **RAT 撑起 3 个等级。** 先锋、移民、技工都吃 RAT —— 是游戏中产量最大的消耗品。早期就要多建几个 FP。
+4. **工程师和科学家吃 FIM/MEA。** 这些是从 RAT → FIM → MEA 加工而来。升级工人等级前，先规划好食物链。
+5. **奢侈品按工人数提升效率 —— 先上便宜的。** 先锋的 COF 最便宜；移民的 KOM 最便宜。从第一天就至少供应一种奢侈品。
+6. **自给自足 vs 从 CX 购买。** 算一下每天成本：100 先锋每天吃 4 RAT × 3 代币 CX 价 + 4 DW × 3 代币 ≈ 20 代币/天。和本地种 2 FRM + 1 FP 比较一下。
+7. **捆包合同是稳定收入。** 如果有富余产能，卖长期 PBU/SBU 合同比在 CX 上追涨杀跌稳定得多。

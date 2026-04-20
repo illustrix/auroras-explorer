@@ -1,0 +1,230 @@
+# 电子与软件
+
+游戏中最复杂的生产链。**44 种电子 + 17 种软件**层层堆叠成深度依赖网络 —— 许多船只组件和高级消耗品离原料有 8–16 个生产步骤。利润丰厚但对新手不友好。如果想卖 CC（计算核心）或 WR（警戒雷达），你就是在承诺建立一个多殖民地的长线供应网。
+
+## 加工建筑
+
+| 等级 | 建筑 | 名称 | 工人 | 生产 |
+|------|------|------|------|------|
+| 1 | **FS** | 精密锻造厂 | 50 移民 | BCO、BGC、HCC、MFK、SFK（简单小件） |
+| 1 | **CLR** | 洁净室 | 25 移民 + 15 技工 | CAP、LDI、MWF、SWF、TRN、TRA |
+| 2 | **SCA** | 小型组件装配 | 30 技工 | MPC、PCB、RAM、ROM、SEN、TPU |
+| 2 | **MCA** | 中型组件装配 | 20 移民 + 20 技工 | DIS、FAN、HD、MB、CD |
+| 3 | **EDM** | 电子设备制造 | 50 移民 | BID、HOG、MHP、RAD、SCN |
+| 3 | **ELP** | 电子厂 | 40 技工 | AAR、AWF、BMF、BWS、HPC、SAR、CD |
+| 3 | **PHF** | 制药厂 | 25 移民 + 25 技工 | BSC |
+| 4 | **APF** | 电器厂 | 60 技工 + 20 工程师 | ACS、ADS、COM、FFC、LIS、LOG、WR、PDA、WS |
+| 4 | **AAF** | 高级电器厂 | 40 工程师 + 20 科学家 | CC、CRU、STS、TAC |
+| SW | **SD** | 软件开发 | 50 技工 | BAI、LD、MLI、NF、SA、SAL、WM |
+| SW | **SE** | 软件工程 | 30 工程师 | DA、DD、DV、EDC、NN、OS |
+| SW | **SL** | 软件实验室 | 20 科学家 | IDC、IMM、SNM、WAI |
+
+## 第 1 级：电子小件（10 种）
+
+最小的构建块。便宜、快速、高产。
+
+### 精密锻造厂（FS）—— 金属类小件
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **SFK** | 小型紧固件套件 | 1× FE → 16× SFK | 2.9h |
+| **MFK** | 中型紧固件套件 | 1× STL → 8× MFK | 2.9h |
+| **BCO** | 基础铜线 | 1× CU + 300× PE → 10× BCO | 7.2h |
+| **BGC** | 基础金组件 | 1× BGO + 300× PE → 10× BGC | 7.2h |
+| **HCC** | 高容量组件 | 300× PE + 1× RGO → 10× HCC | 7.2h |
+
+### 洁净室（CLR）—— 硅类小件
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **CAP** | 电容 | 1× FE + 1× SI → 15× CAP | 9.6h |
+| **LDI** | 激光二极管 | 1× SI + 1× GAL → 6× LDI | 8.4h |
+| **MWF** | 中型晶圆 | 2× SI + 2× AL → 20× MWF | 12h |
+| **SWF** | 小型晶圆 | 1× AL + 1× SI → 30× SWF | 12h |
+| **TRN** | 晶体管 | 1× SI + 1× AL → 10× TRN | 6h |
+
+> **SFK 和 MFK 是万金油。** 两者用在几十个配方里（紧固件把一切连在一起）。周期只有 2.9h —— 1 个 FS 每天能产几百个。
+
+## 第 2 级：电子部件（11 种）
+
+在 **SCA**（技工）和 **MCA**（移民+技工）中组装。是 PrUn 的"芯片"层。
+
+### 小型组件装配（SCA）
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **PCB** | 印刷电路板 | 5× BCO + 10× SWF + 1× BGO + 60× PE → 5× PCB | 6.7h |
+| **MPC** | 微处理器 | 10× BCO + 10× SWF + 10× TRN → 10× MPC | 10.1h |
+| **RAM** | 随机存取存储 | 6× BCO + 6× CAP + 6× PSS → 6× RAM | 10.1h |
+| **ROM** | 只读存储 | 10× BGC + 10× PSS + 10× SI → 10× ROM | 7.2h |
+| **SEN** | 传感器 | 10× H + 10× N + 20× TRN → 20× SEN | 7h |
+| **TPU** | 张量处理单元 | 4× MWF + 4× CAP + 4× HCC + 4× TRN → 4× TPU | 15.6h |
+
+### 中型组件装配（MCA）
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **DIS** | 显示器 | 1× LCR + 3× GL → 1× DIS | 16.1h |
+| **CD** | 紧凑显示器 | 1× DIS + 2× BCO → 1× CD | 16.1h（在 ELP 中） |
+| **MB** | 主板 | 4× MPC + 4× PSM + 4× SFK + 4× RAM → 4× MB | 7.2h |
+| **HD** | 硬盘 | 5× LDI + 5× DCS + 1× RG → 5× HD | 16.1h |
+| **FAN** | 风扇 | 8× DCS + 1× AL + 2× SFK → 8× FAN | 4.8h |
+
+### 洁净室（也能做）
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **TRA** | 收发器 | 1× SWF + 1× CAP + 1× TRN → 1× TRA | 4.8h |
+
+> **PCB 是电子链的中心枢纽。** 出现在 10+ 个配方中作为输入。如果能廉价生产 PCB（来自金矿丰富星球的低价 BGO 供应），终生受益。
+
+## 第 3 级：电子设备（12 种）
+
+成品硬件。要么被工人直接消耗（SCN、PDA），要么进入系统。
+
+### 电子厂（ELP）—— 高级设备
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **AAR** | 自动天线阵列 | 2× AU + 4× PCB + 1× KV + 6× SWF → 3× AAR | 16.1h |
+| **AWF** | 大气水过滤器 | 10× BAC + 10× PE + 1× MAG → 5× AWF | 15.6h |
+| **BMF** | 体感框架 | 1× MB + 1× TPU + 1× DCL + 1× FAN → 1× BMF | 16.8h |
+| **BWS** | 基础工作站 | 1× DCM + 1× HD + 1× MB → 1× BWS | 12h |
+| **HPC** | 高性能计算机 | 1× MB + 1× DCS + 1× CD → 1× HPC | 8.4h |
+| **SAR** | 传感器阵列 | 16× SEN + 4× PCB → 1× SAR | 16.1h |
+
+### EDM（移民级设备）
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **MHP** | 微型热泵 | 1× TRA + 1× PCB → 1× MHP | 4.8h |
+| **RAD** | 收音机 | 1× DCS + 1× POW + 1× SFK → 1× RAD | 4.8h |
+| **BID** | 生物反应植入器 | 2× CD + 1× KV + 2× SAR → 2× BID | 7.2h |
+| **HOG** | 均质机 | 1× HD + 1× DCS + 1× NG → 1× HOG | 7.2h |
+
+### 制药厂（PHF）
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **BSC** | 生物合成舱 | 1× DCM + 1× MFK + 1× SAR → 1× BSC | 21.6h |
+
+> **SAR（传感器阵列）是关键中间件。** 用在 AIR（空气循环器）、CC、WR、ACS 里。每个 SAR 要 16× SEN —— 传感器需求量巨大。
+
+## 第 4 级：电子系统（11 种）—— 终局
+
+最高级的电子系统，几乎全部需要 **WAI**（科学家级 AI 软件）。
+
+### 电器厂（APF）—— 技工 + 工程师
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **ACS** | 门禁系统 | 1× FC + 1× SAR + 1× WAI + 10× THF → 1× ACS | 14.4h |
+| **ADS** | 自动钻探系统 | 1× BWS + 1× OS + 8× TRA → 1× ADS | 24h |
+| **COM** | 通信系统 | 1× AAR + 1× BWS + 4× RAD → 1× COM | 18h |
+| **LOG** | 物流系统 | 1× LD + 1× BMF + 1× SAL → 1× LOG | 21.6h |
+| **WR** | 警戒雷达 | 1× AWF + 1× SEN + 1× FC + 1× WAI + 12× FLP + 1× PCB → 1× WR | 40.8h |
+| **FFC** | 飞行火控 | 1× BMF + 5× W + 1× WAI + 1× DA → 1× FFC | 60h |
+| **LIS** | 生命维持系统 | 1× AIR + 1× BMF + 1× WR + 1× WAI → 1× LIS | 60h |
+
+### 高级电器厂（AAF）—— 工程师 + 科学家
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **STS** | 稳定系统 | 1× WAI + 1× TPU → 1× STS | 48h |
+| **TAC** | 战术系统 | 1× DA + 1× SA + 1× BMF → 1× TAC | 57.6h |
+| **CC** | 计算核心 | 1× PCB + 100× GV + 8× FC + 10× SAR + 20× THF + 1× WAI → 1× CC | 57.6h |
+| **CRU** | 控制反应单元 | 1× SAR + 6× FLP + 1× CST + 1× WAI + 10× ES + 3× FC + 1× PCB → 1× CRU | 52.8h |
+
+> **CC 是游戏中最复杂的配方之一。** 7 种输入，57.6h 周期，需要 WAI（科学家级），100× GV，10× SAR。一个 CC 基本上是 5+ 个配套殖民地的劳动成果。
+
+## 软件（17 种）
+
+软件没有物料输入 —— 纯靠工人"生成"。分 3 级：
+
+### 软件开发（SD）—— 50 技工
+
+| 代号 | 名称 | 时间 |
+|------|------|------|
+| **SA** | 搜索算法 | 24h |
+| **SAL** | 排序算法 | 24h |
+| **LD** | 日志数据库 | 36h |
+| **NF** | 网络框架 | 36h |
+| **BAI** | 基础 AI | 48h |
+| **WM** | 窗口管理器 | 48h |
+| **MLI** | 机器学习基础设施 | 72h |
+
+### 软件工程（SE）—— 30 工程师
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **DV** | 设备驱动 | —（无输入） | 36h |
+| **EDC** | 嵌入式代码 | — | 24h |
+| **DA** | 数据分析器 | 1× LD + 1× SAL + 1× ROM + 1× SA → 1× DA | 36h |
+| **DD** | 设备驱动（打包） | 1× LD + 1× NF → 1× DD | 48h |
+| **NN** | 神经网络 | 1× MLI + 1× BAI → 1× NN | 36h |
+| **OS** | 操作系统 | 1× LD + 1× WM + 1× ROM → 1× OS | 48h |
+
+### 软件实验室（SL）—— 20 科学家
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **IDC** | 输入设计终端 | — | 24h |
+| **IMM** | 沉浸模型 | 1× DD + 1× DA → 1× IMM | 36h |
+| **WAI** | 弱 AI | 1× ROM + 1× NN → 1× WAI | 48h |
+| **SNM** | 扫描方法论 | 1× DV + 1× WAI + 1× IMM → 2× SNM | 48h |
+
+> **WAI 是解锁钥匙。** 出现在 8+ 个终局配方中（ACS、CC、CRU、FFC、LIS、STS、WR、SNM）。带 SL 的科学家殖民地是几乎所有顶级电子系统的前提。
+
+## 依赖堆栈
+
+import { Mermaid } from '@/components/mdx/mermaid'
+
+<Mermaid chart={`
+graph LR
+  Metals[金属\nFE AL CU AU SI\nW TA BGO RGO] --> T1[第 1 级 小件\nFS / CLR]
+  Plastic[塑料\nPE PG PSS PSM DCS] --> T1
+
+  T1 --> Pieces[10 种小件\nBCO BGC CAP HCC\nLDI MFK MWF SFK\nSWF TRN]
+
+  Pieces --> T2[第 2 级 部件\nSCA / MCA]
+  T2 --> Parts[11 种部件\nPCB MPC RAM ROM\nSEN TPU DIS CD\nMB HD FAN TRA]
+
+  Parts --> T3[第 3 级 设备\nEDM / ELP / PHF]
+  T3 --> Devices[12 种设备\nAAR AWF BID BMF\nBSC BWS HD HOG\nHPC MHP RAD SAR]
+
+  Software[软件链\nSD→SE→SL] --> WAI[WAI\n关键钥匙]
+  Devices --> T4[第 4 级 系统\nAPF / AAF]
+  WAI --> T4
+  T4 --> Systems[11 种系统\nACS ADS COM CRU CC\nFFC LIS LOG STS TAC WR]
+
+  Systems --> Ship[船只组件]
+  Systems --> Infra[高级基础设施]
+  Devices --> Consumables[消耗品\nSCN PDA WS]
+
+  style Metals fill:#b08620,stroke:#e0b040,color:#fff
+  style Plastic fill:#b08620,stroke:#e0b040,color:#fff
+  style T1 fill:#2d6a4f,stroke:#52b788,color:#fff
+  style T2 fill:#2d6a4f,stroke:#52b788,color:#fff
+  style T3 fill:#2d6a4f,stroke:#52b788,color:#fff
+  style T4 fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Software fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Pieces fill:#3b6ea5,stroke:#6aacf0,color:#fff
+  style Parts fill:#3b6ea5,stroke:#6aacf0,color:#fff
+  style Devices fill:#c05030,stroke:#e07050,color:#fff
+  style Systems fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style WAI fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Ship fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+  style Infra fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+  style Consumables fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+`} />
+
+## 小技巧
+
+1. **从 FS + CLR 开始。** 两者都只要移民/技工 —— 不需要工程师。卖 BCO/PCB/SFK 是稳定的中期利基。
+2. **金矿供应是 PCB 的瓶颈。** BGO → PCB 每 5× PCB 需要 1× BGO。便宜的 AU 来源是 PCB 生意的基石。
+3. **SEN 被低估了。** 每个 SAR 要 16× SEN，而 SAR 进入 5+ 个配方。一个专做 SEN + SAR 的 SCA 能供应整个系统工厂。
+4. **软件时间惊人。** MLI 72h、WAI 48h、CC 57.6h。开始终局电子前要按 10+ 天的生产窗口规划。
+5. **不要跳过软件链。** 做 CC/WR/FFC/LIS 的时候，同时也要运营 SD/SE/SL。预算 3 个建筑 + 科学家住房。
+6. **AAF 是船只级系统的大门。** 40 工程师 + 20 科学家工人。需要成熟的殖民地。有意义的产能至少要 2-3 个 AAF。
+7. **PCB > MPC > MB 是主装配链。** 每一层消耗上一层 —— 保持吞吐平衡，否则会有一层堆积。
+8. **洁净室（CLR）能跑 6 种配方。** 电子链中最灵活的工种 —— 一个 CLR 可以在 CAP、LDI、MWF、SWF、TRN、TRA 之间切换。

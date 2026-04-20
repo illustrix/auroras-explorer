@@ -1,0 +1,212 @@
+# 特殊材料
+
+生产树剩下的部分 —— **约 50 个项目**，涵盖纺织品、单元预制件、能源、无人机、医疗和基础设施。每类都不大但都很关键：没有纺织品就没有 HMS/HSS/LC 工服；没有电池就没有高级引擎；没有单元预制件就没有 HAM。这些是把大链条粘在一起的胶水。
+
+## 纺织品（7 种）
+
+面料链 —— 供给衣物、护盾、船只内饰。主要建筑：**WPL**（编织厂）和 **CLF**（服装厂）。
+
+### 编织厂（WPL）—— 70 移民
+
+| 代号 | 名称 | 配方 | 时间 | 用途 |
+|------|------|------|------|------|
+| **COT** | 棉布 | 1× RCO → 1× COT | 7.2h | OVE、MED、纺织品 |
+| **SIL** | 丝绸 | 1× RSI → 1× SIL | 12h | LC、BND、奢侈品 |
+| **NL** | 尼龙 | 50× PG → 1× NL | 12h | HMS、HSS、LDE |
+| **KV** | 凯夫拉 | 5× TCL + 75× PG → 1× KV | 19.2h | BWH、BRP、AAR（护盾） |
+| **TK** | 特克林 | 1× TC + 1× KV → 1× TK | 21.6h | AWH、ARP、AGS |
+
+### 其他纺织品来源
+
+| 代号 | 名称 | 工厂 | 配方 | 时间 |
+|------|------|------|------|------|
+| **CF** | 陶瓷纤维 | SME | 4× AL + 2× O + 1× SI → 1× CF | 9.6h |
+| **CTF** | 陶瓷处理纤维 | ASM | 2× WAL + 1× O + 1× SI → 1× CTF | 9.6h |
+
+> **CF/CTF 是熔炼出来的，不是编织的。** 虽然归为"纺织品"，但在 SME/ASM 中制造 —— 陶瓷纤维大量用于船只建造（THP、BWH、船只引擎）。
+
+## 单元预制件（18 种）
+
+在 **UPF**（单元预制厂 —— 20 先锋 + 50 移民）中制造。是船只和高级住房的"家具"。很多直接进入 HAM 或船只内饰。
+
+### 基础单元
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **HAB** | 居住单元 | 6× BBH + 10× BSE + 50× SOI + 10× BDE → 1× HAB | 48h |
+| **LU** | 实验室单元 | 1× WS + 6× PSM + 10× PSL + 1× DA → 1× LU | 36h |
+| **SU** | 医务室单元 | 2× BSC + 4× SEQ + 8× PSM + 12× PSL + 10× NG → 1× SU | 48h |
+| **WOR** | 工作间 | 12× PSM + 20× PSL + 6× UTS → 1× WOR | 43.2h |
+| **FUN** | 娱乐单元 | 4× PCB + 8× PSL + 1× BWS + 1× BID → 1× FUN | 52.8h |
+
+### 船员宿舍（4 级）
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **CQT** | 微型宿舍 | 5× AL + 1× DEC + 1× TCU + 2× PSL + 5× PSM + 1× BMF → 1× CQT | 40.8h |
+| **CQS** | 小型宿舍 | 5× PSL + 1× TCU + 1× LIS + 5× FAL + 2× DEC + 10× PSM → 1× CQS | 48h |
+| **CQM** | 中型宿舍 | 10× TI + 1× LIS + 1× TCU + 10× PSL + 20× PSM + 10× DEC → 1× CQM | 60h |
+| **CQL** | 大型宿舍 | 30× PSM + 20× PSL + 1× TCU + 1× LIS + 20× FET + 20× DEC → 1× CQL | 72h |
+
+### 船只指挥舱
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **BRS** | 小型指挥舱 | 10× TI + 4× RAD + 5× SAR + 20× PSM + 10× PSL → 1× BRS | 72h |
+| **BR1** | 一型指挥舱 | 10× FET + 5× SAR + 20× PSM + 1× NV1 + 10× PSL + 1× COM → 1× BR1 | 96h |
+| **BR2** | 二型指挥舱 | 10× SAR + 10× FET + 1× NV2 + 1× COM + 20× PSM + 10× PSL → 1× BR2 | 120h |
+
+### HAM 构成
+
+HAM（来自船只组件文档）使用这 6 种单元：
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **BSU** | 舱支援单元 | 1× LIS + 60× DDT + 200× PFE + 1× HAB → 1× BSU | 120h |
+| **CPU** | 指挥处理单元 | 1× CRU + 1× LIS + 100× FLO → 1× CPU | 144h |
+| **TCU** | 温控单元 | 1× ADR + 12× PSL + 8× PSM → 1× TCU | 38.4h |
+| **DOU** | 对接单元 | 4× SAR + 10× PSL + 1× COM → 1× DOU | 43.2h |
+| **RDS** | 小型雷达罩 | 20× PSL + 4× SRD + 30× PSM → 1× RDS | 72h |
+| **RDL** | 大型雷达罩 | 8× SRD + 30× PSL + 50× PSM → 1× RDL | 120h |
+
+> **HAM = 通过 6 种不同 UPF 配方 + 1000 PFE 的 15 天生产。** 如果看到船只合同要求交付 HAM，按 2 周的提前期规划。
+
+## 能源系统（6 种）
+
+全部在 **ECA**（能源组件装配 —— 20 移民 + 20 技工）中制造。
+
+| 代号 | 名称 | 配方 | 时间 | 用途 |
+|------|------|------|------|------|
+| **POW** | 电池 | 1× NCS + 4× LI → 1× POW | 4.8h | RAD、基础电子 |
+| **SOL** | 太阳能板 | 1× BRO + 4× BCO + 2× SI + 2× CU → 12× SOL | 4.8h | 发电、SP |
+| **SP** | 太阳能阵列 | 8× GL + 24× SOL → 12× SP | 7.2h | 大规模太阳能发电 |
+| **CBS** | 小型电池 | 20× BCO + 6× LI + 6× BE + 60× PG → 1× CBS | 7.2h | QCR、RCT、SFE |
+| **CBM** | 中型电池 | 120× PG + 8× LI + 40× BGC + 8× BE → 1× CBM | 9.6h | HPR、MFE、PFG |
+| **CBL** | 大型电池 | 150× PG + 12× BE + 60× HCC + 12× LI → 1× CBL | 12h | HYR、VOE、LFE |
+
+> **CBL 是船只引擎的卡点。** 顶级 FTL 引擎（HYR、VOE）需要它。每个 CBL 用 60× HCC（金基）和 12× Be（稀有）—— 昂贵且缓慢。
+
+## 无人机（7 种）
+
+全部来自 **DRS**（无人机店 —— 40 技工 + 20 工程师）。用于基础设施项目和稀有生产链的专用设备。
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **DRF** | 无人机框架 | 1× HE + 6× AL → 1× DRF（在 WEL 中） | 2.4h |
+| **DCH** | 无人机底盘 | 1× DRF + 1× MPC + 1× SOL + 1× POW → 1× DCH | 6.7h |
+| **CCD** | 货运无人机 | 1× DCH + 1× BSC → 1× CCD | 12h |
+| **RED** | 侦察无人机 | 1× DCH + 1× SAR → 1× RED | 12h |
+| **SRD** | 勘测无人机 | 1× DCH + 1× SAR + 2× UTS → 1× SRD | 12h |
+| **SUD** | 次表面无人机 | 1× SAR + 1× BSC + 1× DCH → 1× SUD | 14.4h |
+| **SDR** | 扫描无人机 | 1× DCH + 1× SEQ + 1× BSC → 1× SDR | 16.8h |
+
+## 医疗设备（6 种）
+
+分布在 **PHF**（制药厂）、**BMP**、**FS**、**GF**。
+
+| 代号 | 名称 | 建筑 | 配方 | 时间 |
+|------|------|------|------|------|
+| **BND** | 绷带 | PHF | 1× SIL + 1× NL → 20× BND | 4.8h |
+| **PK** | 止痛药 | PHF | 10× REA + 4× LI + 2× CA → 10× PK | 7.9h |
+| **ADR** | 肾上腺素 | PHF | 2× DCM + 1× BSC + 20× REA + 4× MFK → 1× ADR | 21.6h |
+| **SEQ** | 测序仪 | FS | 2× TI + 1× HOG + 2× STL → 1× SEQ | 7.2h |
+| **STR** | 担架 | BMP | 50× PE + 4× AL → 2× STR | 7.2h |
+| **TUB** | 试管 | GF | 10× GL → 20× TUB | 4.8h |
+
+## 基础设施（7 种）
+
+末期星球基础设施 —— 这些是建筑/项目，不是消耗品。大多需要 AAF 和稀有工程。
+
+| 代号 | 名称 | 建筑 | 配方 | 时间 |
+|------|------|------|------|------|
+| **SPT** | 支撑板 | CLF | 1× KV + 10× MTC → 100× SPT | 12h |
+| **TRS** | 桁架系统 | PP4 | 4× PSH + 100× MFK + 8× HSE → 1× TRS | 48h |
+| **TOR** | 鱼雷 | WEL | 200× ALR + 40× HE → 1× TOR | 96h |
+| **SDM** | 次表面钻探模块 | APF | 10× TRS + 1× STS → 1× SDM | 24h |
+| **SST** | 系统稳定器 | AAF | 1× PFG + 1× SDM + 200× WRH → 1× SST | 48h |
+| **PFG** | 行星力场发生器 | AAF | 2× RAG + 2× FIR + 2× CBM + 1× FFC → 1× PFG | **144h** |
+| **GWS** | 星门系统 | AAF | 2× TOR + 1× SST + 10× SAR + 4× TRS + 1000× SPT + 1× SNM → 1× GWS | **192h** |
+
+> **GWS 是终局建筑。** 创建 FTL 星门。192h 周期 + 1000 SPT + 1 SNM。如果有配方能定义"末期"，就是这个。
+
+## 通用品（3 种）
+
+不适合其他类别的杂项小件：
+
+| 代号 | 名称 | 建筑 | 配方 | 时间 | 用途 |
+|------|------|------|------|------|------|
+| **OFF** | 办公用品 | BMP | 20× EPO + 20× PG → 50× OFF | 4.8h | 管理建筑 |
+| **SUN** | 防晒装备 | BMP | 20× OVE + 10× C → 20× SUN | 4.8h | 日晒工地 |
+| **UTS** | 公用支架 | FS | 2× SFK + 6× FE → 1× UTS | 9.6h | WOR、SRD 生产 |
+
+## 各类归属
+
+import { Mermaid } from '@/components/mdx/mermaid'
+
+<Mermaid chart={`
+graph LR
+  Farms[农场] --> WPL[WPL\n移民]
+  Plastic[塑料] --> WPL
+  WPL --> Textiles[纺织品\nCOT SIL NL KV TK]
+
+  SME_ASM[SME / ASM] --> CeramFiber[陶瓷纤维\nCF CTF]
+
+  Electronics[电子] --> UPF[UPF\n先锋+移民]
+  Textiles --> UPF
+  UPF --> Units[单元预制件\n18 种\nCQ BR HAB FUN WOR ...]
+  Units --> HAM_Ship[HAM / 船只内饰]
+
+  Metals[金属] --> ECA[ECA\n移民+技工]
+  Elements[元素\nLI BE] --> ECA
+  Goldpcs[BCO BGC HCC] --> ECA
+  ECA --> Energy[能源\nPOW SOL SP CBS CBM CBL]
+
+  ECA --> Reactors[船只反应堆\nRCT HPR QCR HYR VOE]
+
+  Metal_PLC[金属+塑料] --> DRS[DRS\n技工+工程师]
+  DRS --> Drones[无人机\nDRF DCH CCD RED\nSRD SUD SDR]
+
+  Chem[化学品] --> PHF[PHF\n移民+技工]
+  Textiles --> PHF
+  PHF --> Medical[医疗\nBND PK ADR SEQ STR TUB]
+
+  Metal_Chem[金属+能源+化学] --> Infra[基建\nWEL / AAF / PP4]
+  Infra --> Infrastructure[基础设施\nSPT TRS TOR SDM\nSST PFG GWS]
+
+  style Farms fill:#b08620,stroke:#e0b040,color:#fff
+  style Plastic fill:#b08620,stroke:#e0b040,color:#fff
+  style Electronics fill:#b08620,stroke:#e0b040,color:#fff
+  style Metals fill:#b08620,stroke:#e0b040,color:#fff
+  style Elements fill:#b08620,stroke:#e0b040,color:#fff
+  style Goldpcs fill:#b08620,stroke:#e0b040,color:#fff
+  style Metal_PLC fill:#b08620,stroke:#e0b040,color:#fff
+  style Chem fill:#b08620,stroke:#e0b040,color:#fff
+  style Metal_Chem fill:#b08620,stroke:#e0b040,color:#fff
+  style WPL fill:#2d6a4f,stroke:#52b788,color:#fff
+  style SME_ASM fill:#2d6a4f,stroke:#52b788,color:#fff
+  style UPF fill:#2d6a4f,stroke:#52b788,color:#fff
+  style ECA fill:#2d6a4f,stroke:#52b788,color:#fff
+  style DRS fill:#2d6a4f,stroke:#52b788,color:#fff
+  style PHF fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Infra fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Textiles fill:#3b6ea5,stroke:#6aacf0,color:#fff
+  style CeramFiber fill:#3b6ea5,stroke:#6aacf0,color:#fff
+  style Units fill:#c05030,stroke:#e07050,color:#fff
+  style Energy fill:#c05030,stroke:#e07050,color:#fff
+  style Drones fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Medical fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Infrastructure fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+  style HAM_Ship fill:#8b4513,stroke:#d2691e,color:#fff
+  style Reactors fill:#8b4513,stroke:#d2691e,color:#fff
+`} />
+
+## 小技巧
+
+1. **WPL 是很好的纯移民生意。** 只需要 1× RCO 做 COT、1× RSI 做 SIL。消费品需求稳定。
+2. **CF vs CTF 决定船只等级。** CF 用于基础船体；CTF 用于高级船体和引擎。规划时要分开。
+3. **UPF 深度惊人。** CQS（48h）需要 LIS，LIS 需要 AIR，AIR 需要 9 种输入。基础船员宿舍 = 几周的供应链搭建。
+4. **ECA 是价值最高的建筑之一。** 电池（CBS/CBM/CBL）体积小但供给所有 FTL 反应堆。占地小、利润高。
+5. **无人机是利基品。** 由特定基础设施和勘测项目消耗。别投机 —— 按合同制造。
+6. **PHF 虽小但稳定。** 6 种医疗品，5 种移民+技工工人就够。中期殖民地的好副业。
+7. **GWS 基本上什么都要。** 6 种输入项，包括 SNM（科学家软件）和 1000 SPT。按月提前规划供应。
+8. **OFF/SUN 容易被忽视。** 小、便宜，用在后台活动中。看看价格 —— 有时候卖 50× OFF 比做 1 个高级品还赚。

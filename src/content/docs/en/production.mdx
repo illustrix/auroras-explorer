@@ -1,0 +1,92 @@
+# Production & Recipes
+
+Production is the heart of Prosperous Universe. Every manufactured item is created by feeding specific inputs into a building and waiting for the recipe to complete.
+
+## How Recipes Work
+
+A recipe defines:
+
+- **Building** — which building type runs this recipe (e.g., SME, FP, CHP)
+- **Inputs** — materials consumed (e.g., 1× FEO)
+- **Outputs** — materials produced (e.g., 1× FE)
+- **Duration** — how long the production cycle takes
+
+For example, smelting iron:
+
+> **SME:** 1× FEO → 1× FE (4.8 hours)
+
+## Recipe Statistics
+
+The game contains **389 recipes** across **49 building types**. Here's an overview:
+
+| Metric | Value |
+|--------|-------|
+| Total recipes | 389 |
+| Building types | 49 |
+| Most recipes | FP (21), BMP (20), UPF (19) |
+| Fastest recipe | ~2.4 hours |
+| Slowest recipe | 360 hours (HAM) |
+
+## Production Chain Depth
+
+Materials sit at different "depths" in the production chain:
+
+- **Depth 0** — Raw materials (44 types): ores, gases, water, etc.
+- **Depth 1–4** — Basic processed goods: metals, simple chemicals
+- **Depth 5–7** — Intermediate products: electronics, construction parts (~150 types)
+- **Depth 8–12** — Advanced products: ship components, software
+- **Depth 13–16** — Endgame products: vortex engines, gateway segments
+
+The deepest items (**GWS** and **VOE** at depth 16) require raw materials to pass through 16 sequential processing steps before becoming the final product.
+
+## Key Production Buildings
+
+### Tier 1 (Pioneer workforce)
+
+| Building | Name | Key Products |
+|----------|------|-------------|
+| RIG | Rig | Water, gases |
+| EXT | Extractor | Ores, minerals |
+| COL | Collector | Atmospheric gases |
+| FRM | Farm | Grains, beans, vegetables |
+| FP | Food Processor | RAT, DW, MEA |
+| SME | Smelter | Basic metals |
+
+### Tier 2 (Settler workforce)
+
+| Building | Name | Key Products |
+|----------|------|-------------|
+| CHP | Chemical Plant | Chemicals, reagents |
+| CLR | Clean Room | Refined materials |
+| WEL | Welder | Metal products |
+| BMP | Basic Materials Plant | Plastics, basic materials |
+
+### Tier 3+ (Technician/Engineer/Scientist)
+
+| Building | Name | Key Products |
+|----------|------|-------------|
+| ELP | Electronics Plant | Circuit boards, processors |
+| SKF | Ship Kit Factory | Ship components |
+| LAB | Laboratory | Research chemicals |
+| AAF | Advanced Assembly | Infrastructure |
+
+## Food Production: RAT Recipes
+
+One of the most important early-game products is **RAT (Rations)**. All RAT recipes follow a pattern:
+
+> **Pick one from each of three groups → 10× RAT (6 hours)**
+
+| Carbohydrate | Protein | Fat |
+|-------------|---------|-----|
+| GRN (Grains) | ALG (Algae) | NUT (Nuts) |
+| MAI (Maize) | BEA (Beans) | VEG (Vegetables) |
+| MUS (Mushrooms) | — | — |
+
+The most economical combo uses only farm-grown ingredients: **MAI + BEA + NUT** — all produced in a basic Farm (FRM) with just water.
+
+## Tips for Production Planning
+
+1. **Balance your workforce** — Don't over-build one tier. Each building needs workers fed and housed.
+2. **Consider transport costs** — It may be cheaper to buy intermediates from the CX than to produce them yourself.
+3. **Watch the market** — Prices fluctuate. Today's profitable recipe might be tomorrow's money pit.
+4. **Plan for uptime** — Buildings produce nothing when inputs run out. Keep buffers of critical materials.

@@ -1,0 +1,173 @@
+# Raw Materials
+
+Everything in Prosperous Universe starts here. Raw materials are extracted directly from planets and moons — **44 total** across ores, gases, minerals, and elements. Pick the wrong planet and your production line starves; pick the right one and you'll outrun competitors.
+
+## Extraction Buildings
+
+Three Pioneer-staffed buildings handle all planetary extraction:
+
+| Building | Name | Workforce | Area | What It Extracts |
+|----------|------|-----------|------|------------------|
+| **EXT** | Extractor | 60 Pioneer | 25 | Ores, minerals, liquids |
+| **COL** | Collector | 50 Pioneer | 15 | Gases only |
+| **RIG** | Rig | 30 Pioneer | 10 | Ores, minerals, liquids (smaller/faster) |
+
+> **How extraction works:** Output depends entirely on **what the planet has**. Each planet has a fixed set of resources with specific **concentration** values. Higher concentration = faster extraction. The building has no "recipe" — you place it on a planet and it pulls whatever's there.
+
+**EXT vs RIG:** EXT has higher total throughput but takes more area and workforce. RIG is cheaper to run but slower per unit. For rare/low-concentration resources, RIG is often more cost-efficient; for abundant high-concentration deposits, EXT wins.
+
+## Ores (8 types)
+
+Smelted into metals in **SME** (Smelter) or **AML** (Advanced Material Lab).
+
+| Ticker | Name | Smelts Into | Key Recipe |
+|--------|------|-------------|-----------|
+| **FEO** | Iron Ore | FE (Iron) | 6× FEO + 1× C + 1× O → 3× FE (12h) |
+| **ALO** | Aluminum Ore | AL (Aluminum) | 6× ALO + 1× C + 1× O → 3× AL (12h) |
+| **CUO** | Copper Ore | CU (Copper) | 5× CUO + 1× SIO + 10× O → 3× CU (12h) |
+| **SIO** | Silicon Ore | SI (Silicon) | 3× SIO + 1× AL → 1× SI (3.6h) |
+| **AUO** | Gold Ore | AU (Gold) | 3× AUO + 1× C → 2× AU (10.8h) |
+| **LIO** | Lithium Ore | LI (Lithium) | 10× LIO + 4× HAL → 4× LI (15.8h) |
+| **TIO** | Titanium Ore | TI (Titanium) | 4× TIO + 1× C + 1× O → 2× TI (18h) |
+| **REO** | Rare Earth Ore | RE (Rare Earths) | 8× REO + 1× C + 1× O → 4× RE (19.2h) |
+
+> **FLX (Flux) boosts yield:** Adding 1× FLX to FEO/ALO/REO smelting gives +33% output. FLX comes from LST (Limestone) in a CHP, so factor that cost in.
+
+## Gases (10 types)
+
+Collected with **COL**. Feed every chemical and fuel chain.
+
+| Ticker | Name | Main Uses |
+|--------|------|-----------|
+| **H** | Hydrogen | Fuels (SF, FF, VF), chemicals (AMM, H2O) |
+| **O** | Oxygen | Smelting flux, water, consumables |
+| **N** | Nitrogen | Ammonia (AMM), life support |
+| **HE** | Helium | Cryogenics, superconductors |
+| **HE3** | Helium-3 | FTL fuel (FF), refined from TS |
+| **F** | Fluorine | High-end chemicals, rocket fuel |
+| **AMM** | Ammonia | Fertilizer, cleaning products |
+| **AR** | Argon | Noble gas, shielding |
+| **KR** | Krypton | Specialty electronics |
+| **NE** | Neon | Lighting, lasers |
+
+**H + HE3 → FF (FTL Fuel):** The entire FTL travel economy runs on this one recipe. HE3 is rare and expensive — often produced from TS (Thorium) in a REF instead of collected directly.
+
+## Minerals (14 types)
+
+Extracted with EXT/RIG. Processed into elements by **CHP**, **AML**, **BMP**, or used directly.
+
+### Common Minerals (CHP / BMP processing)
+
+| Ticker | Name | Processed To |
+|--------|------|-------------|
+| **LST** | Limestone | CA (Calcium), FLX (Flux) |
+| **HAL** | Halite (Salt) | NA (Sodium) + CL (Chlorine) |
+| **CLI** | Clay | I (Iodine) |
+| **MGS** | Magnesite | MG (Magnesium) |
+| **SCR** | Sulfur-bearing rock | S (Sulfur) via SME |
+| **TCO** | Technetium Ore | TC (Technetium) via TNP |
+
+### Rare Minerals (AML processing — Tech/Eng workforce)
+
+| Ticker | Name | Processed To |
+|--------|------|-------------|
+| **BER** | Beryl | BE (Beryllium) + bonus AL + SIO |
+| **BOR** | Borax | BOS (Boron Oxide) — needs 4× AL + 1× SI |
+| **TAI** | Tantalite | TA (Tantalum) + bonus FE |
+| **ZIR** | Zircon | ZR (Zirconium) + bonus SIO |
+| **BTS** | Bauxite/Tungsten | W (Tungsten) via AML — 5× BTS → 1× W |
+
+### Liquid/Special
+
+| Ticker | Name | Notes |
+|--------|------|-------|
+| **TS** | Thorium | Refined to HE3 in REF (3× TS → 2× HE3) |
+| **MAG** | Magnetite | Used in construction and electronics |
+| **BRM** | Bromine-bearing | Chemical feedstock |
+
+## Elements (12 types)
+
+The "periodic table" materials — basic chemistry building blocks.
+
+| Ticker | Name | Source | Used For |
+|--------|------|--------|----------|
+| **C** | Carbon | HCP → INC (or GRN/MAI) | Smelting, plastics, almost everything |
+| **O** | Oxygen | Collected gas | Smelting flux, water, consumables |
+| **H** | Hydrogen | Collected gas | Fuels, water, ammonia |
+| **CA** | Calcium | LST → CHP | Concrete, glass, consumables |
+| **NA** | Sodium | HAL → CHP | Chemicals, solar panels |
+| **CL** | Chlorine | HAL → CHP | Disinfectants, plastics |
+| **MG** | Magnesium | MGS → BMP | Alloys, electronics |
+| **I** | Iodine | CLI → BMP | Medical, chemicals |
+| **S** | Sulfur | SCR → SME | Sulfuric acid, rubber |
+| **BE** | Beryllium | BER → AML | Advanced alloys, electronics |
+| **TA** | Tantalum | TAI → AML | Capacitors, high-end electronics |
+| **ZR** | Zirconium | ZIR → AML | Heat-resistant alloys |
+| **TC** | Technetium | TCO → TNP | Radioisotopes, advanced chemistry |
+
+**HCP is the carbon backbone:** Carbon (C) is consumed everywhere — smelting, plastics, chemicals. Most players grow HCP on a farm and burn it in an Incinerator (INC) rather than importing C.
+
+## Fuels (3 types) — Refinery (REF)
+
+| Ticker | Name | Recipe | Used For |
+|--------|------|--------|----------|
+| **SF** | STL Fuel | 2× GAL + 1× AMM + 3× H → 100× SF (3.6h) | Sublight ship movement (in-system) |
+| **FF** | FTL Fuel | 4× H + 2× HE3 → 100× FF (3.6h) | FTL jumps (between systems) |
+| **VF** | Vessel Fuel | 4× H + 2× KRE → 2000× VF (12h) | Specialty vessels |
+
+> **Alt SF recipe:** 1× AMM + 5× NAB → 150× SF (9.6h). NAB is a nitrogen-rich chemical — sometimes cheaper than GAL depending on your market.
+
+## Extraction Flow
+
+import { Mermaid } from '@/components/mdx/mermaid'
+
+<Mermaid chart={`
+graph LR
+  Planet[Planet / Moon] --> EXT[EXT Extractor]
+  Planet --> COL[COL Collector]
+  Planet --> RIG[RIG Rig]
+
+  EXT --> Ores[Ores\nFEO ALO CUO SIO\nAUO LIO TIO REO]
+  EXT --> Minerals[Minerals\nLST HAL CLI MGS\nBER TAI ZIR TS ...]
+  RIG --> Ores
+  RIG --> Minerals
+  COL --> Gases[Gases\nH O N HE HE3\nAMM AR KR NE F]
+
+  Ores --> SME[SME Smelter] --> Metals[Metals\nFE AL CU SI AU\nLI TI RE]
+  Minerals --> CHP[CHP Chemical Plant]
+  Minerals --> AML[AML Adv Mat Lab]
+  Minerals --> BMP[BMP Basic Mat Plant]
+  CHP --> Elements[Elements\nCA NA CL ...]
+  AML --> Elements2[Rare Elements\nBE TA ZR W]
+  BMP --> Elements
+
+  Gases --> REF[REF Refinery] --> Fuels[Fuels\nSF FF VF]
+  Minerals -->|TS| REF
+
+  style Planet fill:#2d5a8b,stroke:#5588cc,color:#fff
+  style EXT fill:#2d6a4f,stroke:#52b788,color:#fff
+  style COL fill:#2d6a4f,stroke:#52b788,color:#fff
+  style RIG fill:#2d6a4f,stroke:#52b788,color:#fff
+  style SME fill:#2d6a4f,stroke:#52b788,color:#fff
+  style CHP fill:#2d6a4f,stroke:#52b788,color:#fff
+  style AML fill:#2d6a4f,stroke:#52b788,color:#fff
+  style BMP fill:#2d6a4f,stroke:#52b788,color:#fff
+  style REF fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Ores fill:#b08620,stroke:#e0b040,color:#fff
+  style Minerals fill:#b08620,stroke:#e0b040,color:#fff
+  style Gases fill:#b08620,stroke:#e0b040,color:#fff
+  style Metals fill:#c05030,stroke:#e07050,color:#fff
+  style Elements fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Elements2 fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Fuels fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+`} />
+
+## Tips for Picking Extraction Planets
+
+1. **Check concentration first.** A planet with 0.5 concentration FEO produces 5× more than one at 0.1. Always compare before settling.
+2. **Gas giants are gas-only.** If you need ores and gases, you need two planets — or ship between them.
+3. **Fertility matters for farms, not for EXT.** Rocky barren planets with rich ores beat fertile ones for mining bases.
+4. **Water (H2O) is a liquid resource.** Extracted with EXT/RIG, not from ice. Some planets have zero water — plan supply lines.
+5. **AML buildings need Tech+Eng workforce.** Rare-element mining requires a mature base with full workforce tiers — not a starting-planet activity.
+6. **HE3 is usually cheaper refined than collected.** Check the math: 3× TS → 2× HE3 via REF often beats raw HE3 collection costs.
+7. **Don't neglect C.** Carbon shortage bottlenecks smelting. Most mature bases grow HCP locally rather than importing C.

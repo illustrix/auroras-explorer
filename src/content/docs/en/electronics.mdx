@@ -1,0 +1,230 @@
+# Electronics & Software
+
+The most complex production chain in the game. **44 electronics + 17 software items** stack into deeply layered dependencies — many ship components and advanced consumables sit 8–16 production steps above raw metals. Profitable but not beginner-friendly. If you want to sell CC (Computing Core) or WR (Warning Radar), you're committing to a long, multi-colony supply network.
+
+## Processing Buildings
+
+| Tier | Building | Name | Workforce | Makes |
+|------|----------|------|-----------|-------|
+| 1 | **FS** | Fine Smithy | 50 Settler | BCO, BGC, HCC, MFK, SFK (simple pieces) |
+| 1 | **CLR** | Clean Room | 25 Sett + 15 Tech | CAP, LDI, MWF, SWF, TRN, TRA |
+| 2 | **SCA** | Small Components Assembly | 30 Tech | MPC, PCB, RAM, ROM, SEN, TPU |
+| 2 | **MCA** | Medium Components Assembly | 20 Sett + 20 Tech | DIS, FAN, HD, MB, CD |
+| 3 | **EDM** | Electronic Device Manufactory | 50 Settler | BID, HOG, MHP, RAD, SCN |
+| 3 | **ELP** | Electronics Plant | 40 Technician | AAR, AWF, BMF, BWS, HPC, SAR, CD |
+| 3 | **PHF** | Pharma Factory | 25 Sett + 25 Tech | BSC |
+| 4 | **APF** | Appliances Factory | 60 Tech + 20 Eng | ACS, ADS, COM, FFC, LIS, LOG, WR, PDA, WS |
+| 4 | **AAF** | Advanced Appliances Factory | 40 Eng + 20 Sci | CC, CRU, STS, TAC |
+| SW | **SD** | Software Development | 50 Technician | BAI, LD, MLI, NF, SA, SAL, WM |
+| SW | **SE** | Software Engineering | 30 Engineer | DA, DD, DV, EDC, NN, OS |
+| SW | **SL** | Software Labs | 20 Scientist | IDC, IMM, SNM, WAI |
+
+## Tier 1: Electronic Pieces (10)
+
+The smallest building blocks. Cheap, fast, high-volume.
+
+### Fine Smithy (FS) — metallic pieces
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **SFK** | Small Fastener Kit | 1× FE → 16× SFK | 2.9h |
+| **MFK** | Medium Fastener Kit | 1× STL → 8× MFK | 2.9h |
+| **BCO** | Basic Copper Wiring | 1× CU + 300× PE → 10× BCO | 7.2h |
+| **BGC** | Basic Gold Component | 1× BGO + 300× PE → 10× BGC | 7.2h |
+| **HCC** | High Capacity Component | 300× PE + 1× RGO → 10× HCC | 7.2h |
+
+### Clean Room (CLR) — silicon pieces
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **CAP** | Capacitor | 1× FE + 1× SI → 15× CAP | 9.6h |
+| **LDI** | Laser Diode | 1× SI + 1× GAL → 6× LDI | 8.4h |
+| **MWF** | Medium Wafer | 2× SI + 2× AL → 20× MWF | 12h |
+| **SWF** | Small Wafer | 1× AL + 1× SI → 30× SWF | 12h |
+| **TRN** | Transistor | 1× SI + 1× AL → 10× TRN | 6h |
+
+> **SFK and MFK are universal.** Both are used in dozens of recipes (fasteners hold everything together). They're 2.9h cycles — 1 FS can produce hundreds per day.
+
+## Tier 2: Electronic Parts (11)
+
+Assembled in **SCA** (Tech) and **MCA** (Sett+Tech). These are the "chips" of PrUn.
+
+### Small Components Assembly (SCA)
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **PCB** | Printed Circuit Board | 5× BCO + 10× SWF + 1× BGO + 60× PE → 5× PCB | 6.7h |
+| **MPC** | Microprocessor | 10× BCO + 10× SWF + 10× TRN → 10× MPC | 10.1h |
+| **RAM** | Random Access Memory | 6× BCO + 6× CAP + 6× PSS → 6× RAM | 10.1h |
+| **ROM** | Read-Only Memory | 10× BGC + 10× PSS + 10× SI → 10× ROM | 7.2h |
+| **SEN** | Sensor | 10× H + 10× N + 20× TRN → 20× SEN | 7h |
+| **TPU** | Tensor Processing Unit | 4× MWF + 4× CAP + 4× HCC + 4× TRN → 4× TPU | 15.6h |
+
+### Medium Components Assembly (MCA)
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **DIS** | Display | 1× LCR + 3× GL → 1× DIS | 16.1h |
+| **CD** | Compact Display | 1× DIS + 2× BCO → 1× CD | 16.1h (in ELP) |
+| **MB** | Motherboard | 4× MPC + 4× PSM + 4× SFK + 4× RAM → 4× MB | 7.2h |
+| **HD** | Hard Drive | 5× LDI + 5× DCS + 1× RG → 5× HD | 16.1h |
+| **FAN** | Fan | 8× DCS + 1× AL + 2× SFK → 8× FAN | 4.8h |
+
+### Clean Room (also)
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **TRA** | Transceiver | 1× SWF + 1× CAP + 1× TRN → 1× TRA | 4.8h |
+
+> **PCB is the central hub of electronics.** It appears as input to 10+ recipes. If you can produce PCB cheaply (cheap BGO supply from AU-rich worlds), you're set for life.
+
+## Tier 3: Electronic Devices (12)
+
+Finished hardware. These often get consumed directly by workers (SCN, PDA) or go into systems.
+
+### Electronics Plant (ELP) — advanced devices
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **AAR** | Auto Antenna Array | 2× AU + 4× PCB + 1× KV + 6× SWF → 3× AAR | 16.1h |
+| **AWF** | Atmospheric Water Filter | 10× BAC + 10× PE + 1× MAG → 5× AWF | 15.6h |
+| **BMF** | Body Motion Frame | 1× MB + 1× TPU + 1× DCL + 1× FAN → 1× BMF | 16.8h |
+| **BWS** | Basic Workstation | 1× DCM + 1× HD + 1× MB → 1× BWS | 12h |
+| **HPC** | High Performance Computer | 1× MB + 1× DCS + 1× CD → 1× HPC | 8.4h |
+| **SAR** | Sensor Array | 16× SEN + 4× PCB → 1× SAR | 16.1h |
+
+### EDM (Settler-tier devices)
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **MHP** | Micro Heat Pump | 1× TRA + 1× PCB → 1× MHP | 4.8h |
+| **RAD** | Radio | 1× DCS + 1× POW + 1× SFK → 1× RAD | 4.8h |
+| **BID** | Bioreactor Implant Device | 2× CD + 1× KV + 2× SAR → 2× BID | 7.2h |
+| **HOG** | Homogenizer | 1× HD + 1× DCS + 1× NG → 1× HOG | 7.2h |
+
+### Pharma Factory (PHF)
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **BSC** | Bio-synthesis Chamber | 1× DCM + 1× MFK + 1× SAR → 1× BSC | 21.6h |
+
+> **SAR (Sensor Array) is a critical ingredient.** Used in AIR (air recycler), CC, WR, ACS. You need 16× SEN per SAR — big sensor demand.
+
+## Tier 4: Electronic Systems (11) — the endgame
+
+The most advanced electronics, almost all requiring **WAI** (a scientist-tier AI software).
+
+### Appliances Factory (APF) — Tech + Eng
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **ACS** | Access Control System | 1× FC + 1× SAR + 1× WAI + 10× THF → 1× ACS | 14.4h |
+| **ADS** | Automatic Drilling System | 1× BWS + 1× OS + 8× TRA → 1× ADS | 24h |
+| **COM** | Communication System | 1× AAR + 1× BWS + 4× RAD → 1× COM | 18h |
+| **LOG** | Logistics System | 1× LD + 1× BMF + 1× SAL → 1× LOG | 21.6h |
+| **WR** | Warning Radar | 1× AWF + 1× SEN + 1× FC + 1× WAI + 12× FLP + 1× PCB → 1× WR | 40.8h |
+| **FFC** | Flight Fire Control | 1× BMF + 5× W + 1× WAI + 1× DA → 1× FFC | 60h |
+| **LIS** | Life Support System | 1× AIR + 1× BMF + 1× WR + 1× WAI → 1× LIS | 60h |
+
+### Advanced Appliances Factory (AAF) — Eng + Sci
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **STS** | Stabilization System | 1× WAI + 1× TPU → 1× STS | 48h |
+| **TAC** | Tactical Systems | 1× DA + 1× SA + 1× BMF → 1× TAC | 57.6h |
+| **CC** | Computing Core | 1× PCB + 100× GV + 8× FC + 10× SAR + 20× THF + 1× WAI → 1× CC | 57.6h |
+| **CRU** | Control Reaction Unit | 1× SAR + 6× FLP + 1× CST + 1× WAI + 10× ES + 3× FC + 1× PCB → 1× CRU | 52.8h |
+
+> **CC is one of the most complex recipes in the game.** 7 inputs, 57.6h cycle, requires WAI (scientist-tier), 100× GV, 10× SAR. A single CC is essentially the work of 5+ feeder colonies.
+
+## Software (17 items)
+
+Software has no material inputs — it's "generated" by workforce alone. Three tiers:
+
+### Software Development (SD) — 50 Technician
+
+| Ticker | Name | Time |
+|--------|------|------|
+| **SA** | Search Algorithm | 24h |
+| **SAL** | Sorting Algorithm | 24h |
+| **LD** | Log Database | 36h |
+| **NF** | Network Framework | 36h |
+| **BAI** | Basic AI | 48h |
+| **WM** | Window Manager | 48h |
+| **MLI** | Machine Learning Infrastructure | 72h |
+
+### Software Engineering (SE) — 30 Engineer
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **DV** | Device Driver | — (no inputs) | 36h |
+| **EDC** | Embedded Code | — | 24h |
+| **DA** | Data Analyzer | 1× LD + 1× SAL + 1× ROM + 1× SA → 1× DA | 36h |
+| **DD** | Device Driver (packaged) | 1× LD + 1× NF → 1× DD | 48h |
+| **NN** | Neural Network | 1× MLI + 1× BAI → 1× NN | 36h |
+| **OS** | Operating System | 1× LD + 1× WM + 1× ROM → 1× OS | 48h |
+
+### Software Labs (SL) — 20 Scientist
+
+| Ticker | Name | Recipe | Time |
+|--------|------|--------|------|
+| **IDC** | Input Design Console | — | 24h |
+| **IMM** | Immersion Model | 1× DD + 1× DA → 1× IMM | 36h |
+| **WAI** | Weak AI | 1× ROM + 1× NN → 1× WAI | 48h |
+| **SNM** | Scanning Methodology | 1× DV + 1× WAI + 1× IMM → 2× SNM | 48h |
+
+> **WAI is the unlocker.** Appears in 8+ endgame recipes (ACS, CC, CRU, FFC, LIS, STS, WR, SNM). A scientist colony with SL is a prerequisite for almost every top-tier electronic system.
+
+## Dependency Stack
+
+import { Mermaid } from '@/components/mdx/mermaid'
+
+<Mermaid chart={`
+graph LR
+  Metals[Metals\nFE AL CU AU SI\nW TA BGO RGO] --> T1[Tier 1 Pieces\nFS / CLR]
+  Plastic[Plastics\nPE PG PSS PSM DCS] --> T1
+
+  T1 --> Pieces[10 Pieces\nBCO BGC CAP HCC\nLDI MFK MWF SFK\nSWF TRN]
+
+  Pieces --> T2[Tier 2 Parts\nSCA / MCA]
+  T2 --> Parts[11 Parts\nPCB MPC RAM ROM\nSEN TPU DIS CD\nMB HD FAN TRA]
+
+  Parts --> T3[Tier 3 Devices\nEDM / ELP / PHF]
+  T3 --> Devices[12 Devices\nAAR AWF BID BMF\nBSC BWS HD HOG\nHPC MHP RAD SAR]
+
+  Software[Software Chain\nSD→SE→SL] --> WAI[WAI\nkey unlocker]
+  Devices --> T4[Tier 4 Systems\nAPF / AAF]
+  WAI --> T4
+  T4 --> Systems[11 Systems\nACS ADS COM CRU CC\nFFC LIS LOG STS TAC WR]
+
+  Systems --> Ship[Ship Components]
+  Systems --> Infra[Advanced Infrastructure]
+  Devices --> Consumables[Consumables\nSCN PDA WS]
+
+  style Metals fill:#b08620,stroke:#e0b040,color:#fff
+  style Plastic fill:#b08620,stroke:#e0b040,color:#fff
+  style T1 fill:#2d6a4f,stroke:#52b788,color:#fff
+  style T2 fill:#2d6a4f,stroke:#52b788,color:#fff
+  style T3 fill:#2d6a4f,stroke:#52b788,color:#fff
+  style T4 fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Software fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Pieces fill:#3b6ea5,stroke:#6aacf0,color:#fff
+  style Parts fill:#3b6ea5,stroke:#6aacf0,color:#fff
+  style Devices fill:#c05030,stroke:#e07050,color:#fff
+  style Systems fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style WAI fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Ship fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+  style Infra fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+  style Consumables fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+`} />
+
+## Tips
+
+1. **Start with FS + CLR.** Both run on Settler/Tech — no Engineer needed. Selling BCO/PCB/SFK is a solid mid-game niche.
+2. **Gold supply gates PCB.** BGO → PCB uses 1× BGO per 5× PCB. A cheap AU source is the foundation of a PCB business.
+3. **SEN is underrated.** Every SAR needs 16× SEN, and SAR feeds into 5+ recipes. A SCA dedicated to SEN + SAR can supply a whole system factory.
+4. **Software times are huge.** MLI at 72h, WAI at 48h, CC at 57.6h. Don't start endgame electronics without 10+ day production windows in mind.
+5. **Don't skip the software chain.** If you're making CC/WR/FFC/LIS, you also need to run SD/SE/SL. Budget 3 buildings + Scientist housing.
+6. **AAF is the gate to ship-grade systems.** 40 Eng + 20 Sci workforce. Requires a mature colony. Expect 2-3 AAF for meaningful throughput.
+7. **PCB > MPC > MB is the main assembly chain.** Each level consumes the prior — keep throughput balanced or one will pile up.
+8. **Clean Room (CLR) runs 6 different recipes.** The most flexible workforce of the electronics chain — one CLR can swap between CAP, LDI, MWF, SWF, TRN, TRA.

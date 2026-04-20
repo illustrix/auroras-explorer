@@ -1,0 +1,159 @@
+# 金属与合金
+
+如果说原料是根基，那金属和合金就是骨架。**10 种金属 + 10 种合金**供给几乎所有下游产品 —— 从基础船体到终局船只引擎。这条链由单一建筑类型（**SME** / **ASM**）主导，是你能运营的**最省占地**的生产线之一。
+
+## 加工建筑
+
+| 建筑 | 名称 | 工人 | 占地 | 职能 |
+|------|------|------|------|------|
+| **SME** | 熔炉 | 50 先锋 | 17 | 基础金属熔炼（矿 → 金属） |
+| **ASM** | 高级熔炉 | 50 技工 + 20 工程师 | 34 | 大部分合金 |
+| **FS** | 精密锻造厂 | 50 移民 | 25 | 金合金（BGO、RGO、BRO） |
+| **AML** | 高级材料实验室 | 20 技工 + 30 工程师 | 45 | 稀有金属（BE、W、TA、ZR）和 BOS |
+
+## 基础金属（10 种）
+
+除 **W** 需要 AML 外，其余 10 种金属都来自 SME：
+
+| 代号 | 名称 | 主配方 | 时间 | 加 FLX 变种 |
+|------|------|--------|------|-------------|
+| **FE** | 铁 | 6× FEO + 1× C + 1× O → 3× FE | 12h | +FLX → 4× FE (14.4h) |
+| **AL** | 铝 | 6× ALO + 1× C + 1× O → 3× AL | 12h | +FLX → 4× AL (14.4h) |
+| **CU** | 铜 | 5× CUO + 1× SIO + 10× O → 3× CU | 12h | — |
+| **AU** | 金 | 3× AUO + 1× C → 2× AU | 10.8h | — |
+| **SI** | 硅 | 3× SIO + 1× AL → 1× SI | 3.6h | alt: 3× SIO + 1× FLX + 1× O + 1× C → 1× SI (2.9h) |
+| **LI** | 锂 | 10× LIO + 4× HAL → 4× LI | 15.8h | — |
+| **TI** | 钛 | 4× TIO + 1× C + 1× O → 2× TI | 18h | — |
+| **RE** | 稀土 | 8× REO + 1× C + 1× O → 4× RE | 19.2h | +FLX → 5× RE (19.2h) |
+| **STL** | 钢 | 2× FE + 8× O → 2× STL | 8.4h | —（FE 本身已熔炼） |
+| **W** | 钨 | 5× BTS → 1× W（在 AML 中） | 14.4h | 稀有矿物路径 |
+
+> **FLX 对 FE、AL、REO 几乎总是值得的** —— 把 3× 产出变成 4–5×。FLX 在 CHP 中从 LST 制成。一个专门生产 FLX 的 CHP 就能供应一整排熔炉。
+
+### 金属按下游使用频次
+
+从配方数据库看，每种金属下游消耗情况：
+
+| 金属 | 下游配方数 | 主要角色 |
+|------|-----------|---------|
+| **AL** | 41 | 万能 —— 合金、电子、建筑，样样都要 |
+| **FE** | 15 | 钢、建筑、合金、基础部件 |
+| **SI** | 13 | 电子、硅晶圆、玻璃 |
+| **STL** | 13 | 建筑、工具、船只部件 |
+| **TI** | 11 | 高级船体、船只部件、合金 |
+| **CU** | 6 | 布线、电子、合金 |
+| **LI** | 5 | 电池（POW、CBL）、医疗 |
+| **W** | 5 | 钨合金、高级船只部件 |
+| **AU** | 3 | 专用贵金属合金（BGO、RGO） |
+| **RE** | 2 | 铼合金（ALR、WRH） |
+
+**AL 是游戏中第 1 名金属。** 几乎样样都要用到。运营熔炉殖民地时，优先保证 AL 吞吐量。
+
+## 合金（10 种）
+
+合金是两种或多种金属的组合。大多数在 **ASM** 中制造，少数在 **FS** 中（金合金）。
+
+### 高级熔炉（ASM）合金
+
+| 代号 | 名称 | 配方 | 时间 | 用途 |
+|------|------|------|------|------|
+| **FAL** | 铁铝合金 | 3× FE + 3× AL → 6× FAL | 9.6h | BGS、BWH、CQS、NOZ |
+| **AST** | 铝钛合金 | 1× AL + 3× TI → 4× AST | 9.6h | AGS、ENG、HHP、船只引擎 |
+| **FET** | 铁钛合金 | 1× FE + 3× TI → 4× FET | 9.6h | AEN、AHP、ANZ、船只部件 |
+| **WAL** | 钨铝合金 | 3× AL + 1× W → 4× WAL | 9.6h | CTF、FIR、HCB、HNZ、高端船只部件 |
+| **ALR** | 铝铼合金 | 5× RE + 1× AL → 6× ALR | 12h | TOR（鱼雷壳体） |
+| **WRH** | 钨铼合金 | 2× W + 4× RE → 6× WRH | 14.4h | SST（航天器结构塔） |
+
+### 精密锻造厂（FS）合金
+
+| 代号 | 名称 | 配方 | 时间 | 用途 |
+|------|------|------|------|------|
+| **BRO** | 青铜 | 2× CU + 1× AL → 3× BRO | 9.6h | FSE（场抑制发射器）、SOL（太阳能） |
+| **BGO** | 基础金 | 4× AU + 1× FE → 5× BGO | 9.6h | BGC、PCB、QCR（电子部件） |
+| **RGO** | 红金 | 4× AU + 1× CU → 5× RGO | 9.6h | HCC（高容量电容） |
+
+### AML 合金
+
+| 代号 | 名称 | 配方 | 时间 | 用途 |
+|------|------|------|------|------|
+| **BOS** | 氧化硼 | 1× BOR + 4× AL + 1× SI → 4× BOS | 12h | ATP、CHA（船只推进组件） |
+
+## 合金依赖图
+
+import { Mermaid } from '@/components/mdx/mermaid'
+
+<Mermaid chart={`
+graph LR
+  Ores[矿石\nFEO ALO CUO AUO\nSIO LIO TIO REO] --> SME[SME 熔炉]
+  BTS[BTS\n钨铁矿] --> AML[AML 实验室]
+
+  SME --> Metals[金属\nFE AL CU AU SI\nLI TI RE STL]
+  AML --> W[W 钨]
+  AML --> BOS[BOS]
+
+  Metals --> ASM[ASM 高级熔炉]
+  W --> ASM
+  Metals --> FS[FS 精密锻造]
+
+  ASM --> CommonAlloys[常见合金\nFAL AST FET WAL]
+  ASM --> RareAlloys[稀有合金\nALR WRH]
+  FS --> GoldAlloys[金合金\nBRO BGO RGO]
+
+  CommonAlloys --> Ship[船只部件]
+  RareAlloys --> Ship
+  GoldAlloys --> Electronics[电子产品]
+  Metals --> Electronics
+  Metals --> Construction[建筑]
+  Metals --> Consumer[消费品]
+
+  style Ores fill:#b08620,stroke:#e0b040,color:#fff
+  style BTS fill:#b08620,stroke:#e0b040,color:#fff
+  style SME fill:#2d6a4f,stroke:#52b788,color:#fff
+  style ASM fill:#2d6a4f,stroke:#52b788,color:#fff
+  style FS fill:#2d6a4f,stroke:#52b788,color:#fff
+  style AML fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Metals fill:#3b6ea5,stroke:#6aacf0,color:#fff
+  style W fill:#3b6ea5,stroke:#6aacf0,color:#fff
+  style BOS fill:#3b6ea5,stroke:#6aacf0,color:#fff
+  style CommonAlloys fill:#c05030,stroke:#e07050,color:#fff
+  style RareAlloys fill:#c05030,stroke:#e07050,color:#fff
+  style GoldAlloys fill:#c05030,stroke:#e07050,color:#fff
+  style Ship fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Electronics fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+  style Construction fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+  style Consumer fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+`} />
+
+## 常见殖民地模式
+
+### "SME 农场"（纯先锋）
+
+门槛最低的金属生产。在富矿星球上摆 6–10 个 SME，只用先锋工人。
+
+- **优点：** 建设便宜，不需要升级工人等级
+- **缺点：** 利润低，竞争激烈 —— 价格往往很卷
+- **技巧：** 把一个星球专门用于 AL+FE+SI 熔炼，因为这三种需求量最大
+
+### "ASM 殖民地"（技工 + 工程师）
+
+资本投入更高的设置，生产合金。需要爬到技工和工程师等级。
+
+- **优点：** 利润更高，竞争更少
+- **缺点：** 供应链复杂（需要基础金属持续输入）
+- **技巧：** 进口基础金属而不是就地熔炼。一个纯 ASM 殖民地（不带 SME）往往比混合型更赚钱。
+
+### "精密锻造利基"（移民）
+
+FS 只做 3 种合金（BRO/BGO/RGO），但全都进入高价值电子品。低产量、高利润的细分市场。
+
+- **技巧：** BGO → PCB 是关键生产链。如果能同时供应两端，PCB 销售是稳定收入。
+
+## 小技巧
+
+1. **FLX 对 FE、AL、REO 稳赚不亏。** 除非 FLX 不可用（太贵或没 CHP），否则别跳过。
+2. **STL 吃 C 吃得凶。** 每个 STL 配方消耗 8× O + 通过 FE 间接的碳。扩产钢之前先规划好 O 和 C 供应。
+3. **AL 是唯一应该超额生产的金属。** 用在 41 个下游配方里。AL 产能越多，选择越多。
+4. **W（钨）是高级合金的咽喉。** WAL 和 WRH 都需要 W，而 W 需要 AML + 稀有矿（BTS）。中期瓶颈。
+5. **金合金就是 PCB 的金矿。** BGO → PCB 是游戏中消耗最多的电子部件。如果找到便宜的 AU 供应，投资 FS。
+6. **没有稳定金属进口就别建 ASM。** 合金比金属价值密度高得多 —— 让专门的 SME 星球给你供货。
+7. **合金标准时间 9.6h。** ASM 大部分配方都是 9.6h 周期，产能规划很简单：1 个 ASM ≈ 每天 2.5 次配方。

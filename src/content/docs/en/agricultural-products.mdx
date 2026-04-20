@@ -1,0 +1,128 @@
+# Agricultural Products
+
+Agricultural products are the foundation of the food supply chain in Prosperous Universe. There are **19 types** in total, grown across 4 different building types. They feed your workforce, supply breweries and textile mills, and even serve as industrial feedstock.
+
+## Production Buildings
+
+| Building | Name | Workforce | Requires Fertility | Notes |
+|----------|------|-----------|-------------------|-------|
+| **FRM** | Farm | Pioneer | Yes | The basic farming building. Needs fertile planets. |
+| **HYF** | Hydroponics Farm | Settler | No | Soilless farming. Works on any planet, but needs Nutrient Solution (NS). |
+| **ORC** | Orchard | Pioneer | Yes | Grows tree crops: grapes, hops, pineberries. Long cycles. |
+| **IVP** | In-Vitro Plant | Technician | No | Produces meat and silk through bio-synthesis. |
+
+> **Key trade-off:** FRM is cheap but requires a fertile planet. HYF works anywhere but consumes NS (Nutrient Solution), a chemical product, driving up costs.
+
+## All Agricultural Products
+
+### Food Crops — RAT Ingredients
+
+These 7 crops are the core of food production. Each RAT recipe picks one from each nutritional group:
+
+| Ticker | Name | Group | Best Recipe | Building | Yield |
+|--------|------|-------|-------------|----------|-------|
+| **GRN** | Grains | Carbohydrate | 1× H2O → 4× GRN | FRM | 12h |
+| **MAI** | Maize | Carbohydrate | 4× H2O → 12× MAI | FRM | 33.6h |
+| **MUS** | Mushrooms | Carbohydrate | 1× NS → 4× MUS | HYF | 7.2h |
+| **ALG** | Algae | Protein | 16× H2O + 2× NS → 12× ALG | HYF | 10.8h |
+| **BEA** | Beans | Protein | 1× H2O → 2× BEA | FRM | 6h |
+| **NUT** | Nuts | Fat | 1× H2O → 12× NUT | FRM | 36h |
+| **VEG** | Vegetables | Fat | 3× H2O → 4× VEG | FRM | 10.8h |
+
+**RAT recipe rule:** Pick 1 Carbohydrate + 1 Protein + 1 Fat → 10× RAT (6h in FP).
+
+The most efficient self-sufficient combo is **MAI + BEA + NUT** — all grown in FRM with just water, no NS needed.
+
+### Beverage & Luxury Crops
+
+These crops supply the brewing and luxury goods chain:
+
+| Ticker | Name | Building | Recipe | Used For |
+|--------|------|----------|--------|----------|
+| **CAF** | Coffee Beans | HYF | 3× NS + 22× H2O → 2× CAF (6h) | COF (Coffee) — settler luxury |
+| **GRA** | Grapes | ORC | 1× DDT + 40× H2O → 5× GRA (24h) | WIN (Wine) — engineer luxury |
+| **HOP** | Hops | ORC | 2× DDT + 60× H2O → 15× HOP (48h) | ALE (Ale) — technician luxury |
+| **PIB** | Pineberries | ORC | 30× H2O + 1× DDT → 10× PIB (19.2h) | VIT (Vita Essence) — scientist supply |
+| **HER** | Herbs | FRM | 1× DDT + 4× H2O → 4× HER (48h) | FIM, MED, KOM — food/medicine/kombucha |
+
+> **Note:** ORC crops (GRA, HOP, PIB) all require **DDT** (pesticide), a chemical product. HER also needs DDT. These are higher-tier agricultural products with longer production cycles.
+
+### Industrial & Textile Crops
+
+| Ticker | Name | Building | Recipe | Used For |
+|--------|------|----------|--------|----------|
+| **HCP** | Hydrocarbon Plants | FRM | 2× H2O → 4× HCP (12h) | Carbon (INC), Bacteria (LAB), Meat (IVP), Silk (IVP), Air (APF) |
+| **RCO** | Raw Cotton | FRM | 2× H2O → 1× RCO (14.4h) | Cotton (WPL), Overalls (BMP) |
+| **RSI** | Raw Silk | IVP | 16× H2O + 1× HCP + 1× NS → 8× RSI (24h) | Silk fabric (WPL) |
+
+**HCP** is the most versatile agricultural product — it feeds into 5 completely different production chains, from carbon fuel to medical bacteria to air recyclers.
+
+### Processed Agricultural Products
+
+These are produced from other agricultural products:
+
+| Ticker | Name | Building | Recipe | Used For |
+|--------|------|----------|--------|----------|
+| **PPA** | Protein Paste | FP | 1× ALG + 1× BEA + 1× H2O → 6× PPA (12h) | Meat production (IVP) |
+| **MTP** | Meat | IVP | 1× HCP + 1× PPA + 1× NS → 4× MTP (18h) | MEA (Premium Meals) |
+| **FOD** | Fodder | FP | 5× NUT + 5× VEG + 5× MAI → 16× FOD (12h) | Terminal product (livestock feed) |
+| **VIT** | Vita Essence | FER | 10× DW + 1× I + 1× AMM + 4× PIB + 1× CA → 20× VIT (19.2h) | VG (Vita Gel) — scientist luxury |
+
+## Production Flow
+
+import { Mermaid } from '@/components/mdx/mermaid'
+
+<Mermaid chart={`
+graph LR
+  FRM[FRM Farm] --> Food[Food Crops\nGRN MAI BEA\nNUT VEG]
+  FRM --> Herb[HER Herbs]
+  FRM --> Ind[Industrial Crops\nHCP RCO]
+  HYF[HYF Hydroponics] --> Hydro[Hydro Crops\nALG MUS CAF]
+  ORC[ORC Orchard] --> Tree[Tree Crops\nGRA HOP PIB]
+
+  Food -->|carb+protein+fat| RAT[RAT Rations]
+  Hydro -->|carb+protein| RAT
+  RAT --> FIM[FIM Fine Meals]
+  Herb --> FIM
+  FIM --> MEA[MEA Premium Meals]
+
+  Hydro --> PPA[PPA] --> MTP[MTP Meat]
+  Ind --> MTP
+  MTP --> MEA
+
+  Hydro --> Drinks[Drinks\nCOF WIN ALE\nGIN KOM VIT]
+  Tree --> Drinks
+  Food --> Drinks
+  Herb --> Drinks
+
+  Ind --> Industrial[Industrial Products\nC BAC COT\nOVE SIL]
+
+  style FRM fill:#2d6a4f,stroke:#52b788,color:#fff
+  style HYF fill:#2d6a4f,stroke:#52b788,color:#fff
+  style ORC fill:#2d6a4f,stroke:#52b788,color:#fff
+
+  style Food fill:#b08620,stroke:#e0b040,color:#fff
+  style Herb fill:#b08620,stroke:#e0b040,color:#fff
+  style Hydro fill:#b08620,stroke:#e0b040,color:#fff
+  style Tree fill:#b08620,stroke:#e0b040,color:#fff
+  style Ind fill:#b08620,stroke:#e0b040,color:#fff
+
+  style RAT fill:#c05030,stroke:#e07050,color:#fff
+  style FIM fill:#c05030,stroke:#e07050,color:#fff
+  style MEA fill:#c05030,stroke:#e07050,color:#fff
+  style PPA fill:#c05030,stroke:#e07050,color:#fff
+  style MTP fill:#c05030,stroke:#e07050,color:#fff
+
+  style Drinks fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Industrial fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+`} />
+
+## Efficiency Tips
+
+1. **NUT has the best water-to-output ratio** — 1 H2O yields 12 NUT (36h). Great for batch production.
+2. **MAI is the best carbohydrate** — 4 H2O yields 12 MAI. Much better volume than GRN.
+3. **MUS is the only crop that doesn't need water** — just 1 NS for 4 MUS (7.2h). Ideal for waterless planets.
+4. **HYF has faster cycles** — VEG takes 4.8h in HYF vs 10.8h in FRM, but NS adds cost.
+5. **GRN's secret value** — besides RAT, it makes GIN and ALE, both profitable luxury drinks.
+6. **HCP is an underrated workhorse** — feeds carbon, bacteria, meat, silk, and air recycler chains. Settle near it.
+7. **ORC crops are luxury plays** — GRA, HOP, PIB all need DDT and long cycles, but their end products (WIN, ALE, VIT) command premium prices.

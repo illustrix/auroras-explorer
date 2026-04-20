@@ -104,3 +104,5 @@ bun --hot ./index.ts
 ```
 
 For more information, read the Bun API docs in `node_modules/bun-types/docs/**.md`.
+
+Technical documentation for the MDX docs system is at `docs/mdx-system.md`.

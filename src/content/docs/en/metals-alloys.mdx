@@ -1,0 +1,159 @@
+# Metals & Alloys
+
+If raw materials are the foundation, metals and alloys are the skeleton. **10 metals + 10 alloys** feed almost every downstream product — from basic hulls to endgame ship engines. This chain is dominated by a single building type (**SME** / **ASM**), making it one of the most **area-efficient** production lines you can run.
+
+## Processing Buildings
+
+| Building | Name | Workforce | Area | Handles |
+|----------|------|-----------|------|---------|
+| **SME** | Smelter | 50 Pioneer | 17 | Basic metal smelting (Ore → Metal) |
+| **ASM** | Advanced Smelter | 50 Tech + 20 Eng | 34 | Most alloys |
+| **FS** | Fine Smithy | 50 Settler | 25 | Gold alloys (BGO, RGO, BRO) |
+| **AML** | Advanced Material Lab | 20 Tech + 30 Eng | 45 | Rare metals (BE, W, TA, ZR) and BOS |
+
+## Basic Metals (10)
+
+All 10 metals come from SME (except **W** which needs AML):
+
+| Ticker | Name | Primary Recipe | Time | FLX Variant |
+|--------|------|---------------|------|-------------|
+| **FE** | Iron | 6× FEO + 1× C + 1× O → 3× FE | 12h | +FLX → 4× FE (14.4h) |
+| **AL** | Aluminum | 6× ALO + 1× C + 1× O → 3× AL | 12h | +FLX → 4× AL (14.4h) |
+| **CU** | Copper | 5× CUO + 1× SIO + 10× O → 3× CU | 12h | — |
+| **AU** | Gold | 3× AUO + 1× C → 2× AU | 10.8h | — |
+| **SI** | Silicon | 3× SIO + 1× AL → 1× SI | 3.6h | alt: 3× SIO + 1× FLX + 1× O + 1× C → 1× SI (2.9h) |
+| **LI** | Lithium | 10× LIO + 4× HAL → 4× LI | 15.8h | — |
+| **TI** | Titanium | 4× TIO + 1× C + 1× O → 2× TI | 18h | — |
+| **RE** | Rare Earth | 8× REO + 1× C + 1× O → 4× RE | 19.2h | +FLX → 5× RE (19.2h) |
+| **STL** | Steel | 2× FE + 8× O → 2× STL | 8.4h | — (FE is already smelted) |
+| **W** | Tungsten | 5× BTS → 1× W (in AML) | 14.4h | rare mineral path |
+
+> **FLX is almost always worth it** for FE, AL, and REO smelting — it turns 3× output into 4–5×. FLX comes from LST in a CHP. A single CHP producing FLX can feed a whole row of smelters.
+
+### Metals by Usage Frequency
+
+From the recipe database, here's how often each metal is consumed downstream:
+
+| Metal | Used in # Recipes | Primary Role |
+|-------|-------------------|--------------|
+| **AL** | 41 | Universal — alloys, electronics, construction, everything |
+| **FE** | 15 | Steel, construction, alloys, basic parts |
+| **SI** | 13 | Electronics, silicon wafers, glass |
+| **STL** | 13 | Construction, tools, ship parts |
+| **TI** | 11 | High-tier hulls, ship parts, alloys |
+| **CU** | 6 | Wiring, electronics, alloys |
+| **LI** | 5 | Batteries (POW, CBL), medical |
+| **W** | 5 | Tungsten alloys, high-grade ship parts |
+| **AU** | 3 | Precious alloys only (BGO, RGO) |
+| **RE** | 2 | Rhenium alloys (ALR, WRH) |
+
+**AL is the #1 metal in the game.** It's in almost everything. If you're running a smelter colony, prioritize AL throughput.
+
+## Alloys (10)
+
+Alloys combine two or more metals. Most are made in **ASM**, a few in **FS** (gold alloys).
+
+### Advanced Smelter (ASM) Alloys
+
+| Ticker | Name | Recipe | Time | Used For |
+|--------|------|--------|------|----------|
+| **FAL** | Ferro-Aluminum | 3× FE + 3× AL → 6× FAL | 9.6h | BGS, BWH, CQS, NOZ |
+| **AST** | Aluminum-Titanium | 1× AL + 3× TI → 4× AST | 9.6h | AGS, ENG, HHP, ship engines |
+| **FET** | Ferro-Titanium | 1× FE + 3× TI → 4× FET | 9.6h | AEN, AHP, ANZ, ship parts |
+| **WAL** | Tungsten-Aluminum | 3× AL + 1× W → 4× WAL | 9.6h | CTF, FIR, HCB, HNZ, high-end ship parts |
+| **ALR** | Aluminum-Rhenium | 5× RE + 1× AL → 6× ALR | 12h | TOR (torpedo hull) |
+| **WRH** | Tungsten-Rhenium | 2× W + 4× RE → 6× WRH | 14.4h | SST (structural spacecraft tower) |
+
+### Fine Smithy (FS) Alloys
+
+| Ticker | Name | Recipe | Time | Used For |
+|--------|------|--------|------|----------|
+| **BRO** | Bronze | 2× CU + 1× AL → 3× BRO | 9.6h | FSE (field suppression emitter), SOL (solar) |
+| **BGO** | Base Gold | 4× AU + 1× FE → 5× BGO | 9.6h | BGC, PCB, QCR (electronic parts) |
+| **RGO** | Red Gold | 4× AU + 1× CU → 5× RGO | 9.6h | HCC (high-capacity capacitor) |
+
+### AML Alloy
+
+| Ticker | Name | Recipe | Time | Used For |
+|--------|------|--------|------|----------|
+| **BOS** | Boron Oxide | 1× BOR + 4× AL + 1× SI → 4× BOS | 12h | ATP, CHA (ship thrust components) |
+
+## Alloy Dependency Chart
+
+import { Mermaid } from '@/components/mdx/mermaid'
+
+<Mermaid chart={`
+graph LR
+  Ores[Ores\nFEO ALO CUO AUO\nSIO LIO TIO REO] --> SME[SME Smelter]
+  BTS[BTS\nBauxite] --> AML[AML Lab]
+
+  SME --> Metals[Metals\nFE AL CU AU SI\nLI TI RE STL]
+  AML --> W[W Tungsten]
+  AML --> BOS[BOS]
+
+  Metals --> ASM[ASM Adv Smelter]
+  W --> ASM
+  Metals --> FS[FS Fine Smithy]
+
+  ASM --> CommonAlloys[Common Alloys\nFAL AST FET WAL]
+  ASM --> RareAlloys[Rare Alloys\nALR WRH]
+  FS --> GoldAlloys[Gold Alloys\nBRO BGO RGO]
+
+  CommonAlloys --> Ship[Ship Parts]
+  RareAlloys --> Ship
+  GoldAlloys --> Electronics[Electronics]
+  Metals --> Electronics
+  Metals --> Construction[Construction]
+  Metals --> Consumer[Consumer Goods]
+
+  style Ores fill:#b08620,stroke:#e0b040,color:#fff
+  style BTS fill:#b08620,stroke:#e0b040,color:#fff
+  style SME fill:#2d6a4f,stroke:#52b788,color:#fff
+  style ASM fill:#2d6a4f,stroke:#52b788,color:#fff
+  style FS fill:#2d6a4f,stroke:#52b788,color:#fff
+  style AML fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Metals fill:#3b6ea5,stroke:#6aacf0,color:#fff
+  style W fill:#3b6ea5,stroke:#6aacf0,color:#fff
+  style BOS fill:#3b6ea5,stroke:#6aacf0,color:#fff
+  style CommonAlloys fill:#c05030,stroke:#e07050,color:#fff
+  style RareAlloys fill:#c05030,stroke:#e07050,color:#fff
+  style GoldAlloys fill:#c05030,stroke:#e07050,color:#fff
+  style Ship fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Electronics fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+  style Construction fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+  style Consumer fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+`} />
+
+## Common Colony Patterns
+
+### "SME Farm" (Pioneer only)
+
+The lowest-barrier metal production. Drop 6–10 SMEs on an ore-rich planet with Pioneer-only workforce.
+
+- **Pros:** Cheap to set up, no workforce upgrades needed
+- **Cons:** Low margin, very common — prices often competitive
+- **Tip:** Dedicate one planet to AL+FE+SI smelting since these three are the most demanded
+
+### "ASM Colony" (Tech + Eng)
+
+A more capital-intensive setup that produces alloys. Requires climbing to Technicians and Engineers.
+
+- **Pros:** Higher margin, fewer competitors
+- **Cons:** Complex supply chain (you need basic metals flowing in)
+- **Tip:** Import basic metals rather than smelting on-site. An ASM colony with no SME is often more profitable than a mixed one.
+
+### "Fine Smithy Niche" (Settler)
+
+FS only makes 3 alloys (BRO/BGO/RGO) but all feed into high-value electronics. Low-volume, high-margin niche.
+
+- **Tip:** BGO → PCB is a key production chain. If you can supply both halves, PCB sales are a steady earner.
+
+## Tips
+
+1. **FLX pays for itself on FE, AL, REO.** Don't skip it unless FLX is unusable (too expensive or no CHP available).
+2. **STL needs C in enormous volume.** Each STL recipe consumes 8× O + carbon via FE. Plan O and C supply before scaling steel.
+3. **AL is the single metal to over-produce.** Used in 41 downstream recipes. More AL capacity = more options.
+4. **W (Tungsten) is the choke point for high-tier alloys.** WAL and WRH both need W, and W requires AML + rare mineral (BTS). Mid-game bottleneck.
+5. **Gold alloys are PCB gold.** BGO→PCB is the most consumed electronic part in the game. If you find a cheap AU supply, invest in FS.
+6. **Don't build ASM without steady metal imports.** Alloys have much more value density than raw metals — let a dedicated SME planet feed yours.
+7. **Alloys are 9.6h standard.** ASM runs most recipes on a 9.6h cycle, making capacity planning simple: 1 ASM ≈ 2.5 recipes/day.

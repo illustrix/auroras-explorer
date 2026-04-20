@@ -1,0 +1,238 @@
+# 船只组件
+
+游戏中最深的生产链。一艘船需要 **63 种不同的组件**，涵盖引擎、船体、套件和护盾。许多终局引擎离原矿有 **16+ 个生产步骤**，而最稀有的（HYR、VOE）每台需要 5–7 天。对大多数玩家来说，理解这条链是可选的 —— 但如果你想卖船或造船所需的零件，这里是金字塔的顶端。
+
+## 加工建筑
+
+| 建筑 | 名称 | 工人 | 占地 | 生产 |
+|------|------|------|------|------|
+| **HWP** | 船体焊接厂 | 40 移民 + 10 技工 | 25 | 船体板（LHP、BHP、RHP、AHP、HHP、THP、BWH、AWH）、ATP |
+| **SKF** | 船只套件厂 | 40 移民 + 10 技工 | 40 | 全部 15 种船只套件（货舱、燃料箱、STL 燃料仓） |
+| **SPP** | 航天器预制厂 | 50 技工 + 30 工程师 | 60 | 船只部件（AGS、BGS）、护盾板（APT、ARP、BPT、BRP、SRP） |
+| **SPF** | 航天器推进厂 | 50 工程师 + 20 科学家 | 40 | 大部分引擎（AEN、ENG、AFP、BFP、ANZ、NOZ、HNZ、FSE、HPR、HTE、HYR、VOE 等） |
+| **ECA** | 能源组件装配 | 20 移民 + 20 技工 | 35 | 反应堆核心（FIR、RAG、VOR） |
+| **UPF** | 单元预制厂 | 20 先锋 + 50 移民 | 50 | HAM（居住模块）和单元舱（CQS/CQM/CQL/CQT、FUN 等） |
+| **FS** | 精密锻造厂 | 50 移民 | 25 | AFR、BFR（小型引擎部件） |
+| **WEL** | 焊接厂 | 70 先锋 | 19 | CHA、SSC、THP |
+| **GF** | 玻璃熔炉 | 80 移民 | 27 | GCH、GNZ、GEN（玻璃类引擎部件） |
+| **ELP**/**CLR**/**PPF** | （电子链） | 不一 | 不一 | MFE、SFE、LFE、LFP |
+
+## 船体部件（13 种）
+
+船的主体 —— 板、屏蔽、核心结构件。
+
+### 船体焊接厂（HWP）—— 移民 + 技工
+
+| 代号 | 名称 | 配方 | 时间 | 用途 |
+|------|------|------|------|------|
+| **LHP** | 轻型船体板 | 12× AL + 1× HE → 4× LHP | 7.2h | 轻型船 —— 维修材料 |
+| **BHP** | 基础船体板 | 12× AL + 1× STL + 1× HE → 4× BHP | 7.2h | 中小型船 |
+| **RHP** | 加固船体板 | 12× AL + 1× HE + 4× TI → 4× RHP | 16.8h | 中级船 |
+| **AHP** | 高级船体板 | 1× HE + 10× FET + 8× AL → 4× AHP | 21.6h | 重型船 |
+| **HHP** | 重型船体板 | 12× AL + 1× HE + 4× AST → 4× HHP | 12h | 重载船 |
+| **THP** | 隔热船体板 | 2× CF + 2× BE + 1× HE → 4× THP | 4.3h | 耐热部位 |
+| **BWH** | 基础内壁 | 4× CF + 2× FAL + 1× KV + 1× HE → 10× BWH | 7.2h | 内饰墙 |
+| **AWH** | 高级内壁 | 1× HE + 4× CTF + 2× TI + 2× TK → 10× AWH | 12h | 高级内饰 |
+
+### 焊接厂（WEL）
+
+| 代号 | 名称 | 配方 | 时间 | 用途 |
+|------|------|------|------|------|
+| **SSC** | 船只结构组件 | 1× HE + 20× NFI + 2× AL → 6× SSC | 2.4h | 万能维修材料 —— 每艘船都用 |
+| **ATP** | 高级推进器部件 | 2× CTF + 2× BOS + 1× HE → 2× ATP | 6h | 用于 AFP（引擎燃料口） |
+
+### 航天器预制厂（SPP）
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **AGS** | 高级仪表系统 | 20× AST + 8× TK + 100× PG → 1× AGS | 48h |
+| **BGS** | 基础仪表系统 | 14× FAL + 80× PG + 4× KV → 1× BGS | 36h |
+
+### 单元预制厂（UPF）
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **HAM** | 居住模块 | 1× BSU + 1× CPU + 1× TCU + 1× WOR + 1× FUN + 1× SU + 1000× PFE → 1× HAM | **360h** |
+
+> **HAM 要 15 天。** 6 种不同的单元预制件（BSU/CPU/TCU/WOR/FUN/SU）+ **1000 PFE** —— 按输入数量和周期时间衡量，是游戏中最重的配方之一。
+
+## 导航与控制（2 种）
+
+| 代号 | 名称 | 工厂 | 配方 | 时间 |
+|------|------|------|------|------|
+| **NV1** | 导航计算机 1 | APF | 1× SNM + 1× WS → 1× NV1 | 36h |
+| **NV2** | 导航计算机 2 | AAF | 1× SNM + 1× BMF → 1× NV2 | 48h |
+
+SNM 来自 SL（科学家软件）。没有科学家基地就做不出船载导航计算机。
+
+## 船只套件（15 种）—— 货舱、燃料箱
+
+全部 15 种套件都在 **SKF**（船只套件厂）中制造。对应船上的物理存储 —— 货舱、燃料箱、STL 燃料仓。
+
+### 货舱（7 种尺寸）
+
+造船用的货舱套件。
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **TCB** | 微型货舱 | 20× FE + 4× MFK → 1× TCB | 9.6h |
+| **VCB** | 极小型货舱 | 20× MFK + 200× FET → 1× VCB | 19.2h |
+| **SCB** | 小型货舱 | 50× FAL + 12× MFK → 1× SCB | 14.4h |
+| **MCB** | 中型货舱 | 16× MFK + 100× AST → 1× MCB | 15.6h |
+| **LCB** | 大型货舱 | 200× AST + 20× MFK → 1× LCB | 18h |
+| **HCB** | 重型货舱 | 100× MFK + 600× WAL → 1× HCB | 48h |
+| **WCB** | 宽型货舱 | 20× MFK + 100× FET + 100× AST → 1× WCB | 19.2h |
+
+### STL 燃料箱（3 种尺寸）
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **SSL** | 小型 STL 燃料箱 | 20× TI + 2× MFK → 1× SSL | 12h |
+| **MSL** | 中型 STL 燃料箱 | 4× MFK + 50× FET → 1× MSL | 16.8h |
+| **LSL** | 大型 STL 燃料箱 | 125× FET + 8× MFK → 1× LSL | 21.6h |
+
+### FTL 燃料箱（3 种尺寸）
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **SFL** | 小型 FTL 燃料箱 | 5× ZR + 1× MFK → 1× SFL | 7.2h |
+| **MFL** | 中型 FTL 燃料箱 | 10× ZR + 4× MFK → 1× MFL | 12h |
+| **LFL** | 大型 FTL 燃料箱 | 20× ZR + 8× MFK → 1× LFL | 16.8h |
+
+### 其他
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **VSC** | 通风子组件 | 35× FE + 8× MFK → 1× VSC | 12h |
+| **VFT** | 通风燃料箱 | 50× ZR + 80× SRP + 24× MFK → 1× VFT | 72h |
+
+> **每个套件都有 MFK。** 所有船只套件都需要 MFK（中型紧固件套件）。充足规划 MFK 供应，否则一切都会停滞。
+
+## 引擎（28 种）
+
+这是船只如此复杂的主要原因。引擎按尺寸、燃料类型和技术等级分几类。
+
+### 简单引擎部件（FS / WEL / GF / CLR / PPF / ELP）
+
+| 代号 | 名称 | 工厂 | 配方 | 时间 |
+|------|------|------|------|------|
+| **AFR** | 辅助 FTL 谐振器 | FS | 1× AL + 1× ZR → 1× AFR | 14.4h |
+| **BFR** | 基础 FTL 谐振器 | FS | 1× AL + 1× STL → 1× BFR | 12h |
+| **CHA** | 燃烧室 | WEL | 1× HE + 1× GV + 10× BOS → 1× CHA | 10.8h |
+| **NOZ** | 喷嘴 | SPF | 1× CHA + 10× FAL + 2× MFK → 1× NOZ | 12h |
+| **HNZ** | 重型喷嘴 | SPF | 20× WAL + 4× MFK + 1× CHA → 1× HNZ | 21.6h |
+| **GNZ** | 玻璃喷嘴 | GF | 20× RG + 1× GCH + 1× TI → 1× GNZ | 36h |
+| **GCH** | 玻璃燃烧室 | GF | 20× RG + 1× GV → 1× GCH | 16.8h |
+| **ANZ** | 高级喷嘴 | SPF | 1× CHA + 4× MFK + 20× FET → 1× ANZ | 16.8h |
+| **AFP** | 辅助燃料管 | SPF | 50× PG + 10× ATP + 1× SFK → 1× AFP | 9.6h |
+| **BFP** | 基础燃料管 | SPF | 50× PG + 1× SFK + 5× THP → 1× BFP | 7.2h |
+| **LFP** | 液体燃料管 | PPF | 1× SFK + 10× THF + 50× PG → 1× LFP | 12h |
+| **LFE** | 低流量发射器 | ELP | 3× CTF + 1× CBL → 1× LFE | 12h |
+| **MFE** | 中流量发射器 | CLR | 4× CF + 1× CBM → 1× MFE | 9.6h |
+| **SFE** | 小流量发射器 | CLR | 2× CF + 1× CBS → 1× SFE | 4.8h |
+
+### STL 引擎（SPF —— 工程师 + 科学家）
+
+亚光速引擎。按尺寸/功率等级命名。
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **ENG** | 标准引擎 | 10× AST + 1× MFK + 1× ACS + 4× NOZ + 4× BFP → 1× ENG | 19.2h |
+| **AEN** | 高级引擎 | 20× FET + 1× ACS + 4× ANZ + 4× AFP + 1× MFK → 1× AEN | 48h |
+| **FSE** | 节油引擎 | 1× ACS + 1× MFK + 6× NOZ + 25× BRO + 6× LFP → 1× FSE | 24h |
+| **HTE** | 高推力引擎 | 20× WAL + 1× MFK + 1× ACS + 8× AFP + 4× HNZ → 1× HTE | 96h |
+| **GEN** | 玻璃引擎 | 1× MFK + 10× THF + 4× GNZ + 4× LFP + 50× NG → 1× GEN | 30h |
+
+### FTL 引擎（SPF —— 工程师 + 科学家）
+
+用于恒星际旅行。
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **RCT** | 反应堆（FTL 核心） | 1× CBS + 1× RAG + 10× AST → 1× RCT | 62.4h |
+| **HPR** | 高性能反应堆 | 1× FIR + 1× CBM + 20× STL → 1× HPR | 120h |
+| **QCR** | 快充反应堆 | 1× CBS + 20× BGO + 1× RAG → 1× QCR | 72h |
+| **HYR** | 超反应堆 | 2× FIR + 20× WAL + 1× CBL → 1× HYR | **168h** |
+| **VOE** | 虚空引擎 | 1× VOR + 40× WAL + 1× CBL → 1× VOE | **240h** |
+
+### 反应堆核心（ECA）
+
+| 代号 | 名称 | 配方 | 时间 |
+|------|------|------|------|
+| **RAG** | 反应堆栅格 | 4× BFR + 6× CF + 4× ETC + 1× RCS + 1× ACS + 8× AST → 1× RAG | 60h |
+| **FIR** | 聚变点火反应堆 | 4× EES + 1× RCS + 8× AFR + 10× WAL + 10× CTF + 1× ACS → 1× FIR | 84h |
+| **VOR** | 虚空反应堆 | 20× CTF + 1× AFR + 1× PFG + 10× KRE + 1× RCS + 1× ACS → 1× VOR | **192h** |
+| **RCS** | 反应控制系统 | 1× OS + 1× SAR + 1× BWS + 1× DA → 1× RCS | 48h |
+
+> **VOE + VOR = 432 小时（18 天）。** 顶级 FTL 引擎需要 240 小时组装，而它所需的虚空反应堆本身还需要 192 小时。一台 VOE = 一个 18 天的生产窗口。
+
+## 船只护盾（7 种）—— SPP 和 HWP
+
+| 代号 | 名称 | 工厂 | 配方 | 时间 |
+|------|------|------|------|------|
+| **BPT** | 基础顶板 | SPP | 5× THP + 20× THF → 12× BPT | 8.4h |
+| **APT** | 高级顶板 | SPP | 30× THF + 5× ATP → 12× APT | 12h |
+| **BRP** | 基础辐射板 | SPP | 2× KV + 5× LST → 12× BRP | 9.6h |
+| **ARP** | 高级辐射板 | SPP | 2× TK + 5× LST → 10× ARP | 12h |
+| **SRP** | 极品辐射板 | SPP | 5× TA + 5× LST + 5× W → 10× SRP | 12h |
+| **BWH** | 基础内壁（已列在船体中） | HWP | — | — |
+| **AWH** | 高级内壁（已列在船体中） | HWP | — | — |
+
+## 船只生产链
+
+import { Mermaid } from '@/components/mdx/mermaid'
+
+<Mermaid chart={`
+graph LR
+  Metals[金属与合金\nFE AL STL TI W\nFET AST FAL WAL] --> Hulls[船体部件\nHWP]
+  Plastics[塑料\nPE PG NFI] --> Hulls
+
+  Metals --> Kits[船只套件\nSKF]
+  MFK[MFK\n来自 FS] --> Kits
+  Kits --> CargoBays[货舱\n+ 燃料箱]
+
+  Electronics[电子\nACS RCS SAR] --> Engines[引擎\nSPF 工程师+科学家]
+  Metals --> Engines
+  EnginePrts[部件\nCHA NOZ BFP AFP\nAFR CTF CF] --> Engines
+  Engines --> STLEngines[STL 引擎\nENG AEN FSE HTE GEN]
+
+  ECA[ECA\nRAG FIR VOR] --> FTLEngines[FTL 反应堆\nRCT HPR QCR HYR VOE]
+  Software[软件\nSNM WAI] --> NavComp[导航计算机\nNV1 NV2]
+
+  Hulls --> ShipBuild[造船\n航天器船坞]
+  CargoBays --> ShipBuild
+  STLEngines --> ShipBuild
+  FTLEngines --> ShipBuild
+  NavComp --> ShipBuild
+  Shields[护盾\nBPT APT SRP 等] --> ShipBuild
+  HAM[HAM\n居住模块 360h] --> ShipBuild
+
+  style Metals fill:#b08620,stroke:#e0b040,color:#fff
+  style Plastics fill:#b08620,stroke:#e0b040,color:#fff
+  style MFK fill:#b08620,stroke:#e0b040,color:#fff
+  style Electronics fill:#b08620,stroke:#e0b040,color:#fff
+  style Software fill:#b08620,stroke:#e0b040,color:#fff
+  style EnginePrts fill:#b08620,stroke:#e0b040,color:#fff
+  style Hulls fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Kits fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Engines fill:#2d6a4f,stroke:#52b788,color:#fff
+  style ECA fill:#2d6a4f,stroke:#52b788,color:#fff
+  style CargoBays fill:#3b6ea5,stroke:#6aacf0,color:#fff
+  style STLEngines fill:#c05030,stroke:#e07050,color:#fff
+  style FTLEngines fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style NavComp fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Shields fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+  style HAM fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+  style ShipBuild fill:#8b4513,stroke:#d2691e,color:#fff
+`} />
+
+## 小技巧
+
+1. **别想垂直整合。** 63 个组件分布在 10+ 个建筑上，一家公司不可能高效地全部生产。专注 2–3 个类别。
+2. **SSC 是万能船只产品。** 每艘船都用它维修。WEL 中 2.4h 周期（先锋工人）—— 想低门槛进入船只生意从这里开始。
+3. **SKF 是船链中最简单的建筑。** 所有套件都遵循类似模式（金属 + MFK），移民/技工工人，时间适中。首选船只工厂。
+4. **HAM 是合同产品。** 360h + 7 种单元预制件输入，很少有投机生产的经济性。只按合同制造。
+5. **WAI / SNM = 科学家门槛。** 导航计算机（NV1/NV2）被锁在 SL 之后。规划船只电子前先规划科学家住房。
+6. **VOE/HYR 周期 10+ 天。** 如果要投入，一个船只工厂每月最多生产约 3 台。
+7. **ACS 是引擎解锁器。** ACS 需要 WAI + SAR + FC + THF。没有 ACS 就做不出 ENG、AEN、FSE、FIR、RAG 或 HTE。是个咽喉。
+8. **KV（凯夫拉纺织品）出现在护盾里。** BRP 和 BWH 用 KV —— 来自 CLF（服装厂）。规划护盾生产时别忘了纺织链。

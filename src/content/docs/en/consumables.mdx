@@ -1,0 +1,187 @@
+# Consumables
+
+Your workforce doesn't work for free — **29 consumable types** keep them fed, clothed, healthy, and happy. If any required consumable runs out, that workforce tier's buildings slow down or halt entirely. Supplying your own workforce is often cheaper than buying prefabs off the CX; supplying *other* players' workforces is a stable long-term business.
+
+## Workforce Tiers
+
+PrUn has 5 workforce tiers, each with strict consumption requirements (per 100 workers per day):
+
+### PIONEER
+
+| Ticker | Consumable | Type | Amount/100/day |
+|--------|-----------|------|----------------|
+| **DW** | Drinking Water | Basic | 4.0 |
+| **RAT** | Rations | Basic | 4.0 |
+| **OVE** | Overalls | Basic | 0.5 |
+| **COF** | Coffee | Luxury (drink) | 0.5 |
+| **PWO** | Power Overalls | Luxury (clothing) | 0.2 |
+
+### SETTLER
+
+| Ticker | Consumable | Type | Amount/100/day |
+|--------|-----------|------|----------------|
+| **DW** | Drinking Water | Basic | 5.0 |
+| **RAT** | Rations | Basic | 6.0 |
+| **EXO** | Exoskeleton | Basic | 0.5 |
+| **PT** | Power Tools | Basic | 0.5 |
+| **KOM** | Kombucha | Luxury (drink) | 1.0 |
+| **REP** | Repair Kit | Luxury (tools) | 0.2 |
+
+### TECHNICIAN
+
+| Ticker | Consumable | Type | Amount/100/day |
+|--------|-----------|------|----------------|
+| **DW** | Drinking Water | Basic | 7.5 |
+| **RAT** | Rations | Basic | 7.0 |
+| **HMS** | Hazmat Suits | Basic | 0.5 |
+| **MED** | Medicine | Basic | 0.5 |
+| **SCN** | Scanner | Basic | 0.1 |
+| **ALE** | Ale | Luxury (drink) | 1.0 |
+| **SC** | Smart Chips | Luxury (health) | 0.1 |
+
+### ENGINEER
+
+| Ticker | Consumable | Type | Amount/100/day |
+|--------|-----------|------|----------------|
+| **DW** | Drinking Water | Basic | 10.0 |
+| **FIM** | Fine Meals | Basic | 7.0 |
+| **HSS** | Hi-Spec Suits | Basic | 0.2 |
+| **MED** | Medicine | Basic | 0.5 |
+| **PDA** | PDA | Basic | 0.1 |
+| **GIN** | Gin | Luxury (drink) | 1.0 |
+| **VG** | Vita Gel | Luxury (health) | 0.2 |
+
+### SCIENTIST
+
+| Ticker | Consumable | Type | Amount/100/day |
+|--------|-----------|------|----------------|
+| **DW** | Drinking Water | Basic | 10.0 |
+| **MEA** | Premium Meals | Basic | 7.0 |
+| **LC** | Lab Coats | Basic | 0.2 |
+| **MED** | Medicine | Basic | 0.5 |
+| **WS** | Workstation | Basic | 0.05 |
+| **WIN** | Wine | Luxury (drink) | 1.0 |
+| **NST** | Nootropics | Luxury (health) | 0.1 |
+
+> **Basic vs Luxury:** Basic consumables are **required** — if missing, that tier's buildings stop. Luxury consumables are **optional** but boost efficiency. Every tier has food + water + clothing + optionally tools/health, plus a signature drink.
+
+## Basic Consumables (14)
+
+| Ticker | Name | Building | Recipe |
+|--------|------|----------|--------|
+| **DW** | Drinking Water | FP | 10× H2O → 7× DW (2.4h) or 1× PG + 10× H2O → 10× DW |
+| **RAT** | Rations | FP | 1× GRN + 1× ALG + 1× NUT → 10× RAT (6h) |
+| **FIM** | Fine Meals | FP | 1× HER + 2× RAT → 2× FIM (12h) |
+| **MEA** | Premium Meals | FP | 1× MTP + 2× FIM → 2× MEA (15.6h) |
+| **OVE** | Overalls | BMP | 10× PG + 1× COT → 30× OVE (7.2h) |
+| **EXO** | Exoskeleton | BMP | 1× SWF + 1× AL + 10× OVE → 10× EXO (3.6h) |
+| **HMS** | Hazmat Suits | CLF | 6× GC + 1× IND + 1× NL → 10× HMS (16.8h) |
+| **HSS** | Hi-Spec Suits | CLF | 1× BLE + 5× NL + 5× PCB + 5× SEN → 20× HSS (24h) |
+| **LC** | Lab Coats | CLF | 2× SIL + 10× PCB + 10× HD + 1× BLE → 10× LC (19.2h) |
+| **PT** | Power Tools | BMP | 1× STL + 1× W → 15× PT (8.4h) |
+| **SCN** | Scanner | EDM | 100× PE + 4× CU → 8× SCN (28.8h) |
+| **PDA** | PDA | APF | 1× LD + 2× HPC → 32× PDA (14.4h) |
+| **WS** | Workstation | APF | 1× DA + 1× BWS → 20× WS (43.2h) |
+| **MED** | Medicine | CHP | 1× HER + 50× PE + 1× AL + 4× COT → 16× MED (19.2h) |
+
+## Luxury Consumables (10)
+
+| Ticker | Name | Building | Recipe |
+|--------|------|----------|--------|
+| **COF** | Coffee | FP | 1× CAF + 3× DW → 3× COF (7.2h) |
+| **KOM** | Kombucha | FER | 4× DW + 1× AMM + 1× HER → 6× KOM (8.4h) |
+| **ALE** | Ale | FER | 1× HOP + 1× AMM + 3× DW + 2× GRN → 6× ALE (15.4h) |
+| **GIN** | Gin | FER | 1× ES + 2× GRN + 2× DW + 1× AMM → 4× GIN (15.6h) |
+| **WIN** | Wine | FER | 15× GRA + 15× REA + 20× DW + 1× AMM → 10× WIN (19.2h) |
+| **PWO** | Power Overalls | BMP | 50× PG + 1× COT → 20× PWO (7.2h) |
+| **REP** | Repair Kit | BMP | 1× SFK + 1× MFK + 10× INS → 4× REP (6h) |
+| **SC** | Smart Chips | CHP | 1× MG + 1× TA + 2× CA → 20× SC (15.6h) |
+| **VG** | Vita Gel | IVP | 2× VIT + 2× BAC + 4× REA + 2× BL → 20× VG (24h) |
+| **NST** | Nootropics | LAB | 1× ES + 1× THF + 1× ALG → 4× NST (12h) |
+
+> **Brewery pattern:** ALE, GIN, WIN, KOM all need **AMM** (ammonia) as fermentation agent. Build a CHP or import AMM — don't underestimate it. All four also need DW, so a brewery planet usually runs its own FP for water.
+
+## Consumable Bundles (5)
+
+Bundles are **pre-packaged** consumable sets made in **PAC** (Packaging) buildings. They're mostly used for player-to-player supply contracts — one COLONY consumption plan = one bundle per day.
+
+| Ticker | For | Recipe |
+|--------|-----|--------|
+| **PBU** | Pioneer | 50× PE + 5× COF + 40× DW + 40× RAT + 5× OVE + 2× PWO → 1× PBU (4.8h) |
+| **SBU** | Settler | 60× RAT + 100× PE + 10× KOM + 50× DW + 5× EXO + 5× PT + 2× REP → 1× SBU (5.3h) |
+| **TBU** | Technician | 70× RAT + 1× PSS + 1× SCN + 1× SC + 40× PE + 5× HMS + 75× DW + 5× MED + 10× ALE → 1× TBU (6h) |
+| **EBU** | Engineer | 4× PSS + 70× FIM + 1× PDA + 10× GIN + 160× PE + 5× MED + 2× HSS + 100× DW + 2× VG → 1× EBU (6.7h) |
+| **CBU** | Scientist | 10× WIN + 280× PE + 5× MED + 2× LC + 1× WS + 100× DW + 70× MEA + 8× PSS + 1× NST → 1× CBU (7.2h) |
+
+> **PE (Polyethylene) is the wrapping.** Every bundle uses 50–280 PE — often the biggest single cost.
+
+## Production Buildings
+
+| Building | Name | Workforce | Makes |
+|----------|------|-----------|-------|
+| **FP** | Food Processor | 10 Pioneer | DW, RAT, FIM, MEA, COF |
+| **BMP** | Basic Materials Plant | 20 Pioneer | OVE, EXO, PT, PWO, REP |
+| **CLF** | Clothing Factory | Settler | HMS, HSS, LC |
+| **FER** | Fermenter | Settler | ALE, GIN, WIN, KOM |
+| **CHP** | Chemical Plant | Settler | MED, SC |
+| **APF** | Appliance Factory | Tech | PDA, WS |
+| **EDM** | Electronic Device Mfg | Tech | SCN |
+| **LAB** | Laboratory | Eng/Sci | NST |
+| **IVP** | In-Vitro Plant | Tech | VG |
+| **PAC** | Packaging | Settler | All bundles |
+
+## Consumable Flow
+
+import { Mermaid } from '@/components/mdx/mermaid'
+
+<Mermaid chart={`
+graph LR
+  Farms[FRM / HYF / ORC] --> Crops[Crops\nGRN NUT ALG HER\nHOP GRA CAF VEG]
+  Crops --> FP[FP Food Proc]
+  Crops --> FER[FER Fermenter]
+
+  FP --> Food[Food + Water\nDW RAT FIM MEA COF]
+  FER --> Drinks[Luxury Drinks\nALE GIN WIN KOM]
+
+  Chem[CHP / LAB / IVP] --> Health[Health\nMED SC NST VG]
+  Metal[BMP / EDM / APF] --> Gear[Clothing + Tools\nOVE EXO HMS HSS LC\nPT SCN PDA WS PWO REP]
+  Textile[CLF] --> Gear
+
+  Food --> PAC[PAC Packaging]
+  Drinks --> PAC
+  Health --> PAC
+  Gear --> PAC
+
+  PAC --> Bundles[Bundles\nPBU SBU TBU EBU CBU]
+
+  Bundles --> Workers[Workforce\nPioneer Settler\nTechnician Engineer\nScientist]
+  Food --> Workers
+  Drinks --> Workers
+  Health --> Workers
+  Gear --> Workers
+
+  style Farms fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Chem fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Metal fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Textile fill:#2d6a4f,stroke:#52b788,color:#fff
+  style FP fill:#2d6a4f,stroke:#52b788,color:#fff
+  style FER fill:#2d6a4f,stroke:#52b788,color:#fff
+  style PAC fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Crops fill:#b08620,stroke:#e0b040,color:#fff
+  style Food fill:#c05030,stroke:#e07050,color:#fff
+  style Drinks fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Health fill:#c05030,stroke:#e07050,color:#fff
+  style Gear fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+  style Bundles fill:#3b6ea5,stroke:#6aacf0,color:#fff
+  style Workers fill:#8b4513,stroke:#d2691e,color:#fff
+`} />
+
+## Tips
+
+1. **Basic consumables first.** Missing a luxury cuts efficiency 10–20%. Missing a basic stops production. Always prioritize basics.
+2. **Water is universal.** Every tier needs DW. A reliable water supply (either local H2O extraction or imports) is the #1 bottleneck on most colonies.
+3. **RAT carries 3 tiers.** Pioneers, Settlers, and Technicians all eat RAT — it's the single most-produced consumable in the game. Build multiple FPs early.
+4. **Engineers and Scientists eat FIM/MEA.** These are processed RAT → FIM → MEA. Plan the food chain accordingly before upgrading your workforce.
+5. **Luxuries boost efficiency per worker — cheap ones first.** COF is the cheapest luxury for Pioneers; KOM for Settlers. Supply at least one luxury from day 1.
+6. **Self-supply vs buy from CX.** Calculate per-day cost: 100 Pioneers eat 4 RAT × 3 tickers CX price + 4 DW × 3 tickers = ~20 CX tickers/day. Compare against growing locally with 2 FRM + 1 FP.
+7. **Bundle contracts are stable income.** If you have spare capacity, selling PBU/SBU on long-term contracts is far more stable than chasing CX price swings.

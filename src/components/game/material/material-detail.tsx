@@ -6,6 +6,7 @@ import {
   getRecipesByInput,
   getRecipesByOutput,
 } from '@/components/pages/production-line/graph'
+import { RecipePreview } from '@/components/pages/production-line/recipe-preview'
 import { useGameData } from '@/lib/store'
 import { cn } from '@/lib/utils'
 import { getMaterialCategoryTheme } from '../material-category'
@@ -114,6 +115,46 @@ const _MaterialDetail: FC<MaterialDetailProps> = ({
             })}
           </div>
         </div>
+      </div>
+
+      <div>
+        {recipes.cur ? (
+          recipes.cur.length > 0 ? (
+            <div>
+              <div className="text-sm font-bold mb-2">
+                {t('game.canBeProducedBy')}
+              </div>
+              <div className="flex flex-col gap-2">
+                {recipes.cur.map(recipe => (
+                  <RecipePreview recipe={recipe} key={recipe.RecipeName} />
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div className="text-sm text-muted-foreground">
+              {t('game.noRecipesProducing')}
+            </div>
+          )
+        ) : null}
+
+        {recipes.fur ? (
+          recipes.fur.length > 0 ? (
+            <div>
+              <div className="text-sm font-bold mb-2">
+                {t('game.usedInRecipes')}
+              </div>
+              <div className="flex flex-col gap-2">
+                {recipes.fur.map(recipe => (
+                  <RecipePreview recipe={recipe} key={recipe.RecipeName} />
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div className="text-sm text-muted-foreground">
+              {t('game.noRecipesUsing')}
+            </div>
+          )
+        ) : null}
       </div>
     </div>
   )

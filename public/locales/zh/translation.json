@@ -180,8 +180,79 @@
     "selectBuilding": "选择建筑"
   },
   "catalog": {
-    "title": "材料目录",
-    "searchPlaceholder": "搜索材料..."
+    "title": "目录",
+    "allMaterials": "全部物品",
+    "searchPlaceholder": "搜索代号或名称...",
+    "filterByCategory": "按分类筛选",
+    "sourceAll": "全部",
+    "sourceRaw": "原料",
+    "sourceProduced": "可生产",
+    "sortCategory": "按分类分组",
+    "sortTicker": "代号 A–Z",
+    "sortWeightAsc": "重量：轻 → 重",
+    "sortWeightDesc": "重量：重 → 轻",
+    "sortVolumeAsc": "体积：小 → 大",
+    "sortVolumeDesc": "体积：大 → 小",
+    "sortDensityAsc": "密度：低 → 高",
+    "sortDensityDesc": "密度：高 → 低",
+    "clearFilters": "清除筛选",
+    "resultCount_one": "{{count}} 种材料",
+    "resultCount_other": "{{count}} 种材料"
+  },
+  "docs": {
+    "title": "游戏指南",
+    "description": "了解游戏机制、物品分类、生产链等内容。",
+    "backToList": "返回指南列表",
+    "notFound": "文档未找到。",
+    "editOnGithub": "在 GitHub 上编辑此页面",
+    "gettingStarted": {
+      "title": "新手入门",
+      "description": "Prosperous Universe 入门介绍 —— 核心玩法循环、第一个基地和劳动力等级。"
+    },
+    "materials": {
+      "title": "物品分类",
+      "description": "370+ 种物品按分类概览 —— 从基础矿石到终局船舶组件。"
+    },
+    "rawMaterials": {
+      "title": "原料",
+      "description": "矿石、气体、矿物、元素 —— 星球开采机制以及哪些建筑加工什么。"
+    },
+    "metalsAlloys": {
+      "title": "金属与合金",
+      "description": "熔炼链、合金配方，以及哪些金属供给哪些下游产品。"
+    },
+    "construction": {
+      "title": "建筑材料",
+      "description": "4 级预制件系统、12 种建筑零件、11 种批量材料，以及每种住房的成本。"
+    },
+    "chemicalsPlastics": {
+      "title": "化学品与塑料",
+      "description": "21 化学品 + 8 塑料 + 3 液体。CHP/LAB/POL 产业链、PE 经济学，以及稀有试剂。"
+    },
+    "electronics": {
+      "title": "电子与软件",
+      "description": "从小件到系统的 4 级电子链，加上软件依赖（SD/SE/SL）和 WAI。"
+    },
+    "shipComponents": {
+      "title": "船只组件",
+      "description": "63 种船只零件，涵盖船体、套件、引擎和护盾 —— 游戏中最深的生产链。"
+    },
+    "specialty": {
+      "title": "特殊材料",
+      "description": "纺织品、单元预制件、能源、无人机、医疗、基础设施 —— 连接一切的小链条。"
+    },
+    "production": {
+      "title": "生产与配方",
+      "description": "配方的工作原理、生产链深度、关键建筑和规划建议。"
+    },
+    "agriculturalProducts": {
+      "title": "农产品",
+      "description": "全部 19 种作物 — 食物、饮料、纺织和工业用途。生产建筑、RAT 配方和效率建议。"
+    },
+    "consumables": {
+      "title": "消耗品",
+      "description": "各级工人维持运转所需的消耗品 —— 基础需求、奢侈品和预打包捆包。"
+    }
   },
   "configTransform": {
     "title": "配置转换",
@@ -213,7 +284,11 @@
     "loading": "加载中...",
     "selectAMaterial": "选择材料...",
     "searchMaterials": "搜索材料...",
-    "noMaterialFound": "未找到材料。"
+    "noMaterialFound": "未找到材料。",
+    "canBeProducedBy": "可由以下配方生产",
+    "usedInRecipes": "被以下配方使用",
+    "noRecipesProducing": "没有配方可以生产此材料。",
+    "noRecipesUsing": "没有配方使用此材料。"
   },
   "ui": {
     "previous": "上一页",

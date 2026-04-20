@@ -1,0 +1,173 @@
+# 原料
+
+在 Prosperous Universe 中，一切都从这里开始。原料直接从星球和卫星开采而来 —— 共 **44 种**，包括矿石、气体、矿物和元素。选错星球你的生产线就会饿死；选对了就能甩开竞争对手。
+
+## 开采建筑
+
+三种由先锋工人（Pioneer）运作的建筑负责所有星球开采：
+
+| 建筑 | 名称 | 工人 | 占地 | 开采内容 |
+|------|------|------|------|---------|
+| **EXT** | 开采器 | 60 先锋 | 25 | 矿石、矿物、液体 |
+| **COL** | 收集器 | 50 先锋 | 15 | 只有气体 |
+| **RIG** | 钻井 | 30 先锋 | 10 | 矿石、矿物、液体（小而快） |
+
+> **开采机制：** 产出完全取决于**星球拥有的资源**。每个星球都有一组固定资源，带有特定的**浓度值**。浓度越高，开采越快。建筑没有"配方" —— 放到星球上就会自动抽取该星球的资源。
+
+**EXT vs RIG：** EXT 总产量更高，但占地和用人更多。RIG 运行成本低但单位时间产出慢。对稀有/低浓度资源，RIG 通常更划算；对丰富的高浓度矿藏，EXT 胜出。
+
+## 矿石（8 种）
+
+在 **SME**（熔炉）或 **AML**（高级材料实验室）中熔炼成金属。
+
+| 代号 | 名称 | 熔炼为 | 主要配方 |
+|------|------|--------|---------|
+| **FEO** | 铁矿 | FE（铁） | 6× FEO + 1× C + 1× O → 3× FE (12h) |
+| **ALO** | 铝矿 | AL（铝） | 6× ALO + 1× C + 1× O → 3× AL (12h) |
+| **CUO** | 铜矿 | CU（铜） | 5× CUO + 1× SIO + 10× O → 3× CU (12h) |
+| **SIO** | 硅矿 | SI（硅） | 3× SIO + 1× AL → 1× SI (3.6h) |
+| **AUO** | 金矿 | AU（金） | 3× AUO + 1× C → 2× AU (10.8h) |
+| **LIO** | 锂矿 | LI（锂） | 10× LIO + 4× HAL → 4× LI (15.8h) |
+| **TIO** | 钛矿 | TI（钛） | 4× TIO + 1× C + 1× O → 2× TI (18h) |
+| **REO** | 稀土矿 | RE（稀土） | 8× REO + 1× C + 1× O → 4× RE (19.2h) |
+
+> **FLX（助熔剂）提升产量：** FEO/ALO/REO 熔炼中加 1× FLX 能增产 33%。FLX 在 CHP 中从 LST（石灰岩）制成，所以要算上这部分成本。
+
+## 气体（10 种）
+
+用 **COL** 收集。是所有化工和燃料链的起点。
+
+| 代号 | 名称 | 主要用途 |
+|------|------|---------|
+| **H** | 氢 | 燃料（SF、FF、VF）、化学品（AMM、H2O） |
+| **O** | 氧 | 熔炼助剂、水、消耗品 |
+| **N** | 氮 | 氨（AMM）、生命维持 |
+| **HE** | 氦 | 低温工程、超导体 |
+| **HE3** | 氦-3 | FTL 燃料（FF），也可从 TS 精炼 |
+| **F** | 氟 | 高端化学品、火箭燃料 |
+| **AMM** | 氨 | 化肥、清洁剂 |
+| **AR** | 氩 | 惰性气体、屏蔽 |
+| **KR** | 氪 | 专用电子 |
+| **NE** | 氖 | 照明、激光 |
+
+**H + HE3 → FF（FTL 燃料）：** 整个 FTL 旅行经济都靠这一个配方。HE3 稀有且昂贵 —— 通常在 REF 里从 TS（钍）精炼得到，而不是直接收集。
+
+## 矿物（14 种）
+
+用 EXT/RIG 开采。通过 **CHP**、**AML**、**BMP** 加工成元素，或直接使用。
+
+### 常见矿物（CHP / BMP 加工）
+
+| 代号 | 名称 | 加工为 |
+|------|------|--------|
+| **LST** | 石灰岩 | CA（钙）、FLX（助熔剂） |
+| **HAL** | 盐岩 | NA（钠）+ CL（氯） |
+| **CLI** | 粘土 | I（碘） |
+| **MGS** | 菱镁矿 | MG（镁） |
+| **SCR** | 含硫岩石 | S（硫）—— 在 SME 中 |
+| **TCO** | 锝矿 | TC（锝）—— 在 TNP 中 |
+
+### 稀有矿物（AML 加工 —— 需要技工/工程师）
+
+| 代号 | 名称 | 加工为 |
+|------|------|--------|
+| **BER** | 绿柱石 | BE（铍）+ 附带 AL + SIO |
+| **BOR** | 硼砂 | BOS（氧化硼）—— 需要 4× AL + 1× SI |
+| **TAI** | 钽铁矿 | TA（钽）+ 附带 FE |
+| **ZIR** | 锆石 | ZR（锆）+ 附带 SIO |
+| **BTS** | 钨铁矿 | W（钨）—— 5× BTS → 1× W |
+
+### 液体/特殊
+
+| 代号 | 名称 | 说明 |
+|------|------|------|
+| **TS** | 钍 | 在 REF 中精炼为 HE3（3× TS → 2× HE3） |
+| **MAG** | 磁铁矿 | 用于建筑和电子 |
+| **BRM** | 溴矿 | 化工原料 |
+
+## 元素（12 种）
+
+"元素周期表"式的材料 —— 化学的基础组件。
+
+| 代号 | 名称 | 来源 | 用途 |
+|------|------|------|------|
+| **C** | 碳 | HCP → INC（或 GRN/MAI） | 熔炼、塑料、几乎所有东西 |
+| **O** | 氧 | 收集的气体 | 熔炼助剂、水、消耗品 |
+| **H** | 氢 | 收集的气体 | 燃料、水、氨 |
+| **CA** | 钙 | LST → CHP | 混凝土、玻璃、消耗品 |
+| **NA** | 钠 | HAL → CHP | 化学品、太阳能板 |
+| **CL** | 氯 | HAL → CHP | 消毒剂、塑料 |
+| **MG** | 镁 | MGS → BMP | 合金、电子 |
+| **I** | 碘 | CLI → BMP | 医疗、化学 |
+| **S** | 硫 | SCR → SME | 硫酸、橡胶 |
+| **BE** | 铍 | BER → AML | 高级合金、电子 |
+| **TA** | 钽 | TAI → AML | 电容、高端电子 |
+| **ZR** | 锆 | ZIR → AML | 耐热合金 |
+| **TC** | 锝 | TCO → TNP | 放射性同位素、高级化学 |
+
+**HCP 是碳的来源主力：** 碳（C）在熔炼、塑料、化学中到处都要用。大多数玩家在农场种 HCP，然后在焚化炉（INC）中烧掉来获取 C，而不是进口 C。
+
+## 燃料（3 种）—— 精炼厂（REF）
+
+| 代号 | 名称 | 配方 | 用途 |
+|------|------|------|------|
+| **SF** | STL 燃料 | 2× GAL + 1× AMM + 3× H → 100× SF (3.6h) | 亚光速船只（系统内） |
+| **FF** | FTL 燃料 | 4× H + 2× HE3 → 100× FF (3.6h) | FTL 跳跃（系统间） |
+| **VF** | 船舶燃料 | 4× H + 2× KRE → 2000× VF (12h) | 专用船只 |
+
+> **SF 替代配方：** 1× AMM + 5× NAB → 150× SF (9.6h)。NAB 是一种富氮化学品 —— 根据市场价格，有时比 GAL 更便宜。
+
+## 开采流程
+
+import { Mermaid } from '@/components/mdx/mermaid'
+
+<Mermaid chart={`
+graph LR
+  Planet[星球 / 卫星] --> EXT[EXT 开采器]
+  Planet --> COL[COL 收集器]
+  Planet --> RIG[RIG 钻井]
+
+  EXT --> Ores[矿石\nFEO ALO CUO SIO\nAUO LIO TIO REO]
+  EXT --> Minerals[矿物\nLST HAL CLI MGS\nBER TAI ZIR TS ...]
+  RIG --> Ores
+  RIG --> Minerals
+  COL --> Gases[气体\nH O N HE HE3\nAMM AR KR NE F]
+
+  Ores --> SME[SME 熔炉] --> Metals[金属\nFE AL CU SI AU\nLI TI RE]
+  Minerals --> CHP[CHP 化工厂]
+  Minerals --> AML[AML 高级材料实验室]
+  Minerals --> BMP[BMP 基础材料厂]
+  CHP --> Elements[元素\nCA NA CL ...]
+  AML --> Elements2[稀有元素\nBE TA ZR W]
+  BMP --> Elements
+
+  Gases --> REF[REF 精炼厂] --> Fuels[燃料\nSF FF VF]
+  Minerals -->|TS| REF
+
+  style Planet fill:#2d5a8b,stroke:#5588cc,color:#fff
+  style EXT fill:#2d6a4f,stroke:#52b788,color:#fff
+  style COL fill:#2d6a4f,stroke:#52b788,color:#fff
+  style RIG fill:#2d6a4f,stroke:#52b788,color:#fff
+  style SME fill:#2d6a4f,stroke:#52b788,color:#fff
+  style CHP fill:#2d6a4f,stroke:#52b788,color:#fff
+  style AML fill:#2d6a4f,stroke:#52b788,color:#fff
+  style BMP fill:#2d6a4f,stroke:#52b788,color:#fff
+  style REF fill:#2d6a4f,stroke:#52b788,color:#fff
+  style Ores fill:#b08620,stroke:#e0b040,color:#fff
+  style Minerals fill:#b08620,stroke:#e0b040,color:#fff
+  style Gases fill:#b08620,stroke:#e0b040,color:#fff
+  style Metals fill:#c05030,stroke:#e07050,color:#fff
+  style Elements fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Elements2 fill:#7b2d8b,stroke:#a855f7,color:#fff
+  style Fuels fill:#1a7a7a,stroke:#2dd4bf,color:#fff
+`} />
+
+## 选择开采星球的小技巧
+
+1. **先看浓度。** 浓度 0.5 的 FEO 星球产量是 0.1 浓度星球的 5 倍。入驻前一定要比较。
+2. **气态巨星只有气体。** 如果既要矿石又要气体，就需要两个星球 —— 或者中间运输。
+3. **肥沃度对农场有用，对 EXT 没用。** 资源丰富的贫瘠岩石星球比肥沃星球更适合建矿业基地。
+4. **水（H2O）是液体资源。** 用 EXT/RIG 开采，不是从冰里取。有些星球根本没水 —— 要提前规划供应链。
+5. **AML 需要技工+工程师。** 稀有元素开采需要成熟的基地和完整的工人等级 —— 这不是起始星球能做的事。
+6. **HE3 通常精炼比收集更便宜。** 算一下账：3× TS → 2× HE3 用 REF 往往比直接收集 HE3 的成本低。
+7. **别忽视 C。** 碳短缺是熔炼瓶颈。大多数成熟基地都在本地种 HCP，而不是进口 C。
