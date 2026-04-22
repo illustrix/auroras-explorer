@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils'
 
 export const Route = createFileRoute('/catalog')({
   component: RouteComponent,
+  staticData: { fullHeight: true },
 })
 
 function RouteComponent() {

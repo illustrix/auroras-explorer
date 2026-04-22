@@ -10,6 +10,7 @@ const searchParamsSchema = type({
 export const Route = createFileRoute('/production-line/')({
   component: RouteComponent,
   validateSearch: searchParamsSchema,
+  staticData: { fullHeight: true },
 })
 
 function RouteComponent() {
